@@ -5,10 +5,10 @@
 get_header();
 ?>
 
-    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.jpg'; ?>)">
+    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/electrical-installation-hero.webp'; ?>)">
         <div class="container">
             <div class="hero-content">
-                <div class="hero-label">ромислові та цивільні об'єкти</div>
+                <div class="hero-label">промислові та цивільні об'єкти</div>
                 <h1 class="hero-title">ЕЛЕКТРО<br><span class="accent-blue">МОН</span><span class="accent-green">ТАЖ</span></span></h1>
                 <p class="hero-desc">Повний цикл електромонтажних робіт: від проектування схем до здачі об'єкта. Досвід на об'єктах від 40 МВт до приватного будинку.</p>
                 <div class="hero-actions btn-group">
@@ -439,7 +439,7 @@ get_header();
             </div>   
         </div>
     </section>
-    <section class="page-section faq-section">
+    <section class="page-section faq-section page-section-bg2">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
                 <div class="section-label">Відповіді на питання</div>

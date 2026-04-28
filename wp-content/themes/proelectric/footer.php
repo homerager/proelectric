@@ -41,29 +41,48 @@
 				</div>
 				<div class="footer-col">
 					<div class="footer-col-title">Послуги</div>
-					<ul class="footer-links">
+					<!--<ul class="footer-links">
 						<li><a href="#">Сонячні електростанції</a></li>
 						<li><a href="#">СЕС для ОСББ</a></li>
 						<li><a href="#">СЕС для бізнесу</a></li>
 						<li><a href="#">Електромонтажні роботи</a></li>
 						<li><a href="#">Електрощитове обладнання</a></li>
-					</ul>
+					</ul>-->
+					<?php
+						wp_nav_menu(
+							array(
+								'container'      => false,
+								'menu_class'     => 'footer-links',
+								'theme_location' => 'footer_service_menu',
+							)
+						);
+					?>
 				</div>
 				<div class="footer-col">
 					<div class="footer-col-title">Компанія</div>
-					<ul class="footer-links">
+					<!--<ul class="footer-links">
 						<li><a href="#">Про нас</a></li>
 						<li><a href="#">Проєкти</a></li>
 						<li><a href="#">Блог</a></li>
 						<li><a href="#">Партнери</a></li>
 						<li><a href="#">Контакти</a></li>
-					</ul>
+					</ul>-->
+					<?php
+						wp_nav_menu(
+							array(
+								'container'      => false,
+								'menu_class'     => 'footer-links',
+								'theme_location' => 'footer_company_menu',
+							)
+						);
+					?>
 				</div>
 				<div class="footer-col">
 					<div class="footer-col-title">Контакти</div>
 					<ul class="footer-links">
 						<li><a href="tel:+380630607600">+38 063 060 76 00</a></li>
 						<li><a href="tel:+380684526450">+38 068 452 64 50</a></li>
+						<li><a href="mailto:progreselectric@gmail.com">progreselectric@gmail.com</a></li>
 					</ul>
 				</div>
 			</div>

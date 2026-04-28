@@ -50,6 +50,8 @@ function proelectric_setup() {
 	register_nav_menus(
 		array(
 			'header_menu' => esc_html__( 'Header menu', 'proelectric' ),
+			'footer_service_menu' => esc_html__( 'Footer service menu', 'proelectric' ),
+			'footer_company_menu' => esc_html__( 'Footer company menu', 'proelectric' ),
 		)
 	);
 
@@ -175,3 +177,4 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+add_filter('wpcf7_autop_or_not', '__return_false');

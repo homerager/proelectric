@@ -3,6 +3,70 @@ document.addEventListener("DOMContentLoaded", onInit);
 function onInit() {
     initScrollAnimation();
     initScrollAnchors();
+    onInitMobileMenu();
+}
+
+
+function onInitMobileMenu () {
+    const toggle = document.querySelector('.navbar-toggles');
+  
+    if (toggle) {
+      toggle.addEventListener('click', () => {
+        document.body.classList.toggle('header-menu-is-visible');
+      });
+    }
+  
+    const isMobile = () => window.innerWidth <= 1124;
+    const header = document.querySelector(".header");
+    const menuItems = document.querySelectorAll(".menu > li.dropdown-menu-item");
+    
+    if (menuItems) {
+      menuItems.forEach( (menuItem) => {
+        if (isMobile()) {
+           if (menuItem.classList.contains('menu-item-has-children')) {
+            const link = menuItem.querySelector(':scope > a')
+             
+            if (link) {
+              const button = document.createElement('button');
+              button.type = 'button'
+              button.className = 'menu-item-btn'
+  
+              const icon = document.createElement('i')
+              icon.className = 'icon-caret'
+  
+              button.appendChild(icon)
+              link.appendChild(button)
+  
+              button.addEventListener('click', (event) => {
+                event.preventDefault()
+                event.stopPropagation()
+  
+                menuItem.classList.toggle('show')
+              })
+            }
+          }
+  
+          menuItem.addEventListener("click", (event) => {
+            if (event.target.closest('.menu-item-btn')) {
+              return
+            }
+          })
+        } else {
+          menuItem.addEventListener("mouseenter", () => {
+            menuItem.classList.add("show");
+            if (header) {
+              header.classList.add("active")
+            }   
+          });
+          menuItem.addEventListener("mouseleave", () => {
+            menuItem.classList.remove("show");
+            if (header) {
+              header.classList.remove("active")
+            }   
+          })
+        }
+      })
+    }
 }
 
 function initScrollAnimation() {
@@ -189,3 +253,40 @@ function sendConfig() {
 }
 
 updateSummary();
+
+function calcOsbb() {
+  const flats   = parseInt(document.getElementById('c-flats').value)  || 60;
+  const floors  = parseInt(document.getElementById('c-floors').value)  || 9;
+  const hasLift = parseInt(document.getElementById('c-lift').value)    || 1;
+  const tariff  = parseFloat(document.getElementById('c-tariff').value)|| 4.32;
+  const sun     = parseFloat(document.getElementById('c-region').value)|| 4.5;
+
+  // monthly consumption estimate kWh
+  const lighting   = floors * 2 * 0.06 * 12 * 30;        // 2 bulbs per floor, 12h/day
+  const lift       = hasLift ? floors * 25 : 0;           // ~25 kWh/floor/month
+  const pumps      = flats * 0.8;                          // ~0.8 kWh/flat/month
+  const other      = flats * 0.5;
+  const monthlyKwh = lighting + lift + pumps + other;
+
+  // system sizing
+  const powerKw  = +(monthlyKwh / sun / 30 * 1.15).toFixed(1);
+  const panels   = Math.ceil(powerKw * 1000 / 400);
+  const annualGen= Math.round(powerKw * sun * 365 * 0.83);
+  const annualSave = Math.round(Math.min(annualGen, monthlyKwh*12) * tariff);
+  const systemCost = Math.round(powerKw * 30000);
+  const payback  = (systemCost / annualSave).toFixed(1);
+  const perFlat  = Math.round(annualSave / 12 / flats);
+  const y25      = (annualSave * 25).toLocaleString('uk');
+
+  document.getElementById('r-pow').textContent  = powerKw + ' кВт';
+  document.getElementById('r-pnl').textContent  = panels + ' шт.';
+  document.getElementById('r-cost').textContent = '~' + systemCost.toLocaleString('uk') + ' грн';
+  document.getElementById('r-save').textContent = annualSave.toLocaleString('uk') + ' грн/рік';
+  document.getElementById('r-flat').textContent = '~' + perFlat + ' грн/кв/міс';
+  document.getElementById('r-back').textContent = payback + ' років';
+  document.getElementById('r-25').textContent   = '~' + y25 + ' грн';
+
+  const res = document.getElementById('calc-res');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth', block:'nearest'});
+}

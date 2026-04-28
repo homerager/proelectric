@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.jpg'; ?>)">
+    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/electrical-panel-equipment-hero.webp'; ?>)">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-label">Проєктування · Постачання · Монтаж</div>
@@ -350,6 +350,135 @@ get_header();
             </div>
         </div>
     </section>
+    <section class="page-section features-split">
+        <div class="container">
+            <div class="page-section-header wf-animate mb-5">
+                <div class="section-label">Наші переваги</div>
+                <h2 class="section-title">ЧОМУ ОБИРАЮТЬ НАС</h2>
+            </div>
+            <div class="lg-grid-2-columns lg-gap-64 features-inner">
+                <div class="features-visual wf-animate">
+                    <div class="vis-accent"></div>
+                    <!-- panel diagram SVG -->
+                    <svg width="320" height="340" viewBox="0 0 320 340" fill="none" style="position:relative;z-index:1">
+                        <defs>
+                        <linearGradient id="pg1" x1="0" y1="0" x2="1" y2="1">
+                            <stop offset="0%" stop-color="#1a5fa8" stop-opacity=".6"/>
+                            <stop offset="100%" stop-color="#2db551" stop-opacity=".4"/>
+                        </linearGradient>
+                        </defs>
+                        <!-- cabinet outline -->
+                        <rect x="60" y="20" width="200" height="300" rx="4" fill="rgba(255,255,255,0.04)" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
+                        <!-- top section header -->
+                        <rect x="60" y="20" width="200" height="40" rx="4" fill="rgba(26,95,168,0.2)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <text x="160" y="45" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="13" fill="rgba(255,255,255,0.7)" letter-spacing="2">ГРЩ-01</text>
+                        <!-- bus bar -->
+                        <rect x="76" y="72" width="168" height="6" rx="1" fill="url(#pg1)" opacity=".8"/>
+                        <!-- breaker rows -->
+                        <rect x="76" y="86" width="28" height="36" rx="2" fill="rgba(26,95,168,0.3)" stroke="rgba(26,95,168,0.5)" stroke-width="1"/>
+                        <rect x="108" y="86" width="28" height="36" rx="2" fill="rgba(26,95,168,0.3)" stroke="rgba(26,95,168,0.5)" stroke-width="1"/>
+                        <rect x="140" y="86" width="28" height="36" rx="2" fill="rgba(26,95,168,0.3)" stroke="rgba(26,95,168,0.5)" stroke-width="1"/>
+                        <rect x="172" y="86" width="28" height="36" rx="2" fill="rgba(45,181,81,0.25)" stroke="rgba(45,181,81,0.5)" stroke-width="1"/>
+                        <rect x="204" y="86" width="28" height="36" rx="2" fill="rgba(26,95,168,0.3)" stroke="rgba(26,95,168,0.5)" stroke-width="1"/>
+                        <!-- handles -->
+                        <rect x="86" y="96" width="8" height="16" rx="1" fill="rgba(255,255,255,0.35)"/>
+                        <rect x="118" y="96" width="8" height="16" rx="1" fill="rgba(255,255,255,0.35)"/>
+                        <rect x="150" y="96" width="8" height="16" rx="1" fill="rgba(255,255,255,0.35)"/>
+                        <rect x="182" y="96" width="8" height="16" rx="1" fill="rgba(45,181,81,0.8)"/>
+                        <rect x="214" y="96" width="8" height="16" rx="1" fill="rgba(255,255,255,0.35)"/>
+                        <!-- second row -->
+                        <rect x="76" y="132" width="168" height="6" rx="1" fill="rgba(255,255,255,0.08)"/>
+                        <rect x="76" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <rect x="98" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <rect x="120" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <rect x="142" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <rect x="164" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <rect x="186" y="146" width="18" height="28" rx="2" fill="rgba(45,181,81,0.2)" stroke="rgba(45,181,81,0.4)" stroke-width="1"/>
+                        <rect x="208" y="146" width="18" height="28" rx="2" fill="rgba(26,95,168,0.25)" stroke="rgba(26,95,168,0.4)" stroke-width="1"/>
+                        <!-- meter display -->
+                        <rect x="76" y="190" width="80" height="48" rx="2" fill="rgba(0,0,0,0.3)" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
+                        <text x="116" y="213" text-anchor="middle" font-family="monospace" font-size="11" fill="rgba(45,181,81,0.8)">380.4 V</text>
+                        <text x="116" y="229" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(45,181,81,0.5)">148.3 A</text>
+                        <!-- status leds -->
+                        <circle cx="180" cy="202" r="4" fill="#2db551" opacity=".8"/>
+                        <circle cx="195" cy="202" r="4" fill="#2db551" opacity=".8"/>
+                        <circle cx="210" cy="202" r="4" fill="rgba(255,165,0,0.7)"/>
+                        <circle cx="225" cy="202" r="4" fill="rgba(255,255,255,0.2)"/>
+                        <!-- cable entry -->
+                        <rect x="76" y="250" width="168" height="50" rx="2" fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+                        <line x1="100" y1="260" x2="100" y2="295" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                        <line x1="120" y1="260" x2="120" y2="295" stroke="rgba(26,95,168,0.4)" stroke-width="2"/>
+                        <line x1="140" y1="260" x2="140" y2="295" stroke="rgba(45,181,81,0.4)" stroke-width="2"/>
+                        <line x1="160" y1="260" x2="160" y2="295" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                        <line x1="180" y1="260" x2="180" y2="295" stroke="rgba(26,95,168,0.4)" stroke-width="2"/>
+                        <line x1="200" y1="260" x2="200" y2="295" stroke="rgba(45,181,81,0.4)" stroke-width="2"/>
+                        <line x1="220" y1="260" x2="220" y2="295" stroke="rgba(255,255,255,0.15)" stroke-width="2"/>
+                    </svg>
+                </div>
+                <div class="features-list wf-animate">
+                    <div class="feat-item">
+                        <div class="feat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2db551" stroke-width="1.7">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                                <polyline points="14 2 14 8 20 8"/>
+                                <path d="m9 15 2 2 4-4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="feat-title">Власне виробництво — щити під замовлення</div>
+                            <div class="feat-desc">Збираємо щити в власній майстерні за індивідуальними схемами. Від простого квартирного до складного ГРЩ з секціонуванням.</div>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2db551" stroke-width="1.7">
+                                <circle cx="12" cy="12" r="10"/>
+                                <polyline points="12 6 12 12 16 14"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="feat-title">Виготовлення за 14 робочих днів</div>
+                            <div class="feat-desc">Стандартний термін для щита будь-якої складності. Терміновий монтаж — за 5–7 днів за погодженням. Фото-звіт по кожному етапу.</div>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2db551" stroke-width="1.7">
+                                <path d="M12 2L3 7v10l9 5 9-5V7l-9-5z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="feat-title">Офіційні бренди з гарантією</div>
+                            <div class="feat-desc">Офіційний дистриб'ютор ABB, Legrand, Schneider Electric, Siemens. Гарантія від виробника, не від посередника.</div>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2db551" stroke-width="1.7">
+                                <rect x="3" y="3" width="18" height="18" rx="2"/>
+                                <path d="M9 9h6M9 13h4"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="feat-title">Повний пакет документації</div>
+                            <div class="feat-desc">Принципова схема, монтажна схема розташування, специфікація, паспорт щита, протоколи випробувань — все включено.</div>
+                        </div>
+                    </div>
+                    <div class="feat-item">
+                        <div class="feat-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="#2db551" stroke-width="1.7">
+                                <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <div class="feat-title">Монтаж і введення в експлуатацію</div>
+                            <div class="feat-desc">Поставка, монтаж, підключення, перевірка — все виконує одна команда. Гарантія 5 років на обладнання, 3 роки на монтаж.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="page-section" id="projects">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
@@ -394,7 +523,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="page-section faq-section" id="faq">
+    <section class="page-section faq-section page-section-bg2" id="faq">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
                 <div class="section-label">Відповіді на питання</div>

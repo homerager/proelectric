@@ -27,7 +27,7 @@
                     </div>
                     <div>
                         <div class="c-label">Email</div>
-                        <a href="/cdn-cgi/l/email-protection#c7aea9a1a887b7b5a8a2aba2a4b3b5aea4e9a4a8aae9b2a6" class="c-value"><span class="__cf_email__" data-cfemail="b5dcdbd3daf5c5c7dad0d9d0d6c1c7dcd69bd6dad89bc0d4">[email&#160;protected]</span></a>
+                        <a href="mailto:progreselectric@gmail.com" class="c-value"><span class="__cf_email__">progreselectric@gmail.com</span></a>
                     </div>
                 </div>
                 <div class="contact-detail">
@@ -43,18 +43,9 @@
                     </div>
                 </div>
             </div>
-            <form class="contact-form wf-animate" onsubmit="return false;">
-                <div class="form-row">
-                    <div class="form-group"><label>Ім'я *</label><input type="text" placeholder="Ваше ім'я"></div>
-                    <div class="form-group"><label>Прізвище</label><input type="text" placeholder="Ваше прізвище"></div>
-                </div>
-                <div class="form-row">
-                    <div class="form-group"><label>Email *</label><input type="email" placeholder="email@example.com"></div>
-                    <div class="form-group"><label>Телефон *</label><input type="tel" placeholder="+38 0__ ___ __ __"></div>
-                </div>
-                <div class="form-group"><label>Повідомлення</label><textarea rows="4" placeholder="Опишіть ваш проєкт або питання..."></textarea></div>
-                <button type="submit" class="btn btn-primary">Надіслати заявку</button>
-            </form>
+            <div class="contact-form wf-animate">
+                <?php echo do_shortcode('[contact-form-7 id="b9fb7f7" title="Контактна форма"]'); ?>
+            </div>
         </div>
     </div>
 </section>

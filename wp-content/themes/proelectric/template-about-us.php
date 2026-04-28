@@ -292,11 +292,6 @@ get_header();
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
             <div class="section-label">Документи та сертифікати</div>
-                    </svg>
-                </div>
-                <div class="srv-title">Довгострокове партнерство</div>
-                <div class="srv-desc">Договір на 5 років. Постійний моніторинг якості та співпраця з клієнтом. Ми не просто виконуємо роботи, ми створюємо партнерські відносини.</div>
-            </div>
             <h2 class="section-title">ЛІЦЕНЗІЇ ТА СТАНДАРТИ</h2>
             <div class="section-sub">Всі роботи виконуються відповідно до чинного законодавства та міжнародних стандартів якості.</div>
         </div>

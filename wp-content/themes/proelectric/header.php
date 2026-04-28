@@ -18,7 +18,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
+	<meta hid="google-site-verification" name="google-site-verification" content="r8g3Wy30VM5toMXwaYU-dpJhmpN8NUTkyeNx0yFYp-E">
 	<?php wp_head(); ?>
 </head>
 
@@ -56,22 +56,27 @@
 					</div>
 				</a>
 			</div>
-			<div class="page-menu navbar-collapse flex-1">
-				<?php
-					wp_nav_menu(
-						array(
-							'container'      => false,
-							'theme_location' => 'header_menu',
-							'menu_id'        => 'header-menu',
-							'menu_class'     => 'menu'
-						)
-					);
-				?>
+			<div class="header-menu-navbar page-menu navbar-collapse">
+				<nav class="main-nav">
+					<?php
+						wp_nav_menu(
+							array(
+								'container'      => false,
+								'theme_location' => 'header_menu',
+								'menu_id'        => 'header-menu',
+								'menu_class'     => 'menu'
+							)
+						);
+					?>
+				</nav>
 			</div>
-			<div class="nav-cta">
+			<div class="nav-cta d-lg-flex d-none">
 				<a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
 				<a href="#contact" class="btn btn-primary">Консультація</a>
 			</div>
+			<button type="button" class="navbar-toggles" aria-label="toggle">
+				<span class="nav-icons"></span>
+			</button>
 		</div>	
 	</div>
 </header>

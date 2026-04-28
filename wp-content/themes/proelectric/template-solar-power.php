@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.jpg'; ?>)">
+    <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/ses-hero-banner.webp'; ?>)">
         <div class="container">
             <div class="hero-content">
                 <div class="hero-label">Відновлювана енергетика</div>
@@ -102,12 +102,12 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="page-section how" id="process">
+    <section class="page-section page-section-bg-dark how" id="process">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
                 <div class="section-label">Як ми працюємо</div>
                 <h2 class="section-title">ПРОЦЕС ВСТАНОВЛЕННЯ</h2>
-                <p class="section-sub" style="color:rgba(255,255,255,0.5)">Від першого дзвінка до запуску системи — чітко і прозоро, без сюрпризів.</p>
+                <p class="section-sub">Від першого дзвінка до запуску системи — чітко і прозоро, без сюрпризів.</p>
             </div>
             <div class="steps d-grid lg-grid-5-columns wf-animate-grid position-relative">
                 <div class="step wf-animate">
@@ -333,7 +333,7 @@ get_header();
                         </div>
                     </div>
                     <div class="mt-2">
-                        <button class="btn  btn-primary" onclick="calculate()" style="padding:13px 36px;font-size:12px">Розрахувати →</button>
+                        <button class="btn btn-primary" onclick="calculate()">Розрахувати →</button>
                     </div>
                     <div class="calc-result mt-4" id="calc-result">
                         <div class="calc-result-title">Результати розрахунку</div>
@@ -406,7 +406,7 @@ get_header();
             </div>
         </div>
     </section>
-    <section class="page-section faq-section" id="faq">
+    <section class="page-section faq-section page-section-bg2" id="faq">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
                 <div class="section-label">Відповіді на питання</div>

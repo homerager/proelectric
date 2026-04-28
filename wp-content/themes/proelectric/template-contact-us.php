@@ -35,72 +35,10 @@ get_header();
             <h2>Напишіть нам — відповімо протягом 2 годин</h2>
             <p>Розкажіть про ваш об'єкт і задачу. Виїдемо на огляд безкоштовно і підготуємо детальну комерційну пропозицію.</p>
         </div>
-        <form class="contact-form contact-form-bg-fields" id="contact-form" onsubmit="submitForm(event)">
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Ім'я *</label>
-                    <input type="text" id="f-name" placeholder="Ваше ім'я" required>
-                </div>
-                <div class="form-group">
-                    <label>Прізвище</label>
-                    <input type="text" id="f-last" placeholder="Ваше прізвище">
-                </div>
-            </div>
-            <div class="form-row">
-                <div class="form-group">
-                    <label>Телефон *</label>
-                    <input type="tel" id="f-phone" placeholder="+38 0__ ___ __ __" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" id="f-email" placeholder="email@example.com">
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Тип послуги</label>
-                <div class="select-wrap">
-                    <select id="f-service">
-                        <option value="">Оберіть послугу...</option>
-                        <option>Сонячна електростанція (СЕС)</option>
-                        <option>Електромонтажні роботи</option>
-                        <option>Електрощитове обладнання</option>
-                        <option>Системи освітлення</option>
-                        <option>Монтаж кабелів та ЛЕП</option>
-                        <option>Заземлення та блискавкозахист</option>
-                        <option>Пусконалагоджувальні роботи</option>
-                        <option>Інше</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Тип об'єкта</label>
-                <div class="select-wrap">
-                    <select id="f-object">
-                        <option value="">Оберіть тип...</option>
-                        <option>Приватний будинок / котедж</option>
-                        <option>Квартира</option>
-                        <option>ОСББ / Житловий комплекс</option>
-                        <option>Комерційна нерухомість</option>
-                        <option>Промислове підприємство</option>
-                        <option>Агрокомплекс</option>
-                        <option>Інше</option>
-                    </select>
-                </div>
-            </div>
-            <div class="form-group">
-                <label>Повідомлення</label>
-                <textarea id="f-msg" rows="4" placeholder="Опишіть ваш проєкт, орієнтовний обсяг, терміни або будь-які деталі..."></textarea>
-            </div>
-            <div class="form-submit-row">
-                <button type="submit" class="btn btn-primary btn-submit">
-                    Надіслати запит
-                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
-                        <path d="M5 12h14M12 5l7 7-7 7"/>
-                    </svg>
-                </button>
-                <p class="form-note mt-3">Натискаючи кнопку, ви погоджуєтесь з нашою політикою конфіденційності.</p>
-            </div>
-        </form>
+        <div class="contact-form contact-form-bg-fields" id="contact-form">
+            <?php echo do_shortcode('[contact-form-7 id="75a4959" title="Контактна форма (контакти)"]'); ?>
+        </div>
+</div>
     </div>
     <div class="info-side reveal">
         <div class="info-block">
@@ -139,7 +77,7 @@ get_header();
                 </div>
                 <div>
                     <div class="info-text-label">Email</div>
-                    <a href="mailto:info@proelectric.com.ua" class="info-text-val">info@proelectric.com.ua</a>
+                    <a href="mailto:progreselectric@gmail.com" class="info-text-val">progreselectric@gmail.com</a>
                 </div>
             </div>
             <div class="info-row">

@@ -5,15 +5,15 @@
 get_header();
 ?>
 
-<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.jpg'; ?>)">
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.webp'; ?>)">
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">Електромонтажні роботи &amp; СЕС</div>
             <h1 class="hero-title">ВАША<br> <span class="accent-blue">ЕНЕРГЕ</span><span class="accent-green">ТИЧНА</span><br>СВОБОДА</h1>
             <p class="hero-desc">Повний цикл електромонтажних робіт — від проектування до запуску. Сонячні електростанції, промислові об'єкти, приватні будинки.</p>
             <div class="hero-actions btn-group">
-                <a href="#contact" class="btn btn-primary">Отримати пропозицію</a>
-                <a href="#projects" class="btn btn-white">Наші проєкти</a>
+                <a href="#contact" class="btn btn-primary scroll-to-btn">Отримати пропозицію</a>
+                <a href="#projects" class="btn btn-white scroll-to-btn">Наші проєкти</a>
             </div>
         </div>
     </div>
