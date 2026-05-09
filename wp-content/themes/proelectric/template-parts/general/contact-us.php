@@ -39,7 +39,7 @@
                     </div>
                     <div>
                         <div class="c-label">Адреса</div>
-                        <span class="c-value">Україна</span>
+                        <span class="c-value">вул. Навроцького, 33<br>Львів, 79034, Україна</span>
                     </div>
                 </div>
             </div>

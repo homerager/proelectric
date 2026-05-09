@@ -97,15 +97,20 @@ function initScrollAnimation() {
 }
 
 function initScrollAnchors() {
-    document.querySelectorAll('a.scroll-to-btn').forEach(link => {
-        link.addEventListener('click', e => {
-            const targetId = link.getAttribute('href').replace('#', '');
-            const target = document.getElementById(targetId);
-            if (!target) return;
-            e.preventDefault();
-            target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        });
+  document.querySelectorAll('a.scroll-to-btn').forEach(link => {
+    link.addEventListener('click', e => {
+      const targetId = link.getAttribute('href').replace('#', '');
+      const target = document.getElementById(targetId);
+      if (!target) return;
+      e.preventDefault();
+      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
     });
+  });
+}
+
+function switchTab(idx) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+  document.querySelectorAll('.tab-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
 }
 
 function toggleFaq(btn) {
@@ -287,6 +292,89 @@ function calcOsbb() {
   document.getElementById('r-25').textContent   = '~' + y25 + ' грн';
 
   const res = document.getElementById('calc-res');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// Business ROI Calculator
+function calcSesForBusiness() {
+  const kwh    = parseFloat(document.getElementById('b-kwh').value)    || 50000;
+  const tariff = parseFloat(document.getElementById('b-tariff').value) || 4.32;
+  const sun    = parseFloat(document.getElementById('b-region').value) || 4.5;
+  const mode   = parseFloat(document.getElementById('b-mode').value)   || 0.8;
+  const hybrid = parseInt(document.getElementById('b-type').value)     || 0;
+
+  // system sizing
+  const powerKw  = +(kwh / sun / 30 * 1.15).toFixed(0);
+  const panels   = Math.ceil(powerKw * 1000 / 400);
+  const areaM2   = Math.round(panels * 2.1);
+  const annualGen= Math.round(powerKw * sun * 365 * 0.84);
+  const usable   = Math.round(annualGen * mode);
+  const sold     = Math.max(0, annualGen - usable);
+  const saved    = Math.round(usable * tariff);
+  const earned   = Math.round(sold * 1.5); // green tariff ~1.5 grn/kwh
+  const total    = saved + earned;
+  const baseCost = Math.round(powerKw * 28000);
+  const hybAdd   = hybrid ? Math.round(powerKw * 0.5 * 4500) : 0;
+  const cost     = baseCost + hybAdd;
+  const vat      = Math.round(cost * 0.2);
+  const netCost  = cost - vat;
+  const payback  = (netCost / total).toFixed(1);
+
+  const f = n => n.toLocaleString('uk');
+
+  document.getElementById('b-pow').textContent  = powerKw + ' кВт';
+  document.getElementById('b-pnl').textContent  = f(panels) + ' шт.';
+  document.getElementById('b-area').textContent = f(areaM2) + ' м²';
+  document.getElementById('b-cost').textContent = '~' + f(cost) + ' грн';
+  document.getElementById('b-vat').textContent  = '~' + f(vat)  + ' грн';
+  document.getElementById('b-net').textContent  = '~' + f(netCost) + ' грн';
+  document.getElementById('b-save').textContent = f(total) + ' грн/рік';
+  document.getElementById('b-back').textContent = payback + ' р.';
+
+  const res = document.getElementById('calc-res');
+  res.classList.add('show');
+  res.scrollIntoView({behavior:'smooth', block:'nearest'});
+}
+
+// Home calculator
+function calcHome() {
+  const kwh    = parseFloat(document.getElementById('h-kwh').value)    || 350;
+  const tariff = parseFloat(document.getElementById('h-tariff').value) || 4.32;
+  const sun    = parseFloat(document.getElementById('h-region').value) || 4.5;
+  const roof   = parseFloat(document.getElementById('h-roof').value)   || 1.0;
+  const hybrid = parseInt(document.getElementById('h-type').value)     || 0;
+  const green  = parseInt(document.getElementById('h-green').value)    || 1;
+
+  const powerKw  = +(kwh / sun / 30 * 1.18 * (1/roof)).toFixed(1);
+  const panels   = Math.ceil(powerKw * 1000 / 400);
+  const areaM2   = Math.round(panels * 2.0);
+  const akbKwh   = hybrid ? Math.round(powerKw * 1.2) : 0;
+  const annualGen= Math.round(powerKw * sun * 365 * 0.83 * roof);
+  const annualKwh= kwh * 12;
+  const selfUse  = Math.min(annualGen, annualKwh);
+  const surplus  = Math.max(0, annualGen - annualKwh);
+  const saved    = Math.round(selfUse * tariff);
+  const earned   = green ? Math.round(surplus * 1.5) : 0;
+  const total    = saved + earned;
+  const pct      = Math.round(selfUse / annualKwh * 100);
+  const baseCost = Math.round(powerKw * 33000);
+  const akbCost  = hybrid ? Math.round(akbKwh * 4200) : 0;
+  const cost     = baseCost + akbCost;
+  const payback  = (cost / total).toFixed(1);
+
+  const f = n => n.toLocaleString('uk');
+
+  document.getElementById('h-pow').textContent  = powerKw + ' кВт';
+  document.getElementById('h-pnl').textContent  = panels + ' шт.';
+  document.getElementById('h-area').textContent = areaM2 + ' м²';
+  document.getElementById('h-akb').textContent  = hybrid ? akbKwh + ' кВт·год' : 'Не потрібен';
+  document.getElementById('h-cost').textContent = '~' + f(cost) + ' грн';
+  document.getElementById('h-save').textContent = f(total) + ' грн/рік';
+  document.getElementById('h-pct').textContent  = pct + '% від рахунків';
+  document.getElementById('h-back').textContent = payback + ' р.';
+
+  const res = document.getElementById('home-result');
   res.classList.add('show');
   res.scrollIntoView({behavior:'smooth', block:'nearest'});
 }

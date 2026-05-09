@@ -1,0 +1,1003 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>СЕС для бізнесу — Прогрес Електрик</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:#1a5fa8; --blue2:#154d8c; --blue3:#0e3660;
+    --green:#2db551; --green2:#239e43; --green3:#1a7a32;
+    --bg:#f5f7fa; --bg2:#edf1f7; --card:#ffffff;
+    --border:#d4dde8; --dark:#0f1f33;
+    --heading:#0d1a2a; --muted:#6b7f99; --text:#3a4a5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+
+  /* NAV */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px;background:transparent;border-bottom:1px solid rgba(255,255,255,.1);transition:background .35s,backdrop-filter .35s,border-color .35s,box-shadow .35s}
+  nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 20px rgba(26,95,168,.07)}
+  .logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .logo-mark{width:46px;height:46px;flex-shrink:0}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text .brand{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:#fff;transition:color .3s}
+  .logo-text .sub{font-size:8.5px;letter-spacing:2.5px;color:var(--green);text-transform:uppercase;margin-top:3px}
+  nav.scrolled .logo-text .brand{color:var(--heading)}
+  .nav-links{display:flex;gap:36px;list-style:none}
+  .nav-links a{text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .2s}
+  nav.scrolled .nav-links a{color:var(--muted)}
+  .nav-links a:hover,.nav-links a.active{color:var(--green)!important}
+  .nav-cta{display:flex;align-items:center;gap:20px}
+  .nav-phone{font-size:12px;color:rgba(255,255,255,.85);text-decoration:none;letter-spacing:.5px;font-weight:500;transition:color .2s}
+  nav.scrolled .nav-phone{color:var(--text)}
+  .nav-phone:hover{color:var(--green)}
+  .btn-primary{background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;border:none;padding:10px 24px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:opacity .2s,transform .15s;text-decoration:none;display:inline-block}
+  .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+
+  /* HERO */
+  .hero{height:100vh;min-height:680px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;text-align:center}
+  .hero-photo{position:absolute;inset:0;z-index:0;background-color:#060d17;background-image:linear-gradient(150deg,#060d17 0%,#0b1e38 48%,#060f0c 100%);background-size:cover;background-position:center}
+  .hero-photo::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(4,10,20,.38) 0%,rgba(4,10,20,.65) 44%,rgba(4,10,20,.93) 80%,rgba(4,10,20,1) 100%)}
+  .hero-tint{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 55% 55% at 50% 32%,rgba(26,95,168,.22) 0%,transparent 68%),radial-gradient(ellipse 32% 40% at 82% 68%,rgba(45,181,81,.11) 0%,transparent 58%)}
+  /* industrial deco */
+  .hero-deco{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+
+  .hero-content{position:relative;z-index:3;padding:0 5vw;max-width:920px;display:flex;flex-direction:column;align-items:center}
+  .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);animation:fadeUp .7s ease both}
+  .breadcrumb a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+  .breadcrumb a:hover{color:var(--green)}
+  .breadcrumb span{color:rgba(255,255,255,.15)}
+  .hero-label{font-size:11px;letter-spacing:4px;color:var(--green);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px;animation:fadeUp .7s .05s ease both}
+  .hero-label::before,.hero-label::after{content:'';display:block;width:36px;height:1px;background:var(--green)}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(52px,9vw,118px);line-height:.89;color:#fff;letter-spacing:2px;text-shadow:0 2px 40px rgba(0,0,0,.5);animation:fadeUp .7s .1s ease both}
+  .accent-blue{color:var(--blue)} .accent-green{color:var(--green)}
+  .hero-desc{margin-top:24px;font-size:15px;line-height:1.8;color:rgba(255,255,255,.58);max-width:570px;animation:fadeUp .7s .18s ease both}
+  .hero-actions{margin-top:40px;display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .26s ease both}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;padding:12px 28px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.09)}
+  .hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:3;display:flex;border-top:1px solid rgba(255,255,255,.08);background:rgba(4,10,20,.78);backdrop-filter:blur(12px);animation:fadeUp .7s .36s ease both}
+  .hsi{flex:1;padding:28px 32px;border-right:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:16px}
+  .hsi:last-child{border-right:none}
+  .stat-num{font-family:'Bebas Neue',sans-serif;font-size:46px;color:#fff;line-height:1;white-space:nowrap}
+  .stat-num .u{color:var(--green);font-size:32px}
+  .stat-lbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.38);line-height:1.6}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+  /* SHARED */
+  section{padding:96px 5vw}
+  .sl{font-size:10px;letter-spacing:4px;color:var(--green);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .sl::before{content:'';display:block;width:28px;height:1px;background:var(--green)}
+  .st{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,60px);color:var(--heading);line-height:1;letter-spacing:.5px}
+  .ss{font-size:14px;line-height:1.85;color:var(--muted);max-width:580px;margin-top:16px}
+
+  /* SEGMENTS — 3-col tab switcher */
+  .segments-nav{display:flex;gap:2px;background:var(--border);margin-top:48px}
+  .seg-tab{
+    flex:1;padding:18px 20px;background:var(--card);
+    font-size:11px;letter-spacing:1.5px;text-transform:uppercase;font-weight:600;
+    color:var(--muted);cursor:pointer;text-align:center;border:none;font-family:'Montserrat',sans-serif;
+    transition:background .2s,color .2s;
+    border-bottom:3px solid transparent;
+  }
+  .seg-tab.active{color:var(--blue);border-bottom-color:var(--blue);background:#fafcff}
+  .seg-tab:hover:not(.active){background:var(--bg2);color:var(--text)}
+  .seg-panels{margin-top:2px;background:var(--border)}
+  .seg-panel{display:none;background:var(--card)}
+  .seg-panel.active{display:grid;grid-template-columns:1fr 1fr;gap:0}
+  .seg-info{padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+  .seg-title{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--heading);letter-spacing:.5px;margin-bottom:16px}
+  .seg-desc{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:24px}
+  .seg-kpis{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:4px}
+  .seg-kpi{background:var(--bg2);padding:20px;border-left:3px solid var(--green)}
+  .seg-kpi-num{font-family:'Bebas Neue',sans-serif;font-size:36px;color:var(--blue);line-height:1}
+  .seg-kpi-lbl{font-size:11px;letter-spacing:.5px;text-transform:uppercase;color:var(--muted);margin-top:4px}
+  .seg-visual{min-height:380px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .seg-visual.sv1{background:linear-gradient(135deg,#0e3660,#1a5fa8)}
+  .seg-visual.sv2{background:linear-gradient(135deg,#1a5fa8,#1a7a32)}
+  .seg-visual.sv3{background:linear-gradient(135deg,#0a2845,#239e43)}
+  .seg-visual.sv4{background:linear-gradient(135deg,#154d8c,#2db551)}
+  .seg-visual::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.08) 1px,transparent 1px);background-size:22px 22px}
+
+  /* BENEFITS — icon grid */
+  .benefits-section{background:var(--dark)}
+  .benefits-section .st{color:#fff}
+  .benefits-section .ss{color:rgba(255,255,255,.4)}
+  .ben-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.04);margin-top:56px}
+  .ben-card{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:40px 32px;transition:background .2s,border-color .25s}
+  .ben-card:hover{background:rgba(26,95,168,.1);border-color:rgba(26,95,168,.3)}
+  .ben-icon{color:var(--green);margin-bottom:20px}
+  .ben-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:#fff;letter-spacing:.5px;margin-bottom:10px}
+  .ben-desc{font-size:13px;line-height:1.8;color:rgba(255,255,255,.4)}
+
+  /* ROI SECTION — split with large numbers */
+  .roi-section{background:var(--bg2)}
+  .roi-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--border);margin-top:56px}
+  .roi-left{background:var(--card);padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+  .roi-right{background:var(--dark);padding:56px 48px;display:flex;flex-direction:column;gap:0}
+
+  .roi-title{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--heading);letter-spacing:.5px;margin-bottom:16px}
+  .roi-desc{font-size:13px;line-height:1.9;color:var(--muted);margin-bottom:32px}
+
+  /* interactive ROI calc */
+  .roi-calc-field{display:flex;flex-direction:column;gap:7px;margin-bottom:18px}
+  .roi-calc-field label{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:var(--muted)}
+  .roi-calc-field input,.roi-calc-field select{background:var(--bg);border:1px solid var(--border);color:var(--heading);padding:12px 14px;font-family:'Montserrat',sans-serif;font-size:13px;outline:none;transition:border-color .2s;appearance:none}
+  .roi-calc-field input:focus,.roi-calc-field select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(26,95,168,.08)}
+  .roi-r2{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .roi-calc-btn{width:100%;padding:13px;background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;border:none;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:opacity .2s;margin-top:6px}
+  .roi-calc-btn:hover{opacity:.88}
+
+  .roi-metrics{display:flex;flex-direction:column;gap:0}
+  .rm{padding:28px 0;border-bottom:1px solid rgba(255,255,255,.07)}
+  .rm:last-child{border-bottom:none}
+  .rm-num{font-family:'Bebas Neue',sans-serif;font-size:52px;line-height:1;margin-bottom:6px}
+  .rm-num.blue{color:var(--blue)} .rm-num.green{color:var(--green)}
+  .rm-label{font-size:12px;font-weight:600;color:#fff;margin-bottom:4px}
+  .rm-desc{font-size:12px;line-height:1.7;color:rgba(255,255,255,.35)}
+
+  .roi-result-strip{margin-top:20px;background:rgba(45,181,81,.08);border:1px solid rgba(45,181,81,.25);padding:16px 20px;display:none}
+  .roi-result-strip.show{display:flex;justify-content:space-between;align-items:center;animation:fadeUp .4s ease both}
+  .rrs-k{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:rgba(255,255,255,.35)}
+  .rrs-v{font-family:'Bebas Neue',sans-serif;font-size:28px;color:var(--green);line-height:1}
+  .roi-rows{margin-top:20px;display:none;flex-direction:column;gap:0}
+  .roi-rows.show{display:flex;animation:fadeUp .4s ease both}
+  .rr{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid rgba(255,255,255,.06);font-size:12px}
+  .rr:last-child{border-bottom:none}
+  .rr-k{color:rgba(255,255,255,.35)} .rr-v{color:#fff;font-weight:600} .rr-v.g{color:var(--green)}
+
+  /* PROCESS — horizontal numbered */
+  .process-inner{display:grid;grid-template-columns:repeat(6,1fr);gap:2px;background:var(--border);margin-top:56px}
+  .pc{background:var(--card);padding:36px 28px;position:relative;transition:background .2s,transform .3s,box-shadow .3s}
+  .pc:hover{background:#fafcff;transform:translateY(-4px);box-shadow:0 12px 32px rgba(26,95,168,.1);z-index:2}
+  .pc-num{font-family:'Bebas Neue',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px}
+  .pc-title{font-size:13px;font-weight:700;color:var(--heading);margin-bottom:8px}
+  .pc-desc{font-size:12px;line-height:1.7;color:var(--muted)}
+
+  /* SECTORS ICONS STRIP */
+  .sectors-strip{background:var(--card);padding:56px 5vw;border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
+  .sectors-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:36px}
+  .sectors-row{display:flex;justify-content:center;gap:0;border:1px solid var(--border)}
+  .sector-cell{flex:1;padding:32px 16px;border-right:1px solid var(--border);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;transition:background .2s}
+  .sector-cell:last-child{border-right:none}
+  .sector-cell:hover{background:var(--bg2)}
+  .sector-icon{font-size:32px}
+  .sector-name{font-size:11px;letter-spacing:1px;text-transform:uppercase;color:var(--muted);text-align:center;line-height:1.4}
+
+  /* PROJECTS */
+  .projects-strip{display:grid;grid-template-columns:1.8fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;margin-top:56px}
+  .pj{background:var(--card);border:1px solid var(--border);padding:40px 36px;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(26,95,168,.05);transition:box-shadow .3s,transform .3s}
+  .pj:hover{box-shadow:0 10px 36px rgba(26,95,168,.12);transform:translateY(-3px)}
+  .pj.feat{grid-row:span 2;background:linear-gradient(140deg,#eef4ff,#eaf6ef);border-color:rgba(26,95,168,.14)}
+  .pj::after{content:'';position:absolute;top:0;right:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--blue),var(--green));opacity:0;transition:opacity .3s}
+  .pj:hover::after{opacity:1}
+  .pj-tag{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--green);border:1px solid rgba(45,181,81,.4);padding:4px 10px;margin-bottom:18px}
+  .pj-title{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--heading);margin-bottom:12px;letter-spacing:.3px;line-height:1.05}
+  .pj.feat .pj-title{font-size:38px}
+  .pj-desc{font-size:13px;line-height:1.8;color:var(--muted)}
+  .pj-meta{margin-top:18px;display:flex;gap:16px;flex-wrap:wrap}
+  .pj-mi{font-size:10px;letter-spacing:.5px;color:var(--muted);display:flex;align-items:center;gap:5px}
+  .pj-big{font-family:'Bebas Neue',sans-serif;font-size:64px;color:rgba(26,95,168,.07);line-height:1;position:absolute;bottom:-6px;right:12px}
+
+  /* FAQ */
+  .faq-section{background:var(--bg2)}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+  .faq-item{background:var(--card);border:1px solid var(--border);overflow:hidden}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;cursor:pointer;user-select:none;font-size:13px;font-weight:600;color:var(--heading);line-height:1.45;transition:background .2s}
+  .faq-q:hover{background:var(--bg2)}
+  .faq-ico{flex-shrink:0;width:22px;height:22px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .3s,background .2s}
+  .faq-item.open .faq-q{background:var(--bg2)}
+  .faq-item.open .faq-ico{background:var(--blue);border-color:var(--blue);transform:rotate(45deg)}
+  .faq-item.open .faq-ico svg{color:#fff}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a-inner{padding:0 24px 22px;font-size:13px;line-height:1.85;color:var(--muted)}
+  .faq-item.open .faq-a{max-height:300px}
+
+  /* CTA */
+  .cta-band{background:linear-gradient(110deg,var(--blue3) 0%,var(--blue) 50%,var(--green3) 100%);padding:80px 5vw;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;overflow:hidden}
+  .cta-band::after{content:'';position:absolute;right:0;top:0;bottom:0;width:45%;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M200 0 L100 150 H160 L80 300 L280 120 H200Z' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;pointer-events:none}
+  .cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,52px);color:#fff;letter-spacing:1px;line-height:1.05}
+  .cta-sub{font-size:14px;color:rgba(255,255,255,.65);margin-top:10px;max-width:480px;line-height:1.7}
+  .cta-btns{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0}
+  .btn-white{background:#fff;color:var(--blue);border:none;padding:14px 32px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:opacity .2s;text-decoration:none;display:inline-block;white-space:nowrap}
+  .btn-white:hover{opacity:.88}
+  .btn-ol-white{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.4);padding:14px 32px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block;white-space:nowrap}
+  .btn-ol-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+  /* FOOTER */
+  footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:60px 5vw 36px}
+  .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .footer-brand p{font-size:12px;line-height:1.85;color:rgba(255,255,255,.4);margin-top:20px;max-width:260px}
+  .footer-col-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:20px}
+  .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+  .footer-links a:hover{color:var(--green)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:11px;color:rgba(255,255,255,.25)}
+  footer .logo-text .brand{color:#fff!important}
+
+  /* REVEAL */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* MOBILE */
+  @media(max-width:960px){
+    .nav-links{display:none}
+    .seg-panel.active{grid-template-columns:1fr}
+    .seg-visual{min-height:200px;order:-1}
+    .ben-grid{grid-template-columns:1fr}
+    .roi-inner{grid-template-columns:1fr}
+    .process-inner{grid-template-columns:1fr 1fr}
+    .sectors-row{flex-wrap:wrap}
+    .sector-cell{flex:1 1 30%;border-bottom:1px solid var(--border)}
+    .sector-cell:nth-child(3n){border-right:none}
+    .projects-strip{grid-template-columns:1fr}
+    .pj.feat{grid-row:auto}
+    .faq-grid{grid-template-columns:1fr}
+    .footer-top{grid-template-columns:1fr 1fr}
+    .cta-band{flex-direction:column}
+    .hero-stats{flex-wrap:wrap}
+    .hsi{flex:1 1 45%;padding:20px 20px}
+    .roi-r2{grid-template-columns:1fr}
+  }
+  @media(max-width:600px){
+    .footer-top{grid-template-columns:1fr}
+    .process-inner{grid-template-columns:1fr}
+    .seg-kpis{grid-template-columns:1fr}
+    .sectors-row{border:none;flex-direction:column;gap:2px;background:var(--border)}
+    .sector-cell{border-right:none;border-bottom:none;flex:none}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="logo">
+    <svg class="logo-mark" viewBox="0 0 46 46" fill="none">
+      <defs>
+        <linearGradient id="nlg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a5fa8"/><stop offset="100%" stop-color="#2db551"/></linearGradient>
+        <clipPath id="ncc"><circle cx="23" cy="23" r="21"/></clipPath>
+      </defs>
+      <circle cx="23" cy="23" r="22.5" fill="none" stroke="url(#nlg)" stroke-width="1" opacity=".4"/>
+      <circle cx="23" cy="23" r="21" fill="url(#nlg)"/>
+      <path d="M14 24 L23 14 L32 24 L30 24 L30 33 L25 33 L25 27 L21 27 L21 33 L16 33 L16 24Z" fill="rgba(255,255,255,0.15)" clip-path="url(#ncc)"/>
+      <path d="M25.5 10 L17.5 24.5 H23.5 L20 36 L32 20 H25.5Z" fill="white"/>
+    </svg>
+    <div class="logo-text">
+      <span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
+      <span class="sub">Енергетичні рішення</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="index.html#services" class="active">Послуги</a></li>
+    <li><a href="proelectric-solar.html">Сонячні СЕС</a></li>
+    <li><a href="proelectric-electro.html">Електромонтаж</a></li>
+    <li><a href="proelectric-blog-post.html">Блог</a></li>
+    <li><a href="proelectric-contacts.html">Контакти</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
+    <a href="#contact" class="btn-primary">Розрахунок для бізнесу</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo"></div>
+
+  <!-- industrial facility deco -->
+  <div class="hero-deco">
+    <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
+      <defs>
+        <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
+          <stop offset="0%" stop-color="#1a5fa8" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#2db551" stop-opacity=".2"/>
+        </linearGradient>
+        <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%" stop-color="#f5c518" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
+        </linearGradient>
+      </defs>
+      <!-- sun -->
+      <circle cx="700" cy="80" r="100" fill="url(#hg2)" opacity=".4"/>
+      <!-- factory / warehouse silhouette -->
+      <rect x="100" y="500" width="1200" height="400" fill="rgba(255,255,255,.025)" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
+      <rect x="200" y="420" width="300" height="480" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <rect x="900" y="440" width="250" height="460" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
+      <!-- chimney / tower -->
+      <rect x="480" y="280" width="30" height="220" fill="rgba(255,255,255,.04)"/>
+      <rect x="890" y="310" width="30" height="190" fill="rgba(255,255,255,.04)"/>
+      <!-- rooftop solar panels array -->
+      <rect x="120" y="490" width="1160" height="14" rx="2" fill="rgba(26,95,168,.18)" stroke="rgba(26,95,168,.35)" stroke-width="1"/>
+      <line x1="240" y1="490" x2="240" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="360" y1="490" x2="360" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="480" y1="490" x2="480" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="600" y1="490" x2="600" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="720" y1="490" x2="720" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="840" y1="490" x2="840" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="960" y1="490" x2="960" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="1080" y1="490" x2="1080" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <line x1="1200" y1="490" x2="1200" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+      <!-- second panel row -->
+      <rect x="120" y="470" width="1160" height="14" rx="2" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
+      <!-- energy lines -->
+      <path d="M700 80 Q700 300 700 490" stroke="rgba(245,197,24,.15)" stroke-width="2" fill="none" stroke-dasharray="8 8"/>
+      <path d="M400 80 Q400 300 350 490" stroke="rgba(245,197,24,.1)" stroke-width="1.5" fill="none" stroke-dasharray="6 8"/>
+      <path d="M1000 80 Q1000 300 1050 490" stroke="rgba(245,197,24,.1)" stroke-width="1.5" fill="none" stroke-dasharray="6 8"/>
+      <!-- ground energy flows -->
+      <path d="M700 504 Q700 600 500 650" stroke="rgba(45,181,81,.2)" stroke-width="1.5" fill="none" stroke-dasharray="5 6"/>
+      <path d="M700 504 Q700 600 900 650" stroke="rgba(45,181,81,.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 6"/>
+    </svg>
+  </div>
+
+  <div class="hero-tint"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Головна</a><span>›</span>
+      <a href="proelectric-solar.html">Сонячні СЕС</a><span>›</span>
+      <span style="color:rgba(255,255,255,.7)">СЕС для бізнесу</span>
+    </div>
+    <div class="hero-label">Промислова сонячна енергетика</div>
+    <h1 class="hero-title">
+      <span class="accent-blue">СЕС</span> ДЛЯ<br><span class="accent-green">БІЗНЕСУ</span>
+    </h1>
+    <p class="hero-desc">Знижуємо витрати на електроенергію промислових підприємств, агрокомплексів, складів і комерційних об'єктів на 50–80%. Від 50 кВт до 10 МВт «під ключ».</p>
+    <div class="hero-actions">
+      <a href="#roi" class="btn-primary" style="padding:13px 32px;font-size:12px">Розрахувати ROI</a>
+      <a href="#segments" class="btn-ghost">Сегменти бізнесу</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hsi"><div><div class="stat-num">50–80<span class="u">%</span></div></div><div class="stat-lbl">Зниження витрат<br>на електроенергію</div></div>
+    <div class="hsi"><div><div class="stat-num">3–5<span class="u"> р.</span></div></div><div class="stat-lbl">Термін<br>окупності</div></div>
+    <div class="hsi"><div><div class="stat-num">10<span class="u"> МВт</span></div></div><div class="stat-lbl">Максимальна<br>потужність</div></div>
+    <div class="hsi"><div><div class="stat-num">20<span class="u">%</span></div></div><div class="stat-lbl">Повернення<br>ПДВ</div></div>
+  </div>
+</section>
+
+
+<!-- SEGMENTS -->
+<section id="segments">
+  <div class="reveal">
+    <div class="sl">Для якого бізнесу</div>
+    <h2 class="st">СЕГМЕНТИ БІЗНЕСУ</h2>
+    <p class="ss">Підбираємо рішення під специфіку кожного бізнесу — потужність, схему підключення та фінансову модель.</p>
+  </div>
+
+  <div class="segments-nav reveal">
+    <button class="seg-tab active" onclick="switchSeg(0)">Виробництво</button>
+    <button class="seg-tab" onclick="switchSeg(1)">Агросектор</button>
+    <button class="seg-tab" onclick="switchSeg(2)">Комерційна нерухомість</button>
+    <button class="seg-tab" onclick="switchSeg(3)">Склади та логістика</button>
+  </div>
+
+  <div class="seg-panels reveal">
+
+    <!-- Panel 0: Manufacturing -->
+    <div class="seg-panel active">
+      <div class="seg-info">
+        <div class="seg-title">Промислові підприємства</div>
+        <p class="seg-desc">Заводи, фабрики та виробничі підприємства — найбільші споживачі електроенергії. СЕС 200 кВт – 10 МВт суттєво знижує собівартість продукції та підвищує конкурентоспроможність.</p>
+        <div class="seg-kpis">
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">10 МВт</div>
+            <div class="seg-kpi-lbl">Максимальна потужність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">3–4 р.</div>
+            <div class="seg-kpi-lbl">Окупність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">80%</div>
+            <div class="seg-kpi-lbl">Покриття в сезон</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">20%</div>
+            <div class="seg-kpi-lbl">ПДВ повернення</div>
+          </div>
+        </div>
+      </div>
+      <div class="seg-visual sv1">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
+          <rect x="20" y="100" width="160" height="80" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.25)" stroke-width="1.5" rx="2"/>
+          <rect x="40" y="60" width="50" height="120" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <rect x="110" y="70" width="50" height="110" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <rect x="20" y="88" width="160" height="14" rx="1" fill="rgba(26,95,168,.35)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
+          <line x1="57" y1="88" x2="57" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
+          <line x1="96" y1="88" x2="96" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
+          <line x1="135" y1="88" x2="135" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
+          <rect x="40" y="50" width="8" height="50" fill="rgba(255,255,255,.08)"/>
+          <rect x="110" y="55" width="8" height="45" fill="rgba(255,255,255,.08)"/>
+          <circle cx="100" cy="30" r="22" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
+          <path d="M100 14 L96 26 H101 L96 46 L110 24 H104 Z" fill="rgba(245,197,24,.8)"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 1: Agriculture -->
+    <div class="seg-panel">
+      <div class="seg-info">
+        <div class="seg-title">Агросектор</div>
+        <p class="seg-desc">Фермерські господарства, зернові елеватори, молочно-товарні ферми та теплиці споживають величезну кількість електроенергії на зрошення, вентиляцію та заморожування. СЕС — найкращий захист від зростання тарифів.</p>
+        <div class="seg-kpis">
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">50–5 МВт</div>
+            <div class="seg-kpi-lbl">Діапазон потужностей</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">3–5 р.</div>
+            <div class="seg-kpi-lbl">Окупність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">100%</div>
+            <div class="seg-kpi-lbl">Покриття вдень</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">5× </div>
+            <div class="seg-kpi-lbl">ROI за 25 років</div>
+          </div>
+        </div>
+      </div>
+      <div class="seg-visual sv2">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
+          <ellipse cx="100" cy="150" rx="80" ry="15" fill="rgba(45,181,81,.15)"/>
+          <rect x="60" y="100" width="80" height="50" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.2)" stroke-width="1" rx="2"/>
+          <path d="M50 100 L100 65 L150 100" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <rect x="62" y="86" width="76" height="14" rx="1" fill="rgba(45,181,81,.25)" stroke="rgba(45,181,81,.45)" stroke-width="1"/>
+          <line x1="85" y1="86" x2="85" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
+          <line x1="108" y1="86" x2="108" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
+          <line x1="131" y1="86" x2="131" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
+          <circle cx="100" cy="30" r="25" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
+          <path d="M100 12 L95 26 H101 L96 48 L112 22 H104.5 Z" fill="rgba(245,197,24,.85)"/>
+          <path d="M100 100 Q100 120 80 135" stroke="rgba(45,181,81,.3)" stroke-width="1.5" fill="none" stroke-dasharray="4 4"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 2: Commercial real estate -->
+    <div class="seg-panel">
+      <div class="seg-info">
+        <div class="seg-title">Комерційна нерухомість</div>
+        <p class="seg-desc">Торгові центри, офісні будівлі, готелі та ресторани несуть значні витрати на кондиціонування та освітлення вдень — саме коли сонячна система генерує максимум. Ідеальний збіг профілів споживання і генерації.</p>
+        <div class="seg-kpis">
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">50–500 кВт</div>
+            <div class="seg-kpi-lbl">Типова потужність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">4–6 р.</div>
+            <div class="seg-kpi-lbl">Окупність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">70%</div>
+            <div class="seg-kpi-lbl">Зниження витрат</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">ESG</div>
+            <div class="seg-kpi-lbl">Зелений сертифікат</div>
+          </div>
+        </div>
+      </div>
+      <div class="seg-visual sv3">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
+          <rect x="50" y="60" width="100" height="120" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1.5" rx="2"/>
+          <rect x="60" y="72" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="82" y="72" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="104" y="72" width="18" height="14" rx="1" fill="rgba(45,181,81,.2)"/>
+          <rect x="126" y="72" width="14" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="60" y="94" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="82" y="94" width="18" height="14" rx="1" fill="rgba(26,95,168,.2)"/>
+          <rect x="104" y="94" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="126" y="94" width="14" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="50" y="48" width="100" height="14" rx="1" fill="rgba(239,195,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1"/>
+          <line x1="75" y1="48" x2="75" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
+          <line x1="100" y1="48" x2="100" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
+          <line x1="125" y1="48" x2="125" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
+          <circle cx="100" cy="25" r="16" fill="rgba(245,197,24,.25)" stroke="rgba(245,197,24,.4)" stroke-width="1"/>
+          <path d="M100 13 L97 22 H101 L97.5 32 L107 18 H102 Z" fill="rgba(245,197,24,.9)"/>
+        </svg>
+      </div>
+    </div>
+
+    <!-- Panel 3: Warehouses -->
+    <div class="seg-panel">
+      <div class="seg-info">
+        <div class="seg-title">Склади та логістика</div>
+        <p class="seg-desc">Логістичні центри та склади мають великі плоскі дахи з мінімальним затіненням — ідеальні для масштабних СЕС. Низьке споживання відносно площі дозволяє продавати надлишки за зеленим тарифом.</p>
+        <div class="seg-kpis">
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">100 кВт–2 МВт</div>
+            <div class="seg-kpi-lbl">Типова потужність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">3–4 р.</div>
+            <div class="seg-kpi-lbl">Окупність</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">1 м²=100 Вт</div>
+            <div class="seg-kpi-lbl">Встановлена питома</div>
+          </div>
+          <div class="seg-kpi">
+            <div class="seg-kpi-num">+15%</div>
+            <div class="seg-kpi-lbl">Вартість нерухомості</div>
+          </div>
+        </div>
+      </div>
+      <div class="seg-visual sv4">
+        <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
+          <rect x="20" y="110" width="160" height="60" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
+          <path d="M15 110 L100 70 L185 110" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+          <!-- large panel array on flat roof -->
+          <rect x="22" y="97" width="156" height="12" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.45)" stroke-width="1"/>
+          <line x1="55" y1="97" x2="55" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+          <line x1="89" y1="97" x2="89" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+          <line x1="123" y1="97" x2="123" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+          <line x1="157" y1="97" x2="157" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
+          <rect x="22" y="83" width="156" height="12" rx="1" fill="rgba(26,95,168,.18)" stroke="rgba(26,95,168,.35)" stroke-width="1"/>
+          <rect x="75" y="130" width="50" height="40" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
+          <circle cx="100" cy="40" r="22" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.35)" stroke-width="1.5"/>
+          <path d="M100 24 L96 36 H101 L97 52 L111 30 H104 Z" fill="rgba(245,197,24,.8)"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- BENEFITS -->
+<section class="benefits-section">
+  <div class="reveal">
+    <div class="sl" style="color:var(--green)">Переваги для бізнесу</div>
+    <h2 class="st">ЧОМУ СЕС — ЦЕ ВИГІДНО</h2>
+    <p class="ss">Сонячна електростанція — це не витрата, а інвестиція з прогнозованим і вимірюваним доходом.</p>
+  </div>
+  <div class="ben-grid">
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 2L2 7v10l10 5 10-5V7l-10-5z"/><polyline points="2 7 12 12 22 7"/><line x1="12" y1="12" x2="12" y2="22"/></svg>
+      </div>
+      <div class="ben-title">Зниження собівартості продукції</div>
+      <p class="ben-desc">Електроенергія — стаття витрат, яку СЕС перетворює на постійну статтю заощаджень. Для виробничих підприємств це пряме зниження собівартості і зростання маржі.</p>
+    </div>
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 7V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v2"/><line x1="12" y1="12" x2="12" y2="16"/><line x1="10" y1="14" x2="14" y2="14"/></svg>
+      </div>
+      <div class="ben-title">Повернення ПДВ 20%</div>
+      <p class="ben-desc">Підприємства на загальній системі оподаткування повертають 20% ПДВ з вартості обладнання та монтажних робіт. Це суттєво скорочує фактичні інвестиції.</p>
+    </div>
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+      </div>
+      <div class="ben-title">Захист від зростання тарифів</div>
+      <p class="ben-desc">Вартість електроенергії зростає щороку. Власна СЕС фіксує «вартість» електрики на рівні амортизаційних відрахувань — а це значно нижче, ніж ринковий тариф.</p>
+    </div>
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      </div>
+      <div class="ben-title">Продаж надлишків — «зелений тариф»</div>
+      <p class="ben-desc">Надлишкова електроенергія в непрацюючий час продається в мережу за «зеленим тарифом». Додатковий дохід, який скорочує термін окупності.</p>
+    </div>
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+      </div>
+      <div class="ben-title">ESG та зелена репутація</div>
+      <p class="ben-desc">Власна генерація — це сертифікат «зеленого підприємства», що відкриває доступ до міжнародних ринків, партнерств та інвестицій від ESG-орієнтованих фондів.</p>
+    </div>
+
+    <div class="ben-card reveal">
+      <div class="ben-icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+      </div>
+      <div class="ben-title">Резервне живлення при відключеннях</div>
+      <p class="ben-desc">Гібридна СЕС з акумуляторами забезпечує безперебійну роботу критичних виробничих ліній навіть під час планових та аварійних відключень мережі.</p>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- ROI SECTION -->
+<section class="roi-section" id="roi">
+  <div class="reveal">
+    <div class="sl">Фінансова модель</div>
+    <h2 class="st">РОЗРАХУНОК ROI</h2>
+    <p class="ss">Введіть параметри вашого підприємства — отримайте орієнтовну фінансову модель.</p>
+  </div>
+
+  <div class="roi-inner reveal">
+    <!-- Calculator -->
+    <div class="roi-left">
+      <div class="roi-title">Калькулятор окупності для бізнесу</div>
+      <p class="roi-desc">Вкажіть поточне споживання та отримайте розрахунок потужності СЕС, терміну окупності і прибутку за 25 років.</p>
+
+      <div class="roi-calc-field">
+        <label>Щомісячне споживання електроенергії (кВт·год)</label>
+        <input type="number" id="b-kwh" value="50000" min="1000" placeholder="50 000"/>
+      </div>
+      <div class="roi-r2">
+        <div class="roi-calc-field">
+          <label>Тариф (грн/кВт·год)</label>
+          <input type="number" id="b-tariff" value="4.32" step="0.01" min="1"/>
+        </div>
+        <div class="roi-calc-field">
+          <label>Регіон</label>
+          <select id="b-region">
+            <option value="4.8">Південь</option>
+            <option value="4.5" selected>Центр</option>
+            <option value="4.2">Захід</option>
+            <option value="4.0">Північ</option>
+          </select>
+        </div>
+      </div>
+      <div class="roi-r2">
+        <div class="roi-calc-field">
+          <label>Режим роботи</label>
+          <select id="b-mode">
+            <option value="1.0">Цілодобово</option>
+            <option value="0.8" selected>Денна зміна</option>
+            <option value="0.5">Неповна зміна</option>
+          </select>
+        </div>
+        <div class="roi-calc-field">
+          <label>Тип системи</label>
+          <select id="b-type">
+            <option value="0">Мережева (без АКБ)</option>
+            <option value="1">Гібридна (з АКБ)</option>
+          </select>
+        </div>
+      </div>
+      <button class="roi-calc-btn" onclick="calcBiz()">Розрахувати ROI →</button>
+
+      <div class="roi-rows" id="roi-rows">
+        <div class="rr"><span class="rr-k">Рекомендована потужність</span><span class="rr-v" id="b-pow">—</span></div>
+        <div class="rr"><span class="rr-k">Кількість панелей</span><span class="rr-v" id="b-pnl">—</span></div>
+        <div class="rr"><span class="rr-k">Необхідна площа даху</span><span class="rr-v" id="b-area">—</span></div>
+        <div class="rr"><span class="rr-k">Орієнтовна вартість СЕС</span><span class="rr-v" id="b-cost">—</span></div>
+        <div class="rr"><span class="rr-k">Повернення ПДВ (20%)</span><span class="rr-v g" id="b-vat">—</span></div>
+        <div class="rr"><span class="rr-k">Чисті інвестиції після ПДВ</span><span class="rr-v" id="b-net">—</span></div>
+        <div class="rr"><span class="rr-k">Річна економія/дохід</span><span class="rr-v g" id="b-save">—</span></div>
+      </div>
+      <div class="roi-result-strip" id="roi-strip">
+        <span class="rrs-k">Термін окупності</span>
+        <span class="rrs-v" id="b-back">—</span>
+      </div>
+      <p id="roi-note" style="display:none;font-size:11px;color:var(--muted);line-height:1.65;margin-top:12px">* Орієнтовний розрахунок. Для точної фінансової моделі — безкоштовна консультація інженера.</p>
+    </div>
+
+    <!-- Static metrics -->
+    <div class="roi-right">
+      <div class="roi-metrics">
+        <div class="rm">
+          <div class="rm-num blue">3–5</div>
+          <div class="rm-label">Років — типова окупність для бізнесу</div>
+          <div class="rm-desc">Для підприємств з денним споживанням понад 50 000 кВт·год/міс окупність скорочується до 3 років завдяки поверненню ПДВ та зеленому тарифу.</div>
+        </div>
+        <div class="rm">
+          <div class="rm-num green">5×</div>
+          <div class="rm-label">Повернення інвестицій за 25 років</div>
+          <div class="rm-desc">Після окупності система генерує чистий прибуток. За 25 років загальна економія в 5 разів перевищує початкові інвестиції при поточних тарифах.</div>
+        </div>
+        <div class="rm">
+          <div class="rm-num blue">20%</div>
+          <div class="rm-label">ПДВ до повернення</div>
+          <div class="rm-desc">Підприємства — платники ПДВ повертають 20% від вартості обладнання та монтажу. Для системи 2 МВт це до 3 млн грн реальної економії.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section id="process">
+  <div class="reveal">
+    <div class="sl">Як ми реалізуємо</div>
+    <h2 class="st">ПРОЦЕС РОБОТИ</h2>
+    <p class="ss">Від першого контакту до введення в експлуатацію — повний супровід без зайвих кроків.</p>
+  </div>
+  <div class="process-inner">
+    <div class="pc reveal">
+      <div class="pc-num">01</div>
+      <div class="pc-title">Технічний аудит</div>
+      <p class="pc-desc">Виїзд інженера, аналіз споживання, огляд даху та технічної інфраструктури підприємства</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">02</div>
+      <div class="pc-title">Фінансова модель</div>
+      <p class="pc-desc">Детальний розрахунок ROI, окупності, ПДВ, зеленого тарифу та порівняння варіантів фінансування</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">03</div>
+      <div class="pc-title">Проект та ТЗ</div>
+      <p class="pc-desc">Розробка технічного проекту, специфікації обладнання, погодження з мережевою компанією</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">04</div>
+      <div class="pc-title">Монтаж</div>
+      <p class="pc-desc">Встановлення панелей, інверторів, захисного обладнання. Без зупинки виробництва</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">05</div>
+      <div class="pc-title">Підключення</div>
+      <p class="pc-desc">Підключення до мережі підприємства та зовнішньої мережі, налаштування моніторингу</p>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">06</div>
+      <div class="pc-title">Здача та сервіс</div>
+      <p class="pc-desc">Пуск, навчання персоналу, оформлення зеленого тарифу, гарантійний супровід 5 років</p>
+    </div>
+  </div>
+</section>
+
+
+<!-- SECTORS STRIP -->
+<div class="sectors-strip reveal">
+  <div class="sectors-label">Ми вже реалізували проекти для цих секторів</div>
+  <div class="sectors-row">
+    <div class="sector-cell"><div class="sector-icon">🏭</div><div class="sector-name">Промисло&shy;вість</div></div>
+    <div class="sector-cell"><div class="sector-icon">🌾</div><div class="sector-name">Агро&shy;комплекси</div></div>
+    <div class="sector-cell"><div class="sector-icon">🏢</div><div class="sector-name">Офісні центри</div></div>
+    <div class="sector-cell"><div class="sector-icon">🛒</div><div class="sector-name">Торгові центри</div></div>
+    <div class="sector-cell"><div class="sector-icon">🏨</div><div class="sector-name">Готелі та HoReCa</div></div>
+    <div class="sector-cell"><div class="sector-icon">📦</div><div class="sector-name">Склади та логістика</div></div>
+    <div class="sector-cell"><div class="sector-icon">⚕️</div><div class="sector-name">Медичні заклади</div></div>
+    <div class="sector-cell"><div class="sector-icon">🎓</div><div class="sector-name">Освіта та держсектор</div></div>
+  </div>
+</div>
+
+
+<!-- PROJECTS -->
+<section style="background:var(--bg2)" id="projects">
+  <div class="reveal">
+    <div class="sl">Реалізовані об'єкти</div>
+    <h2 class="st">НАШІ ПРОЄКТИ</h2>
+    <p class="ss">Від 50 кВт для малого бізнесу до 10 МВт промислового масштабу.</p>
+  </div>
+  <div class="projects-strip">
+    <div class="pj feat reveal">
+      <div class="pj-tag">Промислова СЕС</div>
+      <div class="pj-title">Агрокомплекс «Зернопром» — 2 МВт</div>
+      <p class="pj-desc" style="max-width:360px">Мережева СЕС 2 МВт для зернового елеватора. 4 400 панелей LONGi Hi-MO6, 4 інвертори Huawei SUN2000 500K. Річна генерація 2 480 МВт·год. Економія 10.7 млн грн/рік.</p>
+      <div class="pj-meta">
+        <span class="pj-mi"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/></svg>2023</span>
+        <span class="pj-mi">Окупність 3.2 р.</span>
+        <span class="pj-mi">ПДВ повернуто</span>
+      </div>
+      <div class="pj-big">2 МВт</div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Виробництво</div>
+      <div class="pj-title">Завод металоконструкцій — 500 кВт</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Гібридна СЕС 500 кВт + АКБ 200 кВт·год. Безперебійна робота під час відключень.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2022 / Дніпро</span></div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Комерція</div>
+      <div class="pj-title">Торговий центр — 300 кВт</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Покриття 65% денного споживання кондиціонування та освітлення ТЦ. Окупність 4.5 р.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2023 / Київ</span></div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Логістика</div>
+      <div class="pj-title">Логістичний центр — 1.2 МВт</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Плоский дах 8 000 м². Зелений тариф — продаж надлишків 40% генерації. Сертифікат LEED.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2024 / Одеса</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="reveal">
+    <div class="sl">Запитання та відповіді</div>
+    <h2 class="st">ЧАСТІ ЗАПИТАННЯ</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Як повернути ПДВ з вартості СЕС?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Підприємства — платники ПДВ включають ПДВ з вартості обладнання та монтажних робіт до податкового кредиту і повертають його у звичайному порядку через декларацію. Ми надаємо всі необхідні первинні документи та накладні для бухгалтерії.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Чи можна встановити СЕС у кредит або лізинг?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Так. Ми співпрацюємо з банками (Укргазбанк, ПУМБ, OTP Bank), що надають пільгові кредити на сонячну енергетику. Також доступний фінансовий лізинг — щомісячні лізингові платежі перекриваються щомісячною економією від першого місяця.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Яка мінімальна потужність для бізнесу?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Для бізнесу розглядаємо проекти від 30 кВт. Але для вигідної окупності рекомендуємо від 50 кВт. Для підприємств з потужністю понад 500 кВт потрібне погодження технічних умов підключення з обленерго.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Чи зупиниться виробництво під час монтажу?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Монтаж панелей і кабелів не зупиняє виробництво. Єдина коротка перерва — підключення до головного щита (2–4 години, планується у неробочий час або вихідні). Узгоджуємо графік з технічним керівником підприємства заздалегідь.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Чи потрібна окрема підстанція для великих систем?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Для систем до 500 кВт достатньо існуючого введення підприємства. Для потужностей 500 кВт – 10 МВт необхідне підключення через трансформатор 6–10 кВ та погодження технічних умов з обленерго. Ми виконуємо всі ці роботи.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Що входить у «зелений тариф» для бізнесу?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Зелений тариф для юридичних осіб передбачає продаж всієї або надлишкової генерації за фіксованою ціною, що залежить від потужності установки та дати підключення. Станом на 2025 рік тариф для комерційних СЕС — 0.05–0.15 €/кВт·год залежно від умов договору.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<div class="cta-band reveal" id="contact">
+  <div>
+    <div class="cta-title">ГОТОВІ ЗНИЗИТИ ВИТРАТИ<br>ВАШОГО БІЗНЕСУ?</div>
+    <p class="cta-sub">Безкоштовна консультація інженера та фінансова модель з повним розрахунком ROI, ПДВ і зеленого тарифу.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="proelectric-contacts.html" class="btn-white">Замовити консультацію</a>
+    <a href="tel:+380630607600" class="btn-ol-white">+38 063 060 76 00</a>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" viewBox="0 0 46 46" fill="none">
+          <defs>
+            <linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a5fa8"/><stop offset="100%" stop-color="#2db551"/></linearGradient>
+            <clipPath id="fcc"><circle cx="23" cy="23" r="21"/></clipPath>
+          </defs>
+          <circle cx="23" cy="23" r="22.5" fill="none" stroke="url(#flg)" stroke-width="1" opacity=".3"/>
+          <circle cx="23" cy="23" r="21" fill="url(#flg)"/>
+          <path d="M14 24 L23 14 L32 24 L30 24 L30 33 L25 33 L25 27 L21 27 L21 33 L16 33 L16 24Z" fill="rgba(255,255,255,0.15)" clip-path="url(#fcc)"/>
+          <path d="M25.5 10 L17.5 24.5 H23.5 L20 36 L32 20 H25.5Z" fill="white"/>
+        </svg>
+        <div class="logo-text">
+          <span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
+          <span class="sub">Енергетичні рішення</span>
+        </div>
+      </a>
+      <p>Ваша енергетична свобода та безпека. Електромонтажні роботи та сонячні електростанції будь-якого масштабу.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Послуги</div>
+      <ul class="footer-links">
+        <li><a href="proelectric-solar.html">Сонячні електростанції</a></li>
+        <li><a href="proelectric-osbb.html">СЕС для ОСББ</a></li>
+        <li><a href="#">СЕС для бізнесу</a></li>
+        <li><a href="proelectric-electro.html">Електромонтажні роботи</a></li>
+        <li><a href="proelectric-switchgear.html">Електрощитове обладнання</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Компанія</div>
+      <ul class="footer-links">
+        <li><a href="proelectric-about.html">Про нас</a></li>
+        <li><a href="#">Проєкти</a></li>
+        <li><a href="proelectric-blog-post.html">Блог</a></li>
+        <li><a href="#">Партнери</a></li>
+        <li><a href="proelectric-contacts.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Контакти</div>
+      <ul class="footer-links">
+        <li><a href="tel:+380630607600">+38 063 060 76 00</a></li>
+        <li><a href="tel:+380684526450">+38 068 452 64 50</a></li>
+        <li><a href="mailto:info@proelectric.com.ua">info@proelectric.com.ua</a></li>
+        <li><a href="#">вул. Городоцька, 359, Львів</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 ТОВ Прогрес Електрик. Всі права захищені.</span>
+    <span>Розроблено з ⚡ в Україні</span>
+  </div>
+</footer>
+
+<script>
+  // Nav
+  const nav = document.getElementById('main-nav');
+  const upNav = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', upNav, {passive:true}); upNav();
+
+  // Reveal
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)} });
+  }, {threshold:0, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  // Stagger
+  ['ben-grid','projects-strip','faq-grid','process-inner'].forEach(cls => {
+    document.querySelectorAll('.'+cls).forEach(g => {
+      [...g.children].forEach((c,i) => c.style.transitionDelay = `${i*.07}s`);
+    });
+  });
+
+  // Segment tabs
+  function switchSeg(idx) {
+    document.querySelectorAll('.seg-tab').forEach((t,i) => t.classList.toggle('active', i===idx));
+    document.querySelectorAll('.seg-panel').forEach((p,i) => p.classList.toggle('active', i===idx));
+  }
+
+  // FAQ
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  }
+
+  // Business ROI Calculator
+  function calcBiz() {
+    const kwh    = parseFloat(document.getElementById('b-kwh').value)    || 50000;
+    const tariff = parseFloat(document.getElementById('b-tariff').value) || 4.32;
+    const sun    = parseFloat(document.getElementById('b-region').value) || 4.5;
+    const mode   = parseFloat(document.getElementById('b-mode').value)   || 0.8;
+    const hybrid = parseInt(document.getElementById('b-type').value)     || 0;
+
+    // system sizing
+    const powerKw  = +(kwh / sun / 30 * 1.15).toFixed(0);
+    const panels   = Math.ceil(powerKw * 1000 / 400);
+    const areaM2   = Math.round(panels * 2.1);
+    const annualGen= Math.round(powerKw * sun * 365 * 0.84);
+    const usable   = Math.round(annualGen * mode);
+    const sold     = Math.max(0, annualGen - usable);
+    const saved    = Math.round(usable * tariff);
+    const earned   = Math.round(sold * 1.5); // green tariff ~1.5 grn/kwh
+    const total    = saved + earned;
+    const baseCost = Math.round(powerKw * 28000);
+    const hybAdd   = hybrid ? Math.round(powerKw * 0.5 * 4500) : 0;
+    const cost     = baseCost + hybAdd;
+    const vat      = Math.round(cost * 0.2);
+    const netCost  = cost - vat;
+    const payback  = (netCost / total).toFixed(1);
+
+    const f = n => n.toLocaleString('uk');
+
+    document.getElementById('b-pow').textContent  = powerKw + ' кВт';
+    document.getElementById('b-pnl').textContent  = f(panels) + ' шт.';
+    document.getElementById('b-area').textContent = f(areaM2) + ' м²';
+    document.getElementById('b-cost').textContent = '~' + f(cost) + ' грн';
+    document.getElementById('b-vat').textContent  = '~' + f(vat)  + ' грн';
+    document.getElementById('b-net').textContent  = '~' + f(netCost) + ' грн';
+    document.getElementById('b-save').textContent = f(total) + ' грн/рік';
+    document.getElementById('b-back').textContent = payback + ' р.';
+
+    document.getElementById('roi-rows').classList.add('show');
+    document.getElementById('roi-strip').classList.add('show');
+    document.getElementById('roi-note').style.display = 'block';
+    document.getElementById('roi-strip').scrollIntoView({behavior:'smooth',block:'nearest'});
+  }
+</script>
+</body>
+</html>

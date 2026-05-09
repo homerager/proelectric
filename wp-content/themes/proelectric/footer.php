@@ -17,7 +17,7 @@
 			<div class="footer-row">
 				<div class="footer-col">
 					<div class="footer-brand">
-						<a href="#" class="logo">
+						<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
 							<svg class="logo-mark" viewBox="0 0 46 46" fill="none">
 								<defs>
 									<linearGradient id="flg" x1="0" y1="0" x2="1" y2="1">

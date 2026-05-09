@@ -103,7 +103,7 @@ get_header();
                 </div>
                 <div>
                     <div class="info-text-label">Офіс</div>
-                    <span class="info-text-val small">вул. Городоцька, 359<br>Львів, 79000, Україна</span>
+                    <span class="info-text-val small">вул. Навроцького, 33<br>Львів, 79034, Україна</span>
                 </div>
             </div>
         </div>
@@ -127,12 +127,12 @@ get_header();
         <div class="info-block">
             <div class="info-label">Соціальні мережі</div>
             <div class="social-row">
-                <a href="#" class="social-btn" title="Facebook">
+                <a href="https://www.facebook.com/progreselectric" class="social-btn" title="Facebook">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                         <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
                     </svg>
                 </a>
-                <a href="#" class="social-btn" title="Instagram">
+                <a href="https://www.instagram.com/progres_electric/" class="social-btn" title="Instagram">
                     <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
                         <rect x="2" y="2" width="20" height="20" rx="5"/>
                         <circle cx="12" cy="12" r="4"/>

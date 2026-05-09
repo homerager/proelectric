@@ -72,7 +72,7 @@
 			</div>
 			<div class="nav-cta d-lg-flex d-none">
 				<a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
-				<a href="#contact" class="btn btn-primary">Консультація</a>
+				<a href="#contact" class="btn btn-primary scroll-to-btn">Консультація</a>
 			</div>
 			<button type="button" class="navbar-toggles" aria-label="toggle">
 				<span class="nav-icons"></span>

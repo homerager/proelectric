@@ -377,5 +377,6 @@ get_header();
         </div>
     </div>
 </section> 
+<?php get_template_part('template-parts/general/contact-us'); ?>
 <?php
 get_footer();
