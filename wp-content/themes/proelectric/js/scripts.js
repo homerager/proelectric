@@ -1,99 +1,103 @@
 document.addEventListener("DOMContentLoaded", onInit);
 
 function onInit() {
-    initScrollAnimation();
-    initScrollAnchors();
-    onInitMobileMenu();
+  initScrollAnimation();
+  initScrollAnchors();
+  onInitMobileMenu();
 }
+
+const header = document.getElementById('header');
+const upNav = () => header.classList.toggle('scrolled', window.scrollY > 60);
+window.addEventListener('scroll', upNav, { passive:true }); upNav();
 
 
 function onInitMobileMenu () {
-    const toggle = document.querySelector('.navbar-toggles');
+  const toggle = document.querySelector('.navbar-toggles');
+
+  if (toggle) {
+    toggle.addEventListener('click', () => {
+      document.body.classList.toggle('header-menu-is-visible');
+    });
+  }
+
+  const isMobile = () => window.innerWidth <= 1124;
+  const header = document.querySelector(".header");
+  const menuItems = document.querySelectorAll(".menu > li.dropdown-menu-item");
   
-    if (toggle) {
-      toggle.addEventListener('click', () => {
-        document.body.classList.toggle('header-menu-is-visible');
-      });
-    }
-  
-    const isMobile = () => window.innerWidth <= 1124;
-    const header = document.querySelector(".header");
-    const menuItems = document.querySelectorAll(".menu > li.dropdown-menu-item");
-    
-    if (menuItems) {
-      menuItems.forEach( (menuItem) => {
-        if (isMobile()) {
-           if (menuItem.classList.contains('menu-item-has-children')) {
-            const link = menuItem.querySelector(':scope > a')
-             
-            if (link) {
-              const button = document.createElement('button');
-              button.type = 'button'
-              button.className = 'menu-item-btn'
-  
-              const icon = document.createElement('i')
-              icon.className = 'icon-caret'
-  
-              button.appendChild(icon)
-              link.appendChild(button)
-  
-              button.addEventListener('click', (event) => {
-                event.preventDefault()
-                event.stopPropagation()
-  
-                menuItem.classList.toggle('show')
-              })
-            }
+  if (menuItems) {
+    menuItems.forEach( (menuItem) => {
+      if (isMobile()) {
+          if (menuItem.classList.contains('menu-item-has-children')) {
+          const link = menuItem.querySelector(':scope > a')
+            
+          if (link) {
+            const button = document.createElement('button');
+            button.type = 'button'
+            button.className = 'menu-item-btn'
+
+            const icon = document.createElement('i')
+            icon.className = 'icon-caret'
+
+            button.appendChild(icon)
+            link.appendChild(button)
+
+            button.addEventListener('click', (event) => {
+              event.preventDefault()
+              event.stopPropagation()
+
+              menuItem.classList.toggle('show')
+            })
           }
-  
-          menuItem.addEventListener("click", (event) => {
-            if (event.target.closest('.menu-item-btn')) {
-              return
-            }
-          })
-        } else {
-          menuItem.addEventListener("mouseenter", () => {
-            menuItem.classList.add("show");
-            if (header) {
-              header.classList.add("active")
-            }   
-          });
-          menuItem.addEventListener("mouseleave", () => {
-            menuItem.classList.remove("show");
-            if (header) {
-              header.classList.remove("active")
-            }   
-          })
         }
-      })
-    }
+
+        menuItem.addEventListener("click", (event) => {
+          if (event.target.closest('.menu-item-btn')) {
+            return
+          }
+        })
+      } else {
+        menuItem.addEventListener("mouseenter", () => {
+          menuItem.classList.add("show");
+          if (header) {
+            header.classList.add("active")
+          }   
+        });
+        menuItem.addEventListener("mouseleave", () => {
+          menuItem.classList.remove("show");
+          if (header) {
+            header.classList.remove("active")
+          }   
+        })
+      }
+    })
+  }
 }
 
 function initScrollAnimation() {
-    const items = document.querySelectorAll('.wf-animate');
+  const items = document.querySelectorAll('.wf-animate');
 
-    if (!items?.length) {
-      return
-    }
+  if (!items?.length) {
+    return
+  }
 
-    // Scroll reveal — low threshold + rootMargin so elements trigger early
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(e => {
-            if (e.isIntersecting) {
-                e.target.classList.add('visible');
-                observer.unobserve(e.target);
-            }
-        });
-    }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
-
-    items.forEach(el => observer.observe(el));
-
-    // Stagger children inside grids
-    document.querySelectorAll('.wf-animate-grid').forEach(grid => {
-        [...grid.children].forEach((child, i) => {
-            child.style.transitionDelay = `${i * 0.07}s`;
-        });
+  // Scroll reveal — low threshold + rootMargin so elements trigger early
+  const observer = new IntersectionObserver(entries => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
     });
+  }, { threshold: 0, rootMargin: '0px 0px -60px 0px' });
+
+  items.forEach(el => observer.observe(el));
+
+  // Stagger children inside grids
+  document.querySelectorAll('.wf-animate-grid').forEach(grid => {
+    [...grid.children].forEach((child, i) => {
+      child.style.transitionDelay = `${i * 0.07}s`;
+    });
+  });
 }
 
 function initScrollAnchors() {
