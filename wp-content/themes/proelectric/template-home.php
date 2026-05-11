@@ -47,7 +47,7 @@ get_header();
             <h2 class="section-title">НАШІ ПОСЛУГИ</h2>
         </div>
         <div class="wf-animate-grid d-grid md-grid-3-columns services-grid">
-            <div class="service-card white-card white-card-bottom-border-hover wf-animate">
+            <a href="<?= home_url('/sonyachni-elektrostancziyi/'); ?>" class="service-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="service-num">01</div>
                 <svg class="service-icon" viewBox="0 0 54 54" fill="none">
                     <defs>
@@ -61,8 +61,8 @@ get_header();
                 </svg>
                 <div class="service-title item-title">Сонячні Електростанції</div>
                 <p class="service-desc item-description">Проектування та монтаж СЕС для ОСББ, бізнесу та приватних потреб. Підключення до мережі, «зелений тариф».</p>
-            </div>
-            <div class="service-card white-card white-card-bottom-border-hover wf-animate">
+            </a>
+            <a href="<?= home_url('/elektromontazhni-roboty/'); ?>" class="service-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="service-num">02</div>
                 <svg class="service-icon" viewBox="0 0 54 54" fill="none">
                     <defs>
@@ -78,8 +78,8 @@ get_header();
                 </svg>
                 <div class="service-title item-title">Електромонтажні Роботи</div>
                 <p class="service-desc item-description">Монтаж кабелів, систем освітлення, розподільних щитів. Промислові та цивільні об'єкти будь-якого масштабу.</p>
-            </div>
-            <div class="service-card white-card white-card-bottom-border-hover wf-animate">
+            </a>
+            <a href="<?= home_url('/elektroshhytove-obladnannya/'); ?>" class="service-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="service-num">03</div>
                 <svg class="service-icon" viewBox="0 0 54 54" fill="none">
                     <defs>
@@ -95,7 +95,7 @@ get_header();
                 </svg>
                 <div class="service-title item-title">Електрощитове Обладнання</div>
                 <p class="service-desc item-description">Постачання та монтаж щитового обладнання, автоматики, систем захисту та управління електромережею.</p>
-            </div>
+            </a>
         </div>
     </div>
 </section>
