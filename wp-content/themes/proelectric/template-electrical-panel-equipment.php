@@ -11,8 +11,8 @@ get_header();
             <h1 class="hero-title"><span class="accent-blue">ЕЛЕКТРО</span><span class="accent-green">ЩИТОВЕ</span><br>ОБЛАДНАННЯ</h1>
             <p class="hero-desc">Повний цикл від розробки схеми до встановлення — розподільні щити, шафи управління, АВР та системи автоматики для будь-яких об'єктів.</p>
             <div class="hero-actions btn-group">
-                <a href="#contact" class="btn btn-primary">Замовити розрахунок</a>
-                <a href="#products" class="btn btn-white scroll-to-btn">Типи щитів</a>
+                <a href="#configurator" class="btn btn-primary scroll-to-btn">Замовити розрахунок</a>
+                <a href="#products" class="btn btn-white scroll-to-btn scroll-to-btn">Типи щитів</a>
             </div>
         </div>
     </div>
@@ -345,7 +345,7 @@ get_header();
                     <span class="sum-total-val" id="sv-price">12 000 грн</span>
                 </div>
                 <p class="config-note">* Розрахунок орієнтовний. Точна ціна — після погодження технічного завдання з інженером.</p>
-                <button class="btn-config btn btn-primary" onclick="sendConfig()">Отримати точний розрахунок →</button>
+                <button class="btn-config btn btn-primary w-full-btn" onclick="sendConfig()">Отримати розрахунок →</button>
             </div>
         </div>
     </div>

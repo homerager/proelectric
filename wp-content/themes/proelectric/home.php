@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The template for displaying the blog posts index page (home / posts page)
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
@@ -8,9 +8,6 @@
  */
 
 get_header();
-
-$current_category = get_queried_object();
-$archive_desc  = get_the_archive_description();
 ?>
 
 <section class="hero blog-hero">
@@ -23,12 +20,13 @@ $archive_desc  = get_the_archive_description();
                 <span>Блог</span>
             </div>
             <div class="hero-label">Корисна інформація</div>
-            <h1 class="hero-title"><?php echo $current_category->name; ?></h1>
-            <?php if ( $archive_desc ) : ?>
-            <p class="hero-desc"><?= wp_strip_all_tags( $archive_desc ) ?></p>
-            <?php else : ?>
+            <h1 class="hero-title">
+                <?php
+                $posts_page_id = get_option('page_for_posts');
+                echo $posts_page_id ? esc_html( get_the_title( $posts_page_id ) ) : 'БЛОГ';
+                ?>
+            </h1>
             <p class="hero-desc">Статті та новини про електромонтаж, сонячну енергетику та інжиніринг</p>
-            <?php endif; ?>
         </div>
     </div>
 </section>
