@@ -27,37 +27,39 @@
 
 <header class="header" id="header">
 	<div class="container">
-		<div class="header-row">
-			<div class="site-logo">
-				<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
-					<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="logo">
-					<div class="logo-text">
-						<span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
-						<span class="sub">Енергетичні рішення</span>
-					</div>
-				</a>
-			</div>
-			<div class="header-menu-navbar page-menu navbar-collapse">
-				<nav class="main-nav">
-					<?php
-						wp_nav_menu(
-							array(
-								'container'      => false,
-								'theme_location' => 'header_menu',
-								'menu_id'        => 'header-menu',
-								'menu_class'     => 'menu'
-							)
-						);
-					?>
-				</nav>
-			</div>
-			<div class="nav-cta d-lg-flex d-none">
-				<a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
-				<a href="#contact" class="btn btn-primary scroll-to-btn">Консультація</a>
-			</div>
-			<button type="button" class="navbar-toggles" aria-label="toggle">
-				<span class="nav-icons"></span>
-			</button>
-		</div>	
+		<div class="header-inner">
+			<div class="header-row">
+				<div class="site-logo">
+					<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
+						<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="logo">
+						<div class="logo-text">
+							<span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
+							<span class="sub">Енергетичні рішення</span>
+						</div>
+					</a>
+				</div>
+				<div class="header-menu-navbar page-menu navbar-collapse">
+					<nav class="main-nav">
+						<?php
+							wp_nav_menu(
+								array(
+									'container'      => false,
+									'theme_location' => 'header_menu',
+									'menu_id'        => 'header-menu',
+									'menu_class'     => 'menu'
+								)
+							);
+						?>
+					</nav>
+				</div>
+				<div class="nav-cta d-lg-flex d-none">
+					<a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
+					<a href="#contact" class="btn btn-primary scroll-to-btn">Консультація</a>
+				</div>
+				<button type="button" class="navbar-toggles" aria-label="toggle">
+					<span class="nav-icons"></span>
+				</button>
+			</div>	
+		</div>
 	</div>
 </header>
