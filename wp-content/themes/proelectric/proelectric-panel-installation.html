@@ -1,0 +1,927 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Монтаж електрощитів — Прогрес Електрик</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --blue:#1a5fa8; --blue2:#154d8c; --blue3:#0e3660;
+    --green:#2db551; --green2:#239e43; --green3:#1a7a32;
+    --orange:#e85c1a; --orange2:#c44d14;
+    --bg:#f5f7fa; --bg2:#edf1f7; --card:#ffffff;
+    --border:#d4dde8; --dark:#0f1f33;
+    --heading:#0d1a2a; --muted:#6b7f99; --text:#3a4a5c;
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--bg);color:var(--text);font-family:'Montserrat',sans-serif;font-weight:300;overflow-x:hidden}
+
+  /* ── NAV ── */
+  nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;height:72px;background:transparent;border-bottom:1px solid rgba(255,255,255,.1);transition:background .35s,backdrop-filter .35s,border-color .35s,box-shadow .35s}
+  nav.scrolled{background:rgba(255,255,255,.96);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);box-shadow:0 1px 20px rgba(26,95,168,.07)}
+  .logo{display:flex;align-items:center;gap:14px;text-decoration:none}
+  .logo-mark{width:46px;height:46px;flex-shrink:0}
+  .logo-text{display:flex;flex-direction:column;line-height:1}
+  .logo-text .brand{font-family:'Bebas Neue',sans-serif;font-size:19px;letter-spacing:3px;color:#fff;transition:color .3s}
+  .logo-text .sub{font-size:8.5px;letter-spacing:2.5px;color:var(--green);text-transform:uppercase;margin-top:3px}
+  nav.scrolled .logo-text .brand{color:var(--heading)}
+  .nav-links{display:flex;gap:36px;list-style:none}
+  .nav-links a{text-decoration:none;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.75);transition:color .2s}
+  nav.scrolled .nav-links a{color:var(--muted)}
+  .nav-links a:hover,.nav-links a.active{color:var(--green)!important}
+  .nav-cta{display:flex;align-items:center;gap:20px}
+  .nav-phone{font-size:12px;color:rgba(255,255,255,.85);text-decoration:none;letter-spacing:.5px;font-weight:500;transition:color .2s}
+  nav.scrolled .nav-phone{color:var(--text)}
+  .nav-phone:hover{color:var(--green)}
+  .btn-primary{background:linear-gradient(135deg,var(--blue),var(--green));color:#fff;border:none;padding:10px 24px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:opacity .2s,transform .15s;text-decoration:none;display:inline-block}
+  .btn-primary:hover{opacity:.88;transform:translateY(-1px)}
+
+  /* ── HERO ── */
+  .hero{height:100vh;min-height:680px;position:relative;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden;text-align:center}
+  .hero-photo{position:absolute;inset:0;z-index:0;background-color:#060b10;background-image:linear-gradient(155deg,#060b10 0%,#0c1a28 50%,#060c18 100%)}
+  .hero-photo::after{content:'';position:absolute;inset:0;z-index:1;background:linear-gradient(to bottom,rgba(4,9,16,.38) 0%,rgba(4,9,16,.62) 45%,rgba(4,9,16,.93) 82%,rgba(4,9,16,1) 100%)}
+  .hero-tint{position:absolute;inset:0;z-index:2;background:radial-gradient(ellipse 55% 50% at 50% 30%,rgba(26,95,168,.2) 0%,transparent 65%),radial-gradient(ellipse 30% 40% at 85% 65%,rgba(45,181,81,.07) 0%,transparent 55%)}
+  .hero-deco{position:absolute;inset:0;z-index:1;overflow:hidden;pointer-events:none}
+  .hero-content{position:relative;z-index:3;padding:0 5vw;max-width:900px;display:flex;flex-direction:column;align-items:center}
+  .breadcrumb{display:flex;align-items:center;gap:8px;margin-bottom:28px;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.35);animation:fadeUp .7s ease both}
+  .breadcrumb a{color:rgba(255,255,255,.35);text-decoration:none;transition:color .2s}
+  .breadcrumb a:hover{color:var(--blue)}
+  .breadcrumb span{color:rgba(255,255,255,.15)}
+  .hero-label{font-size:11px;letter-spacing:4px;color:var(--blue);text-transform:uppercase;margin-bottom:22px;display:flex;align-items:center;gap:12px;animation:fadeUp .7s .05s ease both}
+  .hero-label::before,.hero-label::after{content:'';display:block;width:36px;height:1px;background:var(--blue)}
+  .hero-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(50px,8.5vw,114px);line-height:.88;color:#fff;letter-spacing:2px;text-shadow:0 2px 40px rgba(0,0,0,.5);animation:fadeUp .7s .1s ease both}
+  .accent-blue{color:var(--blue)} .accent-green{color:var(--green)} .accent-orange{color:var(--orange)}
+  .hero-desc{margin-top:24px;font-size:15px;line-height:1.8;color:rgba(255,255,255,.58);max-width:560px;animation:fadeUp .7s .18s ease both}
+  .hero-actions{margin-top:40px;display:flex;align-items:center;gap:16px;justify-content:center;flex-wrap:wrap;animation:fadeUp .7s .26s ease both}
+  .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,.4);color:#fff;padding:12px 28px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block}
+  .btn-ghost:hover{border-color:#fff;background:rgba(255,255,255,.09)}
+  .hero-stats{position:absolute;bottom:0;left:0;right:0;z-index:3;display:flex;border-top:1px solid rgba(255,255,255,.08);background:rgba(4,9,16,.78);backdrop-filter:blur(12px);animation:fadeUp .7s .36s ease both}
+  .hsi{flex:1;padding:28px 32px;border-right:1px solid rgba(255,255,255,.07);display:flex;align-items:center;gap:16px}
+  .hsi:last-child{border-right:none}
+  .snum{font-family:'Bebas Neue',sans-serif;font-size:46px;color:#fff;line-height:1;white-space:nowrap}
+  .snum .u{color:var(--blue);font-size:32px}
+  .slbl{font-size:10px;letter-spacing:1.5px;text-transform:uppercase;color:rgba(255,255,255,.38);line-height:1.6}
+  @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+
+  /* ── SHARED ── */
+  section{padding:96px 5vw}
+  .sl{font-size:10px;letter-spacing:4px;color:var(--green);text-transform:uppercase;margin-bottom:16px;display:flex;align-items:center;gap:12px}
+  .sl::before{content:'';display:block;width:28px;height:1px;background:var(--green)}
+  .sl.orange{color:var(--orange)} .sl.orange::before{background:var(--orange)}
+  .sl.blue{color:var(--blue)} .sl.blue::before{background:var(--blue)}
+  .st{font-family:'Bebas Neue',sans-serif;font-size:clamp(32px,5vw,60px);color:var(--heading);line-height:1;letter-spacing:.5px}
+  .ss{font-size:14px;line-height:1.85;color:var(--muted);max-width:580px;margin-top:16px}
+
+  /* ── PANEL TYPES 3-COL ── */
+  .ptypes-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:var(--border);margin-top:56px}
+  .pt-card{background:var(--card);overflow:hidden;position:relative;transition:transform .3s,box-shadow .3s}
+  .pt-card:hover{transform:translateY(-5px);box-shadow:0 18px 48px rgba(26,95,168,.12);z-index:2}
+  .pt-card::after{content:'';position:absolute;bottom:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--blue),var(--green));transform:scaleX(0);transform-origin:left;transition:transform .35s}
+  .pt-card:hover::after{transform:scaleX(1)}
+  .pt-thumb{height:200px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
+  .pt-thumb.pt1{background:linear-gradient(135deg,#060e06,#0e2010)}
+  .pt-thumb.pt2{background:linear-gradient(135deg,#060b10,#0e2040)}
+  .pt-thumb.pt3{background:linear-gradient(135deg,#08060e,#1a0820)}
+  .pt-thumb.pt4{background:linear-gradient(135deg,#060b10,#0e1a2a)}
+  .pt-thumb.pt5{background:linear-gradient(135deg,#060c0a,#0e1e14)}
+  .pt-thumb.pt6{background:linear-gradient(135deg,#080810,#10102a)}
+  .pt-thumb::before{content:'';position:absolute;inset:0;background-image:radial-gradient(circle,rgba(255,255,255,.06) 1px,transparent 1px);background-size:18px 18px}
+  .pt-badge{position:absolute;top:14px;left:14px;font-size:9px;letter-spacing:2px;text-transform:uppercase;background:rgba(255,255,255,.1);color:#fff;border:1px solid rgba(255,255,255,.18);padding:4px 10px;backdrop-filter:blur(6px)}
+  .pt-body{padding:32px 28px}
+  .pt-title{font-family:'Bebas Neue',sans-serif;font-size:22px;color:var(--heading);letter-spacing:.5px;margin-bottom:10px}
+  .pt-desc{font-size:13px;line-height:1.85;color:var(--muted);margin-bottom:16px}
+  .pt-list{list-style:none;display:flex;flex-direction:column;gap:6px}
+  .pt-list li{font-size:12px;color:var(--text);display:flex;align-items:flex-start;gap:8px;line-height:1.5}
+  .pt-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--blue);flex-shrink:0;margin-top:5px}
+
+  /* ── STATS BAND ── */
+  .stats-band{background:var(--card);border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:48px 5vw;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+  .sb-item{padding:20px 32px;border-right:1px solid var(--border);display:flex;align-items:flex-start;gap:16px}
+  .sb-item:last-child{border-right:none}
+  .sb-icon{color:var(--blue);flex-shrink:0;margin-top:2px}
+  .sb-num{font-family:'Bebas Neue',sans-serif;font-size:40px;color:var(--heading);line-height:1;margin-bottom:4px}
+  .sb-num span{color:var(--blue);font-size:28px}
+  .sb-lbl{font-size:11px;letter-spacing:.5px;color:var(--muted);line-height:1.5}
+
+  /* ── SPLIT FEATURES ── */
+  .split-section{background:var(--bg2)}
+  .split-inner{display:grid;grid-template-columns:1fr 1fr;gap:0;background:var(--border);margin-top:56px}
+  .split-visual{min-height:460px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;background:var(--dark)}
+  .split-visual::before{content:'';position:absolute;inset:0;background-image:linear-gradient(rgba(26,95,168,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(26,95,168,.05) 1px,transparent 1px);background-size:40px 40px}
+  .split-accent{position:absolute;right:0;top:0;bottom:0;width:4px;background:linear-gradient(to bottom,var(--blue),var(--green))}
+  .split-content{background:var(--card);padding:56px 52px;display:flex;flex-direction:column;justify-content:center}
+  .feat-list{display:flex;flex-direction:column;gap:0;margin-top:36px}
+  .feat-item{display:flex;gap:20px;padding:22px 0;border-bottom:1px solid var(--border)}
+  .feat-item:last-child{border-bottom:none}
+  .feat-icon{width:44px;height:44px;flex-shrink:0;background:linear-gradient(135deg,rgba(26,95,168,.08),rgba(45,181,81,.08));border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:border-color .2s,background .2s}
+  .feat-item:hover .feat-icon{border-color:var(--blue);background:rgba(26,95,168,.1)}
+  .feat-title{font-size:13px;font-weight:700;color:var(--heading);margin-bottom:5px}
+  .feat-desc{font-size:12px;line-height:1.75;color:var(--muted)}
+
+  /* ── PROCESS ── */
+  .process-dark{background:var(--dark)}
+  .process-dark .st{color:#fff}
+  .process-dark .ss{color:rgba(255,255,255,.4)}
+  .proc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(255,255,255,.04);margin-top:56px}
+  .pc{background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.06);padding:40px 32px;transition:background .2s,border-color .25s}
+  .pc:hover{background:rgba(26,95,168,.06);border-color:rgba(26,95,168,.2)}
+  .pc-num{font-family:'Bebas Neue',sans-serif;font-size:52px;background:linear-gradient(135deg,var(--blue),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px}
+  .pc-title{font-size:14px;font-weight:700;color:#fff;margin-bottom:9px}
+  .pc-desc{font-size:12px;line-height:1.75;color:rgba(255,255,255,.38)}
+  .pc-tag{display:inline-block;margin-top:14px;font-size:9px;letter-spacing:1.5px;text-transform:uppercase;color:var(--blue);border:1px solid rgba(26,95,168,.3);padding:3px 10px}
+
+  /* ── PROJECTS ── */
+  .proj-strip{display:grid;grid-template-columns:1.8fr 1fr 1fr;grid-template-rows:auto auto;gap:16px;margin-top:56px}
+  .pj{background:var(--card);border:1px solid var(--border);padding:40px 36px;position:relative;overflow:hidden;box-shadow:0 2px 12px rgba(26,95,168,.05);transition:box-shadow .3s,transform .3s}
+  .pj:hover{box-shadow:0 10px 36px rgba(26,95,168,.12);transform:translateY(-3px)}
+  .pj.feat{grid-row:span 2;background:linear-gradient(140deg,#f3f7ff,#eaf6ef);border-color:rgba(26,95,168,.15)}
+  .pj::after{content:'';position:absolute;top:0;right:0;width:3px;height:100%;background:linear-gradient(to bottom,var(--blue),var(--green));opacity:0;transition:opacity .3s}
+  .pj:hover::after{opacity:1}
+  .pj-tag{display:inline-block;font-size:9px;letter-spacing:2px;text-transform:uppercase;color:var(--blue);border:1px solid rgba(26,95,168,.35);padding:4px 10px;margin-bottom:18px}
+  .pj-title{font-family:'Bebas Neue',sans-serif;font-size:24px;color:var(--heading);margin-bottom:12px;letter-spacing:.3px;line-height:1.05}
+  .pj.feat .pj-title{font-size:38px}
+  .pj-desc{font-size:13px;line-height:1.8;color:var(--muted)}
+  .pj-meta{margin-top:18px;display:flex;gap:16px;flex-wrap:wrap}
+  .pj-mi{font-size:10px;letter-spacing:.5px;color:var(--muted)}
+  .pj-big{font-family:'Bebas Neue',sans-serif;font-size:60px;color:rgba(26,95,168,.07);line-height:1;position:absolute;bottom:-6px;right:12px}
+
+  /* ── STANDARDS ── */
+  .standards{background:var(--bg2);padding:64px 5vw}
+  .standards-label{font-size:10px;letter-spacing:3px;text-transform:uppercase;color:var(--muted);text-align:center;margin-bottom:36px}
+  .std-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  .std-card{background:var(--card);border:1px solid var(--border);padding:24px 20px;box-shadow:0 2px 10px rgba(26,95,168,.04);transition:border-color .2s,box-shadow .2s}
+  .std-card:hover{border-color:var(--blue);box-shadow:0 6px 24px rgba(26,95,168,.1)}
+  .std-icon{color:var(--blue);margin-bottom:12px}
+  .std-name{font-family:'Bebas Neue',sans-serif;font-size:18px;color:var(--heading);letter-spacing:.5px;margin-bottom:6px}
+  .std-desc{font-size:12px;line-height:1.7;color:var(--muted)}
+
+  /* ── FAQ ── */
+  .faq-section{background:var(--bg2)}
+  .faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:56px}
+  .faq-item{background:var(--card);border:1px solid var(--border);overflow:hidden}
+  .faq-q{display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 24px;cursor:pointer;user-select:none;font-size:13px;font-weight:600;color:var(--heading);line-height:1.45;transition:background .2s}
+  .faq-q:hover{background:var(--bg2)}
+  .faq-ico{flex-shrink:0;width:22px;height:22px;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;transition:transform .3s,background .2s}
+  .faq-item.open .faq-q{background:var(--bg2)}
+  .faq-item.open .faq-ico{background:var(--blue);border-color:var(--blue);transform:rotate(45deg)}
+  .faq-item.open .faq-ico svg{color:#fff}
+  .faq-a{max-height:0;overflow:hidden;transition:max-height .35s ease}
+  .faq-a-inner{padding:0 24px 22px;font-size:13px;line-height:1.85;color:var(--muted)}
+  .faq-item.open .faq-a{max-height:280px}
+
+  /* ── CTA ── */
+  .cta-band{background:linear-gradient(110deg,#050d18 0%,var(--blue2) 38%,#0a2010 100%);padding:80px 5vw;display:flex;align-items:center;justify-content:space-between;gap:40px;position:relative;overflow:hidden}
+  .cta-band::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse 50% 80% at 10% 50%,rgba(26,95,168,.18) 0%,transparent 60%),radial-gradient(ellipse 40% 60% at 85% 50%,rgba(45,181,81,.12) 0%,transparent 60%)}
+  .cta-band::after{content:'';position:absolute;right:0;top:0;bottom:0;width:40%;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 300' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='50' y='40' width='300' height='220' rx='4' fill='none' stroke='rgba(255,255,255,0.04)' stroke-width='2'/%3E%3Crect x='70' y='60' width='260' height='40' rx='2' fill='rgba(255,255,255,0.03)'/%3E%3Crect x='70' y='114' width='40' height='50' rx='2' fill='rgba(255,255,255,0.04)'/%3E%3Crect x='118' y='114' width='40' height='50' rx='2' fill='rgba(255,255,255,0.04)'/%3E%3Crect x='166' y='114' width='40' height='50' rx='2' fill='rgba(255,255,255,0.04)'/%3E%3C/svg%3E") center/cover;pointer-events:none}
+  .cta-title{font-family:'Bebas Neue',sans-serif;font-size:clamp(28px,4vw,52px);color:#fff;letter-spacing:1px;line-height:1.05;position:relative}
+  .cta-sub{font-size:14px;color:rgba(255,255,255,.6);margin-top:10px;max-width:480px;line-height:1.7;position:relative}
+  .cta-btns{display:flex;gap:14px;flex-wrap:wrap;flex-shrink:0;position:relative}
+  .btn-orange{background:var(--blue);color:#fff;border:none;padding:14px 32px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:700;letter-spacing:2px;text-transform:uppercase;cursor:pointer;clip-path:polygon(8px 0%,100% 0%,calc(100% - 8px) 100%,0% 100%);transition:background .2s,transform .15s;text-decoration:none;display:inline-block;white-space:nowrap}
+  .btn-orange:hover{background:var(--blue2);transform:translateY(-1px)}
+  .btn-ol-white{background:transparent;color:#fff;border:1px solid rgba(255,255,255,.35);padding:14px 32px;font-family:'Montserrat',sans-serif;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;cursor:pointer;transition:border-color .2s,background .2s;text-decoration:none;display:inline-block;white-space:nowrap}
+  .btn-ol-white:hover{border-color:#fff;background:rgba(255,255,255,.08)}
+
+  /* ── FOOTER ── */
+  footer{background:var(--dark);border-top:1px solid rgba(255,255,255,.06);padding:60px 5vw 36px}
+  .footer-top{display:grid;grid-template-columns:1.5fr 1fr 1fr 1fr;gap:48px;padding-bottom:48px;border-bottom:1px solid rgba(255,255,255,.08)}
+  .footer-brand p{font-size:12px;line-height:1.85;color:rgba(255,255,255,.4);margin-top:20px;max-width:260px}
+  .footer-col-title{font-size:11px;letter-spacing:2px;text-transform:uppercase;color:rgba(255,255,255,.9);margin-bottom:20px}
+  .footer-links{list-style:none;display:flex;flex-direction:column;gap:10px}
+  .footer-links a{font-size:12px;color:rgba(255,255,255,.4);text-decoration:none;transition:color .2s}
+  .footer-links a:hover{color:var(--green)}
+  .footer-bottom{display:flex;justify-content:space-between;align-items:center;padding-top:28px;font-size:11px;color:rgba(255,255,255,.25)}
+  footer .logo-text .brand{color:#fff!important}
+
+  /* ── REVEAL ── */
+  .reveal{opacity:0;transform:translateY(24px);transition:opacity .65s ease,transform .65s ease}
+  .reveal.visible{opacity:1;transform:translateY(0)}
+
+  /* ── MOBILE ── */
+  @media(max-width:960px){
+    .nav-links{display:none}
+    .ptypes-grid{grid-template-columns:1fr}
+    .split-inner{grid-template-columns:1fr}
+    .split-visual{min-height:220px;order:-1}
+    .stats-band{grid-template-columns:1fr 1fr}
+    .sb-item:nth-child(2n){border-right:none}
+    .sb-item:nth-child(n+3){border-top:1px solid var(--border)}
+    .proc-grid{grid-template-columns:1fr}
+    .std-grid{grid-template-columns:1fr 1fr}
+    .proj-strip{grid-template-columns:1fr}
+    .pj.feat{grid-row:auto}
+    .faq-grid{grid-template-columns:1fr}
+    .footer-top{grid-template-columns:1fr 1fr}
+    .cta-band{flex-direction:column}
+    .hero-stats{flex-wrap:wrap}
+    .hsi{flex:1 1 45%;padding:20px}
+  }
+  @media(max-width:600px){
+    .ptypes-grid{grid-template-columns:1fr}
+    .stats-band{grid-template-columns:1fr}
+    .sb-item{border-right:none;border-bottom:1px solid var(--border)}
+    .std-grid{grid-template-columns:1fr}
+    .footer-top{grid-template-columns:1fr}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="main-nav">
+  <a href="index.html" class="logo">
+    <svg class="logo-mark" viewBox="0 0 46 46" fill="none">
+      <defs>
+        <linearGradient id="nlg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a5fa8"/><stop offset="100%" stop-color="#2db551"/></linearGradient>
+        <clipPath id="ncc"><circle cx="23" cy="23" r="21"/></clipPath>
+      </defs>
+      <circle cx="23" cy="23" r="22.5" fill="none" stroke="url(#nlg)" stroke-width="1" opacity=".4"/>
+      <circle cx="23" cy="23" r="21" fill="url(#nlg)"/>
+      <path d="M14 24 L23 14 L32 24 L30 24 L30 33 L25 33 L25 27 L21 27 L21 33 L16 33 L16 24Z" fill="rgba(255,255,255,0.15)" clip-path="url(#ncc)"/>
+      <path d="M25.5 10 L17.5 24.5 H23.5 L20 36 L32 20 H25.5Z" fill="white"/>
+    </svg>
+    <div class="logo-text">
+      <span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
+      <span class="sub">Енергетичні рішення</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="proelectric-electro.html" class="active">Електромонтаж</a></li>
+    <li><a href="proelectric-solar.html">Сонячні СЕС</a></li>
+    <li><a href="proelectric-about.html">Про нас</a></li>
+    <li><a href="proelectric-contacts.html">Контакти</a></li>
+  </ul>
+  <div class="nav-cta">
+    <a href="tel:+380630607600" class="nav-phone">+38 063 060 76 00</a>
+    <a href="#contact" class="btn-primary">Замовити монтаж</a>
+  </div>
+</nav>
+
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-photo"></div>
+
+  <!-- panel circuit deco -->
+  <div class="hero-deco">
+    <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
+      <defs>
+        <linearGradient id="pnl1" x1="0" y1="0" x2="1" y2="0">
+          <stop offset="0%"   stop-color="#1a5fa8" stop-opacity="0"/>
+          <stop offset="30%"  stop-color="#1a5fa8" stop-opacity=".5"/>
+          <stop offset="70%"  stop-color="#2db551" stop-opacity=".4"/>
+          <stop offset="100%" stop-color="#2db551" stop-opacity="0"/>
+        </linearGradient>
+        <linearGradient id="pnl2" x1="0" y1="0" x2="0" y2="1">
+          <stop offset="0%"   stop-color="#1a5fa8" stop-opacity="0"/>
+          <stop offset="40%"  stop-color="#1a5fa8" stop-opacity=".35"/>
+          <stop offset="100%" stop-color="#e85c1a" stop-opacity=".15"/>
+        </linearGradient>
+      </defs>
+      <line x1="0" y1="180" x2="1400" y2="180" stroke="url(#pnl1)" stroke-width="4"/>
+      <line x1="0" y1="360" x2="1400" y2="360" stroke="url(#pnl1)" stroke-width="2"/>
+      <line x1="0" y1="540" x2="1400" y2="540" stroke="url(#pnl1)" stroke-width="3"/>
+      <line x1="0" y1="720" x2="1400" y2="720" stroke="url(#pnl1)" stroke-width="2"/>
+      <line x1="260"  y1="0" x2="260"  y2="900" stroke="url(#pnl2)" stroke-width="2"/>
+      <line x1="520"  y1="0" x2="520"  y2="900" stroke="url(#pnl2)" stroke-width="3"/>
+      <line x1="780"  y1="0" x2="780"  y2="900" stroke="url(#pnl2)" stroke-width="2"/>
+      <line x1="1040" y1="0" x2="1040" y2="900" stroke="url(#pnl2)" stroke-width="2"/>
+      <rect x="244" y="166" width="32" height="28" rx="2" fill="none" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
+      <rect x="248" y="170" width="24" height="20" rx="1" fill="rgba(26,95,168,.12)"/>
+      <rect x="504" y="346" width="32" height="28" rx="2" fill="none" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
+      <rect x="508" y="350" width="24" height="20" rx="1" fill="rgba(45,181,81,.12)"/>
+      <rect x="764" y="526" width="32" height="28" rx="2" fill="none" stroke="rgba(26,95,168,.3)" stroke-width="1.5"/>
+      <rect x="768" y="530" width="24" height="20" rx="1" fill="rgba(26,95,168,.1)"/>
+      <rect x="1024" y="166" width="32" height="28" rx="2" fill="none" stroke="rgba(232,92,26,.25)" stroke-width="1.5"/>
+      <circle cx="260"  cy="180" r="5" fill="#1a5fa8" opacity=".65"/>
+      <circle cx="520"  cy="360" r="7" fill="#2db551" opacity=".7"/>
+      <circle cx="780"  cy="540" r="5" fill="#1a5fa8" opacity=".6"/>
+      <circle cx="1040" cy="180" r="5" fill="#e85c1a" opacity=".5"/>
+      <circle cx="260"  cy="720" r="5" fill="#2db551" opacity=".45"/>
+      <circle cx="780"  cy="360" r="6" fill="#e85c1a" opacity=".55"/>
+      <!-- panel cabinet silhouette -->
+      <rect x="1100" y="450" width="200" height="280" rx="3" fill="none" stroke="rgba(26,95,168,.12)" stroke-width="1.5"/>
+      <rect x="1100" y="450" width="200" height="40"  rx="3" fill="rgba(26,95,168,.06)"/>
+      <line x1="1100" y1="490" x2="1300" y2="490" stroke="rgba(26,95,168,.1)" stroke-width="1"/>
+      <rect x="1114" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
+      <rect x="1140" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
+      <rect x="1166" y="502" width="22" height="30" rx="1" fill="rgba(45,181,81,.15)"/>
+      <rect x="1192" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
+      <rect x="1218" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
+      <rect x="1244" y="502" width="40" height="30" rx="1" fill="rgba(232,92,26,.1)"/>
+      <rect x="1114" y="556" width="170" height="14" rx="1" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
+      <text x="1199" y="566" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(45,181,81,.5)">380.4 V</text>
+    </svg>
+  </div>
+
+  <div class="hero-tint"></div>
+  <div class="hero-content">
+    <div class="breadcrumb">
+      <a href="index.html">Головна</a><span>›</span>
+      <a href="proelectric-electro.html">Електромонтаж</a><span>›</span>
+      <span style="color:rgba(255,255,255,.7)">Монтаж електрощитів</span>
+    </div>
+    <div class="hero-label">Збирання · Монтаж · Введення в дію</div>
+    <h1 class="hero-title">
+      <span class="accent-blue">МОНТАЖ</span><br>
+      <span class="accent-green">ЕЛЕКТРО</span><span class="accent-orange">ЩИТІВ</span>
+    </h1>
+    <p class="hero-desc">Встановлення та підключення розподільних щитів, ГРЩ, щитів АВР, шаф управління для квартир, будинків, комерційних та промислових об'єктів.</p>
+    <div class="hero-actions">
+      <a href="#contact" class="btn-primary" style="padding:13px 32px;font-size:12px">Замовити монтаж</a>
+      <a href="#panel-types" class="btn-ghost">Типи щитів</a>
+    </div>
+  </div>
+  <div class="hero-stats">
+    <div class="hsi"><div><div class="snum">500<span class="u">+</span></div></div><div class="slbl">Щитів<br>встановлено</div></div>
+    <div class="hsi"><div><div class="snum">6300<span class="u"> А</span></div></div><div class="slbl">Максимальний<br>струм щита</div></div>
+    <div class="hsi"><div><div class="snum">1<span class="u"> день</span></div></div><div class="slbl">Монтаж<br>квартирного щита</div></div>
+    <div class="hsi"><div><div class="snum">5<span class="u"> р.</span></div></div><div class="slbl">Гарантія<br>на обладнання</div></div>
+  </div>
+</section>
+
+
+<!-- PANEL TYPES -->
+<section id="panel-types">
+  <div class="reveal">
+    <div class="sl orange">Що ми монтуємо</div>
+    <h2 class="st">ТИПИ ЕЛЕКТРОЩИТІВ</h2>
+    <p class="ss">Монтуємо будь-які типи щитового обладнання — від побутового квартирного щитка до промислового ГРЩ та АВР.</p>
+  </div>
+
+  <div class="ptypes-grid">
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt1">
+        <div class="pt-badge">Житловий</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="24" y="12" width="48" height="70" rx="3" stroke="rgba(255,255,255,.35)" stroke-width="1.5" fill="rgba(255,255,255,.04)"/>
+          <rect x="24" y="12" width="48" height="16" rx="3" fill="rgba(45,181,81,.15)" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
+          <line x1="24" y1="28" x2="72" y2="28" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <rect x="30" y="33" width="36" height="6" rx="1" fill="rgba(255,255,255,.12)"/>
+          <rect x="30" y="42" width="36" height="6" rx="1" fill="rgba(255,255,255,.12)"/>
+          <rect x="30" y="51" width="36" height="6" rx="1" fill="rgba(45,181,81,.25)"/>
+          <rect x="30" y="60" width="36" height="6" rx="1" fill="rgba(255,255,255,.12)"/>
+          <circle cx="48" cy="20" r="3" fill="rgba(45,181,81,.6)"/>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">Квартирні та будинкові щитки</div>
+        <p class="pt-desc">Встановлення квартирних та поверхових щитків для житлових будинків, ОСББ, котеджів. Монтаж автоматів, УЗО, реле напруги.</p>
+        <ul class="pt-list">
+          <li>На 12–96 модулів DIN-рейки</li>
+          <li>Legrand, ABB, Schneider Electric</li>
+          <li>УЗО, диференційні автомати</li>
+          <li>Реле напруги та контролю фаз</li>
+          <li>Лічильники та системи обліку</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt2">
+        <div class="pt-badge">Комерційний</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="14" y="10" width="68" height="76" rx="3" stroke="rgba(255,255,255,.35)" stroke-width="1.5" fill="rgba(255,255,255,.04)"/>
+          <rect x="14" y="10" width="68" height="18" rx="3" fill="rgba(26,95,168,.2)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+          <text x="48" y="23" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(255,255,255,.6)">ГРЩ</text>
+          <rect x="20" y="32" width="56" height="6" rx="1" fill="rgba(26,95,168,.4)" opacity=".8"/>
+          <rect x="20" y="42" width="14" height="20" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+          <rect x="38" y="42" width="14" height="20" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+          <rect x="56" y="42" width="14" height="20" rx="1" fill="rgba(45,181,81,.2)"  stroke="rgba(45,181,81,.4)"  stroke-width="1"/>
+          <rect x="20" y="68" width="26" height="10" rx="1" fill="rgba(0,0,0,.3)" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
+          <text x="33" y="76" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(45,181,81,.7)">380V</text>
+          <circle cx="58" cy="73" r="3" fill="rgba(45,181,81,.7)"/>
+          <circle cx="66" cy="73" r="3" fill="rgba(255,165,0,.6)"/>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">ГРЩ та ВРЩ для комерції</div>
+        <p class="pt-desc">Монтаж головних та вводно-розподільних щитів для торгових центрів, офісних будівель, готелів та ресторанів.</p>
+        <ul class="pt-list">
+          <li>Струм від 63 до 3200 А</li>
+          <li>Секціонування, шина нульова та PE</li>
+          <li>Вимірювальні прилади та лічильники</li>
+          <li>Система АСКОЕ та облік</li>
+          <li>Вимикачі ABB Emax, Schneider Masterpact</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt3">
+        <div class="pt-badge">Резервне живлення</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="10" y="10" width="76" height="76" rx="3" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="rgba(255,255,255,.03)"/>
+          <rect x="18" y="22" width="22" height="30" rx="2" fill="rgba(255,255,255,.1)" stroke="rgba(255,255,255,.25)" stroke-width="1"/>
+          <rect x="56" y="22" width="22" height="30" rx="2" fill="rgba(45,181,81,.2)" stroke="rgba(45,181,81,.4)" stroke-width="1"/>
+          <line x1="40" y1="37" x2="56" y2="37" stroke="rgba(255,255,255,.3)" stroke-width="1.5" stroke-dasharray="3 2"/>
+          <path d="M46 34 L50 37 L46 40" stroke="rgba(45,181,81,.7)" stroke-width="1.5" fill="none"/>
+          <rect x="28" y="60" width="40" height="16" rx="2" stroke="rgba(232,92,26,.35)" stroke-width="1" fill="rgba(232,92,26,.08)"/>
+          <text x="48" y="71" text-anchor="middle" font-family="monospace" font-size="7" fill="rgba(232,92,26,.7)">АВР</text>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">Шафи АВР (автоматичний ввід резерву)</div>
+        <p class="pt-desc">Встановлення та налаштування шаф автоматичного введення резерву — безперебійне живлення при відключенні основного джерела.</p>
+        <ul class="pt-list">
+          <li>Час перемикання від 0,1 с</li>
+          <li>Мережа + ДГУ, мережа + UPS</li>
+          <li>Моторизовані та електромагнітні АВ</li>
+          <li>Контролери Lovato, Deif, ComAp</li>
+          <li>Дистанційний моніторинг і логування</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt4">
+        <div class="pt-badge">Промисловий</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="10" y="10" width="76" height="76" rx="3" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="rgba(255,255,255,.03)"/>
+          <circle cx="30" cy="36" r="10" stroke="rgba(26,95,168,.5)" stroke-width="1.5" fill="rgba(26,95,168,.1)"/>
+          <circle cx="30" cy="36" r="4" fill="rgba(26,95,168,.5)"/>
+          <circle cx="66" cy="36" r="10" stroke="rgba(45,181,81,.5)" stroke-width="1.5" fill="rgba(45,181,81,.1)"/>
+          <circle cx="66" cy="36" r="4" fill="rgba(45,181,81,.5)"/>
+          <rect x="16" y="56" width="64" height="18" rx="2" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <rect x="20" y="60" width="10" height="10" rx="1" fill="rgba(26,95,168,.4)"/>
+          <rect x="34" y="60" width="10" height="10" rx="1" fill="rgba(45,181,81,.4)"/>
+          <rect x="48" y="60" width="10" height="10" rx="1" fill="rgba(255,255,255,.15)"/>
+          <rect x="62" y="60" width="10" height="10" rx="1" fill="rgba(232,92,26,.4)"/>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">Шафи управління двигунами (ШУД)</div>
+        <p class="pt-desc">Монтаж шаф управління насосами, вентиляторами, конвеєрами. Прямий пуск, реверс, плавний пуск, частотне регулювання.</p>
+        <ul class="pt-list">
+          <li>Струм до 630 А, потужність до 315 кВт</li>
+          <li>Частотні перетворювачі Danfoss, ABB</li>
+          <li>Захист від перевантаження та обриву фаз</li>
+          <li>Інтеграція в системи автоматики</li>
+          <li>ПЛК Siemens, OMRON, Delta</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt5">
+        <div class="pt-badge">Автоматика</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="10" y="10" width="76" height="76" rx="3" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="rgba(255,255,255,.03)"/>
+          <rect x="18" y="18" width="60" height="28" rx="2" fill="rgba(45,181,81,.1)" stroke="rgba(45,181,81,.35)" stroke-width="1"/>
+          <text x="48" y="36" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(45,181,81,.8)">PLC</text>
+          <line x1="18" y1="52" x2="78" y2="52" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <circle cx="26" cy="62" r="4" fill="rgba(26,95,168,.5)"/>
+          <circle cx="40" cy="62" r="4" fill="rgba(45,181,81,.5)"/>
+          <circle cx="54" cy="62" r="4" fill="rgba(255,255,255,.2)"/>
+          <circle cx="68" cy="62" r="4" fill="rgba(232,92,26,.5)"/>
+          <line x1="26" y1="66" x2="26" y2="78" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
+          <line x1="40" y1="66" x2="40" y2="78" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
+          <line x1="54" y1="66" x2="54" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1.5"/>
+          <line x1="68" y1="66" x2="68" y2="78" stroke="rgba(232,92,26,.3)" stroke-width="1.5"/>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">Шафи автоматики та ПЛК</div>
+        <p class="pt-desc">Монтаж шаф з програмованими логічними контролерами для автоматизації технологічних процесів та диспетчеризації.</p>
+        <ul class="pt-list">
+          <li>ПЛК Siemens S7, Schneider M340</li>
+          <li>Панелі оператора HMI Siemens, Weintek</li>
+          <li>Протоколи Modbus, Profibus, EtherNet/IP</li>
+          <li>Інтеграція в SCADA Wonderware, WinCC</li>
+          <li>Налагодження та програмування</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="pt-card reveal">
+      <div class="pt-thumb pt6">
+        <div class="pt-badge">Зовнішній</div>
+        <svg width="96" height="96" viewBox="0 0 96 96" fill="none" style="position:relative;z-index:1">
+          <rect x="10" y="22" width="76" height="62" rx="3" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="rgba(255,255,255,.03)"/>
+          <rect x="10" y="10" width="76" height="16" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
+          <line x1="18" y1="36" x2="78" y2="36" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+          <rect x="18" y="42" width="14" height="18" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="36" y="42" width="14" height="18" rx="1" fill="rgba(255,255,255,.1)"/>
+          <rect x="54" y="42" width="14" height="18" rx="1" fill="rgba(26,95,168,.35)"/>
+          <circle cx="24" cy="28" r="4" fill="rgba(45,181,81,.5)"/>
+          <rect x="18" y="66" width="60" height="10" rx="1" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
+        </svg>
+      </div>
+      <div class="pt-body">
+        <div class="pt-title">Вуличні та вологозахищені щити</div>
+        <p class="pt-desc">Монтаж щитів зовнішнього встановлення для КТП, будівельних майданчиків, вуличного освітлення та зовнішніх споруд.</p>
+        <ul class="pt-list">
+          <li>Ступінь захисту IP44–IP65</li>
+          <li>Корпуси з нержавіючої сталі та склопластику</li>
+          <li>Обігрів та вентиляція шафи</li>
+          <li>Захист від перенапруг (УЗІП)</li>
+          <li>Заземлення, блискавкозахист</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+
+<!-- STATS BAND -->
+<div class="stats-band reveal">
+  <div class="sb-item">
+    <div class="sb-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="2" y="3" width="20" height="14" rx="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg></div>
+    <div>
+      <div class="sb-num">500<span>+</span></div>
+      <div class="sb-lbl">Щитів встановлено<br>нашими бригадами</div>
+    </div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg></div>
+    <div>
+      <div class="sb-num">1<span> день</span></div>
+      <div class="sb-lbl">Монтаж<br>квартирного щита</div>
+    </div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+    <div>
+      <div class="sb-num">100<span>%</span></div>
+      <div class="sb-lbl">Протоколів<br>після монтажу</div>
+    </div>
+  </div>
+  <div class="sb-item">
+    <div class="sb-icon"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg></div>
+    <div>
+      <div class="sb-num">6300<span> А</span></div>
+      <div class="sb-lbl">Максимальний<br>струм щита</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- SPLIT FEATURES -->
+<section class="split-section">
+  <div class="reveal">
+    <div class="sl">Наш підхід</div>
+    <h2 class="st">ТОЧНІСТЬ ДО КОЖНОГО БОЛТА</h2>
+    <p class="ss">Монтуємо електрощити так, щоб вони надійно працювали десятиліттями — без аварій та перегріву.</p>
+  </div>
+
+  <div class="split-inner reveal">
+    <div class="split-visual">
+      <div class="split-accent"></div>
+      <svg width="320" height="360" viewBox="0 0 320 360" fill="none" style="position:relative;z-index:1">
+        <defs>
+          <linearGradient id="spg1" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stop-color="#1a5fa8" stop-opacity=".6"/>
+            <stop offset="100%" stop-color="#2db551" stop-opacity=".4"/>
+          </linearGradient>
+        </defs>
+        <rect x="50" y="20" width="220" height="310" rx="4" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.18)" stroke-width="1.5"/>
+        <rect x="50" y="20" width="220" height="44" rx="4" fill="rgba(26,95,168,.2)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <text x="160" y="47" text-anchor="middle" font-family="'Bebas Neue',sans-serif" font-size="14" fill="rgba(255,255,255,.7)" letter-spacing="3">ГРЩ-01</text>
+        <rect x="66" y="76" width="188" height="7" rx="1" fill="url(#spg1)" opacity=".85"/>
+        <rect x="66"  y="91" width="30" height="38" rx="2" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
+        <rect x="100" y="91" width="30" height="38" rx="2" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
+        <rect x="134" y="91" width="30" height="38" rx="2" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
+        <rect x="168" y="91" width="30" height="38" rx="2" fill="rgba(45,181,81,.25)" stroke="rgba(45,181,81,.5)" stroke-width="1"/>
+        <rect x="202" y="91" width="30" height="38" rx="2" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
+        <rect x="77"  y="103" width="8" height="14" rx="1" fill="rgba(255,255,255,.35)"/>
+        <rect x="111" y="103" width="8" height="14" rx="1" fill="rgba(255,255,255,.35)"/>
+        <rect x="145" y="103" width="8" height="14" rx="1" fill="rgba(255,255,255,.35)"/>
+        <rect x="179" y="103" width="8" height="14" rx="1" fill="rgba(45,181,81,.8)"/>
+        <rect x="213" y="103" width="8" height="14" rx="1" fill="rgba(255,255,255,.35)"/>
+        <rect x="66" y="138" width="188" height="5" rx="1" fill="rgba(255,255,255,.07)"/>
+        <rect x="66"  y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="90"  y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="114" y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="138" y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="162" y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="186" y="149" width="20" height="30" rx="2" fill="rgba(45,181,81,.2)"  stroke="rgba(45,181,81,.4)"  stroke-width="1"/>
+        <rect x="210" y="149" width="20" height="30" rx="2" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
+        <rect x="66" y="190" width="90" height="52" rx="2" fill="rgba(0,0,0,.35)" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
+        <text x="111" y="213" text-anchor="middle" font-family="monospace" font-size="11" fill="rgba(45,181,81,.85)">380.4 V</text>
+        <text x="111" y="231" text-anchor="middle" font-family="monospace" font-size="10" fill="rgba(45,181,81,.55)">148.3 A</text>
+        <circle cx="172" cy="202" r="4" fill="#2db551" opacity=".85"/>
+        <circle cx="186" cy="202" r="4" fill="#2db551" opacity=".85"/>
+        <circle cx="200" cy="202" r="4" fill="rgba(255,165,0,.7)"/>
+        <circle cx="214" cy="202" r="4" fill="rgba(255,255,255,.2)"/>
+        <rect x="66" y="256" width="188" height="62" rx="2" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.1)" stroke-width="1"/>
+        <text x="160" y="272" text-anchor="middle" font-family="Montserrat,sans-serif" font-size="8" fill="rgba(255,255,255,.2)" letter-spacing="1">КАБЕЛЬНИЙ ВІДСІК</text>
+        <line x1="90"  y1="280" x2="90"  y2="314" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+        <line x1="110" y1="280" x2="110" y2="314" stroke="rgba(26,95,168,.4)"   stroke-width="2"/>
+        <line x1="130" y1="280" x2="130" y2="314" stroke="rgba(45,181,81,.4)"   stroke-width="2"/>
+        <line x1="150" y1="280" x2="150" y2="314" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+        <line x1="170" y1="280" x2="170" y2="314" stroke="rgba(26,95,168,.4)"   stroke-width="2"/>
+        <line x1="190" y1="280" x2="190" y2="314" stroke="rgba(45,181,81,.4)"   stroke-width="2"/>
+        <line x1="210" y1="280" x2="210" y2="314" stroke="rgba(255,255,255,.15)" stroke-width="2"/>
+        <line x1="230" y1="280" x2="230" y2="314" stroke="rgba(232,92,26,.3)"   stroke-width="2"/>
+      </svg>
+    </div>
+
+    <div class="split-content">
+      <div class="sl blue">Технічний підхід</div>
+      <h2 class="st" style="font-size:clamp(26px,3.5vw,44px)">МОНТАЖ ЗА ВСІМА<br>НОРМАМИ ПУЕ</h2>
+      <p class="ss">Кожен щит монтується відповідно до проекту, норм ПУЕ та вимог виробників обладнання.</p>
+
+      <div class="feat-list">
+        <div class="feat-item">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="m9 15 2 2 4-4"/></svg></div>
+          <div>
+            <div class="feat-title">Маркування та схеми</div>
+            <div class="feat-desc">Кожен автомат, УЗО та кабель маркуються. Замовник отримує виконавчу принципову схему та монтажну схему розташування.</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg></div>
+          <div>
+            <div class="feat-title">Вимірювання після монтажу</div>
+            <div class="feat-desc">Після монтажу вимірюємо опір ізоляції та петлю фаза-нуль. Протоколи вимірювань — обов'язковий документ здачі об'єкта.</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+          <div>
+            <div class="feat-title">Правильний підбір перерізів</div>
+            <div class="feat-desc">Перетин шин, кабелів та з'єднань підбирається за розрахунковим струмом, термічною стійкістю та допустимим падінням напруги.</div>
+          </div>
+        </div>
+        <div class="feat-item">
+          <div class="feat-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><polyline points="9 12 11 14 15 10"/></svg></div>
+          <div>
+            <div class="feat-title">Захист від перенапруг та ЕМЗ</div>
+            <div class="feat-desc">Встановлення УЗІП (пристроїв захисту від імпульсних перенапруг) класу I, II, III відповідно до категорії об'єкта та зони блискавкозахисту.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROCESS -->
+<section class="process-dark" id="process">
+  <div class="reveal">
+    <div class="sl orange">Як ми працюємо</div>
+    <h2 class="st">ЕТАПИ МОНТАЖУ ЕЛЕКТРОЩИТА</h2>
+    <p class="ss">Від вивчення проекту до здачі з протоколами — чітка технологічна послідовність без відступів.</p>
+  </div>
+  <div class="proc-grid">
+    <div class="pc reveal">
+      <div class="pc-num">01</div>
+      <div class="pc-title">Вивчення проекту та ТЗ</div>
+      <p class="pc-desc">Аналіз робочої документації, уточнення схем підключення, переліку споживачів, вимог до захисту та селективності автоматів</p>
+      <span class="pc-tag">ПУЕ / ДБН</span>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">02</div>
+      <div class="pc-title">Підготовка місця встановлення</div>
+      <p class="pc-desc">Перевірка ніші або місця кріплення, монтаж закладних конструкцій, виконання кабельних вводів та відповідних вирізів у корпусі</p>
+      <span class="pc-tag">Точність кріплення</span>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">03</div>
+      <div class="pc-title">Встановлення корпусу та DIN-рейок</div>
+      <p class="pc-desc">Монтаж корпусу щита, встановлення DIN-рейок, кабельних каналів та нульових шин. Перевірка горизонтальності та доступності</p>
+      <span class="pc-tag">IP захист</span>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">04</div>
+      <div class="pc-title">Монтаж обладнання та шин</div>
+      <p class="pc-desc">Встановлення автоматичних вимикачів, УЗО, реле, вимірювальних приладів, лічильників та шинних з'єднань за монтажною схемою</p>
+      <span class="pc-tag">Сертифіковане обладнання</span>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">05</div>
+      <div class="pc-title">Підключення кабелів та маркування</div>
+      <p class="pc-desc">Введення та підключення всіх живильних і відхідних кабелів з дотриманням моменту затяжки клем, обов'язкове маркування кожного провідника</p>
+      <span class="pc-tag">Моменти затяжки</span>
+    </div>
+    <div class="pc reveal">
+      <div class="pc-num">06</div>
+      <div class="pc-title">Вимірювання та введення в дію</div>
+      <p class="pc-desc">Вимірювання ізоляції, перевірка УЗО, перевірка селективності, налаштування реле і пробне ввімкнення. Передача протоколів та схем</p>
+      <span class="pc-tag">Протоколи вимірювань</span>
+    </div>
+  </div>
+</section>
+
+
+<!-- PROJECTS -->
+<section id="projects">
+  <div class="reveal">
+    <div class="sl">Реалізовані об'єкти</div>
+    <h2 class="st">НАШІ ПРОЄКТИ</h2>
+    <p class="ss">Від квартирного щитка до головного розподільного щита промислового підприємства.</p>
+  </div>
+  <div class="proj-strip">
+    <div class="pj feat reveal">
+      <div class="pj-tag">Промисловий об'єкт</div>
+      <div class="pj-title">ГРЩ для виробничого підприємства на 3200 А</div>
+      <p class="pj-desc" style="max-width:360px">Проектування та монтаж головного розподільного щита на струм 3200 А з двома секціями, шафою АВР та системою АСКОЕ. Корпус ABB, вимикачі Emax 2. Монтаж, підключення кабелів 10 кВ, налаштування та введення в дію з протоколами.</p>
+      <div class="pj-meta">
+        <span class="pj-mi">2023 / Дніпро</span>
+        <span class="pj-mi">3200 А · 0,4 кВ</span>
+        <span class="pj-mi">Термін 3 тижні</span>
+      </div>
+      <div class="pj-big">3200 А</div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Багатоквартирний будинок</div>
+      <div class="pj-title">Поверхові щитки ЖК на 800 квартир</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Монтаж 80 поверхових щитків Legrand по 48 модулів. Автомати, УЗО, реле напруги, лічильники на кожну квартиру.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2023 / Київ</span></div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Резервне живлення</div>
+      <div class="pj-title">АВР 630 А для медичного центру</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Шафа АВР з перемиканням між мережею та ДГУ за 0,5 с. Контролер ComAp, моніторинг онлайн.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2022 / Львів</span></div>
+    </div>
+    <div class="pj reveal">
+      <div class="pj-tag">Автоматика</div>
+      <div class="pj-title">Шафа ПЛК для насосної станції</div>
+      <p class="pj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Siemens S7-1200, HMI панель, дистанційне управління 8 насосами, інтеграція в SCADA, частотні перетворювачі ABB.</p>
+      <div class="pj-meta" style="margin-top:16px"><span class="pj-mi">2024 / Харків</span></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- STANDARDS -->
+<div class="standards reveal">
+  <div class="standards-label">Нормативна база та стандарти</div>
+  <div class="std-grid">
+    <div class="std-card">
+      <div class="std-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><path d="m9 15 2 2 4-4"/></svg></div>
+      <div class="std-name">ПУЕ 7-е видання</div>
+      <div class="std-desc">Правила улаштування електроустановок — основний норматив для монтажу щитового обладнання всіх типів і напруг</div>
+    </div>
+    <div class="std-card">
+      <div class="std-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 9h6M9 13h4"/></svg></div>
+      <div class="std-name">ДБН В.2.5-82</div>
+      <div class="std-desc">Норми проектування електроустановок будівель. Вимоги до розміщення, захисту та комплектації щитів у будівлях</div>
+    </div>
+    <div class="std-card">
+      <div class="std-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg></div>
+      <div class="std-name">ДСТУ IEC 61439</div>
+      <div class="std-desc">Міжнародний стандарт на комплектні розподільні пристрої низької напруги. Визначає вимоги до конструкції та випробувань</div>
+    </div>
+    <div class="std-card">
+      <div class="std-icon"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+      <div class="std-name">НПАОП 40.1-1.21</div>
+      <div class="std-desc">Правила безпечної експлуатації електроустановок споживачів. Вимоги до персоналу та порядку введення в дію</div>
+    </div>
+  </div>
+</div>
+
+
+<!-- FAQ -->
+<section class="faq-section">
+  <div class="reveal">
+    <div class="sl">Відповіді</div>
+    <h2 class="st">ЧАСТІ ЗАПИТАННЯ</h2>
+  </div>
+  <div class="faq-grid">
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Скільки часу займає монтаж квартирного щитка?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Монтаж стандартного квартирного щитка на 24–48 автоматів займає 4–8 годин. ГРЩ або шафа АВР середньої складності — 2–5 робочих днів. Промислова шафа з ПЛК та складною автоматикою — 5–14 днів. Точний термін залежить від кількості кабелів, типу обладнання та умов доступу.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Які документи я отримаю після монтажу щита?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Передаємо повний пакет: виконавчу принципову та монтажну схему, протокол вимірювань опору ізоляції, протокол перевірки УЗО, протокол вимірювання петлі фаза-нуль. Для промислових об'єктів — паспорт щита та акт введення в дію.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Чи монтуєте щити, що вже виготовлені сторонньою організацією?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Так, монтуємо щити будь-якого виробника за наявності технічної документації. Перед монтажем перевіряємо комплектність та відповідність щита проекту. Гарантія поширюється на монтажні роботи, але не на комплектуючі стороннього виробника.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Чи можна замінити старий щит без відключення всього будинку?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">В більшості випадків — так. Ми заздалегідь проводимо обстеження об'єкта, після чого плануємо роботи поетапно або з мінімальним вікном відключення (зазвичай 2–4 години). Для квартир заміна щита зазвичай виконується за один день.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Скільки коштує монтаж ГРЩ або шафи АВР?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Вартість монтажних робіт залежить від типу і розміру щита, кількості кабелів та складності підключень. Орієнтовно: монтаж квартирного щитка — від 3 000 грн; ГРЩ до 250 А — від 15 000 грн; шафа АВР — від 20 000 грн (без вартості обладнання). Точна ціна — після вивчення ТЗ.</div></div>
+    </div>
+    <div class="faq-item reveal">
+      <div class="faq-q" onclick="toggleFaq(this)">
+        Яка гарантія на монтаж електрощита?
+        <span class="faq-ico"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="12" y1="5" x2="12" y2="19"/><line x1="5" y1="12" x2="19" y2="12"/></svg></span>
+      </div>
+      <div class="faq-a"><div class="faq-a-inner">Гарантія на монтажні роботи — 3 роки. Гарантія виробника на компоненти (автомати, УЗО, корпуси) — 5 років. При виникненні гарантійного випадку — безкоштовний виїзд інженера та усунення протягом 48 годин.</div></div>
+    </div>
+  </div>
+</section>
+
+
+<!-- CTA -->
+<div class="cta-band reveal" id="contact">
+  <div>
+    <div class="cta-title">РОЗРАХУЄМО МОНТАЖ<br>ЩИТА ВАШОГО ОБ'ЄКТА</div>
+    <p class="cta-sub">Надішліть схему або опишіть об'єкт — підберемо оптимальне рішення та нададуть комерційну пропозицію протягом 24 годин.</p>
+  </div>
+  <div class="cta-btns">
+    <a href="proelectric-contacts.html" class="btn-orange">Замовити монтаж</a>
+    <a href="tel:+380630607600" class="btn-ol-white">+38 063 060 76 00</a>
+  </div>
+</div>
+
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-top">
+    <div class="footer-brand">
+      <a href="index.html" class="logo">
+        <svg class="logo-mark" viewBox="0 0 46 46" fill="none">
+          <defs>
+            <linearGradient id="flg" x1="0" y1="0" x2="1" y2="1"><stop offset="0%" stop-color="#1a5fa8"/><stop offset="100%" stop-color="#2db551"/></linearGradient>
+            <clipPath id="fcc"><circle cx="23" cy="23" r="21"/></clipPath>
+          </defs>
+          <circle cx="23" cy="23" r="22.5" fill="none" stroke="url(#flg)" stroke-width="1" opacity=".3"/>
+          <circle cx="23" cy="23" r="21" fill="url(#flg)"/>
+          <path d="M14 24 L23 14 L32 24 L30 24 L30 33 L25 33 L25 27 L21 27 L21 33 L16 33 L16 24Z" fill="rgba(255,255,255,0.15)" clip-path="url(#fcc)"/>
+          <path d="M25.5 10 L17.5 24.5 H23.5 L20 36 L32 20 H25.5Z" fill="white"/>
+        </svg>
+        <div class="logo-text">
+          <span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
+          <span class="sub">Енергетичні рішення</span>
+        </div>
+      </a>
+      <p>Ваша енергетична свобода та безпека. Електромонтажні роботи та сонячні електростанції будь-якого масштабу.</p>
+    </div>
+    <div>
+      <div class="footer-col-title">Електромонтаж</div>
+      <ul class="footer-links">
+        <li><a href="proelectric-electro.html">Всі послуги монтажу</a></li>
+        <li><a href="proelectric-cables.html">Кабельні лінії</a></li>
+        <li><a href="#">Монтаж електрощитів</a></li>
+        <li><a href="proelectric-switchgear.html">Електрощитове обладнання</a></li>
+        <li><a href="proelectric-lighting.html">Системи освітлення</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Компанія</div>
+      <ul class="footer-links">
+        <li><a href="proelectric-about.html">Про нас</a></li>
+        <li><a href="#">Проєкти</a></li>
+        <li><a href="#">Блог</a></li>
+        <li><a href="proelectric-contacts.html">Контакти</a></li>
+      </ul>
+    </div>
+    <div>
+      <div class="footer-col-title">Контакти</div>
+      <ul class="footer-links">
+        <li><a href="tel:+380630607600">+38 063 060 76 00</a></li>
+        <li><a href="tel:+380684526450">+38 068 452 64 50</a></li>
+        <li><a href="mailto:info@proelectric.com.ua">info@proelectric.com.ua</a></li>
+        <li><a href="#">вул. Городоцька, 359, Львів</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2025 ТОВ Прогрес Електрик. Всі права захищені.</span>
+    <span>Розроблено з ⚡ в Україні</span>
+  </div>
+</footer>
+
+<script>
+  const nav = document.getElementById('main-nav');
+  const upNav = () => nav.classList.toggle('scrolled', window.scrollY > 60);
+  window.addEventListener('scroll', upNav, {passive:true}); upNav();
+
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)} });
+  }, {threshold:0, rootMargin:'0px 0px -60px 0px'});
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  ['ptypes-grid','proc-grid','proj-strip','faq-grid','std-grid'].forEach(cls => {
+    document.querySelectorAll('.'+cls).forEach(g => {
+      [...g.children].forEach((c,i) => c.style.transitionDelay = `${i*.07}s`);
+    });
+  });
+
+  function toggleFaq(btn) {
+    const item = btn.closest('.faq-item');
+    const open = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(el => el.classList.remove('open'));
+    if(!open) item.classList.add('open');
+  }
+</script>
+</body>
+</html>

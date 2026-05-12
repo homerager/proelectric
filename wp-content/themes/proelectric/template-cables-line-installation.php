@@ -700,7 +700,7 @@ get_header();
             <p class="section-sub">Від кабельної мережі промислового підприємства до підземної КЛ-10 кВ між підстанціями.</p>
         </div>
 
-        <div class="cables-proj-strip wf-animate-grid">
+        <div class="cables-proj-strip projects-strip wf-animate-grid">
             <div class="cables-proj-card featured wf-animate">
                 <div class="cables-proj-tag">Промислова КЛ</div>
                 <div class="cables-proj-title">Внутрішньозаводська кабельна мережа 10 кВ — 28 км</div>
