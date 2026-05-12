@@ -483,7 +483,6 @@ get_header();
             <p class="section-sub">Інтелектуальна система управління освітленням дозволяє заощадити ще 30–40% понад LED-ефективність.</p>
         </div>
         <div class="smart-inner wf-animate-grid d-grid md-grid-2-columns">
-
             <div class="smart-visual wf-animate">
                 <div class="smart-accent"></div>
                 <svg width="340" height="300" viewBox="0 0 340 300" fill="none">

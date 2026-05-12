@@ -107,8 +107,7 @@ get_header();
             <p class="section-sub">Вибираємо оптимальний метод залежно від умов об'єкта, типу кабелю та вимог до захисту.</p>
         </div>
 
-        <div class="cables-methods-grid lg-grid-3-columns wf-animate-grid">
-
+        <div class="cables-methods-grid d-grid lg-grid-3-columns md-grid-2-columns wf-animate-grid">
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb m1">
                     <div class="cables-method-badge">Відкрита прокладка</div>
@@ -353,7 +352,7 @@ get_header();
 <!-- CABLE TYPES -->
 <section class="page-section page-section-bg-dark" id="cables">
     <div class="container">
-        <div class="page-section-header wf-animate mb-16">
+        <div class="page-section-header wf-animate mb-5">
             <div class="section-label orange">Типи кабелів</div>
             <h2 class="section-title">КАБЕЛІ ЯКІ МИ МОНТУЄМО</h2>
             <p class="section-sub">Силові, контрольні, оптичні та спеціальні — підбираємо кабель під конкретні умови і вимоги об'єкта.</p>
@@ -521,7 +520,7 @@ get_header();
 <!-- SPLIT FEATURES -->
 <section class="page-section page-section-bg2">
     <div class="container">
-        <div class="page-section-header wf-animate mb-16">
+        <div class="page-section-header wf-animate mb-5">
             <div class="section-label">Наш підхід</div>
             <h2 class="section-title">ЯКІСТЬ НА КОЖНОМУ МЕТРІ</h2>
             <p class="section-sub">Ми прокладаємо кабельні траси так, щоб вони служили десятиліттями без проблем.</p>
@@ -700,7 +699,7 @@ get_header();
             <p class="section-sub">Від кабельної мережі промислового підприємства до підземної КЛ-10 кВ між підстанціями.</p>
         </div>
 
-        <div class="cables-proj-strip projects-strip wf-animate-grid">
+        <div class="cables-proj-strip projects-grid wf-animate-grid">
             <div class="cables-proj-card featured wf-animate">
                 <div class="cables-proj-tag">Промислова КЛ</div>
                 <div class="cables-proj-title">Внутрішньозаводська кабельна мережа 10 кВ — 28 км</div>

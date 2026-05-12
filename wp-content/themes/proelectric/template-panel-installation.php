@@ -125,8 +125,7 @@ get_header();
             <p class="section-sub">Монтуємо будь-які типи щитового обладнання — від побутового квартирного щитка до промислового ГРЩ та АВР.</p>
         </div>
 
-        <div class="panel-types-grid lg-grid-3-columns wf-animate-grid">
-
+        <div class="panel-types-grid d-grid lg-grid-3-columns wf-animate-grid">
             <div class="panel-type-card wf-animate">
                 <div class="panel-type-thumb pt1">
                     <div class="panel-type-badge">Житловий</div>
@@ -360,7 +359,7 @@ get_header();
 <!-- SPLIT FEATURES -->
 <section class="page-section page-section-bg2">
     <div class="container">
-        <div class="page-section-header wf-animate mb-16">
+        <div class="page-section-header wf-animate mb-5">
             <div class="section-label">Наш підхід</div>
             <h2 class="section-title">ТОЧНІСТЬ ДО КОЖНОГО БОЛТА</h2>
             <p class="section-sub">Монтуємо електрощити так, щоб вони надійно працювали десятиліттями — без аварій та перегріву.</p>
@@ -549,7 +548,7 @@ get_header();
             <p class="section-sub">Від квартирного щитка до головного розподільного щита промислового підприємства.</p>
         </div>
 
-        <div class="panel-proj-strip projects-strip wf-animate-grid">
+        <div class="panel-proj-strip projects-grid wf-animate-grid">
             <div class="panel-proj-card featured wf-animate">
                 <div class="panel-proj-tag">Промисловий об'єкт</div>
                 <div class="panel-proj-title">ГРЩ для виробничого підприємства на 3200 А</div>

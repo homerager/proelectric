@@ -46,7 +46,7 @@ get_header();
             <h2 class="section-title">ТИПИ ЩИТОВОГО ОБЛАДНАННЯ</h2>
             <p class="section-sub">Виготовляємо та постачаємо щитове обладнання власного виробництва і від провідних виробників.</p>
         </div>
-        <div class="products-grid lg-grid-3-columns md-grid-2-columns wf-animate-grid">
+        <div class="products-grid d-grid lg-grid-3-columns md-grid-2-columns wf-animate-grid">
             <div class="prod-card wf-animate">
                 <div class="prod-thumb t1">
                     <div class="prod-label-top">Розподіл</div>

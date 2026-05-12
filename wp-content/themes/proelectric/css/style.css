@@ -1023,7 +1023,6 @@ footer .logo .logo-text .brand {
     grid-template-columns: 2fr 1fr 1fr;
     grid-template-rows: auto auto;
     gap: 16px;
-    margin-top: 60px;
 }
 
 .project-card {
@@ -1033,7 +1032,6 @@ footer .logo .logo-text .brand {
     overflow: hidden;
     border: 1px solid var(--border);
     box-shadow: 0 2px 12px rgba(26, 95, 168, 0.05);
-    transition: box-shadow .3s;
 }
 
 .project-card:hover {
@@ -3200,11 +3198,6 @@ form .btn-group {
 /*-----END ELECTRICAL INSTALLATION PAGE-----*/
 
 /*-----ELECTRICAL PANEL EQUIPMENT PAGE-----*/
-.products-grid {
-    gap: 2px; 
-    background: var(--border); 
-}
-
 .prod-card {
     background: var(--card);
     padding: 0;
@@ -5357,11 +5350,6 @@ form .btn-group {
 }
 
 /* --- Methods grid --- */
-.cables-methods-grid {
-    gap: 2px;
-    background: var(--border);
-}
-
 .cables-method-card {
     background: var(--card);
     overflow: hidden;
@@ -5779,13 +5767,6 @@ form .btn-group {
 }
 
 /* --- Projects strip --- */
-.projects-strip {
-    display: grid;
-    grid-template-columns: 1.8fr 1fr 1fr;
-    grid-template-rows: auto auto;
-    gap: 16px;
-}
-
 .cables-proj-card {
     background: var(--card);
     border: 1px solid var(--border);
@@ -6160,11 +6141,6 @@ form .btn-group {
 }
 
 /* --- Panel types grid --- */
-.panel-types-grid {
-    gap: 2px;
-    background: var(--border);
-}
-
 .panel-type-card {
     background: var(--card);
     overflow: hidden;
@@ -6330,7 +6306,6 @@ form .btn-group {
     grid-template-columns: 1fr 1fr;
     gap: 0;
     background: var(--border);
-    margin-top: 56px;
 }
 
 .panel-split-visual {
@@ -6663,6 +6638,564 @@ form .btn-group {
     background: var(--blue);
 }
 
+/* --- btn-green --- */
+.btn-green {
+    background: var(--green);
+    color: #fff;
+}
+
+.btn-green:hover {
+    opacity: .88;
+}
+
+/* =================================================================
+   OVERHEAD LINES (ЛЕП) PAGE  lep-*
+   ================================================================= */
+
+/* --- Hero --- */
+.lep-hero {
+    background: linear-gradient(145deg, #061420 0%, #0b1c2e 40%, #071a10 100%);
+    background-image: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lep-hero::before {
+    animation: none;
+    background-color: #061420;
+    background-image: linear-gradient(145deg, #061420 0%, #0b1c2e 40%, #071a10 100%);
+}
+
+.lep-hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        radial-gradient(ellipse 55% 50% at 50% 30%, rgba(45,181,81,.12) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 85% 65%, rgba(26,95,168,.10) 0%, transparent 55%),
+        linear-gradient(to bottom, rgba(6,20,32,.55) 0%, rgba(6,20,32,.2) 50%, rgba(6,20,32,.8) 100%);
+    pointer-events: none;
+}
+
+.lep-hero-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.lep-hero > .container {
+    position: relative;
+    z-index: 3;
+}
+
+.lep-hero .hero-content {
+    max-width: 900px;
+}
+
+.lep-hero .hero-label {
+    color: var(--orange);
+    justify-content: center;
+}
+
+.lep-hero .hero-label::before,
+.lep-hero .hero-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--orange);
+}
+
+.lep-hero .hero-stat-item .unit {
+    color: var(--green);
+}
+
+/* --- Line types grid --- */
+.lep-type-card {
+    background: var(--card);
+    overflow: hidden;
+    position: relative;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.lep-type-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 48px rgba(45,181,81,.1);
+    z-index: 2;
+}
+
+.lep-type-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--green), var(--blue));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s;
+}
+
+.lep-type-card:hover::after {
+    transform: scaleX(1);
+}
+
+.lep-type-thumb {
+    height: 190px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.lt1 { background: linear-gradient(135deg, #060e09, #0e2012); }
+.lt2 { background: linear-gradient(135deg, #060b10, #0e2040); }
+.lt3 { background: linear-gradient(135deg, #0a0c06, #1a2010); }
+.lt4 { background: linear-gradient(135deg, #060b10, #0e1a2a); }
+.lt5 { background: linear-gradient(135deg, #060e09, #0b1c10); }
+.lt6 { background: linear-gradient(135deg, #060b10, #10182a); }
+
+.lep-type-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.05) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+.lep-type-badge {
+    position: absolute;
+    top: 14px; left: 14px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    padding: 4px 10px;
+    backdrop-filter: blur(6px);
+    font-family: 'Bebas Neue', sans-serif;
+}
+
+.lep-type-body {
+    padding: 28px 24px;
+}
+
+.lep-type-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 21px;
+    color: var(--heading);
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+.lep-type-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 14px;
+}
+
+.lep-type-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.lep-type-list li {
+    font-size: 12px;
+    color: var(--text);
+    padding-left: 0;
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.lep-type-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--green);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* --- Depth band --- */
+.lep-depth-band {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0;
+}
+
+.lep-depth-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.lep-depth-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    padding: 20px 32px;
+    border-right: 1px solid var(--border);
+}
+
+.lep-depth-item:last-child {
+    border-right: none;
+}
+
+.lep-depth-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(45,181,81,.2);
+    background: rgba(45,181,81,.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    color: var(--green);
+}
+
+.lep-depth-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 38px;
+    color: var(--heading);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.lep-depth-num span {
+    font-size: 24px;
+    color: var(--green);
+}
+
+.lep-depth-lbl {
+    font-size: 11px;
+    letter-spacing: .5px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* --- Tower/wire types (dark section) --- */
+.lep-towers-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.tower-type-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    border-radius: 4px;
+    padding: 22px;
+    transition: border-color .2s, background .2s;
+}
+
+.tower-type-card:hover {
+    border-color: rgba(45,181,81,.22);
+    background: rgba(45,181,81,.04);
+}
+
+.tower-type-icon {
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 14px;
+}
+
+.tower-type-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 16px;
+    letter-spacing: .5px;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.tower-type-badge {
+    display: inline-block;
+    font-size: 9px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    padding: 2px 8px;
+    background: rgba(45,181,81,.1);
+    border: 1px solid rgba(45,181,81,.2);
+    color: rgba(45,181,81,.85);
+    margin-bottom: 10px;
+}
+
+.tower-type-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,.45);
+    line-height: 1.7;
+    margin-bottom: 12px;
+}
+
+.tower-type-specs {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.tower-spec {
+    font-size: 10px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 1px;
+    padding: 2px 7px;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.08);
+    color: rgba(255,255,255,.4);
+}
+
+/* --- Split section (approach) --- */
+.lep-split-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--border);
+}
+
+.lep-split-visual {
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+.lep-split-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(45,181,81,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(45,181,81,.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.lep-split-accent {
+    position: absolute;
+    right: 0; top: 0; bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--green), var(--blue));
+}
+
+.lep-split-content {
+    background: var(--card);
+    padding: 56px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lep-feat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 32px;
+}
+
+.lep-feat-item {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.lep-feat-item:last-child {
+    border-bottom: none;
+}
+
+.lep-feat-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(45,181,81,.08), rgba(26,95,168,.08));
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--green);
+    transition: border-color .2s, background .2s;
+}
+
+.lep-feat-item:hover .lep-feat-icon {
+    border-color: var(--green);
+    background: rgba(45,181,81,.1);
+}
+
+.lep-feat-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 5px;
+}
+
+.lep-feat-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+/* --- Process grid (dark) --- */
+.lep-proc-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2px;
+    background: rgba(255,255,255,.04);
+}
+
+.lep-proc-card {
+    background: rgba(255,255,255,.025);
+    border: 1px solid rgba(255,255,255,.06);
+    padding: 36px 32px;
+    transition: background .2s, border-color .25s;
+}
+
+.lep-proc-card:hover {
+    background: rgba(45,181,81,.06);
+    border-color: rgba(45,181,81,.2);
+}
+
+.lep-proc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    background: linear-gradient(135deg, var(--green), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.lep-proc-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: #fff;
+    letter-spacing: .5px;
+    margin-bottom: 12px;
+}
+
+.lep-proc-desc {
+    font-size: 13px;
+    color: rgba(255,255,255,.5);
+    line-height: 1.75;
+    margin-bottom: 16px;
+}
+
+.lep-proc-tag {
+    display: inline-block;
+    font-size: 9px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    padding: 3px 10px;
+    border: 1px solid rgba(45,181,81,.25);
+    background: rgba(45,181,81,.06);
+    color: rgba(45,181,81,.8);
+}
+
+/* --- Projects strip --- */
+.lep-proj-meta {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.lep-proj-mi {
+    font-size: 11px;
+    font-family: 'Bebas Neue', sans-serif;
+    letter-spacing: 2px;
+    color: var(--muted);
+}
+
+.lep-proj-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 100px;
+    letter-spacing: 2px;
+    color: rgba(45,181,81,.05);
+    line-height: 1;
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    pointer-events: none;
+}
+
+/* --- Standards band --- */
+.lep-standards {
+    background: var(--dark);
+    border-top: 1px solid rgba(255,255,255,.06);
+    border-bottom: 1px solid rgba(255,255,255,.06);
+    padding: 52px 0;
+}
+
+.lep-standards-label {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 11px;
+    letter-spacing: 5px;
+    color: rgba(255,255,255,.3);
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.lep-std-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.lep-std-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 24px;
+    text-align: center;
+    transition: border-color .2s;
+}
+
+.lep-std-card:hover {
+    border-color: rgba(45,181,81,.2);
+}
+
+.lep-std-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    border: 1px solid rgba(45,181,81,.25);
+    background: rgba(45,181,81,.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    color: var(--green);
+}
+
+.lep-std-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 15px;
+    letter-spacing: .5px;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.lep-std-desc {
+    font-size: 12px;
+    color: rgba(255,255,255,.45);
+    line-height: 1.7;
+}
+
+
 /*-----MEDIA QUERIES-----*/
 
 @media (max-width: 1280px) {
@@ -6972,10 +7505,6 @@ form .btn-group {
         grid-template-columns: 1fr 1fr;
     }
 
-    .projects-strip {
-        grid-template-columns: 1fr;
-    }
-
     .cables-proj-card.featured {
         grid-row: auto;
     }
@@ -7021,6 +7550,43 @@ form .btn-group {
 
     .panel-cta-inner {
         flex-direction: column;
+    }
+
+    .lep-towers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lep-depth-row {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lep-depth-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .lep-depth-item:nth-child(n+3) {
+        border-top: 1px solid var(--border);
+    }
+
+    .lep-std-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lep-split-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .lep-split-visual {
+        min-height: 260px;
+        order: -1;
+    }
+
+    .lep-split-content {
+        padding: 40px 28px;
+    }
+
+    .lep-proc-grid {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
@@ -7128,6 +7694,22 @@ form .btn-group {
 
     .cables-std-grid {
         grid-template-columns: 1fr;
+    }
+
+    .lep-towers-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lep-proc-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .lep-std-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .lep-depth-item {
+        padding: 14px 20px;
     }
 
     .footer-top .footer-row {
