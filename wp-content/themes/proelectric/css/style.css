@@ -19,6 +19,8 @@
     --hero-overlay: 220 45% 12%;
     --primary-font: 'Montserrat', sans-serif;
     --hover-transition: 0.3s ease-out;
+    --orange:  #e85c1a;
+    --orange2: #c44d14;
 }
 
 @keyframes gridMove { 
@@ -340,6 +342,10 @@ strong {
     gap: 12px;
 }
 
+.gap-16 {
+    gap: 16px;
+}
+
 .gap-24 {
     gap: 24px;
 }
@@ -493,6 +499,17 @@ strong {
     border-color: #fff;
     color: #fff;
     background: rgba(255, 255, 255, 0.08);
+}
+
+.btn-orange {
+    background: var(--orange);
+    color: #fff;
+}
+
+.btn-orange:hover {
+    background: var(--orange2);
+    color: #fff;
+    opacity: 1;
 }
 
 .cta-actions {
@@ -5070,8 +5087,7 @@ form .btn-group {
 
 /* Sidebar */
 .post-sidebar {
-    position: sticky;
-    top: 90px;
+    margin-top: 30px;
     display: flex;
     flex-direction: column;
     gap: 28px;
@@ -5261,6 +5277,647 @@ form .btn-group {
 .related-posts-section {
     padding-top: 80px;
     padding-bottom: 80px;
+}
+
+
+
+/* ===================================================================
+   CABLES INSTALLATION PAGE
+   =================================================================== */
+
+   .accent-orange {
+    color: var(--orange);
+}
+
+.section-label.orange {
+    color: var(--orange);
+}
+
+.section-label.orange::before {
+    background: var(--orange);
+}
+
+/* --- Hero --- */
+.cables-hero {
+    background: linear-gradient(155deg, #060b10 0%, #0c1a28 50%, #080c06 100%);
+    background-image: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cables-hero::before {
+    animation: none;
+    background-color: #060b10;
+    background-image: linear-gradient(155deg, #060b10 0%, #0c1a28 50%, #080c06 100%);
+}
+
+.cables-hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        radial-gradient(ellipse 55% 50% at 50% 30%, rgba(26,95,168,.18) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 85% 65%, rgba(232,92,26,.08) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.cables-hero-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.cables-hero > .container {
+    position: relative;
+    z-index: 3;
+}
+
+.cables-hero .hero-content {
+    max-width: 900px;
+}
+
+.cables-hero .hero-label {
+    color: var(--orange);
+    justify-content: center;
+}
+
+.cables-hero .hero-label::before,
+.cables-hero .hero-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--orange);
+}
+
+.cables-hero .hero-stat-item .unit {
+    color: var(--orange);
+}
+
+/* --- Methods grid --- */
+.cables-methods-grid {
+    gap: 2px;
+    background: var(--border);
+}
+
+.cables-method-card {
+    background: var(--card);
+    overflow: hidden;
+    position: relative;
+    transition: transform .3s, box-shadow .3s;
+}
+
+.cables-method-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 18px 48px rgba(26,95,168,.12);
+    z-index: 2;
+}
+
+.cables-method-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 3px;
+    background: linear-gradient(90deg, var(--orange), var(--blue));
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform .35s;
+}
+
+.cables-method-card:hover::after {
+    transform: scaleX(1);
+}
+
+.cables-method-thumb {
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.cables-method-thumb.m1 { background: linear-gradient(135deg, #0a0e14, #1a1500); }
+.cables-method-thumb.m2 { background: linear-gradient(135deg, #060b10, #0e2040); }
+.cables-method-thumb.m3 { background: linear-gradient(135deg, #0a0c06, #1a2a08); }
+.cables-method-thumb.m4 { background: linear-gradient(135deg, #100608, #2a0e0e); }
+.cables-method-thumb.m5 { background: linear-gradient(135deg, #080810, #10102a); }
+.cables-method-thumb.m6 { background: linear-gradient(135deg, #0a0e12, #101c2a); }
+
+.cables-method-thumb::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: radial-gradient(circle, rgba(255,255,255,.06) 1px, transparent 1px);
+    background-size: 18px 18px;
+}
+
+.cables-method-badge {
+    position: absolute;
+    top: 14px;
+    left: 14px;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    background: rgba(255,255,255,.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,.18);
+    padding: 4px 10px;
+    backdrop-filter: blur(6px);
+}
+
+.cables-method-body {
+    padding: 32px 28px;
+}
+
+.cables-method-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 23px;
+    color: var(--heading);
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+.cables-method-desc {
+    font-size: 13px;
+    line-height: 1.85;
+    color: var(--muted);
+    margin-bottom: 16px;
+}
+
+.cables-method-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+.cables-method-list li {
+    font-size: 12px;
+    color: var(--text);
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    line-height: 1.5;
+}
+
+.cables-method-list li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--orange);
+    flex-shrink: 0;
+    margin-top: 5px;
+}
+
+/* --- Depth band --- */
+.cables-depth-band {
+    background: var(--card);
+    border-top: 1px solid var(--border);
+    border-bottom: 1px solid var(--border);
+    padding: 48px 0;
+}
+
+.cables-depth-item {
+    padding: 20px 32px;
+    border-right: 1px solid var(--border);
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.cables-depth-item:last-child {
+    border-right: none;
+}
+
+.cables-depth-icon {
+    color: var(--orange);
+    flex-shrink: 0;
+    margin-top: 2px;
+}
+
+.cables-depth-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 40px;
+    color: var(--heading);
+    line-height: 1;
+    margin-bottom: 4px;
+}
+
+.cables-depth-num span {
+    color: var(--orange);
+    font-size: 28px;
+}
+
+.cables-depth-lbl {
+    font-size: 11px;
+    letter-spacing: .5px;
+    color: var(--muted);
+    line-height: 1.5;
+}
+
+/* --- Cable types (dark section) --- */
+
+.cable-type-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.07);
+    padding: 28px 24px;
+    height: 100%;
+    transition: border-color .25s, background .25s;
+}
+
+.cable-type-card:hover {
+    border-color: rgba(232,92,26,.3);
+    background: rgba(232,92,26,.05);
+}
+
+.cable-type-icon {
+    margin-bottom: 18px;
+}
+
+.cable-type-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 20px;
+    color: #fff;
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+}
+
+.cable-type-badge {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    margin-bottom: 10px;
+}
+
+.cable-type-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.38);
+}
+
+.cable-type-specs {
+    margin-top: 14px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.cable-spec {
+    font-size: 10px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,.5);
+    background: rgba(255,255,255,.05);
+    border: 1px solid rgba(255,255,255,.08);
+    padding: 3px 8px;
+}
+
+/* --- Split section (approach) --- */
+.cables-split-inner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0;
+    background: var(--border);
+    margin-top: 56px;
+}
+
+.cables-split-visual {
+    min-height: 460px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+    background: var(--dark);
+}
+
+.cables-split-visual::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(232,92,26,.04) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(26,95,168,.05) 1px, transparent 1px);
+    background-size: 40px 40px;
+}
+
+.cables-split-accent {
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 4px;
+    background: linear-gradient(to bottom, var(--orange), var(--blue));
+}
+
+.cables-split-content {
+    background: var(--card);
+    padding: 56px 52px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cables-feat-list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    margin-top: 36px;
+}
+
+.cables-feat-item {
+    display: flex;
+    gap: 20px;
+    padding: 22px 0;
+    border-bottom: 1px solid var(--border);
+}
+
+.cables-feat-item:last-child {
+    border-bottom: none;
+}
+
+.cables-feat-icon {
+    width: 44px;
+    height: 44px;
+    flex-shrink: 0;
+    background: linear-gradient(135deg, rgba(232,92,26,.08), rgba(26,95,168,.08));
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: border-color .2s, background .2s;
+}
+
+.cables-feat-item:hover .cables-feat-icon {
+    border-color: var(--orange);
+    background: rgba(232,92,26,.1);
+}
+
+.cables-feat-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 5px;
+}
+
+.cables-feat-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+/* --- Process (dark) --- */
+.cables-proc-grid {
+    background: rgba(255,255,255,.04);
+}
+
+.cables-proc-card {
+    background: rgba(255,255,255,.03);
+    border: 1px solid rgba(255,255,255,.06);
+    padding: 40px 32px;
+    transition: background .2s, border-color .25s;
+}
+
+.cables-proc-card:hover {
+    background: rgba(232,92,26,.06);
+    border-color: rgba(232,92,26,.2);
+}
+
+.cables-proc-num {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 52px;
+    background: linear-gradient(135deg, var(--orange), var(--blue));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1;
+    margin-bottom: 16px;
+}
+
+.cables-proc-title {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 9px;
+}
+
+.cables-proc-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: rgba(255,255,255,.38);
+}
+
+.cables-proc-tag {
+    display: inline-block;
+    margin-top: 14px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    color: var(--orange);
+    border: 1px solid rgba(232,92,26,.3);
+    padding: 3px 10px;
+}
+
+/* --- Standards band --- */
+.cables-standards {
+    background: var(--bg2);
+    padding: 64px 0;
+}
+
+.cables-standards-label {
+    font-size: 10px;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--muted);
+    text-align: center;
+    margin-bottom: 36px;
+}
+
+.cables-std-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+}
+
+.cables-std-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 24px 20px;
+    box-shadow: 0 2px 10px rgba(26,95,168,.04);
+    transition: border-color .2s, box-shadow .2s;
+}
+
+.cables-std-card:hover {
+    border-color: var(--blue);
+    box-shadow: 0 6px 24px rgba(26,95,168,.1);
+}
+
+.cables-std-icon {
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.cables-std-name {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 18px;
+    color: var(--heading);
+    letter-spacing: .5px;
+    margin-bottom: 6px;
+}
+
+.cables-std-desc {
+    font-size: 12px;
+    line-height: 1.7;
+    color: var(--muted);
+}
+
+/* --- Projects strip --- */
+.cables-proj-strip {
+    display: grid;
+    grid-template-columns: 1.8fr 1fr 1fr;
+    grid-template-rows: auto auto;
+    gap: 16px;
+}
+
+.cables-proj-card {
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 40px 36px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 2px 12px rgba(26,95,168,.05);
+    transition: box-shadow .3s, transform .3s;
+}
+
+.cables-proj-card:hover {
+    box-shadow: 0 10px 36px rgba(26,95,168,.12);
+    transform: translateY(-3px);
+}
+
+.cables-proj-card.featured {
+    grid-row: span 2;
+    background: linear-gradient(140deg, #fff7f3, #eaf6ef);
+    border-color: rgba(232,92,26,.15);
+}
+
+.cables-proj-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--orange), var(--blue));
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.cables-proj-card:hover::after {
+    opacity: 1;
+}
+
+.cables-proj-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--orange);
+    border: 1px solid rgba(232,92,26,.35);
+    padding: 4px 10px;
+    margin-bottom: 18px;
+}
+
+.cables-proj-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    color: var(--heading);
+    margin-bottom: 12px;
+    letter-spacing: .3px;
+    line-height: 1.05;
+}
+
+.cables-proj-card.featured .cables-proj-title {
+    font-size: 38px;
+}
+
+.cables-proj-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+}
+
+.cables-proj-meta {
+    margin-top: 18px;
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+.cables-proj-mi {
+    font-size: 10px;
+    letter-spacing: .5px;
+    color: var(--muted);
+}
+
+.cables-proj-big {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 60px;
+    color: rgba(232,92,26,.08);
+    line-height: 1;
+    position: absolute;
+    bottom: -6px;
+    right: 12px;
+}
+
+
+/* --- Orange CTA band --- */
+.cables-cta-band {
+    background: linear-gradient(110deg, #140800 0%, var(--orange2) 38%, var(--blue3) 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.cables-cta-band::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 50% 80% at 10% 50%, rgba(232,92,26,.15) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 85% 50%, rgba(26,95,168,.15) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+.cables-cta-inner {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.cables-cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(28px, 4vw, 52px);
+    color: #fff;
+    letter-spacing: 1px;
+    line-height: 1.05;
+}
+
+.cables-cta-sub {
+    font-size: 14px;
+    color: rgba(255,255,255,.6);
+    margin-top: 10px;
+    max-width: 480px;
+    line-height: 1.7;
 }
 
 /*-----MEDIA QUERIES-----*/
@@ -5506,6 +6163,12 @@ form .btn-group {
     /*--END MOBILE MENU---*/
 }
 
+@media (max-width: 1023px) {
+    .sidebar-cta-widget {
+        grid-column: span 2;
+    }
+}
+
 
 @media (max-width: 991px) {
     .config-inner { 
@@ -5543,6 +6206,43 @@ form .btn-group {
 
     .smart-visual {
         min-height: 220px;
+    }
+
+    .cables-split-inner {
+        grid-template-columns: 1fr;
+    }
+
+    .cables-split-visual {
+        min-height: 220px;
+        order: -1;
+    }
+
+    .cables-depth-item:nth-child(2n) {
+        border-right: none;
+    }
+
+    .cables-depth-item:nth-child(n+3) {
+        border-top: 1px solid var(--border);
+    }
+
+    .cables-std-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .cables-proj-strip {
+        grid-template-columns: 1fr;
+    }
+
+    .cables-proj-card.featured {
+        grid-row: auto;
+    }
+
+    .cables-cta-inner {
+        flex-direction: column;
+    }
+
+    .cables-split-content {
+        padding: 40px 28px;
     }
 }
 
@@ -5614,12 +6314,22 @@ form .btn-group {
         text-align: left;
     }
 
-    .post-sidebar {
-        grid-template-columns: 1fr;
-    }
 
     .sidebar-cta-widget {
         grid-column: span 1;
+    }
+
+    .cables-depth-item {
+        border-right: none;
+        border-bottom: 1px solid var(--border);
+    }
+
+    .cables-depth-item:last-child {
+        border-bottom: none;
+    }
+
+    .cables-std-grid {
+        grid-template-columns: 1fr;
     }
 
     .footer-top .footer-row {
@@ -5637,6 +6347,15 @@ form .btn-group {
     }
 }
 
+@media (max-width: 600px) {
+    .post-cta-band {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+        padding: 24px 20px;
+    }
+}
+
 @media (max-width: 460px) {
     .hero .hero-actions {
         flex-direction: column;
@@ -5646,7 +6365,6 @@ form .btn-group {
     .hero .hero-stats .hero-stats-row {
         flex-wrap: wrap;
     }
-
 
     .hero .hero-stat-item {
         padding: 10px;
@@ -5820,26 +6538,7 @@ form .btn-group {
     }
 }
 
-/* --- Responsive --- */
-@media (max-width: 1023px) {
-
-    .post-sidebar {
-        position: static;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-    }
-
-    .sidebar-cta-widget {
-        grid-column: span 2;
-    }
-}
 
 
-@media (max-width: 600px) {
-    .post-cta-band {
-        flex-direction: column;
-        align-items: flex-start;
-        gap: 16px;
-        padding: 24px 20px;
-    }
-}
+
+

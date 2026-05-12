@@ -104,37 +104,35 @@ while ( have_posts() ) :
             </main>
 
             <aside class="post-sidebar">
-
                 <?php
-                $sidebar_recent = new WP_Query( array(
-                    'post_type'      => 'post',
-                    'posts_per_page' => 4,
-                    'post__not_in'   => array( get_the_ID() ),
-                    'post_status'    => 'publish',
-                ) );
-                if ( $sidebar_recent->have_posts() ) :
-                ?>
-                <div class="post-sidebar-widget">
-                    <div class="sidebar-widget-title">Останні статті</div>
-                    <div class="sidebar-recent">
-                        <?php while ( $sidebar_recent->have_posts() ) : $sidebar_recent->the_post(); ?>
-                        <a href="<?= esc_url( get_permalink() ) ?>" class="sidebar-recent-item">
-                            <?php if ( has_post_thumbnail() ) : ?>
-                            <div class="sidebar-recent-thumb">
-                                <?= get_the_post_thumbnail( get_the_ID(), 'thumbnail' ) ?>
-                            </div>
-                            <?php endif; ?>
-                            <div class="sidebar-recent-info">
-                                <div class="sidebar-recent-title"><?= get_the_title() ?></div>
-                                <div class="sidebar-recent-date"><?= esc_html( get_the_date('d.m.Y') ) ?></div>
-                            </div>
-                        </a>
-                        <?php endwhile; ?>
-                        <?php wp_reset_postdata(); ?>
+                    $sidebar_recent = new WP_Query( array(
+                        'post_type'      => 'post',
+                        'posts_per_page' => 4,
+                        'post__not_in'   => array( get_the_ID() ),
+                        'post_status'    => 'publish',
+                    ) );
+                 ?>   
+                <?php if ( $sidebar_recent->have_posts() ) : ?>
+                    <div class="post-sidebar-widget">
+                        <div class="sidebar-widget-title">Останні статті</div>
+                        <div class="sidebar-recent">
+                            <?php while ( $sidebar_recent->have_posts() ) : $sidebar_recent->the_post(); ?>
+                            <a href="<?= esc_url( get_permalink() ) ?>" class="sidebar-recent-item">
+                                <?php if ( has_post_thumbnail() ) : ?>
+                                <div class="sidebar-recent-thumb">
+                                    <?= get_the_post_thumbnail( get_the_ID(), 'thumbnail' ) ?>
+                                </div>
+                                <?php endif; ?>
+                                <div class="sidebar-recent-info">
+                                    <div class="sidebar-recent-title"><?= get_the_title() ?></div>
+                                    <div class="sidebar-recent-date"><?= esc_html( get_the_date('d.m.Y') ) ?></div>
+                                </div>
+                            </a>
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </div>
                     </div>
-                </div>
                 <?php endif; ?>
-
             </aside>
         </div>
     </div>
