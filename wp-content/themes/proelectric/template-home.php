@@ -59,7 +59,7 @@ get_header();
                     <circle cx="27" cy="27" r="24" stroke="url(#si1)" stroke-width="1.5"/>
                     <path d="M27 10 L20 26 H27 L20 44 L36 22 H28Z" fill="url(#si1)"/>
                 </svg>
-                <div class="service-title item-title">Сонячні Електростанції</div>
+                <h3 class="service-title item-title">Сонячні Електростанції</h3>
                 <p class="service-desc item-description">Проектування та монтаж СЕС для ОСББ, бізнесу та приватних потреб. Підключення до мережі, «зелений тариф».</p>
             </a>
             <a href="<?= home_url('/elektromontazhni-roboty/'); ?>" class="service-card white-card white-card-bottom-border-hover wf-animate">
@@ -76,7 +76,7 @@ get_header();
                     <circle cx="20" cy="20" r="2.5" fill="#1a5fa8"/>
                     <circle cx="34" cy="34" r="2.5" fill="#2db551"/>
                 </svg>
-                <div class="service-title item-title">Електромонтажні Роботи</div>
+                <h3 class="service-title item-title">Електромонтажні Роботи</h3>
                 <p class="service-desc item-description">Монтаж кабелів, систем освітлення, розподільних щитів. Промислові та цивільні об'єкти будь-якого масштабу.</p>
             </a>
             <a href="<?= home_url('/elektroshhytove-obladnannya/'); ?>" class="service-card white-card white-card-bottom-border-hover wf-animate">
@@ -93,7 +93,7 @@ get_header();
                     <circle cx="36" cy="40" r="5.5" fill="#2db551"/>
                     <path d="M33.5 40 l2 2 3-3" stroke="white" stroke-width="1.4" fill="none" stroke-linecap="round"/>
                 </svg>
-                <div class="service-title item-title">Електрощитове Обладнання</div>
+                <h3 class="service-title item-title">Електрощитове Обладнання</h3>
                 <p class="service-desc item-description">Постачання та монтаж щитового обладнання, автоматики, систем захисту та управління електромережею.</p>
             </a>
         </div>

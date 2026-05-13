@@ -596,6 +596,7 @@ strong {
     color: var(--heading);
     letter-spacing: 1px;
     margin-bottom: 14px;
+    font-weight: 400;
 }
 
 .item-title-secondary {
@@ -5833,6 +5834,76 @@ form .btn-group {
         radial-gradient(ellipse 40% 60% at 85% 50%, rgba(26,95,168,.15) 0%, transparent 60%);
     pointer-events: none;
 }
+
+/* ============================================================
+   BACKUP POWER / AVR PAGE
+   ============================================================ */
+
+.backup-hero {
+    background: linear-gradient(155deg, #040d08 0%, #091a10 50%, #06100d 100%);
+    background-image: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.backup-hero::before {
+    animation: none;
+    background-color: #040d08;
+    background-image: linear-gradient(155deg, #040d08 0%, #091a10 50%, #06100d 100%);
+}
+
+.backup-hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        radial-gradient(ellipse 55% 50% at 50% 30%, rgba(45,181,81,.14) 0%, transparent 65%),
+        radial-gradient(ellipse 30% 40% at 80% 65%, rgba(26,95,168,.1) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.backup-hero-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.backup-hero > .container {
+    position: relative;
+    z-index: 3;
+}
+
+.backup-hero .hero-content {
+    max-width: 900px;
+}
+
+.backup-hero .hero-label {
+    color: var(--green);
+    justify-content: center;
+}
+
+.backup-hero .hero-label::before,
+.backup-hero .hero-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--green);
+}
+
+.backup-hero .hero-stat-item .unit {
+    color: var(--green);
+}
+
+/* Backup power method card thumbs */
+.cables-method-thumb.bpm1 { background: linear-gradient(135deg, #040d08, #0e2a12); }
+.cables-method-thumb.bpm2 { background: linear-gradient(135deg, #060b10, #0e2040); }
+.cables-method-thumb.bpm3 { background: linear-gradient(135deg, #040d08, #0a1e14); }
+.cables-method-thumb.bpm4 { background: linear-gradient(135deg, #060b10, #08152a); }
+.cables-method-thumb.bpm5 { background: linear-gradient(135deg, #080810, #0a1a14); }
+.cables-method-thumb.bpm6 { background: linear-gradient(135deg, #040e08, #0e1e10); }
 
 /* ============================================================
    404 PAGE

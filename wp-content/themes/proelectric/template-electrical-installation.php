@@ -170,7 +170,7 @@ get_header();
                     <li>Вимірювання опору заземлення</li>
                 </ul>
             </div>
-            <div class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
+            <a href="<?= home_url('/rezervne-zhyvlennya-ta-avr/'); ?>" class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">06</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -192,7 +192,7 @@ get_header();
                     <li>Інвертори</li>
                     <li>Акумуляторні системи</li>
                 </ul>
-            </div>
+            </a>
         </div>
     </div>
 </section>
