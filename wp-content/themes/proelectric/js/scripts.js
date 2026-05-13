@@ -382,3 +382,42 @@ function calcHome() {
   res.classList.add('show');
   res.scrollIntoView({behavior:'smooth', block:'nearest'});
 }
+
+
+function calcIndustrialSolar() {
+  var kwh    = parseFloat(document.getElementById('ind-kwh').value)    || 200000;
+  var tariff = parseFloat(document.getElementById('ind-tariff').value) || 4.32;
+  var sun    = parseFloat(document.getElementById('ind-region').value) || 4.5;
+  var mode   = parseFloat(document.getElementById('ind-mode').value)   || 0.8;
+  var bess   = parseInt(document.getElementById('ind-type').value)     || 0;
+
+  var annualKwh  = kwh * 12;
+  var peakH      = sun * 365;
+  var cover      = mode * 0.85;
+  var targetGen  = annualKwh * cover;
+  var powerKw    = Math.ceil(targetGen / peakH / 0.8 / 100) * 100;
+  var panels     = Math.round(powerKw * 1000 / 600);
+  var area       = Math.round(powerKw * 5.5);
+  var genKwh     = Math.round(powerKw * peakH * 0.8);
+  var pricePerKw = bess ? 18000 : 11500;
+  var cost       = Math.round(powerKw * pricePerKw);
+  var vat        = Math.round(cost * 0.2);
+  var netCost    = cost - vat;
+  var saving     = Math.round(genKwh * cover * tariff);
+  var payback    = (saving > 0) ? (netCost / saving).toFixed(1) : '—';
+
+  var fmt = function(n){ return n.toLocaleString('uk-UA'); };
+  document.getElementById('ind-pow').textContent  = fmt(powerKw) + ' кВт';
+  document.getElementById('ind-pnl').textContent  = fmt(panels) + ' шт.';
+  document.getElementById('ind-area').textContent = fmt(area) + ' м²';
+  document.getElementById('ind-gen').textContent  = fmt(genKwh) + ' кВт·год/р.';
+  document.getElementById('ind-cost').textContent = fmt(cost) + ' грн';
+  document.getElementById('ind-vat').textContent  = '+ ' + fmt(vat) + ' грн';
+  document.getElementById('ind-net').textContent  = fmt(netCost) + ' грн';
+  document.getElementById('ind-save').textContent = fmt(saving) + ' грн/р.';
+  document.getElementById('ind-back').textContent = payback + ' р.';
+
+  document.getElementById('ind-res').style.display   = 'block';
+  document.getElementById('ind-strip').style.display = 'flex';
+  document.getElementById('ind-note').style.display  = 'block';
+}

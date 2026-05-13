@@ -5906,6 +5906,104 @@ form .btn-group {
 .cables-method-thumb.bpm6 { background: linear-gradient(135deg, #040e08, #0e1e10); }
 
 /* ============================================================
+   INDUSTRIAL SOLAR POWER PLANTS PAGE
+   ============================================================ */
+
+.ind-solar-hero {
+    background: linear-gradient(165deg, #04090e 0%, #0a1520 55%, #050d06 100%);
+    background-image: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.ind-solar-hero::before {
+    animation: none;
+    background-color: #04090e;
+    background-image: linear-gradient(165deg, #04090e 0%, #0a1520 55%, #050d06 100%);
+}
+
+.ind-solar-hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        radial-gradient(ellipse 60% 45% at 50% 25%, rgba(245,197,24,.1) 0%, transparent 65%),
+        radial-gradient(ellipse 40% 50% at 20% 60%, rgba(26,95,168,.1) 0%, transparent 60%),
+        radial-gradient(ellipse 30% 40% at 85% 65%, rgba(45,181,81,.07) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.ind-solar-hero-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.ind-solar-hero > .container {
+    position: relative;
+    z-index: 3;
+}
+
+.ind-solar-hero .hero-content {
+    max-width: 940px;
+}
+
+.ind-solar-label {
+    color: var(--gold) !important;
+    justify-content: center;
+}
+
+.ind-solar-label::before,
+.ind-solar-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--gold);
+}
+
+.ind-solar-hero .hero-stat-item .unit {
+    color: var(--gold);
+}
+
+/* accent-yellow utility */
+.accent-yellow { color: var(--gold); }
+
+/* Industrial solar method card thumbs */
+.cables-method-thumb.isp1 { background: linear-gradient(135deg, #060b10, #101e08); }
+.cables-method-thumb.isp2 { background: linear-gradient(135deg, #060b10, #0e1e2a); }
+.cables-method-thumb.isp3 { background: linear-gradient(135deg, #100d02, #1e1a04); }
+.cables-method-thumb.isp4 { background: linear-gradient(135deg, #060b10, #08162a); }
+.cables-method-thumb.isp5 { background: linear-gradient(135deg, #040e06, #0a1e08); }
+.cables-method-thumb.isp6 { background: linear-gradient(135deg, #080810, #0c1a12); }
+
+/* Benefit cards — use cable-type-card base, override icon color */
+.ind-ben-card .cable-type-icon svg { opacity: .9; }
+
+/* Depth band yellow accent */
+.ind-solar-band .cables-depth-num span { color: var(--gold); opacity: .75; }
+
+/* CTA band */
+.ind-solar-cta {
+    background: linear-gradient(110deg, #090c04 0%, #0f1e0a 38%, #060c18 100%);
+    padding: 80px 0;
+    position: relative;
+    overflow: hidden;
+}
+
+.ind-solar-cta::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse 50% 80% at 10% 50%, rgba(245,197,24,.08) 0%, transparent 60%),
+        radial-gradient(ellipse 40% 60% at 85% 50%, rgba(26,95,168,.12) 0%, transparent 60%);
+    pointer-events: none;
+}
+
+/* ============================================================
    404 PAGE
    ============================================================ */
 
