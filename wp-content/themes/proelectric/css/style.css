@@ -432,6 +432,15 @@ strong {
     transform: scaleX(1);
 }
 
+.grid-item > div {
+    height: 100%;
+}
+
+.bg-light-white-grid {
+    background: rgba(255,255,255,.04);
+}
+
+
 .wf-animate { 
     opacity: 0; 
     transform: translateY(24px); 
@@ -5662,9 +5671,6 @@ form .btn-group {
 }
 
 /* --- Process (dark) --- */
-.cables-proc-grid {
-    background: rgba(255,255,255,.04);
-}
 
 .cables-proc-card {
     background: rgba(255,255,255,.03);
@@ -6395,10 +6401,6 @@ form .btn-group {
 }
 
 /* --- Process (dark) --- */
-.panel-proc-grid {
-    background: rgba(255,255,255,.04);
-}
-
 .panel-proc-card {
     background: rgba(255,255,255,.03);
     border: 1px solid rgba(255,255,255,.06);
@@ -7050,13 +7052,6 @@ form .btn-group {
 }
 
 /* --- Process grid (dark) --- */
-.lep-proc-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
-    background: rgba(255,255,255,.04);
-}
-
 .lep-proc-card {
     background: rgba(255,255,255,.025);
     border: 1px solid rgba(255,255,255,.06);

@@ -359,7 +359,7 @@ get_header();
         </div>
 
         <div class="cables-types-grid lg-grid-4-columns md-grid-2-columns gap-16 wf-animate-grid">
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -380,7 +380,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -401,7 +401,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -419,7 +419,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -436,7 +436,7 @@ get_header();
                     </div>
                 </div>
             </div>
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -455,7 +455,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -474,7 +474,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -493,7 +493,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="cable-type-card">
                     <div class="cable-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -648,42 +648,54 @@ get_header();
             <p class="section-sub">Від отримання проекту до підписання акту — чітка послідовність робіт без відступів від технології.</p>
         </div>
 
-        <div class="cables-proc-grid lg-grid-3-columns gap-2 wf-animate-grid">
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">01</div>
-                <div class="cables-proc-title">Отримання та вивчення проекту</div>
-                <p class="cables-proc-desc">Вивчення робочої документації, погодження місць введень та перетинів з іншими комунікаціями, отримання ордера на земляні роботи</p>
-                <span class="cables-proc-tag">ПУЕ / ДБН</span>
+        <div class="cables-proc-grid lg-grid-3-columns gap-2 wf-animate-grid bg-light-white-grid">
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">01</div>
+                    <div class="cables-proc-title">Отримання та вивчення проекту</div>
+                    <p class="cables-proc-desc">Вивчення робочої документації, погодження місць введень та перетинів з іншими комунікаціями, отримання ордера на земляні роботи</p>
+                    <span class="cables-proc-tag">ПУЕ / ДБН</span>
+                </div>
             </div>
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">02</div>
-                <div class="cables-proc-title">Підготовка трас та основ</div>
-                <p class="cables-proc-desc">Розмітка траси, розробка траншей або монтаж кабельних конструкцій, встановлення опор та кронштейнів лотків</p>
-                <span class="cables-proc-tag">Геодезія</span>
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">02</div>
+                    <div class="cables-proc-title">Підготовка трас та основ</div>
+                    <p class="cables-proc-desc">Розмітка траси, розробка траншей або монтаж кабельних конструкцій, встановлення опор та кронштейнів лотків</p>
+                    <span class="cables-proc-tag">Геодезія</span>
+                </div>
             </div>
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">03</div>
-                <div class="cables-proc-title">Розмотка та прокладка кабелю</div>
-                <p class="cables-proc-desc">Розмотка з барабанів із контролем мінімального радіусу вигину. Прокладання зі збереженням маркування жил та кінців</p>
-                <span class="cables-proc-tag">Контроль якості</span>
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">03</div>
+                    <div class="cables-proc-title">Розмотка та прокладка кабелю</div>
+                    <p class="cables-proc-desc">Розмотка з барабанів із контролем мінімального радіусу вигину. Прокладання зі збереженням маркування жил та кінців</p>
+                    <span class="cables-proc-tag">Контроль якості</span>
+                </div>
             </div>
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">04</div>
-                <div class="cables-proc-title">Виконання з'єднань та муфт</div>
-                <p class="cables-proc-desc">Монтаж кінцевих та сполучних муфт кваліфікованими кабельщиками. Підключення кабелів до щитів та вимикачів</p>
-                <span class="cables-proc-tag">Сертифіковані муфти</span>
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">04</div>
+                    <div class="cables-proc-title">Виконання з'єднань та муфт</div>
+                    <p class="cables-proc-desc">Монтаж кінцевих та сполучних муфт кваліфікованими кабельщиками. Підключення кабелів до щитів та вимикачів</p>
+                    <span class="cables-proc-tag">Сертифіковані муфти</span>
+                </div>
             </div>
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">05</div>
-                <div class="cables-proc-title">Засипання та відновлення</div>
-                <p class="cables-proc-desc">Засипання траншеї з піщаною подушкою та сигнальною стрічкою, ущільнення, відновлення дорожнього покриття або благоустрою</p>
-                <span class="cables-proc-tag">Акти прихованих робіт</span>
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">05</div>
+                    <div class="cables-proc-title">Засипання та відновлення</div>
+                    <p class="cables-proc-desc">Засипання траншеї з піщаною подушкою та сигнальною стрічкою, ущільнення, відновлення дорожнього покриття або благоустрою</p>
+                    <span class="cables-proc-tag">Акти прихованих робіт</span>
+                </div>
             </div>
-            <div class="cables-proc-card wf-animate">
-                <div class="cables-proc-num">06</div>
-                <div class="cables-proc-title">Вимірювання та здача</div>
-                <p class="cables-proc-desc">Вимірювання ізоляції мегаомметром, прозвонка, складання виконавчих схем та протоколів, підписання акту здачі-приймання</p>
-                <span class="cables-proc-tag">Протоколи вимірювань</span>
+            <div class="grid-item wf-animate">
+                <div class="cables-proc-card">
+                    <div class="cables-proc-num">06</div>
+                    <div class="cables-proc-title">Вимірювання та здача</div>
+                    <p class="cables-proc-desc">Вимірювання ізоляції мегаомметром, прозвонка, складання виконавчих схем та протоколів, підписання акту здачі-приймання</p>
+                    <span class="cables-proc-tag">Протоколи вимірювань</span>
+                </div>
             </div>
         </div>
     </div>

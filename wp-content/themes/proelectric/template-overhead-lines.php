@@ -411,8 +411,7 @@ get_header();
         </div>
 
         <div class="lep-towers-grid lg-grid-4-columns md-grid-2-columns gap-16 wf-animate-grid">
-
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -434,7 +433,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -456,7 +455,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -477,7 +476,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -498,7 +497,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -520,7 +519,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -538,7 +537,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -557,7 +556,7 @@ get_header();
                 </div>
             </div>
 
-            <div class="wf-animate grid-item">
+            <div class="grid-item wf-animate">
                 <div class="tower-type-card">
                     <div class="tower-type-icon">
                         <svg width="28" height="28" viewBox="0 0 24 24" fill="none">
@@ -723,42 +722,54 @@ get_header();
             <p class="section-sub">Від отримання проекту до підписання акту — чітка послідовність робіт без відступів від технології.</p>
         </div>
 
-        <div class="lep-proc-grid lg-grid-3-columns gap-2 wf-animate-grid">
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">01</div>
-                <div class="lep-proc-title">Вивчення проекту та погодження</div>
-                <p class="lep-proc-desc">Вивчення робочої документації, погодження перетинів з дорогами та комунікаціями, отримання дозволів на будівництво та зупинки руху</p>
-                <span class="lep-proc-tag">ПУЕ / ДБН</span>
+        <div class="lep-proc-grid lg-grid-3-columns gap-2 wf-animate-grid bg-light-white-grid">
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">01</div>
+                    <div class="lep-proc-title">Вивчення проекту та погодження</div>
+                    <p class="lep-proc-desc">Вивчення робочої документації, погодження перетинів з дорогами та комунікаціями, отримання дозволів на будівництво та зупинки руху</p>
+                    <span class="lep-proc-tag">ПУЕ / ДБН</span>
+                </div>
             </div>
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">02</div>
-                <div class="lep-proc-title">Геодезичне трасування та пікетаж</div>
-                <p class="lep-proc-desc">Розбивка траси в натурі, встановлення пікетів та кілочків опор, перевірка відповідності місцевості проектним позначкам</p>
-                <span class="lep-proc-tag">Геодезія</span>
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">02</div>
+                    <div class="lep-proc-title">Геодезичне трасування та пікетаж</div>
+                    <p class="lep-proc-desc">Розбивка траси в натурі, встановлення пікетів та кілочків опор, перевірка відповідності місцевості проектним позначкам</p>
+                    <span class="lep-proc-tag">Геодезія</span>
+                </div>
             </div>
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">03</div>
-                <div class="lep-proc-title">Копання ям та монтаж фундаментів</div>
-                <p class="lep-proc-desc">Механізоване буріння або відкопування ям, встановлення опор буровою машиною або краном, заливка бетоном або засипка із ущільненням</p>
-                <span class="lep-proc-tag">Бетон М200+</span>
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">03</div>
+                    <div class="lep-proc-title">Копання ям та монтаж фундаментів</div>
+                    <p class="lep-proc-desc">Механізоване буріння або відкопування ям, встановлення опор буровою машиною або краном, заливка бетоном або засипка із ущільненням</p>
+                    <span class="lep-proc-tag">Бетон М200+</span>
+                </div>
             </div>
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">04</div>
-                <div class="lep-proc-title">Монтаж гарнітури та ізоляторів</div>
-                <p class="lep-proc-desc">Навішування кронштейнів, траверс та гірлянд ізоляторів, установка гаків, скоб, тросових та дротяних в'язок на всіх опорах</p>
-                <span class="lep-proc-tag">Ізолятори ПС</span>
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">04</div>
+                    <div class="lep-proc-title">Монтаж гарнітури та ізоляторів</div>
+                    <p class="lep-proc-desc">Навішування кронштейнів, траверс та гірлянд ізоляторів, установка гаків, скоб, тросових та дротяних в'язок на всіх опорах</p>
+                    <span class="lep-proc-tag">Ізолятори ПС</span>
+                </div>
             </div>
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">05</div>
-                <div class="lep-proc-title">Підвіска та натягування проводів</div>
-                <p class="lep-proc-desc">Розмотка проводу з барабанів, натягування лебідками, вимірювання стрілки провісу при поточній температурі, остаточне закріплення в анкерних затискачах</p>
-                <span class="lep-proc-tag">Монтажні таблиці</span>
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">05</div>
+                    <div class="lep-proc-title">Підвіска та натягування проводів</div>
+                    <p class="lep-proc-desc">Розмотка проводу з барабанів, натягування лебідками, вимірювання стрілки провісу при поточній температурі, остаточне закріплення в анкерних затискачах</p>
+                    <span class="lep-proc-tag">Монтажні таблиці</span>
+                </div>
             </div>
-            <div class="lep-proc-card wf-animate">
-                <div class="lep-proc-num">06</div>
-                <div class="lep-proc-title">Заземлення, вимірювання та здача</div>
-                <p class="lep-proc-desc">Монтаж заземлюючих спусків, вимірювання опору заземлення кожної опори, вимірювання ізоляції лінії, складання виконавчої документації</p>
-                <span class="lep-proc-tag">Протоколи вимірювань</span>
+            <div class="grid-item wf-animate">
+                <div class="lep-proc-card">
+                    <div class="lep-proc-num">06</div>
+                    <div class="lep-proc-title">Заземлення, вимірювання та здача</div>
+                    <p class="lep-proc-desc">Монтаж заземлюючих спусків, вимірювання опору заземлення кожної опори, вимірювання ізоляції лінії, складання виконавчої документації</p>
+                    <span class="lep-proc-tag">Протоколи вимірювань</span>
+                </div>
             </div>
         </div>
     </div>

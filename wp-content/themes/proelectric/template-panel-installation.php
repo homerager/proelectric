@@ -497,42 +497,54 @@ get_header();
             <p class="section-sub">Від вивчення проекту до здачі з протоколами — чітка технологічна послідовність без відступів.</p>
         </div>
 
-        <div class="panel-proc-grid lg-grid-3-columns gap-2 wf-animate-grid">
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">01</div>
-                <div class="panel-proc-title">Вивчення проекту та ТЗ</div>
-                <p class="panel-proc-desc">Аналіз робочої документації, уточнення схем підключення, переліку споживачів, вимог до захисту та селективності автоматів</p>
-                <span class="panel-proc-tag">ПУЕ / ДБН</span>
+        <div class="panel-proc-grid lg-grid-3-columns gap-2 wf-animate-grid bg-light-white-grid">
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">01</div>
+                    <div class="panel-proc-title">Вивчення проекту та ТЗ</div>
+                    <p class="panel-proc-desc">Аналіз робочої документації, уточнення схем підключення, переліку споживачів, вимог до захисту та селективності автоматів</p>
+                    <span class="panel-proc-tag">ПУЕ / ДБН</span>
+                </div>
             </div>
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">02</div>
-                <div class="panel-proc-title">Підготовка місця встановлення</div>
-                <p class="panel-proc-desc">Перевірка ніші або місця кріплення, монтаж закладних конструкцій, виконання кабельних вводів та відповідних вирізів у корпусі</p>
-                <span class="panel-proc-tag">Точність кріплення</span>
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">02</div>
+                    <div class="panel-proc-title">Підготовка місця встановлення</div>
+                    <p class="panel-proc-desc">Перевірка ніші або місця кріплення, монтаж закладних конструкцій, виконання кабельних вводів та відповідних вирізів у корпусі</p>
+                    <span class="panel-proc-tag">Точність кріплення</span>
+                </div>  
             </div>
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">03</div>
-                <div class="panel-proc-title">Встановлення корпусу та DIN-рейок</div>
-                <p class="panel-proc-desc">Монтаж корпусу щита, встановлення DIN-рейок, кабельних каналів та нульових шин. Перевірка горизонтальності та доступності обслуговування</p>
-                <span class="panel-proc-tag">IP захист</span>
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">03</div>
+                    <div class="panel-proc-title">Встановлення корпусу та DIN-рейок</div>
+                    <p class="panel-proc-desc">Монтаж корпусу щита, встановлення DIN-рейок, кабельних каналів та нульових шин. Перевірка горизонтальності та доступності обслуговування</p>
+                    <span class="panel-proc-tag">IP захист</span>
+                </div>
             </div>
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">04</div>
-                <div class="panel-proc-title">Монтаж обладнання та шин</div>
-                <p class="panel-proc-desc">Встановлення автоматичних вимикачів, УЗО, реле, вимірювальних приладів, лічильників та шинних з'єднань відповідно до монтажної схеми</p>
-                <span class="panel-proc-tag">Сертифіковане обладнання</span>
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">04</div>
+                    <div class="panel-proc-title">Монтаж обладнання та шин</div>
+                    <p class="panel-proc-desc">Встановлення автоматичних вимикачів, УЗО, реле, вимірювальних приладів, лічильників та шинних з'єднань відповідно до монтажної схеми</p>
+                    <span class="panel-proc-tag">Сертифіковане обладнання</span>
+                </div>
             </div>
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">05</div>
-                <div class="panel-proc-title">Підключення кабелів та маркування</div>
-                <p class="panel-proc-desc">Введення та підключення всіх живильних і відхідних кабелів з дотриманням моменту затяжки клем, обов'язкове маркування кожного провідника</p>
-                <span class="panel-proc-tag">Моменти затяжки</span>
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">05</div>
+                    <div class="panel-proc-title">Підключення кабелів та маркування</div>
+                    <p class="panel-proc-desc">Введення та підключення всіх живильних і відхідних кабелів з дотриманням моменту затяжки клем, обов'язкове маркування кожного провідника</p>
+                    <span class="panel-proc-tag">Моменти затяжки</span>
+                </div>
             </div>
-            <div class="panel-proc-card wf-animate">
-                <div class="panel-proc-num">06</div>
-                <div class="panel-proc-title">Вимірювання та введення в дію</div>
-                <p class="panel-proc-desc">Вимірювання ізоляції, перевірка УЗО тестером, перевірка селективності, налаштування реле та пробне ввімкнення. Передача протоколів та схем</p>
-                <span class="panel-proc-tag">Протоколи вимірювань</span>
+            <div class="grid-item wf-animate">
+                <div class="panel-proc-card">
+                    <div class="panel-proc-num">06</div>
+                    <div class="panel-proc-title">Вимірювання та введення в дію</div>
+                    <p class="panel-proc-desc">Вимірювання ізоляції, перевірка УЗО тестером, перевірка селективності, налаштування реле та пробне ввімкнення. Передача протоколів та схем</p>
+                    <span class="panel-proc-tag">Протоколи вимірювань</span>
+                </div>
             </div>
         </div>
     </div>
