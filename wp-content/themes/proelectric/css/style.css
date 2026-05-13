@@ -1132,11 +1132,11 @@ footer .logo .logo-text .brand {
     font-size: clamp(28px, 3.5vw, 50px);
     color: #fff;
     letter-spacing: 1px;
-    line-height: 1;
+    line-height: 1.15;
 }
 
 .cta-band-sub {
-    font-size: 13px;
+    font-size: 15px;
     color: rgba(255, 255, 255, 0.65);
     margin-top: 10px;
     max-width: 480px;
@@ -2810,7 +2810,6 @@ form .btn-group {
     position: relative;
     overflow: hidden;
     transition: transform .3s, box-shadow .3s;
-    cursor: default;
 }
 
 .srv-card::after {
@@ -2852,6 +2851,7 @@ form .btn-group {
     color: var(--heading);
     letter-spacing: .5px;
     margin-bottom: 12px;
+    font-weight: 400;
 }
 
 .srv-desc {
@@ -5773,20 +5773,7 @@ form .btn-group {
 }
 
 /* --- Projects strip --- */
-.cables-proj-card {
-    background: var(--card);
-    border: 1px solid var(--border);
-    padding: 40px 36px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 2px 12px rgba(26,95,168,.05);
-    transition: box-shadow .3s, transform .3s;
-}
 
-.cables-proj-card:hover {
-    box-shadow: 0 10px 36px rgba(26,95,168,.12);
-    transform: translateY(-3px);
-}
 
 .cables-proj-card.featured {
     grid-row: span 2;
@@ -5796,48 +5783,13 @@ form .btn-group {
 
 .cables-proj-card::after {
     content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 100%;
     background: linear-gradient(to bottom, var(--orange), var(--blue));
-    opacity: 0;
-    transition: opacity .3s;
 }
 
-.cables-proj-card:hover::after {
-    opacity: 1;
-}
 
 .cables-proj-tag {
-    display: inline-block;
-    font-size: 9px;
-    letter-spacing: 2px;
-    text-transform: uppercase;
     color: var(--orange);
     border: 1px solid rgba(232,92,26,.35);
-    padding: 4px 10px;
-    margin-bottom: 18px;
-}
-
-.cables-proj-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: 24px;
-    color: var(--heading);
-    margin-bottom: 12px;
-    letter-spacing: .3px;
-    line-height: 1.05;
-}
-
-.cables-proj-card.featured .cables-proj-title {
-    font-size: 38px;
-}
-
-.cables-proj-desc {
-    font-size: 13px;
-    line-height: 1.8;
-    color: var(--muted);
 }
 
 .cables-proj-meta {
@@ -5880,31 +5832,6 @@ form .btn-group {
         radial-gradient(ellipse 50% 80% at 10% 50%, rgba(232,92,26,.15) 0%, transparent 60%),
         radial-gradient(ellipse 40% 60% at 85% 50%, rgba(26,95,168,.15) 0%, transparent 60%);
     pointer-events: none;
-}
-
-.cables-cta-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.cables-cta-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(28px, 4vw, 52px);
-    color: #fff;
-    letter-spacing: 1px;
-    line-height: 1.05;
-}
-
-.cables-cta-sub {
-    font-size: 14px;
-    color: rgba(255,255,255,.6);
-    margin-top: 10px;
-    max-width: 480px;
-    line-height: 1.7;
 }
 
 /* ============================================================
@@ -6591,9 +6518,6 @@ form .btn-group {
 /* --- Blue CTA band --- */
 .panel-cta-band {
     background: linear-gradient(110deg, #050d18 0%, var(--blue2) 38%, #0a2010 100%);
-    padding: 80px 0;
-    position: relative;
-    overflow: hidden;
 }
 
 .panel-cta-band::before {
@@ -6604,31 +6528,6 @@ form .btn-group {
         radial-gradient(ellipse 50% 80% at 10% 50%, rgba(26,95,168,.18) 0%, transparent 60%),
         radial-gradient(ellipse 40% 60% at 85% 50%, rgba(45,181,81,.12) 0%, transparent 60%);
     pointer-events: none;
-}
-
-.panel-cta-inner {
-    position: relative;
-    z-index: 1;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 40px;
-}
-
-.panel-cta-title {
-    font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(28px, 4vw, 52px);
-    color: #fff;
-    letter-spacing: 1px;
-    line-height: 1.05;
-}
-
-.panel-cta-sub {
-    font-size: 14px;
-    color: rgba(255,255,255,.6);
-    margin-top: 10px;
-    max-width: 480px;
-    line-height: 1.7;
 }
 
 /* --- section-label blue variant --- */
@@ -7442,6 +7341,16 @@ form .btn-group {
 
 
 @media (max-width: 991px) {
+    .hero .hero-stats .hero-stats-row {
+        flex-wrap: wrap;
+    }
+
+    .hero-stats-row .hero-stat-item {
+        flex: 1 1 45%;
+        padding: 20px 20px;
+        border-right: none;
+    }
+
     .config-inner { 
         grid-template-columns: 1fr; 
     }
@@ -7729,20 +7638,30 @@ form .btn-group {
         gap: 16px;
         padding: 24px 20px;
     }
+
+    .project-card {
+        padding: 24px 20px;
+    }
+
+    .hero .hero-stat-item {
+        width: 50%;
+        flex: 1 1 50%;
+    }
 }
 
-@media (max-width: 460px) {
+@media (max-width: 520px) { 
     .hero .hero-actions {
         flex-direction: column;
         margin-top: 24px;
     }
+}
 
-    .hero .hero-stats .hero-stats-row {
-        flex-wrap: wrap;
-    }
+@media (max-width: 460px) {
 
     .hero .hero-stat-item {
         padding: 10px;
+        width: 100%;
+        flex: 1 1 100%;
     }
 
     .hero .hero-stat-item .stat-num {

@@ -747,21 +747,22 @@ get_header();
 
 
 <!-- CTA -->
-<div class="panel-cta-band wf-animate" id="contact">
+<section class="cta-band panel-cta-band wf-animate">
     <div class="container">
-        <div class="panel-cta-inner">
-            <div>
-                <div class="panel-cta-title">РОЗРАХУЄМО МОНТАЖ<br>ЩИТА ВАШОГО ОБ'ЄКТА</div>
-                <p class="panel-cta-sub">Надішліть схему або опишіть об'єкт — підберемо оптимальне рішення та нададуть комерційну пропозицію протягом 24 годин.</p>
+        <div class="row align-items-center">
+            <div class="col-md-7 col-12">
+                <div class="cta-band-title">РОЗРАХУЄМО МОНТАЖ<br>ЩИТА ВАШОГО ОБ'ЄКТА</div>
+                <p class="cta-band-sub">Надішліть схему або опишіть об'єкт — підберемо оптимальне рішення та нададуть комерційну пропозицію протягом 24 годин.</p>
             </div>
-            <div class="cta-actions">
-                <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-orange">Замовити монтаж</a>
-                <a href="tel:+380630607600" class="btn btn-outline-white">+38 063 060 76 00</a>
+            <div class="col-md-5 col-12">
+                <div class="cta-actions justify-content-md-end">
+                    <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-orange">Замовити монтаж</a>
+                    <a href="tel:+380630607600" class="btn btn-outline-white">+38 063 060 76 00</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</section> 
 
 <?php get_template_part('template-parts/general/contact-us'); ?>
 <?php get_footer(); ?>

@@ -48,7 +48,7 @@ get_header();
             <p class="section-sub">Виконуємо повний комплекс електромонтажних робіт на об'єктах будь-якого рівня складності.</p>
         </div>
         <div class="wf-animate-grid d-grid md-grid-3-columns services-grid gap-0">
-            <div class="srv-card white-card white-card-bottom-border-hover wf-animate">
+            <a href="<?= home_url('/montazh-elektroshhytiv/'); ?>" class="srv-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">01</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -65,7 +65,7 @@ get_header();
                     <line x1="18" y1="6" x2="18" y2="10" stroke="url(#g1)" stroke-width="1.5"/>
                     <line x1="34" y1="6" x2="34" y2="10" stroke="url(#g1)" stroke-width="1.5"/>
                 </svg>
-                <div class="srv-title">Монтаж Електрощитів</div>
+                <h3 class="srv-title">Монтаж Електрощитів</h3>
                 <p class="srv-desc">Збирання та встановлення розподільних щитів, шафів управління та автоматики для промислових і цивільних об'єктів.</p>
                 <ul class="srv-list">
                     <li>Головні розподільні щити (ГРЩ)</li>
@@ -73,8 +73,8 @@ get_header();
                     <li>Щити автоматики та АВР</li>
                     <li>Шафи управління двигунами</li>
                 </ul>
-            </div>
-            <div class="srv-card white-card white-card-bottom-border-hover wf-animate">
+            </a>
+            <a href="<?= home_url('/montazh-kabelnyh-linij/'); ?>" class="srv-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">02</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -90,7 +90,7 @@ get_header();
                     <circle cx="34" cy="14" r="3" fill="#2db551"/>
                     <circle cx="44" cy="20" r="3" fill="#2db551" opacity=".5"/>
                 </svg>
-                <div class="srv-title">Прокладання Кабелів</div>
+                <h3 class="srv-title">Прокладання Кабелів</h3>
                 <p class="srv-desc">Монтаж силових та контрольних кабелів у кабельних лотках, трубах, каналах та траншеях.</p>
                 <ul class="srv-list">
                     <li>Кабельні лотки та короби</li>
@@ -98,8 +98,8 @@ get_header();
                     <li>Кабельні мости та естакади</li>
                     <li>Кабелі до 110 кВ</li>
                 </ul>
-            </div>
-            <div class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
+            </a>
+            <a href="<?= home_url('/systemy-osvitlennya/'); ?>" class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">03</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -116,7 +116,7 @@ get_header();
                     <line x1="26" y1="28" x2="26" y2="44" stroke="url(#g3)" stroke-width="1.5" stroke-linecap="round"/>
                     <line x1="18" y1="44" x2="34" y2="44" stroke="url(#g3)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-                <div class="srv-title">Системи Освітлення</div>
+                <h3 class="srv-title">Системи Освітлення</h3>
                 <p class="srv-desc">Проектування та монтаж внутрішнього та зовнішнього освітлення: LED, промислові світильники, вулична інфраструктура.</p>
                 <ul class="srv-list">
                     <li>Промислове та офісне освітлення</li>
@@ -124,8 +124,8 @@ get_header();
                     <li>Декоративне та архітектурне</li>
                     <li>Системи управління освітленням</li>
                 </ul>
-            </div>
-            <div class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
+            </a>
+            <a href="<?= home_url('/povitryani-liniyi-lep/'); ?>" class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">04</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -140,7 +140,7 @@ get_header();
                     <line x1="16" y1="34" x2="28" y2="34" stroke="url(#g4)" stroke-width="1.2"/>
                     <path d="M32 30 L38 30 M35 27 L35 33" stroke="#2db551" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
-                <div class="srv-title">Повітряні Лінії ЛЕП</div>
+                <h3 class="srv-title">Повітряні Лінії ЛЕП</h3>
                 <p class="srv-desc">Монтаж та реконструкція повітряних ліній електропередачі 0,4–110 кВ, встановлення опор та підвіска проводів.</p>
                 <ul class="srv-list">
                     <li>ПЛ та КЛ 0,4–10 кВ</li>
@@ -148,7 +148,7 @@ get_header();
                     <li>Вводи в будівлі (АВВГ, СІП)</li>
                     <li>Реконструкція застарілих мереж</li>
                 </ul>
-            </div>
+            </a>
             <div class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">05</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
@@ -161,7 +161,7 @@ get_header();
                     <path d="M26 6 L6 18 v16 c0 10 8 16 20 18 12-2 20-8 20-18 V18 Z" stroke="url(#g5)" stroke-width="1.5" fill="none"/>
                     <path d="M26 14 L18 28 h7 l-4 10 L34 22 H26 Z" fill="url(#g5)"/>
                 </svg>
-                <div class="srv-title">Заземлення та Блискавкозахист</div>
+                <h3 class="srv-title">Заземлення та Блискавкозахист</h3>
                 <p class="srv-desc">Монтаж систем заземлення та захисту від блискавки для промислових будівель, житлових комплексів та об'єктів інфраструктури.</p>
                 <ul class="srv-list">
                     <li>Контурне заземлення об'єктів</li>
@@ -184,13 +184,13 @@ get_header();
                     <path d="M22 24 l3 3 6-6" stroke="#2db551" stroke-width="1.4" fill="none" stroke-linecap="round"/>
                     <line x1="16" y1="38" x2="36" y2="38" stroke="url(#g6)" stroke-width="1.2"/>
                 </svg>
-                <div class="srv-title">Пусконалагоджувальні Роботи</div>
-                <p class="srv-desc">Перевірка, налаштування та випробування електроустановок. Складання виконавчої документації та введення в експлуатацію.</p>
+                <h3 class="srv-title">Резервне Живлення та АВР</h3>
+                <p class="srv-desc">Підключення генераторів, інверторів та систем автоматичного резервного живлення.</p>
                 <ul class="srv-list">
-                    <li>Перевірка ізоляції кабелів</li>
-                    <li>Налаштування захисних реле</li>
-                    <li>Випробування трансформаторів</li>
-                    <li>Оформлення актів виконавчої документації</li>
+                    <li>АВР</li>
+                    <li>Генератори</li>
+                    <li>Інвертори</li>
+                    <li>Акумуляторні системи</li>
                 </ul>
             </div>
         </div>

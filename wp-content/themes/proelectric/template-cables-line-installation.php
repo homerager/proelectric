@@ -72,28 +72,28 @@ get_header();
         </div>
     </div>
 
-    <div class="hero-stats">
-        <div class="container">
-            <div class="hero-stats-row d-flex justify-content-between">
-                <div class="hero-stat-item">
-                    <div class="stat-num">110<span class="unit"> кВ</span></div>
-                    <div class="stat-label">Максимальна<br>напруга кабелів</div>
-                </div>
-                <div class="hero-stat-item">
-                    <div class="stat-num">500<span class="unit">+ км</span></div>
-                    <div class="stat-label">Прокладено<br>кабелю</div>
-                </div>
-                <div class="hero-stat-item">
-                    <div class="stat-num">0<span class="unit"> НВ</span></div>
-                    <div class="stat-label">Нещасних<br>випадків</div>
-                </div>
-                <div class="hero-stat-item">
-                    <div class="stat-num">3<span class="unit"> р.</span></div>
-                    <div class="stat-label">Гарантія<br>на монтаж</div>
-                </div>
-            </div>
-        </div>
-    </div>
+    <?php
+        $stats = array(
+            array(
+                'stat_num' => '110',
+                'unit' => ' кВ',
+                'stat_label' => 'Максимальна напруга кабелів'
+            ), array(
+                'stat_num' => '500',
+                'unit' => '+ км',
+                'stat_label' => 'Прокладено кабелю'
+            ), array(
+                'stat_num' => '0',
+                'unit' => ' НВ',
+                'stat_label' => 'Нещасних випадків'
+            ), array(
+                'stat_num' => '3',
+                'unit' => ' р.',
+                'stat_label' => 'Гарантія на монтаж'
+            )
+        );
+        get_template_part('template-parts/general/hero-stats', null, array('stats' => $stats)); 
+    ?>
 
 </section>
 
@@ -712,38 +712,38 @@ get_header();
         </div>
 
         <div class="cables-proj-strip projects-grid wf-animate-grid">
-            <div class="cables-proj-card featured wf-animate">
-                <div class="cables-proj-tag">Промислова КЛ</div>
-                <div class="cables-proj-title">Внутрішньозаводська кабельна мережа 10 кВ — 28 км</div>
-                <p class="cables-proj-desc" style="max-width:360px">Прокладання 28 км силових кабелів ПвП 10 кВ між трансформаторними підстанціями великого металургійного заводу. Прокладання в траншеях, кабельних каналах та на естакадах. Монтаж кінцевих і сполучних муфт. Вимірювання та випробування кабельних ліній підвищеною напругою.</p>
-                <div class="cables-proj-meta">
+            <div class="project-card cables-proj-card featured wf-animate">
+                <div class="project-tag cables-proj-tag">Промислова КЛ</div>
+                <div class="project-title cables-proj-title">Внутрішньозаводська кабельна мережа 10 кВ — 28 км</div>
+                <p class="project-desc cables-proj-desc" style="max-width:360px">Прокладання 28 км силових кабелів ПвП 10 кВ між трансформаторними підстанціями великого металургійного заводу. Прокладання в траншеях, кабельних каналах та на естакадах. Монтаж кінцевих і сполучних муфт. Вимірювання та випробування кабельних ліній підвищеною напругою.</p>
+                <div class="project-meta cables-proj-meta">
                     <span class="cables-proj-mi">2022 / Дніпро</span>
                     <span class="cables-proj-mi">28 км · 10 кВ</span>
                     <span class="cables-proj-mi">Термін 4 місяці</span>
                 </div>
                 <div class="cables-proj-big">28 км</div>
             </div>
-            <div class="cables-proj-card wf-animate">
-                <div class="cables-proj-tag">Вітрова СЕС</div>
-                <div class="cables-proj-title">КЛ між вітрогенераторами та підстанцією 160 МВт</div>
-                <p class="cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">80 км підземних кабельних ліній 10 кВ для 80 вітрогенераторів. Кабелі ПвП 10 кВ 3×240 мм².</p>
-                <div class="cables-proj-meta" style="margin-top:16px">
+            <div class="project-card cables-proj-card wf-animate">
+                <div class="project-tag cables-proj-tag">Вітрова СЕС</div>
+                <div class="project-title cables-proj-title">КЛ між вітрогенераторами та підстанцією 160 МВт</div>
+                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">80 км підземних кабельних ліній 10 кВ для 80 вітрогенераторів. Кабелі ПвП 10 кВ 3×240 мм².</p>
+                <div class="project-meta cables-proj-meta" style="margin-top:16px">
                     <span class="cables-proj-mi">2020 / Запорізька обл.</span>
                 </div>
             </div>
-            <div class="cables-proj-card wf-animate">
-                <div class="cables-proj-tag">Сонячна СЕС</div>
-                <div class="cables-proj-title">КЛ для СЕС 40 МВт, постійний та змінний струм</div>
-                <p class="cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">DC-кабелі від панелей до інверторів + AC 10 кВ до підстанції. 65 км у траншеях.</p>
-                <div class="cables-proj-meta" style="margin-top:16px">
+            <div class="project-card cables-proj-card wf-animate">
+                <div class="project-tag cables-proj-tag">Сонячна СЕС</div>
+                <div class="project-title cables-proj-title">КЛ для СЕС 40 МВт, постійний та змінний струм</div>
+                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">DC-кабелі від панелей до інверторів + AC 10 кВ до підстанції. 65 км у траншеях.</p>
+                <div class="project-meta cables-proj-meta" style="margin-top:16px">
                     <span class="cables-proj-mi">2019 / Запорізька обл.</span>
                 </div>
             </div>
-            <div class="cables-proj-card wf-animate">
-                <div class="cables-proj-tag">Ж/к будівництво</div>
-                <div class="cables-proj-title">Кабельна мережа ЖК на 800 квартир</div>
-                <p class="cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Повна кабельна мережа 0,4 кВ від КТП до щитів. 120 км кабелю, прокладання в штробах та лотках.</p>
-                <div class="cables-proj-meta" style="margin-top:16px">
+            <div class="project-card cables-proj-card wf-animate">
+                <div class="project-tag cables-proj-tag">Ж/к будівництво</div>
+                <div class="project-title cables-proj-title">Кабельна мережа ЖК на 800 квартир</div>
+                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Повна кабельна мережа 0,4 кВ від КТП до щитів. 120 км кабелю, прокладання в штробах та лотках.</p>
+                <div class="project-meta cables-proj-meta" style="margin-top:16px">
                     <span class="cables-proj-mi">2023 / Київ</span>
                 </div>
             </div>
@@ -901,21 +901,22 @@ get_header();
 
 
 <!-- CTA -->
-<div class="cables-cta-band wf-animate" id="contact">
+<section class="cta-band cables-cta-band wf-animate">
     <div class="container">
-        <div class="cables-cta-inner">
-            <div>
-                <div class="cables-cta-title">РОЗРАХУЄМО КАБЕЛЬНІ<br>ЛІНІЇ ВАШОГО ОБ'ЄКТА</div>
-                <p class="cables-cta-sub">Надішліть проект або технічне завдання — виїдемо на об'єкт та підготуємо детальний кошторис протягом 3 робочих днів.</p>
+        <div class="row align-items-center">
+            <div class="col-md-7 col-12">
+                <div class="cta-band-title">РОЗРАХУЄМО КАБЕЛЬНІ<br>ЛІНІЇ ВАШОГО ОБ'ЄКТА</div>
+                <p class="cta-band-sub">Надішліть проект або технічне завдання — виїдемо на об'єкт та підготуємо детальний кошторис протягом 3 робочих днів</p>
             </div>
-            <div class="cta-actions">
-                <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-orange">Замовити монтаж</a>
-                <a href="tel:+380630607600" class="btn btn-outline-white">+38 063 060 76 00</a>
+            <div class="col-md-5 col-12">
+                <div class="cta-actions justify-content-md-end">
+                    <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-orange">Замовити монтаж</a>
+                    <a href="tel:+380630607600" class="btn btn-outline-white">+38 063 060 76 00</a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-
+</section> 
 
 <?php get_template_part('template-parts/general/contact-us'); ?>
 <?php get_footer(); ?>
