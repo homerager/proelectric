@@ -75,7 +75,7 @@ get_header();
                 <span>›</span>
                 <a href="<?= esc_url( home_url('/elektromontazhni-roboty/') ); ?>">Електромонтаж</a>
                 <span>›</span>
-                <span style="color:rgba(255,255,255,.7)">Монтаж електрощитів</span>
+                <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">Монтаж електрощитів</a>
             </nav>
             <div class="hero-label">Збирання · Монтаж · Введення в дію</div>
             <h1 class="hero-title">

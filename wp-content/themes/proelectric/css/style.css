@@ -4107,6 +4107,12 @@ form .btn-group {
     color: rgba(255, 255, 255, .15);
 }
 
+.hero .breadcrumb .current-crumb {
+    color: rgba(255, 255, 255, .7);
+    pointer-events: none;
+    cursor: default;
+}
+
 /* Hero label decorative lines (lighting) */
 .lighting-hero .hero-label::before,
 .lighting-hero .hero-label::after {

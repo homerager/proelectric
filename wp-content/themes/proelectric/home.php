@@ -39,15 +39,18 @@ get_header();
         <div class="blog-grid d-grid lg-grid-3-columns md-grid-2-columns blog-gap wf-animate-grid">
             <?php while ( have_posts() ) : the_post();
                 $cats         = get_the_category();
+                $tags         = get_the_tags();
                 $words        = str_word_count( strip_tags( get_the_content() ) );
                 $reading_time = max( 1, ceil( $words / 200 ) );
+                // Показуємо теги якщо є, інакше — категорію
+                $card_labels  = ! empty( $tags ) ? array_slice( $tags, 0, 2 ) : ( ! empty( $cats ) ? array_slice( $cats, 0, 1 ) : [] );
             ?>
             <article class="blog-card wf-animate">
                 <?php if ( has_post_thumbnail() ) : ?>
                 <a href="<?= esc_url( get_permalink() ) ?>" class="blog-card-thumb" aria-label="<?= esc_attr( get_the_title() ) ?>">
                     <?= get_the_post_thumbnail( get_the_ID(), 'medium_large' ) ?>
-                    <?php if ( ! empty( $cats ) ) : ?>
-                    <span class="blog-card-cat"><?= esc_html( $cats[0]->name ) ?></span>
+                    <?php if ( ! empty( $card_labels ) ) : ?>
+                    <span class="blog-card-cat"><?= esc_html( $card_labels[0]->name ) ?></span>
                     <?php endif; ?>
                 </a>
                 <?php else : ?>
@@ -55,8 +58,8 @@ get_header();
                     <svg width="52" height="52" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity=".4">
                         <path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/>
                     </svg>
-                    <?php if ( ! empty( $cats ) ) : ?>
-                    <span class="blog-card-cat"><?= esc_html( $cats[0]->name ) ?></span>
+                    <?php if ( ! empty( $card_labels ) ) : ?>
+                    <span class="blog-card-cat"><?= esc_html( $card_labels[0]->name ) ?></span>
                     <?php endif; ?>
                 </a>
                 <?php endif; ?>

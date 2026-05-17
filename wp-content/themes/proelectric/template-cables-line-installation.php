@@ -57,7 +57,7 @@ get_header();
                 <span>›</span>
                 <a href="<?= esc_url( home_url('/elektromontazhni-roboty/') ); ?>">Електромонтаж</a>
                 <span>›</span>
-                <span style="color:rgba(255,255,255,.7)">Кабельні лінії</span>
+                <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">Кабельні лінії</a>
             </nav>
             <div class="hero-label">Силові та контрольні кабелі</div>
             <h1 class="hero-title">

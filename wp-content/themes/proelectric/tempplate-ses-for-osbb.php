@@ -58,7 +58,14 @@ get_header();
     </div>
     <div class="hero-tint"></div>
     <div class="container">
-        <div class="hero-content">
+        <div class="hero-content hero-content-center">
+            <nav class="breadcrumb">
+                <a href="<?= esc_url( home_url('/') ); ?>">Головна</a>
+                <span>›</span>
+                <a href="<?= esc_url( home_url('/sonyachni-elektrostancziyi/') ); ?>">Сонячна енергетика</a>
+                <span>›</span>
+                <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">СЕС для ОСББ</a>
+            </nav>
             <div class="hero-label">Відновлювана енергія для будинків</div>
             <h1 class="hero-title">
                 <span class="accent-blue">СЕС</span> ДЛЯ<br><span class="accent-green">ОСББ</span>

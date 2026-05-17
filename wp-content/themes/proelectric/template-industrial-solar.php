@@ -88,9 +88,9 @@ get_header();
             <nav class="breadcrumb">
                 <a href="<?= esc_url( home_url('/') ); ?>">Головна</a>
                 <span>›</span>
-                <a href="<?= esc_url( home_url('/sonyachni-elektrostantsiyi/') ); ?>">Сонячна енергетика</a>
+                <a href="<?= esc_url( home_url('/sonyachni-elektrostancziyi/') ); ?>">Сонячна енергетика</a>
                 <span>›</span>
-                <span style="color:rgba(255,255,255,.7)">Промислові СЕС</span>
+                <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">Промислові СЕС</a>
             </nav>
             <div class="hero-label ind-solar-label">Масштабна сонячна генерація</div>
             <h1 class="hero-title">
