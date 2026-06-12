@@ -149,7 +149,7 @@ get_header();
                     <li>Реконструкція застарілих мереж</li>
                 </ul>
             </a>
-            <div class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
+            <a href="<?= home_url('/avtomatyka-ta-zahyst/'); ?>" class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">05</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">
                     <defs>
@@ -158,18 +158,20 @@ get_header();
                             <stop offset="100%" stop-color="#2db551"/>
                         </linearGradient>
                     </defs>
-                    <path d="M26 6 L6 18 v16 c0 10 8 16 20 18 12-2 20-8 20-18 V18 Z" stroke="url(#g5)" stroke-width="1.5" fill="none"/>
-                    <path d="M26 14 L18 28 h7 l-4 10 L34 22 H26 Z" fill="url(#g5)"/>
+                    <path d="M26 5 L8 13 v13 c0 11 8 19 18 23 10-4 18-12 18-23 V13 Z" stroke="url(#g5)" stroke-width="1.5" fill="none"/>
+                    <circle cx="26" cy="24" r="6.5" stroke="url(#g5)" stroke-width="1.3"/>
+                    <path d="M26 13.5 v3.5 M26 31 v3.5 M14.5 24 h3.5 M34 24 h3.5 M18 16 l2.5 2.5 M34 16 l-2.5 2.5 M18 32 l2.5-2.5 M34 32 l-2.5-2.5" stroke="url(#g5)" stroke-width="1.4" stroke-linecap="round"/>
+                    <path d="M22.5 24 l2.5 2.5 4.5-4.5" stroke="#2db551" stroke-width="1.6" fill="none" stroke-linecap="round"/>
                 </svg>
-                <h3 class="srv-title">Заземлення та Блискавкозахист</h3>
-                <p class="srv-desc">Монтаж систем заземлення та захисту від блискавки для промислових будівель, житлових комплексів та об'єктів інфраструктури.</p>
+                <h3 class="srv-title">Автоматика та Захист</h3>
+                <p class="srv-desc">Монтаж систем автоматичного керування та релейного захисту для надійної і безпечної роботи електрообладнання промислових і цивільних об'єктів.</p>
                 <ul class="srv-list">
-                    <li>Контурне заземлення об'єктів</li>
-                    <li>Блискавковідводи та тросовий захист</li>
-                    <li>Вирівнювання потенціалів</li>
-                    <li>Вимірювання опору заземлення</li>
+                    <li>Релейний захист та автоматика (РЗА)</li>
+                    <li>Системи диспетчеризації та АСУ</li>
+                    <li>Пристрої захисного відключення (ПЗВ)</li>
+                    <li>Захист від перенапруг (ПЗІП)</li>
                 </ul>
-            </div>
+            </a>
             <a href="<?= home_url('/rezervne-zhyvlennya-ta-avr/'); ?>" class="srv-card reveal white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">06</div>
                 <svg class="srv-icon" viewBox="0 0 52 52" fill="none">

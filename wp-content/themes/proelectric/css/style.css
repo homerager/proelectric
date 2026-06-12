@@ -816,7 +816,8 @@ footer .logo .logo-text .brand {
     gap: 10px;
 }
 
-.footer-links a {
+.footer-links a,
+.footer-links span {
     font-size: 12px;
     color: rgba(255, 255, 255, 0.4);
     text-decoration: none;
@@ -825,6 +826,12 @@ footer .logo .logo-text .brand {
 
 .footer-links a:hover {
     color: var(--green);
+}
+
+.footer-contacts > li {
+    gap: 12px;
+    display: flex;
+    align-items: center;
 }
 
 .footer-bottom {
@@ -893,7 +900,7 @@ footer .logo .logo-text .brand {
 .hero .hero-title {
     font-family: 'Bebas Neue', sans-serif;
     font-size: clamp(42px, 8vw, 86px);
-    line-height: .92;
+    line-height: 1.1;
     color: #fff;
     letter-spacing: -.5px;
     animation: fadeUp .8s .1s ease both;
@@ -4582,6 +4589,7 @@ form .btn-group {
 .hero.post-hero .hero-content {
     padding-top: 110px;
     padding-bottom: 70px;
+    max-width: 800px;
 }
 
 .post-hero-title {
@@ -7263,6 +7271,77 @@ form .btn-group {
     color: rgba(255,255,255,.45);
     line-height: 1.7;
 }
+
+
+/* ============================================================
+   AUTOMATION & PROTECTION PAGE  automation-* / apm-*
+   ============================================================ */
+
+.automation-hero {
+    background: linear-gradient(155deg, #050b12 0%, #0a1622 50%, #06110c 100%);
+    background-image: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.automation-hero::before {
+    animation: none;
+    background-color: #050b12;
+    background-image: linear-gradient(155deg, #050b12 0%, #0a1622 50%, #06110c 100%);
+}
+
+.automation-hero-tint {
+    position: absolute;
+    inset: 0;
+    z-index: 2;
+    background:
+        radial-gradient(ellipse 55% 50% at 50% 28%, rgba(26,95,168,.16) 0%, transparent 65%),
+        radial-gradient(ellipse 32% 42% at 82% 65%, rgba(45,181,81,.1) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+.automation-hero-deco {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    overflow: hidden;
+    pointer-events: none;
+}
+
+.automation-hero > .container {
+    position: relative;
+    z-index: 3;
+}
+
+.automation-hero .hero-content {
+    max-width: 900px;
+}
+
+.automation-hero .hero-label {
+    color: var(--blue);
+    justify-content: center;
+}
+
+.automation-hero .hero-label::before,
+.automation-hero .hero-label::after {
+    content: '';
+    display: block;
+    width: 36px;
+    height: 1px;
+    background: var(--blue);
+}
+
+.automation-hero .hero-stat-item .unit {
+    color: var(--green);
+}
+
+/* Automation & protection method card thumbs */
+.cables-method-thumb.apm1 { background: linear-gradient(135deg, #040d08, #0a1e14); }
+.cables-method-thumb.apm2 { background: linear-gradient(135deg, #060b10, #0e2040); }
+.cables-method-thumb.apm3 { background: linear-gradient(135deg, #040d08, #0a1e10); }
+.cables-method-thumb.apm4 { background: linear-gradient(135deg, #060b10, #08152a); }
+.cables-method-thumb.apm5 { background: linear-gradient(135deg, #040e08, #0e1e10); }
+.cables-method-thumb.apm6 { background: linear-gradient(135deg, #080810, #0c1a2a); }
 
 
 /*-----MEDIA QUERIES-----*/

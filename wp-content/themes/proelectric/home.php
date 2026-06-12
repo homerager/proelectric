@@ -40,7 +40,7 @@ get_header();
             <?php while ( have_posts() ) : the_post();
                 $cats         = get_the_category();
                 $tags         = get_the_tags();
-                $words        = str_word_count( strip_tags( get_the_content() ) );
+                $words        = count( preg_split( '/\s+/u', trim( strip_tags( get_the_content() ) ), -1, PREG_SPLIT_NO_EMPTY ) );
                 $reading_time = max( 1, ceil( $words / 200 ) );
                 // Показуємо теги якщо є, інакше — категорію
                 $card_labels  = ! empty( $tags ) ? array_slice( $tags, 0, 2 ) : ( ! empty( $cats ) ? array_slice( $cats, 0, 1 ) : [] );

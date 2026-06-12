@@ -12,7 +12,7 @@ while ( have_posts() ) :
 
     $categories   = get_the_category();
     $tags         = get_the_tags();
-    $words        = str_word_count( strip_tags( get_the_content() ) );
+    $words        = count( preg_split( '/\s+/u', trim( strip_tags( get_the_content() ) ), -1, PREG_SPLIT_NO_EMPTY ) );
     $reading_time = max( 1, ceil( $words / 200 ) );
     $prev_post    = get_previous_post();
     $next_post    = get_next_post();
@@ -29,17 +29,17 @@ while ( have_posts() ) :
                 <span><?= get_the_title() ?></span>
             </div>
             <?php if ( ! empty( $categories ) ) : ?>
-            <div class="hero-label"><?= esc_html( $categories[0]->name ) ?></div>
+                <div class="hero-label"><?= esc_html( $categories[0]->name ) ?></div>
             <?php endif; ?>
             <h1 class="hero-title post-hero-title"><?= get_the_title() ?></h1>
             <div class="post-hero-meta">
                 <span><?= esc_html( get_the_date('d.m.Y') ) ?></span>
                 <span class="post-meta-sep">·</span>
                 <span><?= $reading_time ?> хв читання</span>
-                <?php if ( get_the_author() ) : ?>
-                <span class="post-meta-sep">·</span>
-                <span><?= esc_html( get_the_author() ) ?></span>
-                <?php endif; ?>
+                <!--<?php if ( get_the_author() ) : ?>
+                    <span class="post-meta-sep">·</span>
+                    <span><?= esc_html( get_the_author() ) ?></span>
+                <?php endif; ?>-->
             </div>
         </div>
     </div>
