@@ -798,7 +798,7 @@ footer .logo .logo-text .brand {
     line-height: 1.85;
     color: rgba(255, 255, 255, 0.4);
     margin-top: 20px;
-    max-width: 260px;
+    max-width: 360px;
 }
 
 .footer-col-title {
@@ -922,7 +922,6 @@ footer .logo .logo-text .brand {
 }
 
 .hero-lead {
-    font-family: 'Lora', Georgia, serif;
     font-size: clamp(15px, 1.5vw, 18px);
     line-height: 1.8;
     color: rgba(255, 255, 255, 0.60);
@@ -7900,6 +7899,8 @@ form .btn-group {
     .hero .hero-stat-item {
         width: 50%;
         flex: 1 1 50%;
+        padding: 6px 10px;
+        gap: 8px;
     }
 }
 
@@ -7911,19 +7912,16 @@ form .btn-group {
 }
 
 @media (max-width: 460px) {
-
-    .hero .hero-stat-item {
-        padding: 10px;
-        width: 100%;
-        flex: 1 1 100%;
-    }
-
     .hero .hero-stat-item .stat-num {
-        font-size: 26px;
+        font-size: 23px;
     }
 
     .hero .hero-stat-item .stat-num .unit {
-        font-size: 20px;
+        font-size: 18px;
+    }
+
+    .hero .hero-stat-item .stat-label {
+        font-size: 9px;
     }
     
     .hero .breadcrumb {
@@ -8080,10 +8078,30 @@ form .btn-group {
 
 }
 
-@media (min-width: 1400px) { 
+@media (min-width: 1400px) {
     .container {
         max-width: 1520px;
     }
+}
+
+/* Projects page hero */
+.hero.projects-hero {
+    background-color: #0a1828;
+    background-image: linear-gradient(135deg, #071020 0%, #0d2040 45%, #071a10 100%);
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.hero.projects-hero .hero-content-left.hero-content {
+    padding-bottom: 150px;
+}
+
+.hero.projects-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(ellipse 50% 60% at 20% 40%, rgba(26, 95, 168, 0.20) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 30%, rgba(45, 181, 81, 0.10) 0%, transparent 60%);
 }
 
 
