@@ -97,7 +97,6 @@ while ( have_posts() ) :
 <section class="page-section project-overview">
 	<div class="container">
 		<div class="project-overview-grid">
-
 			<main class="project-main">
 				<?php if ( has_post_thumbnail() ) : ?>
 					<div class="project-featured-img wf-animate">

@@ -176,6 +176,11 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/inc/acf-project-fields.php';
 
 /**
+ * ACF flexible-content page builder for the Projects page template.
+ */
+require get_template_directory() . '/inc/acf-projects-page-fields.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {
