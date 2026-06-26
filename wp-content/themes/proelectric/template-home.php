@@ -80,6 +80,18 @@ get_header();
                         )
                     );
                     break;
+                case 'latest_posts':
+                    get_template_part(
+                        'template-parts/home/latest-posts',
+                        null,
+                        array(
+                            'sub_title' => get_sub_field( 'sub_title' ),
+                            'title'     => get_sub_field( 'title' ),
+                            'count'     => get_sub_field( 'count' ),
+                            'link'      => get_sub_field( 'link' ),
+                        )
+                    );
+                    break;
             }
         endwhile;
     endif;
