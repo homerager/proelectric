@@ -24,7 +24,7 @@ if ( empty( $ids ) ) {
 }
 ?>
 
-<section class="page-section">
+<section class="page-section" id="projects">
     <div class="container">
         <?php if ( $sub_title || $title ) : ?>
             <div class="page-section-header wf-animate mb-5">

@@ -181,6 +181,11 @@ require get_template_directory() . '/inc/acf-project-fields.php';
 require get_template_directory() . '/inc/acf-projects-page-fields.php';
 
 /**
+ * ACF flexible-content page builder for the Home page template.
+ */
+require get_template_directory() . '/inc/acf-home-page-fields.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

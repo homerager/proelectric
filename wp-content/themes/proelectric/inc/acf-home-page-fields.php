@@ -1,0 +1,212 @@
+<?php
+/**
+ * ACF flexible-content page builder for the "Home" page template.
+ *
+ * Registers a `page_blocks` flexible content field shown on pages that use
+ * template-home.php. Each layout is rendered in the template by a matching
+ * template-part. Registered in PHP so it stays version-controlled with the
+ * theme and needs no manual admin setup.
+ *
+ * @package Proelectric
+ */
+
+if ( ! defined( 'ABSPATH' ) ) {
+	exit;
+}
+
+add_action( 'acf/init', 'proelectric_register_home_page_fields' );
+
+function proelectric_register_home_page_fields() {
+
+	if ( ! function_exists( 'acf_add_local_field_group' ) ) {
+		return;
+	}
+
+	$service_icons = array(
+		'solar'    => 'Блискавка / СЕС',
+		'electric' => 'Розетка / електромонтаж',
+		'panel'    => 'Щит / обладнання',
+	);
+
+	$advantage_icons = array(
+		'check'   => 'Галочка (якість)',
+		'clock'   => 'Годинник (терміни)',
+		'eye'     => 'Око (гнучкість)',
+		'monitor' => 'Монітор (технології)',
+		'link'    => "Зв'язок (партнерство)",
+		'shield'  => 'Щит (чесність)',
+		'bolt'    => 'Блискавка (енергоефективність)',
+		'chart'   => 'Графік (масштаб)',
+	);
+
+	acf_add_local_field_group(
+		array(
+			'key'      => 'group_home_page',
+			'title'    => 'Конструктор головної сторінки',
+			'fields'   => array(
+				array(
+					'key'          => 'field_home_page_blocks',
+					'label'        => 'Блоки сторінки',
+					'name'         => 'page_blocks',
+					'type'         => 'flexible_content',
+					'button_label' => 'Додати блок',
+					'layouts'      => array(
+						'layout_home_services'   => array(
+							'key'        => 'layout_home_services',
+							'name'       => 'services',
+							'label'      => 'Послуги',
+							'display'    => 'block',
+							'sub_fields' => array(
+								array(
+									'key'   => 'field_home_services_sub_title',
+									'label' => 'Підзаголовок',
+									'name'  => 'sub_title',
+									'type'  => 'text',
+								),
+								array(
+									'key'   => 'field_home_services_title',
+									'label' => 'Заголовок',
+									'name'  => 'title',
+									'type'  => 'text',
+								),
+								array(
+									'key'          => 'field_home_services_items',
+									'label'        => 'Послуги',
+									'name'         => 'items',
+									'type'         => 'repeater',
+									'instructions' => 'Номер картки (01, 02, …) проставляється автоматично.',
+									'layout'       => 'block',
+									'button_label' => 'Додати послугу',
+									'sub_fields'   => array(
+										array(
+											'key'     => 'field_home_services_item_icon',
+											'label'   => 'Іконка',
+											'name'    => 'icon',
+											'type'    => 'select',
+											'choices' => $service_icons,
+										),
+										array(
+											'key'   => 'field_home_services_item_title',
+											'label' => 'Назва',
+											'name'  => 'title',
+											'type'  => 'text',
+										),
+										array(
+											'key'   => 'field_home_services_item_description',
+											'label' => 'Опис',
+											'name'  => 'description',
+											'type'  => 'textarea',
+											'rows'  => 3,
+										),
+										array(
+											'key'          => 'field_home_services_item_link',
+											'label'        => 'Посилання',
+											'name'         => 'link',
+											'type'         => 'link',
+											'return_format' => 'array',
+										),
+									),
+								),
+							),
+						),
+						'layout_home_advantages' => array(
+							'key'        => 'layout_home_advantages',
+							'name'       => 'advantages',
+							'label'      => 'Переваги',
+							'display'    => 'block',
+							'sub_fields' => array(
+								array(
+									'key'   => 'field_home_advantages_sub_title',
+									'label' => 'Підзаголовок',
+									'name'  => 'sub_title',
+									'type'  => 'text',
+								),
+								array(
+									'key'   => 'field_home_advantages_title',
+									'label' => 'Заголовок',
+									'name'  => 'title',
+									'type'  => 'text',
+								),
+								array(
+									'key'          => 'field_home_advantages_items',
+									'label'        => 'Переваги',
+									'name'         => 'items',
+									'type'         => 'repeater',
+									'layout'       => 'block',
+									'button_label' => 'Додати перевагу',
+									'sub_fields'   => array(
+										array(
+											'key'     => 'field_home_advantages_item_icon',
+											'label'   => 'Іконка',
+											'name'    => 'icon',
+											'type'    => 'select',
+											'choices' => $advantage_icons,
+										),
+										array(
+											'key'   => 'field_home_advantages_item_title',
+											'label' => 'Назва',
+											'name'  => 'title',
+											'type'  => 'text',
+										),
+										array(
+											'key'   => 'field_home_advantages_item_description',
+											'label' => 'Опис',
+											'name'  => 'description',
+											'type'  => 'textarea',
+											'rows'  => 3,
+										),
+									),
+								),
+							),
+						),
+						'layout_home_projects'   => array(
+							'key'        => 'layout_home_projects',
+							'name'       => 'projects_grid',
+							'label'      => 'Сітка проєктів (з акцентом)',
+							'display'    => 'block',
+							'sub_fields' => array(
+								array(
+									'key'   => 'field_home_projects_sub_title',
+									'label' => 'Підзаголовок',
+									'name'  => 'sub_title',
+									'type'  => 'text',
+								),
+								array(
+									'key'   => 'field_home_projects_title',
+									'label' => 'Заголовок',
+									'name'  => 'title',
+									'type'  => 'text',
+								),
+								array(
+									'key'           => 'field_home_projects_projects',
+									'label'         => 'Проєкти',
+									'name'          => 'projects',
+									'type'          => 'relationship',
+									'instructions'  => 'Перший проєкт у списку показується великою карткою. Оптимально 4–5 проєктів.',
+									'post_type'     => array( 'projects' ),
+									'filters'       => array( 'search', 'taxonomy' ),
+									'return_format' => 'id',
+									'min'           => 1,
+								),
+							),
+						),
+					),
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param'    => 'page_template',
+						'operator' => '==',
+						'value'    => 'template-home.php',
+					),
+				),
+			),
+			'menu_order'      => 0,
+			'position'        => 'normal',
+			'style'           => 'default',
+			'label_placement' => 'top',
+			'active'          => true,
+		)
+	);
+}
