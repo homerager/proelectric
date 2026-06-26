@@ -101,6 +101,12 @@
 	</div>
 </footer>
 
+<button type="button" id="scroll-top" class="scroll-top" aria-label="Догори">
+	<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+		<path d="M12 19V5M5 12l7-7 7 7"/>
+	</svg>
+</button>
+
 <?php wp_footer(); ?>
 
 </body>

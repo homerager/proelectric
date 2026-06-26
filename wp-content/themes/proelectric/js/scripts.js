@@ -3,6 +3,7 @@ document.addEventListener("DOMContentLoaded", onInit);
 function onInit() {
   initScrollAnimation();
   initScrollAnchors();
+  initScrollTop();
   onInitMobileMenu();
 }
 
@@ -97,6 +98,19 @@ function initScrollAnimation() {
     [...grid.children].forEach((child, i) => {
       child.style.transitionDelay = `${i * 0.07}s`;
     });
+  });
+}
+
+function initScrollTop() {
+  const btn = document.getElementById('scroll-top');
+  if (!btn) return;
+
+  const toggle = () => btn.classList.toggle('visible', window.scrollY > 400);
+  window.addEventListener('scroll', toggle, { passive: true });
+  toggle();
+
+  btn.addEventListener('click', () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 }
 
