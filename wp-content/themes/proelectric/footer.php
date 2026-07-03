@@ -101,11 +101,40 @@
 	</div>
 </footer>
 
+<button type="button" id="callback-open" class="callback-fab" aria-label="Замовити дзвінок">
+	<span class="callback-fab-icon">
+		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+			<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+		</svg>
+	</span>
+	<span class="callback-fab-text">Замовити дзвінок</span>
+</button>
+
 <button type="button" id="scroll-top" class="scroll-top" aria-label="Догори">
 	<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
 		<path d="M12 19V5M5 12l7-7 7 7"/>
 	</svg>
 </button>
+
+<div class="callback-modal" id="callback-modal" aria-hidden="true">
+	<div class="callback-overlay" data-callback-close></div>
+	<div class="callback-dialog" role="dialog" aria-modal="true" aria-labelledby="callback-title">
+		<button type="button" class="callback-close" data-callback-close aria-label="Закрити">
+			<svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M18 6 6 18M6 6l12 12"/></svg>
+		</button>
+		<div class="callback-badge">
+			<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
+				<path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/>
+			</svg>
+			Зворотний дзвінок
+		</div>
+		<h3 class="callback-title" id="callback-title">Замовити дзвінок</h3>
+		<p class="callback-sub">Залиште номер — наш менеджер передзвонить вам протягом 15 хвилин у робочий час.</p>
+		<div class="callback-form">
+			<?php echo do_shortcode('[contact-form-7 id="bac27ea" title="Замовити дзвінок"]'); ?>
+		</div>
+	</div>
+</div>
 
 <?php wp_footer(); ?>
 

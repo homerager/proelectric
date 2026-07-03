@@ -4,6 +4,7 @@ function onInit() {
   initScrollAnimation();
   initScrollAnchors();
   initScrollTop();
+  initCallbackModal();
   onInitMobileMenu();
 }
 
@@ -112,6 +113,32 @@ function initScrollTop() {
   btn.addEventListener('click', () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
   });
+}
+
+function initCallbackModal() {
+  const modal = document.getElementById('callback-modal');
+  const openBtn = document.getElementById('callback-open');
+  if (!modal || !openBtn) return;
+
+  const open = () => {
+    modal.classList.add('open');
+    modal.setAttribute('aria-hidden', 'false');
+    document.body.classList.add('no-scroll');
+  };
+  const close = () => {
+    modal.classList.remove('open');
+    modal.setAttribute('aria-hidden', 'true');
+    document.body.classList.remove('no-scroll');
+  };
+
+  openBtn.addEventListener('click', open);
+  modal.querySelectorAll('[data-callback-close]').forEach(el => el.addEventListener('click', close));
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape' && modal.classList.contains('open')) close();
+  });
+
+  // Закрити модалку після успішної відправки форми CF7
+  document.addEventListener('wpcf7mailsent', close);
 }
 
 function initScrollAnchors() {
