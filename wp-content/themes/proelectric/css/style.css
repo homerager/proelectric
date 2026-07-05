@@ -8686,6 +8686,110 @@ body.no-scroll {
     }
 }
 
+/* ===== projects_cart taxonomy archive ===== */
+.projects-cats-nav-section {
+    padding-top: 46px;
+    padding-bottom: 0;
+}
+
+.projects-cats-nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+    padding-bottom: 34px;
+    border-bottom: 1px solid var(--border);
+}
+
+.projects-cat-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 9px;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    color: var(--text);
+    background: var(--card);
+    border: 1px solid var(--border);
+    padding: 11px 20px;
+    border-radius: 40px;
+    text-decoration: none;
+    transition: var(--hover-transition);
+}
+
+.projects-cat-link:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.projects-cat-link.is-active {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+    box-shadow: 0 8px 22px rgba(26, 95, 168, 0.28);
+}
+
+.projects-cat-count {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 20px;
+    height: 20px;
+    font-size: 10px;
+    line-height: 1;
+    padding: 0 6px;
+    border-radius: 20px;
+    background: var(--card2);
+    color: var(--muted);
+}
+
+.projects-cat-link:hover .projects-cat-count {
+    color: var(--blue);
+}
+
+.projects-cat-link.is-active .projects-cat-count {
+    background: rgba(255, 255, 255, 0.22);
+    color: #fff;
+}
+
+.projects-cats-nav-section + .page-section-services {
+    padding-top: 40px;
+}
+
+.page-section-services .pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 46px;
+}
+
+.page-section-services .pagination .page-numbers {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 42px;
+    height: 42px;
+    padding: 0 12px;
+    border: 1px solid var(--border);
+    background: var(--card);
+    color: var(--text);
+    text-decoration: none;
+    transition: var(--hover-transition);
+}
+
+.page-section-services .pagination .page-numbers:hover {
+    color: var(--blue);
+    border-color: var(--blue);
+}
+
+.page-section-services .pagination .page-numbers.current {
+    color: #fff;
+    background: var(--blue);
+    border-color: var(--blue);
+}
+
 
 
 

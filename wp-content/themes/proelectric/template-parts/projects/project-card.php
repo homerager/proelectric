@@ -17,6 +17,14 @@ if ( ! $project_id ) {
 $featured = ! empty( $args['featured'] );
 $cats     = get_the_category( $project_id );
 $cat      = ! empty( $cats ) ? $cats[0]->name : '';
+
+// Fall back to the `projects_cart` custom taxonomy when no standard category is set.
+if ( '' === $cat ) {
+	$proj_terms = get_the_terms( $project_id, 'projects_cart' );
+	if ( ! empty( $proj_terms ) && ! is_wp_error( $proj_terms ) ) {
+		$cat = $proj_terms[0]->name;
+	}
+}
 $power    = get_field( 'project_power', $project_id );
 $year     = get_field( 'project_year', $project_id );
 $type     = get_field( 'project_type', $project_id );
