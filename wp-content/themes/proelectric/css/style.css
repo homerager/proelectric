@@ -8964,6 +8964,35 @@ body.no-scroll {
     border-color: var(--blue);
 }
 
+/* --- Audiences "Для кого" (home) --- */
+.audiences-grid {
+    gap: 24px;
+}
+
+.audience-card {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.audience-icon {
+    width: 54px;
+    height: 54px;
+    margin-bottom: 22px;
+}
+
+.audience-title {
+    margin-bottom: 12px;
+}
+
+.audience-desc {
+    margin-bottom: 28px;
+}
+
+.audience-card .audience-btn {
+    margin-top: auto;
+}
+
 /* --- Partners (home) --- */
 .partners-row {
     display: flex;

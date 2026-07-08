@@ -47,6 +47,17 @@ get_header();
         while ( have_rows( 'page_blocks' ) ) : the_row();
 
             switch ( get_row_layout() ) {
+                case 'audiences':
+                    get_template_part(
+                        'template-parts/home/audiences',
+                        null,
+                        array(
+                            'sub_title' => get_sub_field( 'sub_title' ),
+                            'title'     => get_sub_field( 'title' ),
+                            'items'     => get_sub_field( 'items' ),
+                        )
+                    );
+                    break;
                 case 'services':
                     get_template_part(
                         'template-parts/home/services',

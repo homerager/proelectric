@@ -51,6 +51,68 @@ function proelectric_register_home_page_fields() {
 					'type'         => 'flexible_content',
 					'button_label' => 'Додати блок',
 					'layouts'      => array(
+						'layout_home_audiences'  => array(
+							'key'        => 'layout_home_audiences',
+							'name'       => 'audiences',
+							'label'      => 'Для кого (сценарії)',
+							'display'    => 'block',
+							'sub_fields' => array(
+								array(
+									'key'   => 'field_home_audiences_sub_title',
+									'label' => 'Підзаголовок',
+									'name'  => 'sub_title',
+									'type'  => 'text',
+								),
+								array(
+									'key'   => 'field_home_audiences_title',
+									'label' => 'Заголовок',
+									'name'  => 'title',
+									'type'  => 'text',
+								),
+								array(
+									'key'          => 'field_home_audiences_items',
+									'label'        => 'Сценарії',
+									'name'         => 'items',
+									'type'         => 'repeater',
+									'instructions' => 'Оптимально 3 картки: Приватний будинок / Бізнес / ОСББ. Текст кнопки береться з назви посилання.',
+									'layout'       => 'block',
+									'button_label' => 'Додати сценарій',
+									'sub_fields'   => array(
+										array(
+											'key'     => 'field_home_audiences_item_icon',
+											'label'   => 'Іконка',
+											'name'    => 'icon',
+											'type'    => 'select',
+											'choices' => array(
+												'house'    => 'Приватний будинок',
+												'business' => 'Бізнес / підприємство',
+												'osbb'     => 'ОСББ / багатоповерхівка',
+											),
+										),
+										array(
+											'key'   => 'field_home_audiences_item_title',
+											'label' => 'Назва',
+											'name'  => 'title',
+											'type'  => 'text',
+										),
+										array(
+											'key'   => 'field_home_audiences_item_description',
+											'label' => 'Опис',
+											'name'  => 'description',
+											'type'  => 'textarea',
+											'rows'  => 3,
+										),
+										array(
+											'key'           => 'field_home_audiences_item_link',
+											'label'         => 'Посилання',
+											'name'          => 'link',
+											'type'          => 'link',
+											'return_format' => 'array',
+										),
+									),
+								),
+							),
+						),
 						'layout_home_services'   => array(
 							'key'        => 'layout_home_services',
 							'name'       => 'services',
