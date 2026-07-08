@@ -80,6 +80,17 @@ get_header();
                         )
                     );
                     break;
+                case 'partners':
+                    get_template_part(
+                        'template-parts/home/partners',
+                        null,
+                        array(
+                            'sub_title' => get_sub_field( 'sub_title' ),
+                            'title'     => get_sub_field( 'title' ),
+                            'items'     => get_sub_field( 'items' ),
+                        )
+                    );
+                    break;
                 case 'latest_posts':
                     get_template_part(
                         'template-parts/home/latest-posts',

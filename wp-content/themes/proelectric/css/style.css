@@ -8790,6 +8790,47 @@ body.no-scroll {
     border-color: var(--blue);
 }
 
+/* --- Partners (home) --- */
+.partners-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+
+.partner-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 110px;
+    min-width: 134px;
+    padding: 12px 24px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    text-decoration: none;
+    transition: var(--hover-transition);
+}
+
+.partner-logo img {
+    max-height: 100%;
+    max-width: 210px;
+    object-fit: contain;
+    filter: grayscale(1);
+    opacity: 0.65;
+    transition: var(--hover-transition);
+}
+
+a.partner-logo:hover {
+    border-color: var(--blue);
+    transform: translateY(-2px);
+}
+
+.partner-logo:hover img {
+    filter: none;
+    opacity: 1;
+}
+
 
 
 

@@ -88,7 +88,7 @@ get_header();
                 </div>
                 <div>
                     <div class="info-text-label">Telegram / Viber</div>
-                    <span class="info-text-val small">@proelectric_ua</span>
+                    <span class="info-text-val small">@electric_lv</span>
                 </div>
             </div>
         </div>
