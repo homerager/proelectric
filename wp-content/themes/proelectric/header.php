@@ -70,7 +70,7 @@
 					<?php if ( $header_messengers ) : ?>
 						<div class="header-messengers">
 							<?php foreach ( $header_messengers as $key => $messenger ) : ?>
-								<a href="<?= esc_url( $messenger['url'] ) ?>" class="messenger-btn messenger-btn-sm messenger-<?= esc_attr( $key ) ?>" target="_blank" rel="noopener" aria-label="Написати у <?= esc_attr( $messenger['label'] ) ?>" title="<?= esc_attr( $messenger['label'] ) ?>">
+								<a href="<?=  $messenger['url'] ?>" class="messenger-btn messenger-btn-sm messenger-<?= esc_attr( $key ) ?>" target="_blank" rel="noopener" aria-label="Написати у <?= esc_attr( $messenger['label'] ) ?>" title="<?= esc_attr( $messenger['label'] ) ?>">
 									<?= proelectric_messenger_icon( $key ) ?>
 								</a>
 							<?php endforeach; ?>
