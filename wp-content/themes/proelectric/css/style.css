@@ -8595,7 +8595,7 @@ form .btn-group {
     display: inline-flex;
     align-items: center;
     gap: 0;
-    padding: 8px;
+    padding: 7px;
     border: none;
     border-radius: 999px;
     color: #fff;
@@ -8623,8 +8623,8 @@ form .btn-group {
     align-items: center;
     justify-content: center;
     flex: 0 0 auto;
-    width: 40px;
-    height: 40px;
+    width: 34px;
+    height: 34px;
     border-radius: 50%;
     background: rgba(255, 255, 255, .18);
 }
