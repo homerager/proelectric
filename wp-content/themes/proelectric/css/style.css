@@ -1067,6 +1067,10 @@ footer .logo .logo-text .brand {
     animation: fadeUp .8s .3s ease both;
 }
 
+.hero .hero-actions-left {
+    justify-content: start;
+}
+
 .hero-year {
     position: absolute;
     right: 5vw;
@@ -8991,6 +8995,33 @@ body.no-scroll {
 
 .audience-card .audience-btn {
     margin-top: auto;
+}
+
+/* Content-rich page hero (label + title + desc + button): auto height,
+   vertically centered, with room for the fixed header */
+.hero.page-hero {
+    height: auto;
+    min-height: 480px;
+    align-items: center;
+    padding: 170px 0 90px;
+}
+
+@media (max-width: 768px) {
+    .hero.page-hero {
+        min-height: 0;
+        padding: 130px 0 60px;
+    }
+}
+
+/* Ghost step number in a corner of a white-card (calculator "next steps") */
+.calc-step-num {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 68px;
+    color: rgba(26, 95, 168, 0.07);
+    line-height: 1;
 }
 
 /* --- Partners (home) --- */

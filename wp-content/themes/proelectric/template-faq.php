@@ -124,7 +124,7 @@ foreach ( $faq_groups as $group ) {
 get_header();
 ?>
 
-<section class="hero contact-us-hero position-relative">
+<section class="hero contact-us-hero page-hero position-relative">
     <div class="container">
         <!-- decorative large bolt -->
         <div class="hero-bolt">
