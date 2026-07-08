@@ -5,7 +5,33 @@ function onInit() {
   initScrollAnchors();
   initScrollTop();
   initCallbackModal();
+  initHeaderContacts();
   onInitMobileMenu();
+}
+
+function initHeaderContacts() {
+  const wrap = document.querySelector('.header-contacts');
+  if (!wrap) return;
+
+  const toggle = wrap.querySelector('.header-contacts-toggle');
+
+  const close = () => {
+    wrap.classList.remove('open');
+    toggle.setAttribute('aria-expanded', 'false');
+  };
+
+  toggle.addEventListener('click', () => {
+    const isOpen = wrap.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', isOpen);
+  });
+
+  document.addEventListener('click', e => {
+    if (!wrap.contains(e.target)) close();
+  });
+
+  document.addEventListener('keydown', e => {
+    if (e.key === 'Escape') close();
+  });
 }
 
 const header = document.getElementById('header');
@@ -24,54 +50,41 @@ function onInitMobileMenu () {
 
   const isMobile = () => window.innerWidth <= 1124;
   const header = document.querySelector(".header");
-  const menuItems = document.querySelectorAll(".menu > li.dropdown-menu-item");
-  
-  if (menuItems) {
-    menuItems.forEach( (menuItem) => {
-      if (isMobile()) {
-          if (menuItem.classList.contains('menu-item-has-children')) {
-          const link = menuItem.querySelector(':scope > a')
-            
-          if (link) {
-            const button = document.createElement('button');
-            button.type = 'button'
-            button.className = 'menu-item-btn'
 
-            const icon = document.createElement('i')
-            icon.className = 'icon-caret'
+  if (isMobile()) {
+    // Accordion: caret button toggles the sub-menu, the link itself navigates
+    document.querySelectorAll('#header-menu li.menu-item-has-children').forEach((item) => {
+      const link = item.querySelector(':scope > a');
+      if (!link) return;
 
-            button.appendChild(icon)
-            link.appendChild(button)
+      const button = document.createElement('button');
+      button.type = 'button';
+      button.className = 'menu-item-btn';
+      button.setAttribute('aria-label', 'Розгорнути підменю');
+      button.innerHTML = '<svg class="icon-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+      link.appendChild(button);
 
-            button.addEventListener('click', (event) => {
-              event.preventDefault()
-              event.stopPropagation()
-
-              menuItem.classList.toggle('show')
-            })
-          }
+      button.addEventListener('click', (event) => {
+        event.preventDefault();
+        event.stopPropagation();
+        item.classList.toggle('show');
+      });
+    });
+  } else {
+    document.querySelectorAll(".menu > li.dropdown-menu-item").forEach((menuItem) => {
+      menuItem.addEventListener("mouseenter", () => {
+        menuItem.classList.add("show");
+        if (header) {
+          header.classList.add("active");
         }
-
-        menuItem.addEventListener("click", (event) => {
-          if (event.target.closest('.menu-item-btn')) {
-            return
-          }
-        })
-      } else {
-        menuItem.addEventListener("mouseenter", () => {
-          menuItem.classList.add("show");
-          if (header) {
-            header.classList.add("active")
-          }   
-        });
-        menuItem.addEventListener("mouseleave", () => {
-          menuItem.classList.remove("show");
-          if (header) {
-            header.classList.remove("active")
-          }   
-        })
-      }
-    })
+      });
+      menuItem.addEventListener("mouseleave", () => {
+        menuItem.classList.remove("show");
+        if (header) {
+          header.classList.remove("active");
+        }
+      });
+    });
   }
 }
 

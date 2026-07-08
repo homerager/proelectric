@@ -187,6 +187,11 @@ require get_template_directory() . '/inc/acf-projects-page-fields.php';
 require get_template_directory() . '/inc/acf-home-page-fields.php';
 
 /**
+ * ACF theme settings options page (messenger links etc.).
+ */
+require get_template_directory() . '/inc/acf-theme-settings-fields.php';
+
+/**
  * Load Jetpack compatibility file.
  */
 if ( defined( 'JETPACK__VERSION' ) ) {

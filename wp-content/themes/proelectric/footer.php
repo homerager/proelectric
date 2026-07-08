@@ -96,6 +96,8 @@
 	</div>
 </footer>
 
+<?php $messengers = function_exists( 'proelectric_get_messengers' ) ? proelectric_get_messengers() : array(); ?>
+
 <button type="button" id="callback-open" class="callback-fab" aria-label="Замовити дзвінок">
 	<span class="callback-fab-icon">
 		<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
@@ -128,6 +130,16 @@
 		<div class="callback-form">
 			<?php echo do_shortcode('[contact-form-7 id="bac27ea" title="Замовити дзвінок"]'); ?>
 		</div>
+		<?php if ( $messengers ) : ?>
+			<div class="callback-messengers">
+				<span class="callback-messengers-label">Або напишіть нам:</span>
+				<?php foreach ( $messengers as $key => $messenger ) : ?>
+					<a href="<?= esc_url( $messenger['url'] ) ?>" class="messenger-btn messenger-<?= esc_attr( $key ) ?>" target="_blank" rel="noopener" aria-label="Написати у <?= esc_attr( $messenger['label'] ) ?>" title="<?= esc_attr( $messenger['label'] ) ?>">
+						<?= proelectric_messenger_icon( $key ) ?>
+					</a>
+				<?php endforeach; ?>
+			</div>
+		<?php endif; ?>
 	</div>
 </div>
 
