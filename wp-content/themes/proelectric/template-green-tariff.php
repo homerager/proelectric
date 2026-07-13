@@ -45,26 +45,26 @@ get_header();
                 <p class="item-description mb-4">Для обліку встановлюється двонаправлений лічильник: він фіксує окремо спожиту з мережі та віддану в мережу електроенергію. Розрахунок відбувається щомісяця — ви або зменшуєте свій рахунок, або отримуєте виплату.</p>
                 <p class="item-description">Приватні домогосподарства можуть підключати станції потужністю до 30 кВт за спрощеною процедурою. Для бізнесу діють окремі механізми продажу електроенергії — підкажемо оптимальний варіант саме для вашого об'єкта. Ставки та умови періодично переглядаються, тому актуальні цифри уточнюйте у нашого інженера.</p>
             </div>
-            <div class="calc-info wf-animate">
-                <div class="calc-info-item">
-                    <div class="calc-info-num green">30</div>
+            <div class="facts-col wf-animate">
+                <div class="fact-card">
+                    <div class="fact-num">30</div>
                     <div>
-                        <div class="calc-info-label">кВт — ліміт для приватних домогосподарств</div>
-                        <div class="calc-info-desc">Станції до 30 кВт підключаються за спрощеною процедурою, без ліцензій та складних погоджень.</div>
+                        <div class="fact-label">кВт — ліміт для приватних домогосподарств</div>
+                        <div class="fact-desc">Станції до 30 кВт підключаються за спрощеною процедурою, без ліцензій та складних погоджень.</div>
                     </div>
                 </div>
-                <div class="calc-info-item">
-                    <div class="calc-info-num blue">5–6</div>
+                <div class="fact-card">
+                    <div class="fact-num">5–6</div>
                     <div>
-                        <div class="calc-info-label">Років окупності із зеленим тарифом</div>
-                        <div class="calc-info-desc">Продаж надлишків скорочує окупність СЕС на 2–3 роки порівняно зі станцією «лише для себе».</div>
+                        <div class="fact-label">Років окупності із зеленим тарифом</div>
+                        <div class="fact-desc">Продаж надлишків скорочує окупність СЕС на 2–3 роки порівняно зі станцією «лише для себе».</div>
                     </div>
                 </div>
-                <div class="calc-info-item">
-                    <div class="calc-info-num green">100%</div>
+                <div class="fact-card">
+                    <div class="fact-num">100%</div>
                     <div>
-                        <div class="calc-info-label">Оформлення беремо на себе</div>
-                        <div class="calc-info-desc">Технічні умови, договори, лічильник, комунікація з обленерго — без вашої участі в бюрократії.</div>
+                        <div class="fact-label">Оформлення беремо на себе</div>
+                        <div class="fact-desc">Технічні умови, договори, лічильник, комунікація з обленерго — без вашої участі в бюрократії.</div>
                     </div>
                 </div>
             </div>

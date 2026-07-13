@@ -1381,7 +1381,6 @@ form .btn-group {
     gap: 6px;
 }
 
-
 .wpcf7-not-valid-tip {
     font-size: 11px;
     margin-top: 4px;
@@ -1389,8 +1388,13 @@ form .btn-group {
 
 .wpcf7 form .wpcf7-response-output {
     margin: 0;
-    padding: 0.2em 1em;
+    padding: 0.2em 0;
     border: none;
+}
+
+.wpcf7 form.invalid .wpcf7-response-output {
+    font-size: 14px;
+    color: #dc3232;
 }
 
 /*-----END HOME PAGE-----*/
@@ -8144,6 +8148,10 @@ form .btn-group {
     .lg-gap-64 {
         gap: 64px;
     }
+
+    .hero {
+        background-attachment: fixed;
+    }
 }
 
 @media (min-width: 1124px) {
@@ -9010,6 +9018,72 @@ body.no-scroll {
     .hero.page-hero {
         min-height: 0;
         padding: 130px 0 60px;
+    }
+}
+
+/* Fact cards — highlighted numbers column in two-column "about" sections */
+.facts-col {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.fact-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 24px;
+    padding: 26px 28px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--blue);
+    box-shadow: 0 2px 12px rgba(26, 95, 168, 0.05);
+    transition: transform .3s, box-shadow .3s;
+}
+
+.fact-card:nth-child(even) {
+    border-left-color: var(--green);
+}
+
+.fact-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 14px 40px rgba(26, 95, 168, 0.12);
+}
+
+.fact-num {
+    flex: 0 0 auto;
+    min-width: 108px;
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 46px;
+    line-height: 1;
+    color: var(--blue);
+}
+
+.fact-card:nth-child(even) .fact-num {
+    color: var(--green);
+}
+
+.fact-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--heading);
+    margin-bottom: 6px;
+}
+
+.fact-desc {
+    font-size: 12px;
+    line-height: 1.75;
+    color: var(--muted);
+}
+
+@media (max-width: 768px) {
+    .fact-card {
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .fact-num {
+        min-width: 78px;
+        font-size: 36px;
     }
 }
 
