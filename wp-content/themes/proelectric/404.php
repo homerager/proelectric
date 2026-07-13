@@ -63,7 +63,7 @@ get_header();
 
     <div class="page-404-tint" aria-hidden="true"></div>
 
-    <div class="container">
+    <div class="container relative-container">
         <div class="page-404-inner">
 
             <!-- number -->

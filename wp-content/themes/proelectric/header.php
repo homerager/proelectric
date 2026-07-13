@@ -100,7 +100,7 @@
 							</span>
 						</div>
 					</div>
-					<a href="#contact" class="btn btn-primary scroll-to-btn">Консультація</a>
+					<a href="#contact" class="btn btn-primary scroll-to-btn consultation-btn">Консультація</a>
 				</div>
 				<button type="button" class="navbar-toggles" aria-label="toggle">
 					<span class="nav-icons"></span>

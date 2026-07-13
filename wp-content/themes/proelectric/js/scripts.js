@@ -51,41 +51,65 @@ function onInitMobileMenu () {
   const isMobile = () => window.innerWidth <= 1124;
   const header = document.querySelector(".header");
 
-  if (isMobile()) {
-    // Accordion: caret button toggles the sub-menu, the link itself navigates
-    document.querySelectorAll('#header-menu li.menu-item-has-children').forEach((item) => {
-      const link = item.querySelector(':scope > a');
-      if (!link) return;
-
-      const button = document.createElement('button');
-      button.type = 'button';
-      button.className = 'menu-item-btn';
-      button.setAttribute('aria-label', 'Розгорнути підменю');
-      button.innerHTML = '<svg class="icon-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
-      link.appendChild(button);
-
-      button.addEventListener('click', (event) => {
-        event.preventDefault();
-        event.stopPropagation();
-        item.classList.toggle('show');
-      });
+  // Hover listeners bound once, active only in desktop mode
+  document.querySelectorAll(".menu > li.dropdown-menu-item").forEach((menuItem) => {
+    menuItem.addEventListener("mouseenter", () => {
+      if (isMobile()) return;
+      menuItem.classList.add("show");
+      if (header) {
+        header.classList.add("active");
+      }
     });
-  } else {
-    document.querySelectorAll(".menu > li.dropdown-menu-item").forEach((menuItem) => {
-      menuItem.addEventListener("mouseenter", () => {
-        menuItem.classList.add("show");
-        if (header) {
-          header.classList.add("active");
-        }
-      });
-      menuItem.addEventListener("mouseleave", () => {
-        menuItem.classList.remove("show");
-        if (header) {
-          header.classList.remove("active");
-        }
-      });
+    menuItem.addEventListener("mouseleave", () => {
+      if (isMobile()) return;
+      menuItem.classList.remove("show");
+      if (header) {
+        header.classList.remove("active");
+      }
     });
-  }
+  });
+
+  const setupMode = () => {
+    if (isMobile()) {
+      // Accordion: caret button toggles the sub-menu, the link itself navigates
+      document.querySelectorAll('#header-menu li.menu-item-has-children').forEach((item) => {
+        const link = item.querySelector(':scope > a');
+        if (!link || link.querySelector('.menu-item-btn')) return;
+
+        const button = document.createElement('button');
+        button.type = 'button';
+        button.className = 'menu-item-btn';
+        button.setAttribute('aria-label', 'Розгорнути підменю');
+        button.innerHTML = '<svg class="icon-caret" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>';
+        link.appendChild(button);
+
+        button.addEventListener('click', (event) => {
+          event.preventDefault();
+          event.stopPropagation();
+          item.classList.toggle('show');
+        });
+      });
+
+      if (header) {
+        header.classList.remove('active');
+      }
+    } else {
+      document.body.classList.remove('header-menu-is-visible');
+      document.querySelectorAll('#header-menu li.menu-item-has-children').forEach((item) => {
+        item.classList.remove('show');
+        const button = item.querySelector(':scope > a > .menu-item-btn');
+        if (button) button.remove();
+      });
+    }
+  };
+
+  setupMode();
+
+  let resizeTimer;
+  window.addEventListener('resize', () => {
+    clearTimeout(resizeTimer);
+    resizeTimer = setTimeout(setupMode, 150);
+  });
 }
 
 function initScrollAnimation() {

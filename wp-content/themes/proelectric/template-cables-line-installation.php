@@ -50,7 +50,7 @@ get_header();
 
     <div class="cables-hero-tint"></div>
 
-    <div class="container">
+    <div class="container relative-container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
                 <a href="<?= esc_url( home_url('/') ); ?>">Головна</a>
