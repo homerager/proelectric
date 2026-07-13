@@ -9,6 +9,19 @@ function onInit() {
   onInitMobileMenu();
 }
 
+function animateHeroBg() {
+  const hero = document.querySelector('.hero-bg');
+
+  if (!hero) {
+    return
+  }
+
+  window.addEventListener('scroll',()=>{
+    const y = window.pageYOffset;
+    hero.style.transform = `translateY(${y*0.15}px) scale(1.12)`;
+  });
+}
+
 function initHeaderContacts() {
   const wrap = document.querySelector('.header-contacts');
   if (!wrap) return;

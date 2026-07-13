@@ -990,6 +990,153 @@ footer .logo .logo-text .brand {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+    isolation:isolate;
+}
+
+.hero{
+    position:relative;
+    overflow:hidden;
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+}
+
+/* Фонове фото */
+
+.hero .hero-bg {
+    position:absolute;
+    inset:-6%;
+    z-index:-4;
+    background-image: var(--hero-bg);
+    background-size:cover;
+    background-position:center;
+    animation:kenburns 26s ease-in-out infinite alternate;
+    will-change:transform;
+}
+
+@keyframes kenburns {
+    from{
+        transform:scale(1) translate3d(0,0,0);
+    }
+
+    to{
+        transform:scale(1.12) translate3d(-2%,1%,0);
+    }
+
+}
+
+
+/* затемнення */
+
+.hero-overlay {
+    position:absolute;
+    inset:0;
+    background:
+    linear-gradient(
+        rgba(0,0,0,.55),
+        rgba(0,0,0,.45)
+    );
+    z-index:-3;
+}
+
+
+/* Сонячне світло */
+
+.hero-light {
+    position:absolute;
+    width:650px;
+    height:650px;
+    border-radius:50%;
+    filter:blur(120px);
+    opacity:.22;
+    mix-blend-mode:screen;
+    animation:glow 8s ease-in-out infinite;
+
+}
+
+.hero-light-1 {
+    right:-180px;
+    top:-80px;
+    background:#ffdd88;
+}
+
+.hero-light-2 {
+    left:-180px;
+    bottom:-180px;
+    background:#66d7ff;
+    animation-delay:3s;
+}
+
+@keyframes glow{
+    0% {
+        transform:scale(1);
+        opacity:.18;
+    }
+
+    50%{
+        transform:scale(1.18);
+        opacity:.3;
+    }
+
+    100%{
+        transform:scale(1);
+        opacity:.18;
+    }
+
+}
+
+
+
+/* Частинки */
+
+.hero-particles {
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    z-index:-2;
+}
+
+.hero-particles span {
+    position:absolute;
+    width:5px;
+    height:5px;
+    background:white;
+    border-radius:50%;
+    opacity:.15;
+    filter:blur(1px);
+    animation:float linear infinite;
+}
+
+.hero-particles span:nth-child(1){left:5%;top:90%;animation-duration:22s;}
+.hero-particles span:nth-child(2){left:15%;top:80%;animation-duration:18s;}
+.hero-particles span:nth-child(3){left:25%;top:95%;animation-duration:27s;}
+.hero-particles span:nth-child(4){left:38%;top:88%;animation-duration:23s;}
+.hero-particles span:nth-child(5){left:52%;top:92%;animation-duration:30s;}
+.hero-particles span:nth-child(6){left:63%;top:84%;animation-duration:19s;}
+.hero-particles span:nth-child(7){left:74%;top:95%;animation-duration:26s;}
+.hero-particles span:nth-child(8){left:82%;top:87%;animation-duration:22s;}
+.hero-particles span:nth-child(9){left:90%;top:93%;animation-duration:31s;}
+.hero-particles span:nth-child(10){left:97%;top:89%;animation-duration:24s;}
+
+@keyframes float {
+
+    from{
+        transform:translateY(0);
+        opacity:0;
+    }
+
+    10%{
+        opacity:.2;
+    }
+
+    90%{
+        opacity:.2;
+    }
+
+    to{
+        transform:translateY(-900px);
+        opacity:0;
+    }
 }
 
 .hero::before {
@@ -1000,6 +1147,10 @@ footer .logo .logo-text .brand {
     animation: gridMove 24s linear infinite;
 }
 
+.hero-animate-bg::before {
+    animation: none;
+    background-color: hsl(var(--hero-overlay) / .25);
+}
 .hero .hero-content {
     position: relative;
     z-index: 9;

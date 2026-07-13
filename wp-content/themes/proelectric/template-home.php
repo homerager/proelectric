@@ -5,7 +5,19 @@
 get_header();
 ?>
 
-<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.webp'; ?>)">
+<section class="hero hero-animate-bg">
+    <div class="hero-bg" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.webp'; ?>)"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-light hero-light-1"></div>
+    <div class="hero-light hero-light-2"></div>
+
+    <div class="hero-particles">
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span><span></span><span></span>
+        <span></span><span></span>
+    </div>
+
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">Електромонтажні роботи &amp; СЕС</div>
