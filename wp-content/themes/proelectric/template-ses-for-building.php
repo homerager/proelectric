@@ -89,7 +89,7 @@ get_header();
                     'stat_label' => 'Термін<br>окупності'
                 ), array(
                     'stat_num' => '1-2',
-                    'unit' => ' р.',
+                    'unit' => ' дні',
                     'stat_label' => 'Монтаж<br>системи'
                 ), array(
                     'stat_num' => '25',
@@ -811,7 +811,7 @@ get_header();
             <div class="testimonials-card wf-animate">
                 <div class="testimonials-stars"><span>★</span><span>★</span><span>★</span><span>★</span><span>★</span></div>
                 <div class="testimonials-quote">"</div>
-                <p class="testimonials-text">Якщо ви хочете зекономити на електроенергії, встановіть СЕС. Це простіше, ніж здається, і результат вражає. Я вже продаю надлишки енергії державі і отримую хороший дохід.
+                <p class="testimonials-text">Ставили гібридну систему 8 кВт з акумулятором у травні. Головна причина була — відключення, у нашому районі вимикали по 4–6 годин. Зараз навіть не завжди помічаємо, що світла немає: котел, холодильник, інтернет — все працює. Рахунки за літо взагалі смішні, менше сотні гривень. Монтаж зайняв два дні, після бригади жодного сліду на подвір'ї.</p>
                 <div class="testimonials-sep"></div>
                 <div class="testimonials-name">Олександра Кузьменко</div>
                 <div class="testimonials-role">Власник будинку 150 м², Дніпро</div>
@@ -842,7 +842,7 @@ get_header();
             </div>
             <div class="faq-item wf-animate">
                 <div class="faq-q" onclick="toggleFaq(this)">
-                    Чи буде ліжтар працювати при відключенні світла?
+                    Чи буде світло в будинку при відключенні мережі?
                     <span class="faq-ico">
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
                             <line x1="12" y1="5" x2="12" y2="19"/>

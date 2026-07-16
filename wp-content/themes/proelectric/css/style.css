@@ -993,96 +993,197 @@ footer .logo .logo-text .brand {
     isolation:isolate;
 }
 
-.hero{
-    position:relative;
-    overflow:hidden;
-    min-height:100vh;
-    display:flex;
-    align-items:center;
+.hero-animate-bg {
+    --mx: 0;
+    --my: 0;
+    perspective: 1100px;
 }
 
-/* Фонове фото */
+/* Фонове фото: .hero-parallax нахиляється за мишею (3D),
+   внутрішній .hero-bg окремо живе повільним ken burns */
 
-.hero .hero-bg {
-    position:absolute;
-    inset:-6%;
-    z-index:-4;
+.hero-parallax {
+    position: absolute;
+    inset: 0;
+    z-index: -4;
+    transform: rotateX(calc(var(--my) * -1.6deg)) rotateY(calc(var(--mx) * 1.6deg)) scale(1.05);
+    transition: transform .6s cubic-bezier(.2, .6, .3, 1);
+    will-change: transform;
+}
+
+.hero-parallax .hero-bg {
+    position: absolute;
+    inset: -6%;
     background-image: var(--hero-bg);
-    background-size:cover;
-    background-position:center;
-    animation:kenburns 26s ease-in-out infinite alternate;
-    will-change:transform;
+    background-size: cover;
+    background-position: center;
+    animation:
+        heroBgIn 1.4s ease-out both,
+        kenburns 30s 1.4s ease-in-out infinite alternate;
+}
+
+@keyframes heroBgIn {
+    from { opacity: 0; }
+    to   { opacity: 1; }
 }
 
 @keyframes kenburns {
-    from{
-        transform:scale(1) translate3d(0,0,0);
-    }
-
-    to{
-        transform:scale(1.12) translate3d(-2%,1%,0);
-    }
-
+    from { transform: scale(1) translate3d(0, 0, 0); }
+    to   { transform: scale(1.1) translate3d(-2%, 1%, 0); }
 }
 
 
-/* затемнення */
+/* Затемнення: анімований градієнт поверх фото */
 
 .hero-overlay {
-    position:absolute;
-    inset:0;
-    background:
-    linear-gradient(
-        rgba(0,0,0,.55),
-        rgba(0,0,0,.45)
-    );
-    z-index:-3;
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+    background: linear-gradient(115deg,
+        rgba(5, 14, 28, .68) 0%,
+        rgba(10, 32, 52, .42) 30%,
+        rgba(6, 22, 14, .50) 55%,
+        rgba(8, 18, 34, .62) 80%,
+        rgba(4, 12, 24, .70) 100%);
+    background-size: 260% 260%;
+    animation: overlayShift 26s ease-in-out infinite alternate;
+}
+
+@keyframes overlayShift {
+    from { background-position: 0% 0%; }
+    to   { background-position: 100% 100%; }
 }
 
 
-/* Сонячне світло */
+/* Сонячне світло (radial-gradient замість filter:blur — те саме на вигляд, без навантаження на GPU) */
 
 .hero-light {
-    position:absolute;
-    width:650px;
-    height:650px;
-    border-radius:50%;
-    filter:blur(120px);
-    opacity:.22;
-    mix-blend-mode:screen;
-    animation:glow 8s ease-in-out infinite;
-
+    position: absolute;
+    width: 700px;
+    height: 700px;
+    border-radius: 50%;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: glow 9s ease-in-out infinite;
+    transition: translate .6s cubic-bezier(.2, .6, .3, 1);
 }
 
 .hero-light-1 {
-    right:-180px;
-    top:-80px;
-    background:#ffdd88;
+    /* тепле світло над сонцем на фото (зліва, біля горизонту) */
+    left: calc(12% - 350px);
+    top: calc(58% - 350px);
+    background: radial-gradient(circle,
+        rgba(255, 208, 118, .40) 0%,
+        rgba(255, 190, 90, .14) 40%,
+        transparent 68%);
+    translate: calc(var(--mx) * -36px) calc(var(--my) * -24px);
 }
 
 .hero-light-2 {
-    left:-180px;
-    bottom:-180px;
-    background:#66d7ff;
-    animation-delay:3s;
+    right: -220px;
+    top: -180px;
+    background: radial-gradient(circle,
+        rgba(96, 190, 255, .22) 0%,
+        rgba(96, 190, 255, .08) 40%,
+        transparent 68%);
+    animation-delay: 3s;
+    translate: calc(var(--mx) * -22px) calc(var(--my) * -14px);
 }
 
-@keyframes glow{
-    0% {
-        transform:scale(1);
-        opacity:.18;
+@keyframes glow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: .65;
     }
 
-    50%{
-        transform:scale(1.18);
-        opacity:.3;
+    50% {
+        transform: scale(1.15);
+        opacity: 1;
+    }
+}
+
+/* Сонячні промені: сектор конічного градієнта над сонцем, повільно хитається */
+
+.hero-rays {
+    position: absolute;
+    left: 12%;
+    top: 58%;
+    width: 140vmin;
+    height: 140vmin;
+    margin: -70vmin 0 0 -70vmin;
+    z-index: -2;
+    background: repeating-conic-gradient(from -20deg,
+        rgba(255, 214, 130, .09) 0deg 5deg,
+        transparent 5deg 16deg);
+    -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, .9) 0%, transparent 60%);
+    mask-image: radial-gradient(circle, rgba(0, 0, 0, .9) 0%, transparent 60%);
+    mix-blend-mode: screen;
+    pointer-events: none;
+    animation: raysSway 24s ease-in-out infinite alternate;
+    translate: calc(var(--mx) * -18px) calc(var(--my) * -12px);
+    transition: translate .6s cubic-bezier(.2, .6, .3, 1);
+}
+
+@keyframes raysSway {
+    from {
+        transform: rotate(-3deg) scale(1);
+        opacity: .35;
     }
 
-    100%{
-        transform:scale(1);
-        opacity:.18;
+    to {
+        transform: rotate(3deg) scale(1.05);
+        opacity: .6;
+    }
+}
+
+/* Відблиск, що зрідка проходить по сонячних панелях (нижня третина фото) */
+
+.hero-glint {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 38%;
+    z-index: -2;
+    overflow: hidden;
+    pointer-events: none;
+    mix-blend-mode: screen;
+}
+
+.hero-glint::before {
+    content: '';
+    position: absolute;
+    top: -12%;
+    bottom: -12%;
+    left: 0;
+    width: 22%;
+    background: linear-gradient(100deg,
+        transparent 0%,
+        rgba(185, 215, 250, .05) 35%,
+        rgba(215, 235, 255, .13) 50%,
+        rgba(185, 215, 250, .05) 65%,
+        transparent 100%);
+    animation: glintSweep 13s ease-in-out infinite;
+}
+
+@keyframes glintSweep {
+    0%, 55% {
+        transform: translateX(-140%) skewX(-18deg);
+        opacity: 0;
     }
 
+    62% {
+        opacity: 1;
+    }
+
+    82% {
+        opacity: 1;
+    }
+
+    92%, 100% {
+        transform: translateX(640%) skewX(-18deg);
+        opacity: 0;
+    }
 }
 
 
@@ -1134,7 +1235,7 @@ footer .logo .logo-text .brand {
     }
 
     to{
-        transform:translateY(-900px);
+        transform:translateY(-110vh);
         opacity:0;
     }
 }
@@ -1150,6 +1251,72 @@ footer .logo .logo-text .brand {
 .hero-animate-bg::before {
     animation: none;
     background-color: hsl(var(--hero-overlay) / .25);
+}
+
+.hero-animate-bg .hero-content {
+    translate: calc(var(--mx) * 14px) calc(var(--my) * 9px);
+    transition: translate .6s cubic-bezier(.2, .6, .3, 1);
+}
+
+/* Важчі ефекти вимикаємо на мобільних: лишається фото, градієнт і поява контенту */
+
+@media (max-width: 900px) {
+    .hero-rays,
+    .hero-glint,
+    .hero-particles {
+        display: none;
+    }
+
+    .hero-light {
+        animation: none;
+    }
+
+    .hero-parallax {
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+
+    .hero-parallax .hero-bg {
+        animation: heroBgIn 1.4s ease-out both;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-rays,
+    .hero-glint,
+    .hero-particles {
+        display: none;
+    }
+
+    .hero-parallax {
+        transform: none;
+        transition: none;
+        will-change: auto;
+    }
+
+    .hero-parallax .hero-bg,
+    .hero-light,
+    .hero-overlay {
+        animation: none;
+    }
+
+    .hero-animate-bg .hero-content {
+        translate: none;
+        transition: none;
+    }
+
+    /* контент з'являється одразу, без fadeUp-руху */
+    .hero .hero-label,
+    .hero .hero-title,
+    .hero .hero-desc,
+    .hero .hero-actions,
+    .hero .hero-stats,
+    .hero-lead,
+    .hero-year {
+        animation-duration: .01s;
+        animation-delay: 0s;
+    }
 }
 .hero .hero-content {
     position: relative;

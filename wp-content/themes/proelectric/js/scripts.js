@@ -7,18 +7,39 @@ function onInit() {
   initCallbackModal();
   initHeaderContacts();
   onInitMobileMenu();
+  initHeroParallax();
 }
 
-function animateHeroBg() {
-  const hero = document.querySelector('.hero-bg');
+function initHeroParallax() {
+  const hero = document.querySelector('.hero-animate-bg');
+  if (!hero) return;
 
-  if (!hero) {
-    return
-  }
+  // тільки для пристроїв з мишею і без prefers-reduced-motion
+  const canHover = window.matchMedia('(hover: hover) and (pointer: fine)');
+  const noMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+  if (!canHover.matches || noMotion.matches) return;
 
-  window.addEventListener('scroll',()=>{
-    const y = window.pageYOffset;
-    hero.style.transform = `translateY(${y*0.15}px) scale(1.12)`;
+  let rafId = null;
+  let mx = 0;
+  let my = 0;
+
+  const apply = () => {
+    hero.style.setProperty('--mx', mx.toFixed(3));
+    hero.style.setProperty('--my', my.toFixed(3));
+    rafId = null;
+  };
+
+  hero.addEventListener('mousemove', (e) => {
+    const rect = hero.getBoundingClientRect();
+    mx = (e.clientX - rect.left) / rect.width - 0.5;
+    my = (e.clientY - rect.top) / rect.height - 0.5;
+    if (rafId === null) rafId = requestAnimationFrame(apply);
+  });
+
+  hero.addEventListener('mouseleave', () => {
+    mx = 0;
+    my = 0;
+    if (rafId === null) rafId = requestAnimationFrame(apply);
   });
 }
 

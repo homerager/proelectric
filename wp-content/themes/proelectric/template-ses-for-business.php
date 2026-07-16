@@ -85,7 +85,7 @@ get_header();
                     'unit' => ' р.',
                     'stat_label' => 'Гарантія<br>на панелі'
                 ), array(
-                    'stat_num' => '20',
+                    'stat_num' => '20%',
                     'unit' => '+',
                     'stat_label' => 'Повернення<br>ПДВ'
                 )

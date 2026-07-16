@@ -91,7 +91,7 @@ get_header();
                     'unit' => ' р.',
                     'stat_label' => 'Гарантія<br>на панелі'
                 ), array(
-                    'stat_num' => '40',
+                    'stat_num' => '20',
                     'unit' => '+',
                     'stat_label' => 'ОСББ вже<br>з нашими СЕС'
                 )
@@ -261,7 +261,7 @@ get_header();
                     </div>
                 </div>
                 <div class="step-title">Монтаж</div>
-                <div class="step-desc">Встановлення панелей, інвертора, кабельних ліній — 1–3 дні</div>
+                <div class="step-desc">Встановлення панелей, інвертора, кабельних ліній — 2–5 днів</div>
             </div>
             <div class="step wf-animate mb-30">
                 <div class="step-num">
@@ -421,7 +421,7 @@ get_header();
         <div class="page-section-header wf-animate mb-5">
             <div class="section-label">Реалізовані об'єкти</div>
             <h2 class="section-title">ОСББ ЯКІ ВЖЕ ЕКОНОМЛЯТЬ</h2>
-            <div class="section-sub">Більше 40 ОСББ по всій Україні вже знизили витрати на електрику завдяки нашим СЕС.</div>
+            <div class="section-sub">Більше 20 ОСББ по всій Україні вже знизили витрати на електрику завдяки нашим СЕС.</div>
         </div>
         <div class="projects-grid wf-animate-grid">
             <div class="project-card featured wf-animate">
