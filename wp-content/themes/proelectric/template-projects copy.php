@@ -42,7 +42,7 @@ get_header();
 <section class="page-section" id="featured-projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Флагманські об'єкти</div>
+            <h3 class="section-label">Флагманські об'єкти</h3>
             <h2 class="section-title">КЛЮЧОВІ ПРОЄКТИ</h2>
         </div>
         <div class="projects-grid wf-animate-grid">
@@ -83,7 +83,7 @@ get_header();
 <section class="page-section page-section-services" id="all-projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Портфоліо робіт</div>
+            <h3 class="section-label">Портфоліо робіт</h3>
             <h2 class="section-title">УСІ ОБ'ЄКТИ</h2>
         </div>
         <div class="d-grid md-grid-3-columns wf-animate-grid">

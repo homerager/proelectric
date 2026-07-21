@@ -1,7 +1,7 @@
 <section class="page-section" id="contact">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Зв'яжіться з нами</div>
+            <h3 class="section-label">Зв'яжіться з нами</h3>
             <h2 class="section-title">МАЄТЕ ПИТАННЯ?</h2>
         </div>
         <div class="contact-inner wf-animate-grid d-grid md-grid-2-columns md-gap-64">

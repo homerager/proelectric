@@ -122,7 +122,7 @@ get_header();
 <section class="page-section" id="systems">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми виконуємо</div>
+            <h3 class="section-label">Що ми виконуємо</h3>
             <h2 class="section-title">НАПРЯМКИ АВТОМАТИКИ ТА ЗАХИСТУ</h2>
             <p class="section-sub">Повний комплекс робіт із релейного захисту, автоматизації та диспетчеризації для об'єктів будь-якого рівня складності.</p>
         </div>
@@ -357,7 +357,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="equipment">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Обладнання та виробники</div>
+            <h3 class="section-label">Обладнання та виробники</h3>
             <h2 class="section-title">ОБЛАДНАННЯ ЯКЕ МИ ВИКОРИСТОВУЄМО</h2>
             <p class="section-sub">Працюємо виключно з офіційними постачальниками перевіреного обладнання, що має гарантію та сервісну підтримку в Україні.</p>
         </div>
@@ -552,7 +552,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ЗАХИСТ ЯКИЙ СПРАЦЮЄ ВЧАСНО</h2>
             <p class="section-sub">Релейний захист і автоматика — це не просто обладнання, а точно розрахована логіка, що має спрацювати безпомилково в критичний момент.</p>
         </div>
@@ -624,7 +624,7 @@ get_header();
             </div>
 
             <div class="cables-split-content">
-                <div class="section-label">Інженерний підхід</div>
+                <h3 class="section-label">Інженерний підхід</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">ТОЧНІСТЬ<br>І СЕЛЕКТИВНІСТЬ</h2>
                 <p class="section-sub">Кожна система розробляється з урахуванням схеми мережі, струмів короткого замикання та вимог до безперервності технологічного процесу.</p>
 
@@ -687,7 +687,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ ВПРОВАДЖЕННЯ АВТОМАТИКИ ТА ЗАХИСТУ</h2>
             <p class="section-sub">Від обстеження об'єкта до налагодження та навчання персоналу — повний цикл «під ключ».</p>
         </div>
@@ -750,7 +750,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від шафи РЗА на підстанції до повної АСУ ТП виробничої лінії — впроваджуємо автоматику для критичних об'єктів.</p>
         </div>
@@ -850,7 +850,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

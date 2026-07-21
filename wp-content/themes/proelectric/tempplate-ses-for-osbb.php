@@ -103,7 +103,7 @@ get_header();
 <section class="page-section page-section-why" id="why">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Переваги для ОСББ</div>
+            <h3 class="section-label">Переваги для ОСББ</h3>
             <h2 class="section-title">ЧОМУ ОСББ ПОТРЕБУЄ СЕС</h2>
             <div class="section-sub">Електроенергія для місць загального користування — ліфти, освітлення, насоси — це одна з найбільших статей витрат кожного ОСББ.</div>
         </div>
@@ -209,7 +209,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ПРОЦЕС ВСТАНОВЛЕННЯ</h2>
             <p class="section-sub">Від першого дзвінка до запуску системи — чітко і прозоро, без сюрпризів.</p>
         </div>
@@ -330,7 +330,7 @@ get_header();
 <section class="page-section" id="calc">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Фінансова вигода</div>
+            <h3 class="section-label">Фінансова вигода</h3>
             <h2 class="section-title">ЕКОНОМІКА ПРОЄКТУ</h2>
             <div class="section-sub">Реальні цифри — скільки коштує, скільки заощаджує і коли окупається СЕС для типового ОСББ.</div>
         </div>
@@ -419,7 +419,7 @@ get_header();
 <section class="page-section page-section-bg2" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">ОСББ ЯКІ ВЖЕ ЕКОНОМЛЯТЬ</h2>
             <div class="section-sub">Більше 20 ОСББ по всій Україні вже знизили витрати на електрику завдяки нашим СЕС.</div>
         </div>
@@ -453,7 +453,7 @@ get_header();
 <section class="page-section testimonials-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відгуки</div>
+            <h3 class="section-label">Відгуки</h3>
             <h2 class="section-title">ЩО КАЖУТЬ ГОЛОВИ ОСББ</h2>
         </div>
         <div class="testimonials-grid wf-animate-grid d-grid md-grid-3-columns">
@@ -487,7 +487,7 @@ get_header();
 <section class="page-section faq-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

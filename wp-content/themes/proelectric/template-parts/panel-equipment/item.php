@@ -64,7 +64,7 @@ $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?'
 <section class="page-section" id="about">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що це і для чого</div>
+            <h3 class="section-label">Що це і для чого</h3>
             <h2 class="section-title">ПРО РІШЕННЯ</h2>
         </div>
         <div class="d-grid md-grid-2-columns md-gap-64 wf-animate-grid">
@@ -102,7 +102,7 @@ $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?'
 <section class="page-section page-section-bg2" id="features">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Комплектація</div>
+            <h3 class="section-label">Комплектація</h3>
             <h2 class="section-title"><?= esc_html( $features_title ) ?></h2>
         </div>
         <div class="wf-animate-grid d-grid lg-grid-3-columns md-grid-2-columns audiences-grid">
@@ -121,7 +121,7 @@ $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?'
 <section class="page-section page-section-bg-dark how" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ВІД СХЕМИ ДО ЗАПУСКУ</h2>
         </div>
         <div class="steps d-grid lg-grid-4-columns md-grid-2-columns wf-animate-grid position-relative">
@@ -182,7 +182,7 @@ $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?'
 <section class="page-section faq-section" id="faq">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

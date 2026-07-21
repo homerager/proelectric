@@ -47,11 +47,11 @@ if ( ! function_exists( 'proelectric_audience_icon' ) ) {
 }
 ?>
 
-<section class="page-section page-section-audiences" id="audiences">
+<section class="page-section page-section-bg2 page-section-audiences" id="audiences">
     <div class="container">
         <?php if ( $sub_title || $title ) : ?>
             <div class="page-section-header wf-animate mb-5">
-                <?php if ( $sub_title ) : ?><div class="section-label"><?= esc_html( $sub_title ) ?></div><?php endif; ?>
+                <?php if ( $sub_title ) : ?><h3 class="section-label"><?= esc_html( $sub_title ) ?></h3><?php endif; ?>
                 <?php if ( $title ) : ?><h2 class="section-title"><?= esc_html( $title ) ?></h2><?php endif; ?>
             </div>
         <?php endif; ?>

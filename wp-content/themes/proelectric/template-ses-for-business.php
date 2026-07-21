@@ -97,7 +97,7 @@ get_header();
 <section class="page-section" id="segments">
     <div class="container"> 
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Для якого бізнесу</div>
+            <h3 class="section-label">Для якого бізнесу</h3>
             <h2 class="section-title">СЕГМЕНТИ БІЗНЕСУ</h2>
             <div class="section-sub">Підбираємо рішення під специфіку кожного бізнесу — потужність, схему підключення та фінансову модель.</div>
         </div>
@@ -278,7 +278,7 @@ get_header();
 <section class="page-section page-section-bg-dark benefits-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Переваги для бізнесу</div>
+            <h3 class="section-label">Переваги для бізнесу</h3>
             <h2 class="section-title">ЧОМУ СЕС — ЦЕ ВИГІДНО</h2>
             <div class="section-sub">Сонячна електростанція — це не витрата, а інвестиція з прогнозованим і вимірюваним доходом.</div>
         </div>
@@ -352,7 +352,7 @@ get_header();
 <section class="page-section roi-section" id="roi">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Фінансова модель</div>
+            <h3 class="section-label">Фінансова модель</h3>
             <h2 class="section-title">РОЗРАХУНОК ROI</h2>
             <div class="section-sub">Введіть параметри вашого підприємства — отримайте орієнтовну фінансову модель.</div>
         </div>
@@ -439,7 +439,7 @@ get_header();
 <section class="page-section" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми реалізуємо</div>
+            <h3 class="section-label">Як ми реалізуємо</h3>
             <h2 class="section-title">ПРОЦЕС РОБОТИ</h2>
             <div class="section-sub">Від першого контакту до введення в експлуатацію — повний супровід без зайвих кроків.</div>
         </div>
@@ -519,7 +519,7 @@ get_header();
 <section class="page-section page-section-bg2" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <div class="section-sub">Від 50 кВт для малого бізнесу до 10 МВт промислового масштабу.</div>
         </div>
@@ -553,7 +553,7 @@ get_header();
 <section class="page-section faq-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

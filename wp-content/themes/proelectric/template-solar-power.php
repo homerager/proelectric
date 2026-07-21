@@ -42,7 +42,7 @@ get_header();
 <section class="page-section page-section-types" id="types">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми пропонуємо</div>
+            <h3 class="section-label">Що ми пропонуємо</h3>
             <h2 class="section-title">ТИПИ СОНЯЧНИХ ЕЛЕКТРОСТАНЦІЙ</h2>
             <p class="section-sub">Підбираємо рішення під конкретний об'єкт — від квартири в ОСББ до промислового підприємства.</p>
         </div>
@@ -105,7 +105,7 @@ get_header();
 <section class="page-section page-section-bg-dark how" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ПРОЦЕС ВСТАНОВЛЕННЯ</h2>
             <p class="section-sub">Від першого дзвінка до запуску системи — чітко і прозоро, без сюрпризів.</p>
         </div>
@@ -177,7 +177,7 @@ get_header();
 <section class="page-section" id="equipment">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що входить у систему</div>
+            <h3 class="section-label">Що входить у систему</h3>
             <h2 class="section-title">СКЛАД ОБЛАДНАННЯ</h2>
             <p class="section-sub">Використовуємо перевірених виробників з офіційною гарантією та сервісом в Україні.</p>
         </div>
@@ -286,10 +286,10 @@ get_header();
         </div>
     </div>
 </section>
-<section class="page-section calc-section" id="calc">
+<section class="page-section page-section-bg2 calc-section" id="calc">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Оціните вигоду</div>
+            <h3 class="section-label">Оціните вигоду</h3>
             <h2 class="section-title">КАЛЬКУЛЯТОР СЕС</h2>
             <p class="section-sub">Введіть дані вашого об'єкта — ми порахуємо орієнтовну потужність та окупність системи.</p>
         </div>
@@ -376,7 +376,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
         </div>
         <div class="projects-grid wf-animate-grid">
@@ -409,7 +409,7 @@ get_header();
 <section class="page-section faq-section page-section-bg2" id="faq">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

@@ -31,7 +31,7 @@ get_header();
     <!-- FORM -->
     <div class="form-side reveal">
         <div class="form-head">
-            <div class="section-label">Надіслати запит</div>
+            <h3 class="section-label">Надіслати запит</h3>
             <h2>Напишіть нам — відповімо протягом 2 годин</h2>
             <p>Розкажіть про ваш об'єкт і задачу. Виїдемо на огляд безкоштовно і підготуємо детальну комерційну пропозицію.</p>
         </div>

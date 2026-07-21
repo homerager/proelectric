@@ -98,7 +98,7 @@ get_header();
 <section class="page-section page-section-types" id="types">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми монтуємо</div>
+            <h3 class="section-label">Що ми монтуємо</h3>
             <h2 class="section-title">ТИПИ СИСТЕМ ОСВІТЛЕННЯ</h2>
             <p class="section-sub">Від базового робочого освітлення до інтелектуальних керованих систем — підбираємо під задачі конкретного об'єкта.</p>
         </div>
@@ -316,7 +316,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="led">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label section-label-gold">Технологія</div>
+            <h3 class="section-label section-label-gold">Технологія</h3>
             <h2 class="section-title">ЧОМУ СВІТЛОДІОДНЕ ОСВІТЛЕННЯ</h2>
             <p class="section-sub">LED — це не просто «нова лампочка». Це принципово інша технологія з іншими характеристиками, ресурсом і можливостями управління.</p>
         </div>
@@ -405,7 +405,7 @@ get_header();
 <section class="page-section page-section-bg2 compare-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Порівняння технологій</div>
+            <h3 class="section-label">Порівняння технологій</h3>
             <h2 class="section-title">LED vs ТРАДИЦІЙНЕ ОСВІТЛЕННЯ</h2>
             <p class="section-sub">Об'єктивне порівняння для прийняття зваженого рішення.</p>
         </div>
@@ -478,7 +478,7 @@ get_header();
 <section class="page-section" id="smart">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Автоматизація</div>
+            <h3 class="section-label">Автоматизація</h3>
             <h2 class="section-title">РОЗУМНЕ УПРАВЛІННЯ ОСВІТЛЕННЯМ</h2>
             <p class="section-sub">Інтелектуальна система управління освітленням дозволяє заощадити ще 30–40% понад LED-ефективність.</p>
         </div>
@@ -523,7 +523,7 @@ get_header();
             </div>
 
             <div class="smart-content wf-animate">
-                <div class="section-label">Інтелектуальне управління</div>
+                <h3 class="section-label">Інтелектуальне управління</h3>
                 <h2 class="section-title">SMART-ОСВІТЛЕННЯ<br>ДЛЯ ВАШОГО ОБ'ЄКТА</h2>
                 <p class="section-sub">Система автоматично регулює яскравість і графік роботи залежно від природного освітлення, присутності людей та сценаріїв використання приміщення.</p>
                 <div class="smart-features">
@@ -566,7 +566,7 @@ get_header();
 <section class="page-section page-section-bg2" id="objects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Де ми монтуємо</div>
+            <h3 class="section-label">Де ми монтуємо</h3>
             <h2 class="section-title">ТИПИ ОБ'ЄКТІВ</h2>
             <p class="section-sub">Досвід освітлення об'єктів різного призначення та масштабу.</p>
         </div>
@@ -643,7 +643,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label section-label-gold">Як ми працюємо</div>
+            <h3 class="section-label section-label-gold">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ РЕАЛІЗАЦІЇ</h2>
             <p class="section-sub">Від аудиту існуючого освітлення до здачі системи — чіткий і прозорий процес.</p>
         </div>
@@ -686,7 +686,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від освітлення складу до архітектурного підсвічування — досвід на різних об'єктах.</p>
         </div>
@@ -728,7 +728,7 @@ get_header();
 <section class="page-section faq-section page-section-bg2" id="faq">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді</div>
+            <h3 class="section-label">Відповіді</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

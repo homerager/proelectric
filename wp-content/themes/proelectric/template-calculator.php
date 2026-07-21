@@ -32,10 +32,10 @@ get_header();
     </div>
 </section>
 
-<section class="page-section calc-section" id="calc">
+<section class="page-section page-section-bg2 calc-section" id="calc">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Оціните вигоду</div>
+            <h3 class="section-label">Оціните вигоду</h3>
             <h2 class="section-title">РОЗРАХУЙТЕ СВОЮ СИСТЕМУ</h2>
             <p class="section-sub">Розрахунок працює для приватних будинків, бізнесу та ОСББ. Дані нікуди не передаються — все рахується у вашому браузері.</p>
         </div>
@@ -123,7 +123,7 @@ get_header();
 <section class="page-section" id="next-steps">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що далі</div>
+            <h3 class="section-label">Що далі</h3>
             <h2 class="section-title">ВІД РОЗРАХУНКУ ДО ЗАПУСКУ</h2>
         </div>
         <div class="wf-animate-grid d-grid md-grid-3-columns audiences-grid">

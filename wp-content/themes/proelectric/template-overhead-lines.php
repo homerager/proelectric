@@ -140,7 +140,7 @@ get_header();
 <section class="page-section" id="line-types">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Класи напруги</div>
+            <h3 class="section-label orange">Класи напруги</h3>
             <h2 class="section-title">ТИПИ ПОВІТРЯНИХ ЛІНІЙ</h2>
             <p class="section-sub">Виконуємо повний цикл будівництва та реконструкції ліній усіх класів напруги — від вводів у будинок до магістральних ЛЕП.</p>
         </div>
@@ -405,7 +405,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="towers">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Конструкції та матеріали</div>
+            <h3 class="section-label orange">Конструкції та матеріали</h3>
             <h2 class="section-title">ОПОРИ ТА ПРОВОДИ ЯКІ МИ МОНТУЄМО</h2>
             <p class="section-sub">Металеві, залізобетонні, дерев'яні опори та весь спектр проводів і арматури — підбираємо під клас напруги, умови траси та вимоги замовника.</p>
         </div>
@@ -590,7 +590,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ЯКІСТЬ НА КОЖНОМУ ПРОГОНІ</h2>
             <p class="section-sub">Будуємо лінії так, щоб вони витримували вітрові та льодові навантаження і служили десятиліттями.</p>
         </div>
@@ -654,7 +654,7 @@ get_header();
             </div>
 
             <div class="lep-split-content">
-                <div class="section-label orange">Технічні стандарти</div>
+                <h3 class="section-label orange">Технічні стандарти</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">ВІДПОВІДНО<br>ДО ПУЕ ТА ДБН</h2>
                 <p class="section-sub">Кожна лінія будується за затвердженим проектом, з виконанням нормативних прогонів, стрілок провісу та висот підвіски.</p>
 
@@ -717,7 +717,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Як ми працюємо</div>
+            <h3 class="section-label orange">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ БУДІВНИЦТВА ПОВІТРЯНОЇ ЛІНІЇ</h2>
             <p class="section-sub">Від отримання проекту до підписання акту — чітка послідовність робіт без відступів від технології.</p>
         </div>
@@ -780,7 +780,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від монтажу вводу 0,4 кВ до будівництва магістральної ПЛ-110 кВ між підстанціями.</p>
         </div>
@@ -881,7 +881,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

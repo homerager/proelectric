@@ -115,7 +115,7 @@ get_header();
 <section class="page-section" id="systems">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми монтуємо</div>
+            <h3 class="section-label">Що ми монтуємо</h3>
             <h2 class="section-title">ТИПИ УСТАНОВОК ЗБЕРІГАННЯ ЕНЕРГІЇ</h2>
             <p class="section-sub">Підбираємо рішення під ваше завдання — резервування, зниження рахунків за електроенергію, максимальне самоспоживання СЕС або надання мережевих послуг.</p>
         </div>
@@ -349,7 +349,7 @@ get_header();
 <section class="page-section page-section-bg2 compare-section" id="compare">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Порівняння технологій</div>
+            <h3 class="section-label">Порівняння технологій</h3>
             <h2 class="section-title">УЗЕ vs ГЕНЕРАТОР vs ДБЖ</h2>
             <p class="section-sub">Об'єктивне порівняння рішень для резервного живлення — щоб ви обрали те, що справді вирішує ваше завдання.</p>
         </div>
@@ -430,7 +430,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="equipment">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Обладнання та виробники</div>
+            <h3 class="section-label">Обладнання та виробники</h3>
             <h2 class="section-title">ОБЛАДНАННЯ ДЛЯ СИСТЕМ НАКОПИЧЕННЯ</h2>
             <p class="section-sub">Використовуємо лише сертифіковані батарейні модулі та інвертори від офіційних постачальників з гарантією та сервісом в Україні.</p>
         </div>
@@ -620,7 +620,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ЕНЕРГІЯ, ЯКА ПРАЦЮЄ НА ВАС</h2>
             <p class="section-sub">Установка зберігання — це не просто батареї, а інструмент економії та енергонезалежності, спроєктований під ваш профіль споживання.</p>
         </div>
@@ -671,7 +671,7 @@ get_header();
             </div>
 
             <div class="cables-split-content">
-                <div class="section-label">Економіка та надійність</div>
+                <h3 class="section-label">Економіка та надійність</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">НАКОПИЧУЙТЕ<br>ТА ЕКОНОМТЕ</h2>
                 <p class="section-sub">Кожна установка розраховується під ваш добовий профіль споживання, тариф і завдання — щоб окупитись і працювати роками.</p>
 
@@ -735,7 +735,7 @@ get_header();
 <section class="page-section" id="packages">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Готові рішення</div>
+            <h3 class="section-label">Готові рішення</h3>
             <h2 class="section-title">ПАКЕТИ «ПІД КЛЮЧ»</h2>
             <p class="section-sub">Три перевірені комплектації для типових завдань — або збираємо індивідуально під ваш профіль споживання.</p>
         </div>
@@ -868,7 +868,7 @@ get_header();
 <div class="cables-depth-band wf-animate" id="roi">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Приклад окупності</div>
+            <h3 class="section-label">Приклад окупності</h3>
             <h2 class="section-title">ЯК УЗЕ 100 кВт·год ЗАРОБЛЯЄ ДЛЯ БІЗНЕСУ</h2>
         </div>
         <div class="cables-depth-row wf-animate-grid lg-grid-4-columns md-grid-2-columns">
@@ -927,7 +927,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ ВСТАНОВЛЕННЯ УЗЕ</h2>
             <p class="section-sub">Від аналізу профілю споживання до пусконалагодження та навчання — повний цикл «під ключ».</p>
         </div>
@@ -990,7 +990,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від домашнього накопичувача до мегаватної контейнерної станції — реалізуємо УЗЕ будь-якого масштабу.</p>
         </div>
@@ -1090,7 +1090,7 @@ get_header();
 <section class="page-section" id="about-uze">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Корисно знати</div>
+            <h3 class="section-label">Корисно знати</h3>
             <h2 class="section-title">ВСТАНОВЛЕННЯ УСТАНОВОК ЗБЕРІГАННЯ ЕЛЕКТРОЕНЕРГІЇ В УКРАЇНІ</h2>
         </div>
         <div class="entry-content post-content wf-animate">
@@ -1106,7 +1106,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

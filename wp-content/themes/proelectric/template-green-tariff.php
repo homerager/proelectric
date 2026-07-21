@@ -36,7 +36,7 @@ get_header();
 <section class="page-section" id="about">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Простими словами</div>
+            <h3 class="section-label">Простими словами</h3>
             <h2 class="section-title">ЩО ТАКЕ ЗЕЛЕНИЙ ТАРИФ</h2>
         </div>
         <div class="d-grid md-grid-2-columns md-gap-64 wf-animate-grid">
@@ -75,7 +75,7 @@ get_header();
 <section class="page-section page-section-bg-dark how" id="how">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Крок за кроком</div>
+            <h3 class="section-label">Крок за кроком</h3>
             <h2 class="section-title">ЯК ПІДКЛЮЧИТИ ЗЕЛЕНИЙ ТАРИФ</h2>
             <p class="section-sub">Від заявки до першої виплати — весь процес супроводжуємо ми.</p>
         </div>
@@ -149,7 +149,7 @@ get_header();
 <section class="page-section page-section-bg2" id="for-whom">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Кому підходить</div>
+            <h3 class="section-label">Кому підходить</h3>
             <h2 class="section-title">ЗЕЛЕНИЙ ТАРИФ ДЛЯ ВАШОГО ОБ'ЄКТА</h2>
         </div>
         <div class="wf-animate-grid d-grid md-grid-3-columns audiences-grid">
@@ -175,7 +175,7 @@ get_header();
 <section class="page-section faq-section" id="faq">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

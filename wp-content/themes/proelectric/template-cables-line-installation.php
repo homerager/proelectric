@@ -102,7 +102,7 @@ get_header();
 <section class="page-section" id="methods">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Способи прокладки</div>
+            <h3 class="section-label orange">Способи прокладки</h3>
             <h2 class="section-title">МЕТОДИ МОНТАЖУ КАБЕЛІВ</h2>
             <p class="section-sub">Вибираємо оптимальний метод залежно від умов об'єкта, типу кабелю та вимог до захисту.</p>
         </div>
@@ -353,7 +353,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="cables">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Типи кабелів</div>
+            <h3 class="section-label orange">Типи кабелів</h3>
             <h2 class="section-title">КАБЕЛІ ЯКІ МИ МОНТУЄМО</h2>
             <p class="section-sub">Силові, контрольні, оптичні та спеціальні — підбираємо кабель під конкретні умови і вимоги об'єкта.</p>
         </div>
@@ -521,7 +521,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ЯКІСТЬ НА КОЖНОМУ МЕТРІ</h2>
             <p class="section-sub">Ми прокладаємо кабельні траси так, щоб вони служили десятиліттями без проблем.</p>
         </div>
@@ -580,7 +580,7 @@ get_header();
             </div>
 
             <div class="cables-split-content">
-                <div class="section-label orange">Технічні стандарти</div>
+                <h3 class="section-label orange">Технічні стандарти</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">ВІДПОВІДНО<br>ДО НОРМ І ПРАВИЛ</h2>
                 <p class="section-sub">Кожна кабельна лінія виконується за затвердженим проектом, у суворій відповідності до ПУЕ та ДБН.</p>
 
@@ -643,7 +643,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Як ми працюємо</div>
+            <h3 class="section-label orange">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ МОНТАЖУ КАБЕЛЬНИХ ЛІНІЙ</h2>
             <p class="section-sub">Від отримання проекту до підписання акту — чітка послідовність робіт без відступів від технології.</p>
         </div>
@@ -706,7 +706,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від кабельної мережі промислового підприємства до підземної КЛ-10 кВ між підстанціями.</p>
         </div>
@@ -806,7 +806,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

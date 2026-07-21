@@ -120,7 +120,7 @@ get_header();
 <section class="page-section" id="panel-types">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Що ми монтуємо</div>
+            <h3 class="section-label orange">Що ми монтуємо</h3>
             <h2 class="section-title">ТИПИ ЕЛЕКТРОЩИТІВ</h2>
             <p class="section-sub">Монтуємо будь-які типи щитового обладнання — від побутового квартирного щитка до промислового ГРЩ та АВР.</p>
         </div>
@@ -360,7 +360,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ТОЧНІСТЬ ДО КОЖНОГО БОЛТА</h2>
             <p class="section-sub">Монтуємо електрощити так, щоб вони надійно працювали десятиліттями — без аварій та перегріву.</p>
         </div>
@@ -429,7 +429,7 @@ get_header();
             </div>
 
             <div class="panel-split-content">
-                <div class="section-label blue">Технічний підхід</div>
+                <h3 class="section-label blue">Технічний підхід</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">МОНТАЖ ЗА ВСІМА<br>НОРМАМИ ПУЕ</h2>
                 <p class="section-sub">Кожен щит монтується відповідно до проекту, норм ПУЕ та вимог виробників обладнання.</p>
 
@@ -492,7 +492,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label orange">Як ми працюємо</div>
+            <h3 class="section-label orange">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ МОНТАЖУ ЕЛЕКТРОЩИТА</h2>
             <p class="section-sub">Від вивчення проекту до здачі з протоколами — чітка технологічна послідовність без відступів.</p>
         </div>
@@ -555,7 +555,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від квартирного щитка до головного розподільного щита промислового підприємства.</p>
         </div>
@@ -653,7 +653,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

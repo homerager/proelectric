@@ -136,7 +136,7 @@ get_header();
 <section class="page-section" id="solutions">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Типи промислових СЕС</div>
+            <h3 class="section-label">Типи промислових СЕС</h3>
             <h2 class="section-title">РІШЕННЯ ДЛЯ ПРОМИСЛОВИХ ОБ'ЄКТІВ</h2>
             <p class="section-sub">Підбираємо тип станції залежно від наявних площ, потужності мережевого підключення та фінансової моделі.</p>
         </div>
@@ -435,7 +435,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="benefits">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Переваги для підприємства</div>
+            <h3 class="section-label">Переваги для підприємства</h3>
             <h2 class="section-title">ЧОМУ ПРОМИСЛОВА СЕС — ЦЕ ВИГІДНО</h2>
             <p class="section-sub">Власна генерація — не витрата, а інвестиція з вимірюваним ROI, що захищає від тарифних ризиків на 25+ років.</p>
         </div>
@@ -555,7 +555,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Технічний підхід</div>
+            <h3 class="section-label">Технічний підхід</h3>
             <h2 class="section-title">ЯКІСТЬ НА КОЖНОМУ МЕГАВАТИ</h2>
             <p class="section-sub">Промислова СЕС — це складний інженерний об'єкт. Ми підходимо до нього з тією ж точністю, що і до електричних підстанцій.</p>
         </div>
@@ -624,7 +624,7 @@ get_header();
             </div>
 
             <div class="cables-split-content">
-                <div class="section-label">Технічні стандарти</div>
+                <h3 class="section-label">Технічні стандарти</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">ТОЧНІСТЬ<br>ПРОМИСЛОВОГО РІВНЯ</h2>
                 <p class="section-sub">Кожен МВт будується за затвердженим технічним проектом з дотриманням IEC, ДСТУ та вимог операторів мережі.</p>
 
@@ -686,7 +686,7 @@ get_header();
 <section class="page-section" id="roi">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Фінансова модель</div>
+            <h3 class="section-label">Фінансова модель</h3>
             <h2 class="section-title">РОЗРАХУНОК ОКУПНОСТІ ПРОМИСЛОВОЇ СЕС</h2>
             <p class="section-sub">Введіть параметри вашого підприємства — отримайте орієнтовний розрахунок потужності, вартості та ROI.</p>
         </div>
@@ -774,7 +774,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми будуємо</div>
+            <h3 class="section-label">Як ми будуємо</h3>
             <h2 class="section-title">ЕТАПИ БУДІВНИЦТВА ПРОМИСЛОВОЇ СЕС</h2>
             <p class="section-sub">Від першого дзвінка до введення в експлуатацію та оформлення зеленого тарифу — повний супровід без посередників.</p>
         </div>
@@ -837,7 +837,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОМИСЛОВІ ПРОЄКТИ</h2>
             <p class="section-sub">Від сонячної ферми у 50 МВт до дахової СЕС для агрокомплексу — досвід у кожному сегменті.</p>
         </div>
@@ -937,7 +937,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

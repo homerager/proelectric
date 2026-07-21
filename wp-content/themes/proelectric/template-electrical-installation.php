@@ -43,7 +43,7 @@ get_header();
 <section class="page-section" id="services">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми виконуємо</div>
+            <h3 class="section-label">Що ми виконуємо</h3>
             <h2 class="section-title">ВИДИ РОБІТ</h2>
             <p class="section-sub">Виконуємо повний комплекс електромонтажних робіт на об'єктах будь-якого рівня складності.</p>
         </div>
@@ -203,7 +203,7 @@ get_header();
     <div class="split-inner">
         <div class="split-photo"></div>
         <div class="split-content reveal">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">ЧОМУ ОБИРАЮТЬ НАС</h2>
             <p class="section-sub">Ми будуємо довгострокові відносини з клієнтами — через якість, чесність і відповідальність за результат.</p>
             <div class="feature-list">
@@ -263,7 +263,7 @@ get_header();
 <section class="page-section" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ ВИКОНАННЯ РОБІТ</h2>
             <p class="section-sub">Чіткий і прозорий процес — від першого контакту до підписання акту виконаних робіт.</p>
         </div>
@@ -339,10 +339,10 @@ get_header();
 </section>
 
 
-<section class="page-section objects" id="objects">
+<section class="page-section page-section-bg2 objects" id="objects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Де ми працюємо</div>
+            <h3 class="section-label">Де ми працюємо</h3>
             <h2 class="section-title">ТИПИ ОБ'ЄКТІВ</h2>
             <p class="section-sub">Досвід роботи на об'єктах різного призначення і масштабу — від котеджу до промислового підприємства.</p>
         </div>
@@ -388,9 +388,9 @@ get_header();
         <div class="d-grid md-grid-2-columns md-gap-64 align-items-center">
             <div class="d-grid-col">
                 <div class="page-section-header wf-animate mb-5">
-                    <div class="section-label mb-3">
+                    <h3 class="section-label mb-3">
                         <span>Безпека та відповідність</span>
-                    </div>
+                    </h3>
                     <h2 class="section-title" style="color:#fff">СТАНДАРТИ ЯКОСТІ ТА БЕЗПЕКИ</h2>
                     <p class="section-sub" style="color:rgba(255,255,255,.45)">Всі роботи виконуються відповідно до чинних норм і правил. Безпека персоналу та замовника — наш пріоритет.</p>
                 </div>
@@ -443,7 +443,7 @@ get_header();
 <section class="page-section faq-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

@@ -42,7 +42,7 @@ get_header();
 <section class="page-section products-section" id="products">
 <div class="container">
     <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми виготовляємо</div>
+            <h3 class="section-label">Що ми виготовляємо</h3>
             <h2 class="section-title">ТИПИ ЩИТОВОГО ОБЛАДНАННЯ</h2>
             <p class="section-sub">Виготовляємо та постачаємо щитове обладнання власного виробництва і від провідних виробників.</p>
         </div>
@@ -200,7 +200,7 @@ get_header();
 <section class="page-section page-section-bg-dark config-section" id="configurator">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Швидкий підбір</div>
+            <h3 class="section-label">Швидкий підбір</h3>
             <h2 class="section-title">КОНФІГУРАТОР ЩИТА</h2>
             <p class="section-sub">Виберіть параметри — отримайте орієнтовну вартість і технічне рішення від наших інженерів.</p>
         </div>
@@ -353,7 +353,7 @@ get_header();
 <section class="page-section features-split">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наші переваги</div>
+            <h3 class="section-label">Наші переваги</h3>
             <h2 class="section-title">ЧОМУ ОБИРАЮТЬ НАС</h2>
         </div>
         <div class="lg-grid-2-columns lg-gap-64 features-inner">
@@ -482,7 +482,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <div class="section-sub">Від квартирного щитка до ГРЩ промислового підприємства — досвід на будь-якому масштабі.</div>
         </div>
@@ -526,7 +526,7 @@ get_header();
 <section class="page-section faq-section page-section-bg2" id="faq">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

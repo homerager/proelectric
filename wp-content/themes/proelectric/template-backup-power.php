@@ -126,7 +126,7 @@ get_header();
 <section class="page-section" id="systems">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що ми монтуємо</div>
+            <h3 class="section-label">Що ми монтуємо</h3>
             <h2 class="section-title">ТИПИ СИСТЕМ РЕЗЕРВНОГО ЖИВЛЕННЯ</h2>
             <p class="section-sub">Підбираємо оптимальне рішення залежно від вимог до часу перемикання, потужності та тривалості автономної роботи.</p>
         </div>
@@ -400,7 +400,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="equipment">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Обладнання та виробники</div>
+            <h3 class="section-label">Обладнання та виробники</h3>
             <h2 class="section-title">ОБЛАДНАННЯ ЯКЕ МИ ВИКОРИСТОВУЄМО</h2>
             <p class="section-sub">Працюємо виключно з офіційними постачальниками перевіреного обладнання, що має гарантію та сервісну підтримку в Україні.</p>
         </div>
@@ -588,7 +588,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Наш підхід</div>
+            <h3 class="section-label">Наш підхід</h3>
             <h2 class="section-title">НАДІЙНІСТЬ НА КОЖНОМУ РІВНІ</h2>
             <p class="section-sub">Система резервного живлення — не просто обладнання, а комплексне рішення, яке не підведе у критичний момент.</p>
         </div>
@@ -658,7 +658,7 @@ get_header();
             </div>
 
             <div class="cables-split-content">
-                <div class="section-label">Технічні стандарти</div>
+                <h3 class="section-label">Технічні стандарти</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">БЕЗПЕРЕБІЙНІСТЬ<br>ЯКА ГАРАНТОВАНА</h2>
                 <p class="section-sub">Кожна система розробляється з урахуванням категорії надійності об'єкта та вимог до безперервності технологічного процесу.</p>
 
@@ -721,7 +721,7 @@ get_header();
 <section class="page-section page-section-bg-dark" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ЕТАПИ МОНТАЖУ СИСТЕМИ РЕЗЕРВНОГО ЖИВЛЕННЯ</h2>
             <p class="section-sub">Від аналізу потреб об'єкта до введення в роботу та навчання персоналу — повний цикл «під ключ».</p>
         </div>
@@ -784,7 +784,7 @@ get_header();
 <section class="page-section" id="projects">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Реалізовані об'єкти</div>
+            <h3 class="section-label">Реалізовані об'єкти</h3>
             <h2 class="section-title">НАШІ ПРОЄКТИ</h2>
             <p class="section-sub">Від серверної кімнати до промислового підприємства — забезпечуємо безперебійне живлення для критичних об'єктів.</p>
         </div>
@@ -884,7 +884,7 @@ get_header();
 <section class="page-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
 

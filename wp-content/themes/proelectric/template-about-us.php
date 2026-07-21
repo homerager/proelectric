@@ -43,7 +43,7 @@ get_header();
 <section class="page-section page-section-story" id="story">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Хто ми</div>
+            <h3 class="section-label">Хто ми</h3>
             <h2 class="section-title">НАША ІСТОРІЯ</h2>
         </div>
         <div class="md-grid-2-columns md-gap-64">
@@ -135,7 +135,7 @@ get_header();
 <section class="page-section page-section-bg-dark page-section-timeline" id="timeline">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми зростали</div>
+            <h3 class="section-label">Як ми зростали</h3>
             <h2 class="section-title">КЛЮЧОВІ МОМЕНТИ</h2>
             <p class="section-sub">Від невеликої бригади електриків до повноцінної інжинірингової компанії.</p>
         </div>
@@ -205,7 +205,7 @@ get_header();
 <section class="page-section page-section-values" id="values">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Що нами рухає</div>
+            <h3 class="section-label">Що нами рухає</h3>
             <h2 class="section-title">НАШІ ЦІННОСТІ</h2>
             <p class="section-sub">Принципи, що визначають кожне наше рішення — від підбору матеріалів до спілкування з клієнтом.</p>
         </div>
@@ -291,7 +291,7 @@ get_header();
 <section class="page-section page-section-licences page-section-bg-dark" id="licences">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Документи та сертифікати</div>
+            <h3 class="section-label">Документи та сертифікати</h3>
             <h2 class="section-title">ЛІЦЕНЗІЇ ТА СТАНДАРТИ</h2>
             <div class="section-sub">Всі роботи виконуються відповідно до чинного законодавства та міжнародних стандартів якості.</div>
         </div>

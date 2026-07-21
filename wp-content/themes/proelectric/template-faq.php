@@ -162,7 +162,7 @@ get_header();
     <section class="page-section faq-section<?= $index % 2 ? ' page-section-bg2' : '' ?>" id="faq-<?= esc_attr( $group['id'] ) ?>">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
-                <div class="section-label"><?= esc_html( $group['label'] ) ?></div>
+                <h3 class="section-label"><?= esc_html( $group['label'] ) ?></h3>
                 <h2 class="section-title"><?= esc_html( $group['title'] ) ?></h2>
             </div>
             <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

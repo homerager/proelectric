@@ -104,7 +104,7 @@ get_header();
 <section class="page-section" id="solutions">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Типи систем</div>
+            <h3 class="section-label">Типи систем</h3>
             <h2 class="section-title">ЯКА СЕС ПІДХОДИТЬ ВАШОМУ БУДИНКУ</h2>
             <p class="section-sub">Три рішення для різних потреб — від базової мережевої станції до повністю автономної системи.</p>
         </div>
@@ -191,7 +191,7 @@ get_header();
 <section class="page-section page-section-bg-dark how-dark" id="how">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Принцип роботи</div>
+            <h3 class="section-label">Принцип роботи</h3>
             <h2 class="section-title">ЯК ПРАЦЮЄ СЕС ДЛЯ ДОМУ</h2>
             <p class="section-sub">Проста схема: сонячне світло → електроенергія для дому → залишки в акумулятор або в мережу.</p>
         </div>
@@ -306,7 +306,7 @@ get_header();
 <section class="page-section" id="packages">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Готові рішення</div>
+            <h3 class="section-label">Готові рішення</h3>
             <h2 class="section-title">ПАКЕТИ «ПІД КЛЮЧ»</h2>
             <p class="section-sub">Три перевірені комплектації для типових потреб — або збираємо індивідуально під ваш будинок.</p>
         </div>
@@ -503,10 +503,10 @@ get_header();
         </div>
     </div>
 </section>
-<section class="calc-section" id="calc">
+<section class="calc-section page-section-bg2" id="calc">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Персональний розрахунок</div>
+            <h3 class="section-label">Персональний розрахунок</h3>
             <h2 class="section-title">СКІЛЬКИ ЗАОЩАДИТЬ ВАША СЕС</h2>
             <p class="section-sub">Введіть параметри свого будинку — отримайте рекомендовану потужність, вартість та термін окупності.</p>
         </div>
@@ -608,7 +608,7 @@ get_header();
 <section class="page-section" id="process">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Як ми працюємо</div>
+            <h3 class="section-label">Як ми працюємо</h3>
             <h2 class="section-title">ПРОЦЕС МОНТАЖУ</h2>
             <p class="section-sub">Від дзвінка до запуску — зазвичай 2–3 тижні. Сам монтаж займає лише 1–2 дні.</p>
         </div>
@@ -686,7 +686,7 @@ get_header();
 <section class="page-section page-section-bg-dark" class="monitor-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Повний контроль</div>
+            <h3 class="section-label">Повний контроль</h3>
             <h2 class="section-title">МОНІТОРИНГ У РЕАЛЬНОМУ ЧАСІ</h2>
             <p class="section-sub">Ваш смартфон завжди знає скільки генерує, споживає і продає ваша система.</p>
         </div>
@@ -788,7 +788,7 @@ get_header();
 <section class="page-section testimonials-section page-section-bg2">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відгуки власників</div>
+            <h3 class="section-label">Відгуки власників</h3>
             <h2 class="section-title">ЩО КАЖУТЬ ВЛАСНИКИ</h2>
         </div>
         <div class="testimonials-grid wf-animate-grid d-grid md-grid-3-columns">
@@ -822,7 +822,7 @@ get_header();
 <section class="page-section faq-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Відповіді на питання</div>
+            <h3 class="section-label">Відповіді на питання</h3>
             <h2 class="section-title">ЧАСТІ ЗАПИТАННЯ</h2>
         </div>
         <div class="faq-grid wf-animate-grid d-grid md-grid-2-columns">

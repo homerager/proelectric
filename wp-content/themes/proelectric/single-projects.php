@@ -168,7 +168,7 @@ while ( have_posts() ) :
     <section class="page-section page-section-bg2 project-results">
         <div class="container">
             <div class="page-section-header wf-animate mb-5">
-                <div class="section-label">Підсумки</div>
+                <h3 class="section-label">Підсумки</h3>
                 <h2 class="section-title">РЕЗУЛЬТАТИ ПРОЄКТУ</h2>
             </div>
             <div class="project-results-grid wf-animate-grid">
@@ -198,7 +198,7 @@ if ( $related->have_posts() ) :
 <section class="page-section other-projects-section">
 	<div class="container">
 		<div class="page-section-header wf-animate mb-5">
-			<div class="section-label">Портфоліо робіт</div>
+			<h3 class="section-label">Портфоліо робіт</h3>
 			<h2 class="section-title">ІНШІ ПРОЄКТИ</h2>
 		</div>
 		<div class="d-grid md-grid-3-columns wf-animate-grid">

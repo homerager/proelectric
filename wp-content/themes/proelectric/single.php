@@ -153,7 +153,7 @@ if ( $related->have_posts() ) :
 <section class="page-section page-section-bg2 related-posts-section">
     <div class="container">
         <div class="page-section-header wf-animate mb-5">
-            <div class="section-label">Читайте також</div>
+            <h3 class="section-label">Читайте також</h3>
             <h2 class="section-title">ПОВ'ЯЗАНІ СТАТТІ</h2>
         </div>
         <div class="blog-grid d-grid lg-grid-3-columns md-grid-2-columns blog-gap wf-animate-grid">
