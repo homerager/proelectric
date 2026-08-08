@@ -8,6 +8,23 @@ function onInit() {
   initHeaderContacts();
   onInitMobileMenu();
   initHeroParallax();
+  initCookieConsent();
+}
+
+function initCookieConsent() {
+  const KEY = 'proelectric_cookie_consent';
+  const banner = document.getElementById('cookie-consent');
+  if (!banner) return;
+
+  if (localStorage.getItem(KEY) === 'accepted') return;
+
+  banner.classList.add('visible');
+
+  const acceptBtn = document.getElementById('cookie-consent-accept');
+  acceptBtn.addEventListener('click', () => {
+    localStorage.setItem(KEY, 'accepted');
+    banner.classList.remove('visible');
+  });
 }
 
 function initHeroParallax() {

@@ -187,6 +187,16 @@ require get_template_directory() . '/inc/acf-projects-page-fields.php';
 require get_template_directory() . '/inc/acf-home-page-fields.php';
 
 /**
+ * ACF field group for the vacancy custom post type.
+ */
+require get_template_directory() . '/inc/acf-vacancy-fields.php';
+
+/**
+ * Contact Form 7 form for vacancy applications (resume upload).
+ */
+require get_template_directory() . '/inc/cf7-vacancy-application-form.php';
+
+/**
  * ACF theme settings options page (messenger links etc.).
  */
 require get_template_directory() . '/inc/acf-theme-settings-fields.php';

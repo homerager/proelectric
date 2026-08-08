@@ -79,6 +79,57 @@ function proelectric_register_theme_settings() {
 			'active'          => true,
 		)
 	);
+
+	acf_add_local_field_group(
+		array(
+			'key'    => 'group_theme_vacancy_form',
+			'title'  => 'Кар\'єра',
+			'fields' => array(
+				array(
+					'key'           => 'field_theme_vacancy_form_id',
+					'label'         => 'Форма заявки на вакансію',
+					'name'          => 'vacancy_application_form',
+					'type'          => 'post_object',
+					'instructions'  => 'Форма Contact Form 7, яка показується на сторінці вакансії (template-parts/career/vacancy-apply.php). Залиште порожнім, щоб використовувати форму «Заявка на вакансію», яка створюється автоматично.',
+					'post_type'     => array( 'wpcf7_contact_form' ),
+					'return_format' => 'id',
+					'allow_null'    => 1,
+					'ui'            => 1,
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param'    => 'options_page',
+						'operator' => '==',
+						'value'    => 'theme-settings',
+					),
+				),
+			),
+			'menu_order'      => 1,
+			'position'        => 'normal',
+			'style'           => 'default',
+			'label_placement' => 'top',
+			'active'          => true,
+		)
+	);
+}
+
+/**
+ * Returns the CF7 form ID used for vacancy applications: the admin-selected
+ * form from "Налаштування теми" if set, otherwise the auto-registered
+ * "Заявка на вакансію" form (see inc/cf7-vacancy-application-form.php).
+ */
+function proelectric_get_vacancy_form_id() {
+	if ( function_exists( 'get_field' ) ) {
+		$selected = get_field( 'vacancy_application_form', 'option' );
+
+		if ( $selected ) {
+			return (int) $selected;
+		}
+	}
+
+	return (int) get_option( 'proelectric_vacancy_form_id' );
 }
 
 /**

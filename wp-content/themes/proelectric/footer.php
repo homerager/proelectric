@@ -143,6 +143,20 @@
 	</div>
 </div>
 
+<?php $privacy_policy_url = function_exists( 'get_privacy_policy_url' ) ? get_privacy_policy_url() : ''; ?>
+
+<div class="cookie-consent" id="cookie-consent" role="dialog" aria-live="polite" aria-label="Повідомлення про cookie">
+	<div class="cookie-consent-inner">
+		<p class="cookie-consent-text">
+			Ми використовуємо cookie-файли, щоб покращити роботу сайту та аналізувати трафік.
+			Продовжуючи користуватися сайтом, ви погоджуєтесь з їх використанням<?php if ( $privacy_policy_url ) : ?> відповідно до <a href="<?= esc_url( $privacy_policy_url ); ?>">політики конфіденційності</a><?php endif; ?>.
+		</p>
+		<div class="cookie-consent-actions">
+			<button type="button" class="btn btn-primary" id="cookie-consent-accept">Прийняти</button>
+		</div>
+	</div>
+</div>
+
 <?php wp_footer(); ?>
 
 </body>

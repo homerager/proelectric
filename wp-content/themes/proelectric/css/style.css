@@ -1696,6 +1696,36 @@ footer .logo .logo-text .brand {
     box-shadow: 0 0 0 3px rgba(26, 95, 168, 0.08);
 }
 
+/* File upload field: restyle the native "Choose file" button to match .btn,
+   leave the "no file chosen" text using the input's own (muted) color */
+.form-group input[type="file"] {
+    padding: 9px 16px;
+    font-size: 12px;
+    color: var(--muted);
+    cursor: pointer;
+}
+
+.form-group input[type="file"]::file-selector-button,
+.form-group input[type="file"]::-webkit-file-upload-button {
+    margin-right: 14px;
+    padding: 10px 20px;
+    border: none;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    color: #fff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: opacity .2s;
+}
+
+.form-group input[type="file"]:hover::file-selector-button,
+.form-group input[type="file"]:hover::-webkit-file-upload-button {
+    opacity: .88;
+}
+
 form .btn-group {
     position: relative;
     display: flex;
@@ -9450,7 +9480,326 @@ a.partner-logo:hover {
     opacity: 1;
 }
 
+/* Cookie consent banner */
+.cookie-consent {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 1150;
+    padding: 18px 24px;
+    background: var(--dark);
+    box-shadow: 0 -8px 26px rgba(15, 31, 51, .25);
+    transform: translateY(100%);
+    opacity: 0;
+    visibility: hidden;
+    transition: transform .35s ease, opacity .35s ease, visibility .35s ease;
+}
 
+.cookie-consent.visible {
+    transform: translateY(0);
+    opacity: 1;
+    visibility: visible;
+}
+
+.cookie-consent-inner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    max-width: 1080px;
+    margin: 0 auto;
+    flex-wrap: wrap;
+}
+
+.cookie-consent-text {
+    flex: 1 1 480px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, .85);
+}
+
+.cookie-consent-text a {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.cookie-consent-actions {
+    flex: 0 0 auto;
+}
+
+.cookie-consent-accept {
+    padding: 11px 26px;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    font-family: var(--primary-font);
+    font-size: 14px;
+    font-weight: 600;
+    white-space: nowrap;
+    background: linear-gradient(135deg, var(--green), var(--green2));
+    cursor: pointer;
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.cookie-consent-accept:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 22px rgba(45, 181, 81, .4);
+}
+
+@media (max-width: 768px) {
+    .cookie-consent {
+        padding: 16px;
+    }
+
+    .cookie-consent-inner {
+        justify-content: stretch;
+    }
+
+    .cookie-consent-text {
+        flex-basis: 100%;
+    }
+
+    .cookie-consent-actions {
+        flex-basis: 100%;
+    }
+
+    .cookie-consent-accept {
+        width: 100%;
+    }
+}
+
+/* ===== Кар'єра / vacancies ===== */
+.career-about-card {
+    max-width: 860px;
+    margin: 0 auto;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+    box-shadow: 0 2px 12px rgba(26, 95, 168, 0.05);
+    padding: 44px 52px;
+    position: relative;
+}
+
+.career-about-icon {
+    width: 30px;
+    height: 30px;
+    margin-bottom: 18px;
+}
+
+.career-about-card p {
+    font-size: 15px;
+    line-height: 1.9;
+    color: var(--text);
+    margin: 0 0 16px;
+}
+
+.career-about-card p:last-child {
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .career-about-card {
+        padding: 32px 28px;
+    }
+}
+
+.hero.career-hero {
+    background-color: #0a1828;
+    background-image: linear-gradient(135deg, #071020 0%, #0d2040 45%, #071a10 100%);
+    background-size: cover;
+    background-position: center 40%;
+}
+
+.hero.career-hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    background: radial-gradient(ellipse 50% 60% at 20% 40%, rgba(26, 95, 168, 0.20) 0%, transparent 65%), radial-gradient(ellipse 40% 40% at 80% 30%, rgba(45, 181, 81, 0.10) 0%, transparent 60%);
+}
+
+.vacancy-card {
+    display: block;
+    background: var(--card);
+    padding: 40px 36px;
+    border: 1px solid var(--border);
+    box-shadow: 0 2px 12px rgba(26, 95, 168, 0.05);
+    text-decoration: none;
+    position: relative;
+    overflow: hidden;
+    transition: var(--hover-transition);
+}
+
+.vacancy-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 100%;
+    background: linear-gradient(to bottom, var(--blue), var(--green));
+    opacity: 0;
+    transition: opacity .3s;
+}
+
+.vacancy-card:hover {
+    box-shadow: 0 10px 36px rgba(26, 95, 168, 0.11);
+}
+
+.vacancy-card:hover::after {
+    opacity: 1;
+}
+
+.vacancy-tag {
+    display: inline-block;
+    font-size: 9px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--green);
+    border: 1px solid rgba(45, 181, 81, 0.4);
+    padding: 4px 10px;
+    margin-bottom: 20px;
+}
+
+.vacancy-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    color: var(--heading);
+    line-height: 1.1;
+    margin-bottom: 14px;
+    letter-spacing: .5px;
+}
+
+.vacancy-desc {
+    font-size: 13px;
+    line-height: 1.8;
+    color: var(--muted);
+    margin-top: 8px;
+}
+
+.vacancy-meta {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 20px;
+    font-size: 11px;
+    letter-spacing: .5px;
+    color: var(--muted);
+}
+
+.vacancy-meta-salary {
+    color: var(--blue);
+    font-weight: 600;
+}
+
+/* Single vacancy content */
+.vacancy-content {
+    color: var(--text);
+    line-height: 1.9;
+    font-size: 16px;
+}
+
+.vacancy-content > *:first-child {
+    margin-top: 0;
+}
+
+.vacancy-content h2 {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: clamp(24px, 3.5vw, 36px);
+    color: var(--heading);
+    letter-spacing: .5px;
+    margin: 44px 0 16px;
+}
+
+.vacancy-block {
+    margin-top: 40px;
+    padding: 36px 40px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-left: 3px solid var(--green);
+}
+
+.vacancy-block-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 24px;
+    letter-spacing: .5px;
+    color: var(--heading);
+    margin-bottom: 18px;
+}
+
+.vacancy-content ul,
+.vacancy-block-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.vacancy-content ul li,
+.vacancy-block-content ul li {
+    position: relative;
+    padding-left: 28px;
+    margin-bottom: 12px;
+    line-height: 1.7;
+}
+
+.vacancy-content ul li::before,
+.vacancy-block-content ul li::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 8px;
+    height: 8px;
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    transform: rotate(45deg);
+}
+
+.vacancy-apply-cta {
+    margin-top: 48px;
+    padding: 36px 40px;
+    text-align: center;
+    background: linear-gradient(140deg, var(--blue3) 0%, var(--blue) 100%);
+    color: #fff;
+}
+
+.vacancy-apply-cta-title {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 26px;
+    letter-spacing: .5px;
+    margin-bottom: 10px;
+}
+
+.vacancy-apply-cta p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: rgba(255, 255, 255, .75);
+    margin: 0 0 22px;
+}
+
+.vacancy-apply-phone {
+    display: block;
+    margin-top: 16px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    letter-spacing: .5px;
+}
+
+.vacancy-apply-phone:hover {
+    color: var(--gold);
+}
+
+@media (max-width: 768px) {
+    .vacancy-card,
+    .vacancy-block,
+    .vacancy-apply-cta {
+        padding: 28px 24px;
+    }
+}
 
 
 
