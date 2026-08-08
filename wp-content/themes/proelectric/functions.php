@@ -209,3 +209,21 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+remove_action('wp_print_styles', 'print_emoji_styles');
+remove_action('admin_print_scripts', 'print_emoji_detection_script');
+remove_action('admin_print_styles', 'print_emoji_styles');
+
+function proelectric_add_ga4() {
+    ?>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-V1MG150GJB"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V1MG150GJB');
+    </script>
+    <?php
+}
+add_action('wp_head', 'proelectric_add_ga4', 1);
