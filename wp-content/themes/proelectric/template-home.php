@@ -25,8 +25,8 @@ get_header();
 
     <div class="container">
         <div class="hero-content">
-            <div class="hero-label">Електромонтажні роботи &amp; СЕС</div>
-            <h1 class="hero-title">ВАША<br> <span class="accent-blue">ЕНЕРГЕ</span><span class="accent-green">ТИЧНА</span><br>СВОБОДА</h1>
+            <h1 class="hero-label font-light">Електромонтажні роботи &amp; СЕС</h1>
+            <h2 class="hero-title">ВАША<br> <span class="accent-blue">ЕНЕРГЕ</span><span class="accent-green">ТИЧНА</span><br>СВОБОДА</h2>
             <p class="hero-desc">Повний цикл електромонтажних робіт — від проектування до запуску. Сонячні електростанції, промислові об'єкти, приватні будинки.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Отримати пропозицію</a>

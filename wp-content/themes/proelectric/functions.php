@@ -137,13 +137,61 @@ function proelectric_widgets_init() {
 add_action( 'widgets_init', 'proelectric_widgets_init' );
 
 /**
+ * Determine whether minified assets should be served.
+ *
+ * Uses the minified build when the site is running in production and
+ * SCRIPT_DEBUG isn't forcing unminified sources, falling back to the
+ * source file whenever a minified counterpart doesn't exist on disk.
+ *
+ * @return bool
+ */
+function proelectric_use_minified_assets() {
+	if ( defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ) {
+		return false;
+	}
+
+	return 'production' === wp_get_environment_type();
+}
+
+/**
+ * Resolve the theme-relative path to an asset, preferring its minified
+ * build when available and appropriate for the current environment.
+ *
+ * @param string $rel_path Asset path relative to the theme directory, e.g. '/css/style.css'.
+ * @return string Resolved theme-relative path.
+ */
+function proelectric_asset_path( $rel_path ) {
+	if ( ! proelectric_use_minified_assets() ) {
+		return $rel_path;
+	}
+
+	$path_info = pathinfo( $rel_path );
+	$min_rel_path = trailingslashit( $path_info['dirname'] ) . $path_info['filename'] . '.min.' . $path_info['extension'];
+
+	if ( file_exists( get_template_directory() . $min_rel_path ) ) {
+		return $min_rel_path;
+	}
+
+	return $rel_path;
+}
+
+/**
  * Enqueue scripts and styles.
  */
 function proelectric_scripts() {
 	$theme_dir = get_template_directory();
-	wp_enqueue_script('main-js',  get_template_directory_uri() . '/js/scripts.js', array(), filemtime( $theme_dir . '/js/scripts.js' ), true);
+
+	$script_rel = proelectric_asset_path( '/js/scripts.js' );
+	$style_rel  = proelectric_asset_path( '/css/style.css' );
+
+	wp_enqueue_script( 'main-js', get_template_directory_uri() . $script_rel, array(), filemtime( $theme_dir . $script_rel ), true );
 	wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
-	wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), filemtime( $theme_dir . '/css/style.css' ) );
+	wp_enqueue_style( 'style', get_template_directory_uri() . $style_rel, array(), filemtime( $theme_dir . $style_rel ) );
+
+	//wp_enqueue_script('main-js',  get_template_directory_uri() . '/js/scripts.js', array(), filemtime( $theme_dir . '/js/scripts.js' ), true);
+	//wp_enqueue_style( 'bootstrap-css', get_template_directory_uri() . '/css/bootstrap.min.css', array(), _S_VERSION );
+	//wp_enqueue_style( 'style', get_template_directory_uri() . '/css/style.css', array(), filemtime( $theme_dir . '/css/style.css' ) );
+
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
@@ -213,6 +261,12 @@ add_filter('wpcf7_autop_or_not', '__return_false');
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_scripts', 'print_emoji_detection_script');
 remove_action('admin_print_styles', 'print_emoji_styles');
+
+function proelectric_remove_cf7_styles() {
+    wp_dequeue_style('contact-form-7');
+    wp_deregister_style('contact-form-7');
+}
+add_action('wp_print_styles', 'proelectric_remove_cf7_styles', 100);
 
 function proelectric_add_ga4() {
     ?>

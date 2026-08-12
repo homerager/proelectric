@@ -157,7 +157,7 @@ get_header();
         <div class="emergency-badge">
             <div class="emergency-dot"></div>
             <div>
-                <div class="emergency-title">⚡ Аварійний виїзд 24/7</div>
+                <div class="emergency-title"><span style="width: 15px; display: inline-block;">⚡</span> Аварійний виїзд 24/7</div>
                 <div class="emergency-desc">Для обслуговуваних об'єктів — цілодобовий аварійний виїзд. Час реагування до 2 годин по місту.</div>
             </div>
         </div>
