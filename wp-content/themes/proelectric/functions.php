@@ -281,3 +281,14 @@ function proelectric_add_ga4() {
     <?php
 }
 add_action('wp_head', 'proelectric_add_ga4', 1);
+
+function proelectric_add_hreflang() {
+    global $wp;
+
+    $locale  = str_replace( '_', '-', get_locale() );
+    $current = is_front_page() ? home_url( '/' ) : home_url( add_query_arg( array(), $wp->request ) . '/' );
+
+    echo '<link rel="alternate" hreflang="' . esc_attr( $locale ) . '" href="' . esc_url( $current ) . '">' . "\n";
+    echo '<link rel="alternate" hreflang="x-default" href="' . esc_url( $current ) . '">' . "\n";
+}
+add_action('wp_head', 'proelectric_add_hreflang', 1);
