@@ -105,7 +105,7 @@ get_header();
                 <span class="accent-yellow">СО</span><span class="accent-blue">НЯЧ</span><span class="accent-green">НІ</span><br>
                 ЕЛЕКТРОСТАНЦІЇ
             </h1>
-            <p class="hero-desc">Проєктуємо та будуємо наземні, дахові та плавучі СЕС від 500 кВт до 50 МВт. Повний цикл: від технічного аудиту і проекту до підключення до мережі, оформлення тарифу та сервісу.</p>
+            <p class="hero-desc">Проєктуємо та будуємо наземні та дахові СЕС від 500 кВт до 50 МВт. Повний цикл: від технічного аудиту і проекту до підключення до мережі, оформлення тарифу та сервісу.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Отримати КП</a>
                 <a href="#solutions" class="btn btn-outline-white scroll-to-btn">Типи СЕС</a>
@@ -152,25 +152,8 @@ get_header();
 
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp1">
-                    <div class="cables-method-badge">Наземна СЕС</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- ground -->
-                        <line x1="5" y1="78" x2="95" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <!-- panel rows tilted -->
-                        <rect x="8"  y="52" width="26" height="22" rx="1" transform="rotate(-15,21,63)" fill="rgba(26,95,168,.35)" stroke="rgba(26,95,168,.6)" stroke-width="1.2"/>
-                        <rect x="38" y="52" width="26" height="22" rx="1" transform="rotate(-15,51,63)" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.55)" stroke-width="1.2"/>
-                        <rect x="68" y="52" width="26" height="22" rx="1" transform="rotate(-15,81,63)" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.45)" stroke-width="1.2"/>
-                        <!-- supports -->
-                        <line x1="15" y1="68" x2="15" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="29" y1="62" x2="29" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="45" y1="68" x2="45" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="59" y1="62" x2="59" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="75" y1="68" x2="75" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="89" y1="62" x2="89" y2="78" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <!-- sun -->
-                        <circle cx="50" cy="18" r="10" fill="rgba(245,197,24,.3)" stroke="rgba(245,197,24,.6)" stroke-width="1.2"/>
-                        <path d="M50 8 L47 14 H51 L48 26 L57 12 H52 Z" fill="rgba(245,197,24,.85)"/>
-                    </svg>
+                    <div class="cables-method-badge base-green-badge">Наземна СЕС</div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/nazemna-ses.webp" class="relative z-index-1" alt="Наземні сес">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Наземні СЕС (Open Space)</div>
@@ -187,30 +170,8 @@ get_header();
 
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp2">
-                    <div class="cables-method-badge">Дахова СЕС</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- factory flat roof -->
-                        <rect x="10" y="55" width="80" height="35" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.15)" stroke-width="1.2" rx="1"/>
-                        <!-- flat roof panels -->
-                        <rect x="14" y="38" width="72" height="16" rx="1" fill="rgba(26,95,168,.35)" stroke="rgba(26,95,168,.6)" stroke-width="1.2"/>
-                        <line x1="32" y1="38" x2="32" y2="54" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="50" y1="38" x2="50" y2="54" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="68" y1="38" x2="68" y2="54" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <rect x="14" y="22" width="72" height="14" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.45)" stroke-width="1.2"/>
-                        <line x1="32" y1="22" x2="32" y2="36" stroke="rgba(26,95,168,.15)" stroke-width="1"/>
-                        <line x1="50" y1="22" x2="50" y2="36" stroke="rgba(26,95,168,.15)" stroke-width="1"/>
-                        <line x1="68" y1="22" x2="68" y2="36" stroke="rgba(26,95,168,.15)" stroke-width="1"/>
-                        <!-- support legs -->
-                        <line x1="25" y1="54" x2="25" y2="60" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <line x1="50" y1="54" x2="50" y2="60" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <line x1="75" y1="54" x2="75" y2="60" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <!-- energy flow down -->
-                        <path d="M50 54 Q50 70 50 80" stroke="rgba(245,197,24,.3)" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
-                        <!-- windows -->
-                        <rect x="22" y="65" width="14" height="12" rx="1" fill="rgba(255,255,255,.08)"/>
-                        <rect x="44" y="65" width="14" height="12" rx="1" fill="rgba(255,255,255,.08)"/>
-                        <rect x="66" y="65" width="14" height="12" rx="1" fill="rgba(255,255,255,.08)"/>
-                    </svg>
+                    <div class="cables-method-badge base-green-badge">Дахова СЕС</div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/dahova-ses.webp" class="relative z-index-1" alt="Дахова сес">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Дахові СЕС (Rooftop Industrial)</div>
@@ -227,26 +188,8 @@ get_header();
 
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp3">
-                    <div class="cables-method-badge">Трекерна СЕС</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- ground -->
-                        <line x1="5" y1="78" x2="95" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <!-- tracker 1 – morning angle -->
-                        <line x1="25" y1="78" x2="25" y2="50" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
-                        <rect x="8"  y="40" width="34" height="14" rx="1" transform="rotate(-25,25,47)" fill="rgba(245,197,24,.25)" stroke="rgba(245,197,24,.55)" stroke-width="1.2"/>
-                        <!-- tracker 2 – noon angle -->
-                        <line x1="50" y1="78" x2="50" y2="46" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
-                        <rect x="33" y="36" width="34" height="14" rx="1" fill="rgba(245,197,24,.35)" stroke="rgba(245,197,24,.7)" stroke-width="1.5"/>
-                        <!-- tracker 3 – afternoon angle -->
-                        <line x1="75" y1="78" x2="75" y2="50" stroke="rgba(255,255,255,.25)" stroke-width="2"/>
-                        <rect x="58" y="40" width="34" height="14" rx="1" transform="rotate(25,75,47)" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.5)" stroke-width="1.2"/>
-                        <!-- sun arc -->
-                        <path d="M10 30 Q50 8 90 30" stroke="rgba(245,197,24,.3)" stroke-width="1" fill="none" stroke-dasharray="4 3"/>
-                        <circle cx="50" cy="14" r="7" fill="rgba(245,197,24,.35)" stroke="rgba(245,197,24,.6)" stroke-width="1"/>
-                        <path d="M50 8 L48 13 H51 L49 20 L55 12 H51.5 Z" fill="rgba(245,197,24,.9)"/>
-                        <!-- rotation arc on tracker 2 -->
-                        <path d="M40 47 A12 12 0 0 1 60 47" stroke="rgba(255,255,255,.2)" stroke-width="1" fill="none"/>
-                    </svg>
+                    <div class="cables-method-badge base-green-badge">Трекерна СЕС</div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-na-trekerah.webp" class="relative z-index-1" alt="СЕС на трекерах">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">СЕС на трекерах (Solar Trackers)</div>
@@ -262,65 +205,9 @@ get_header();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb isp4">
-                    <div class="cables-method-badge">Плавуча СЕС</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- water surface -->
-                        <path d="M5 70 Q20 65 35 70 Q50 75 65 70 Q80 65 95 70" stroke="rgba(26,95,168,.5)" stroke-width="1.5" fill="none"/>
-                        <path d="M5 76 Q20 71 35 76 Q50 81 65 76 Q80 71 95 76" stroke="rgba(26,95,168,.3)" stroke-width="1" fill="none"/>
-                        <!-- water fill -->
-                        <rect x="5" y="72" width="90" height="23" fill="rgba(26,95,168,.12)"/>
-                        <!-- floating platform -->
-                        <rect x="15" y="55" width="70" height="18" rx="3" fill="rgba(26,95,168,.15)" stroke="rgba(26,95,168,.4)" stroke-width="1.2"/>
-                        <!-- solar panels on float -->
-                        <rect x="18" y="36" width="64" height="18" rx="1" fill="rgba(26,95,168,.35)" stroke="rgba(26,95,168,.65)" stroke-width="1.2"/>
-                        <line x1="34" y1="36" x2="34" y2="54" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <line x1="50" y1="36" x2="50" y2="54" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <line x1="66" y1="36" x2="66" y2="54" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <!-- anchor lines -->
-                        <line x1="20" y1="73" x2="10" y2="85" stroke="rgba(255,255,255,.2)" stroke-width="1" stroke-dasharray="3 2"/>
-                        <line x1="80" y1="73" x2="90" y2="85" stroke="rgba(255,255,255,.2)" stroke-width="1" stroke-dasharray="3 2"/>
-                        <!-- sun -->
-                        <circle cx="50" cy="16" r="8" fill="rgba(245,197,24,.3)" stroke="rgba(245,197,24,.55)" stroke-width="1"/>
-                        <path d="M50 8 L47.5 14 H51 L48.5 24 L56 12 H51.5 Z" fill="rgba(245,197,24,.85)"/>
-                    </svg>
-                </div>
-                <div class="cables-method-body">
-                    <div class="cables-method-title">Плавучі СЕС (Floating Solar)</div>
-                    <p class="cables-method-desc">Встановлення сонячних панелей на водній поверхні ставків, водосховищ та зрошувальних каналів промислових підприємств.</p>
-                    <ul class="cables-method-list">
-                        <li>Ефективне використання водних поверхонь</li>
-                        <li>Охолодження панелей водою +5–10% генерації</li>
-                        <li>Зменшення випаровування води</li>
-                        <li>Поплавкові системи Ciel & Terre, FS</li>
-                        <li>Кабельні введення з водонепроникністю IP68</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp5">
-                    <div class="cables-method-badge">Агровольтаїка</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- ground / crop rows -->
-                        <line x1="5" y1="82" x2="95" y2="82" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
-                        <ellipse cx="20" cy="80" rx="8" ry="6" fill="rgba(45,181,81,.2)"/>
-                        <ellipse cx="38" cy="80" rx="8" ry="6" fill="rgba(45,181,81,.18)"/>
-                        <ellipse cx="56" cy="80" rx="8" ry="6" fill="rgba(45,181,81,.2)"/>
-                        <ellipse cx="74" cy="80" rx="8" ry="6" fill="rgba(45,181,81,.18)"/>
-                        <!-- elevated panels above crops -->
-                        <line x1="20" y1="82" x2="20" y2="55" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <line x1="80" y1="82" x2="80" y2="55" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <rect x="10" y="42" width="80" height="14" rx="1" fill="rgba(26,95,168,.3)" stroke="rgba(26,95,168,.6)" stroke-width="1.2"/>
-                        <line x1="30" y1="42" x2="30" y2="56" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="50" y1="42" x2="50" y2="56" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="70" y1="42" x2="70" y2="56" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <!-- diffuse light below panels -->
-                        <path d="M20 56 Q50 72 80 56" stroke="rgba(245,197,24,.2)" stroke-width="1" fill="none" stroke-dasharray="4 3"/>
-                        <!-- sun -->
-                        <circle cx="50" cy="18" r="9" fill="rgba(245,197,24,.28)" stroke="rgba(245,197,24,.55)" stroke-width="1"/>
-                        <path d="M50 9 L47.5 15 H51 L48.5 27 L57 13 H52 Z" fill="rgba(245,197,24,.85)"/>
-                    </svg>
+                    <div class="cables-method-badge base-green-badge">Агровольтаїка</div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/agrivoltaics-ses.webp" class="relative z-index-1" alt="Агровольтаїка">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Агровольтаїка (Agrivoltaics)</div>
@@ -337,27 +224,8 @@ get_header();
 
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp6">
-                    <div class="cables-method-badge">Гібридна СЕС</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- solar panel block -->
-                        <rect x="8"  y="18" width="36" height="24" rx="1" fill="rgba(26,95,168,.28)" stroke="rgba(26,95,168,.55)" stroke-width="1.2"/>
-                        <line x1="20" y1="18" x2="20" y2="42" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="32" y1="18" x2="32" y2="42" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="8"  y1="30" x2="44" y2="30" stroke="rgba(26,95,168,.15)" stroke-width="1"/>
-                        <!-- battery block -->
-                        <rect x="8"  y="56" width="36" height="26" rx="2" fill="rgba(45,181,81,.15)" stroke="rgba(45,181,81,.4)" stroke-width="1.2"/>
-                        <text x="26" y="73" text-anchor="middle" font-size="7" fill="rgba(45,181,81,.75)" font-family="Montserrat,sans-serif" font-weight="600">LiFePO₄</text>
-                        <rect x="26" y="82" width="10" height="4" rx="1" fill="rgba(45,181,81,.4)"/>
-                        <!-- inverter box -->
-                        <rect x="58" y="32" width="34" height="36" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(245,197,24,.45)" stroke-width="1.5"/>
-                        <text x="75" y="52" text-anchor="middle" font-size="8" fill="rgba(245,197,24,.8)" font-family="Bebas Neue,sans-serif" letter-spacing="1">INV</text>
-                        <!-- connections -->
-                        <line x1="44" y1="30" x2="58" y2="40" stroke="rgba(26,95,168,.4)" stroke-width="1.5"/>
-                        <line x1="44" y1="69" x2="58" y2="60" stroke="rgba(45,181,81,.4)" stroke-width="1.5"/>
-                        <!-- output to grid -->
-                        <line x1="92" y1="50" x2="100" y2="50" stroke="rgba(245,197,24,.4)" stroke-width="2"/>
-                        <text x="50" y="96" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.3)" font-family="Montserrat,sans-serif" letter-spacing="1">СЕС+АКБ+МЕРЕЖА</text>
-                    </svg>
+                    <div class="cables-method-badge base-green-badge">Гібридна СЕС</div>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/gibridne-ses.webp" class="relative z-index-1" alt="Гібридна СЕС">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Гібридні СЕС з накопиченням (BESS)</div>
@@ -870,19 +738,27 @@ get_header();
                 </div>
             </div>
             <div class="project-card cables-proj-card wf-animate">
-                <div class="project-tag cables-proj-tag">Плавуча СЕС</div>
-                <div class="project-title cables-proj-title">Плавуча СЕС 5 МВт на ставку-відстійнику</div>
-                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Перша плавуча СЕС в регіоні. Поплавки Ciel & Terre, 8 800 панелей. Кабельне з'єднання з берегом у захисних трубах. Підключення 10 кВ.</p>
-                <div class="project-meta cables-proj-meta" style="margin-top:16px">
-                    <span class="cables-proj-mi">2022 / Полтавська обл.</span>
-                </div>
-            </div>
-            <div class="project-card cables-proj-card wf-animate">
                 <div class="project-tag cables-proj-tag">Гібридна BESS</div>
                 <div class="project-title cables-proj-title">СЕС 10 МВт + BESS 20 МВт·год для металургії</div>
                 <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Поєднання наземної СЕС із системою зберігання CATL EnerC. Peak shaving — зниження пікового попиту на 40%. Участь у ринку балансування.</p>
                 <div class="project-meta cables-proj-meta" style="margin-top:16px">
                     <span class="cables-proj-mi">2024 / Дніпро</span>
+                </div>
+            </div>
+            <div class="project-card cables-proj-card wf-animate">
+                <div class="project-tag cables-proj-tag">Трекерна СЕС</div>
+                <div class="project-title cables-proj-title">СЕС 15 МВт на одновісних трекерах — логістичний комплекс</div>
+                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Наземна станція на 20 га з одновісними трекерами GameChange, 24 000 панелей. Приріст генерації +32% порівняно з фіксованою конструкцією. Підключення 35 кВ.</p>
+                <div class="project-meta cables-proj-meta" style="margin-top:16px">
+                    <span class="cables-proj-mi">2023 / Одеська обл.</span>
+                </div>
+            </div>
+            <div class="project-card cables-proj-card wf-animate">
+                <div class="project-tag cables-proj-tag">Агровольтаїка</div>
+                <div class="project-title cables-proj-title">Агровольтаїчна СЕС 3 МВт над садовими насадженнями</div>
+                <p class="project-desc cables-proj-desc" style="font-size:12px;line-height:1.8;margin-top:8px">Елевовані конструкції висотою 5 м над яблуневим садом, 5 200 панелей. Захист від граду та надмірного сонця для культур, зелений тариф для агрокомплексу.</p>
+                <div class="project-meta cables-proj-meta" style="margin-top:16px">
+                    <span class="cables-proj-mi">2023 / Вінницька обл.</span>
                 </div>
             </div>
         </div>

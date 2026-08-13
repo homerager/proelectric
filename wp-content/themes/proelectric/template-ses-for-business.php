@@ -489,35 +489,35 @@ get_header();
         <div class="sectors-label text-center mb-5 wf-animate">Ми вже реалізували проекти для цих секторів</div>
         <div class="sectors-row flex-lg-nowrap flex-wrap wf-animate-grid">
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🏭</div>
+                <div class="sector-icon w-60px">🏭</div>
                 <div class="sector-name">Промисло&shy;вість</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🌾</div>
+                <div class="sector-icon w-60px">🌾</div>
                 <div class="sector-name">Агро&shy;комплекси</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🏢</div>
+                <div class="sector-icon w-60px">🏢</div>
                 <div class="sector-name">Офісні центри</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🛒</div>
+                <div class="sector-icon w-60px">🛒</div>
                 <div class="sector-name">Торгові центри</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🏨</div>
+                <div class="sector-icon w-60px">🏨</div>
                 <div class="sector-name">Готелі та HoReCa</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">📦</div>
+                <div class="sector-icon w-60px">📦</div>
                 <div class="sector-name">Склади та логістика</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">⚕️</div>
+                <div class="sector-icon w-60px">⚕️</div>
                 <div class="sector-name">Медичні заклади</div>
             </div>
             <div class="sector-cell wf-animate">
-                <div class="sector-icon">🎓</div>
+                <div class="sector-icon w-60px">🎓</div>
                 <div class="sector-name">Освіта та держсектор</div>
             </div>
         </div>

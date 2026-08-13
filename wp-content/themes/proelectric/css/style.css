@@ -322,6 +322,10 @@ strong {
     width: 100%;
 }
 
+.w-60px {
+    width: 60px;
+}
+
 .h-full {
     height: 100%;
 }
@@ -363,6 +367,14 @@ strong {
     gap: 24px;
     display: flex;
     flex-wrap: wrap;
+}
+
+.relative {
+    position: relative;
+}
+
+.z-index-1 {
+    z-index: 1;
 }
 
 .mt-30 {
@@ -6086,6 +6098,7 @@ form.submitting .wpcf7-spinner {
     top: 14px;
     left: 14px;
     font-size: 9px;
+    z-index: 2;
     letter-spacing: 2px;
     text-transform: uppercase;
     background: rgba(255,255,255,.1);
@@ -6093,6 +6106,11 @@ form.submitting .wpcf7-spinner {
     border: 1px solid rgba(255,255,255,.18);
     padding: 4px 10px;
     backdrop-filter: blur(6px);
+}
+
+.base-green-badge {
+    border: none;
+    background: linear-gradient(135deg, var(--blue), var(--green));
 }
 
 .cables-method-body {

@@ -18,7 +18,7 @@
 				<div class="footer-col">
 					<div class="footer-brand">
 						<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
-							<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="logo">
+							<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="Прогрес електрик">
 							<div class="logo-text">
 								<span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
 								<span class="sub">Енергетичні рішення</span>

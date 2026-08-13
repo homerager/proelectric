@@ -32,7 +32,7 @@
 				<?php $header_messengers = function_exists( 'proelectric_get_messengers' ) ? proelectric_get_messengers() : array(); ?>
 				<div class="site-logo">
 					<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
-						<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="logo">
+						<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="Прогрес електрик">
 						<div class="logo-text">
 							<span class="brand">ПРОГРЕС ЕЛЕКТРИК</span>
 							<span class="sub">Енергетичні рішення</span>
