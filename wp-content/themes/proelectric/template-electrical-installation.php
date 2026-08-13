@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/electrical-installation-hero.webp'; ?>)">
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/electrical-installation-hero.webp'; ?>)">
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">промислові та цивільні об'єкти</div>

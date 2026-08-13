@@ -7,7 +7,7 @@ get_header();
 
 <section class="hero hero-animate-bg">
     <div class="hero-parallax">
-        <div class="hero-bg" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/hero-bg.webp'; ?>)"></div>
+        <div class="hero-bg" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-bg.webp'; ?>)"></div>
     </div>
     <div class="hero-overlay"></div>
 

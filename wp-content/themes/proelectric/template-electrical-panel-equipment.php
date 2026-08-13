@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/electrical-panel-equipment-hero.webp'; ?>)">
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/electrical-panel-equipment-hero.webp'; ?>)">
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">Проєктування · Постачання · Монтаж</div>

@@ -153,7 +153,7 @@ get_header();
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp1">
                     <div class="cables-method-badge base-green-badge">Наземна СЕС</div>
-                    <img src="<?= get_template_directory_uri(); ?>/images/static/nazemna-ses.webp" class="relative z-index-1" alt="Наземні сес">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/nazemna-ses.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Наземні сес">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Наземні СЕС (Open Space)</div>
@@ -171,7 +171,7 @@ get_header();
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp2">
                     <div class="cables-method-badge base-green-badge">Дахова СЕС</div>
-                    <img src="<?= get_template_directory_uri(); ?>/images/static/dahova-ses.webp" class="relative z-index-1" alt="Дахова сес">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/dahova-ses.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Дахова сес">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Дахові СЕС (Rooftop Industrial)</div>
@@ -189,7 +189,7 @@ get_header();
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp3">
                     <div class="cables-method-badge base-green-badge">Трекерна СЕС</div>
-                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-na-trekerah.webp" class="relative z-index-1" alt="СЕС на трекерах">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-na-trekerah.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС на трекерах">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">СЕС на трекерах (Solar Trackers)</div>
@@ -207,7 +207,7 @@ get_header();
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp5">
                     <div class="cables-method-badge base-green-badge">Агровольтаїка</div>
-                    <img src="<?= get_template_directory_uri(); ?>/images/static/agrivoltaics-ses.webp" class="relative z-index-1" alt="Агровольтаїка">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/agrivoltaics-ses.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Агровольтаїка">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Агровольтаїка (Agrivoltaics)</div>
@@ -225,7 +225,7 @@ get_header();
             <div class="cables-method-card wf-animate">
                 <div class="cables-method-thumb isp6">
                     <div class="cables-method-badge base-green-badge">Гібридна СЕС</div>
-                    <img src="<?= get_template_directory_uri(); ?>/images/static/gibridne-ses.webp" class="relative z-index-1" alt="Гібридна СЕС">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/gibridne-ses.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Гібридна СЕС">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Гібридні СЕС з накопиченням (BESS)</div>

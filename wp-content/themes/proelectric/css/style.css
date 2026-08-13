@@ -322,12 +322,20 @@ strong {
     width: 100%;
 }
 
+.w-30px {
+    width: 30px;
+}
+
 .w-60px {
     width: 60px;
 }
 
 .h-full {
     height: 100%;
+}
+
+.d-flex {
+    display: flex;
 }
 
 .d-grid {
@@ -375,6 +383,10 @@ strong {
 
 .z-index-1 {
     z-index: 1;
+}
+
+.object-fit-cover {
+    object-fit: cover;
 }
 
 .mt-30 {
@@ -8838,7 +8850,7 @@ form.submitting .wpcf7-spinner {
 
     .footer-top .footer-row > .footer-col:first-child {
         grid-column: span 4;
-        order: 1;
+        /* order: 1; */
     }
 
     .footer-brand p {

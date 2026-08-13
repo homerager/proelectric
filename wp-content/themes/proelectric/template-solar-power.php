@@ -4,7 +4,7 @@
  */
 get_header();
 ?>
-<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/ses-hero-banner.webp'; ?>)">
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/ses-hero-banner.webp'; ?>)">
     <div class="container">
         <div class="hero-content">
             <div class="hero-label">Відновлювана енергетика</div>

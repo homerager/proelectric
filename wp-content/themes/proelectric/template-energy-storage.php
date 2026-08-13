@@ -365,9 +365,21 @@ get_header();
                 <thead>
                     <tr>
                         <th>Параметр</th>
-                        <th>🔋 УЗЕ / BESS <span class="cell-tag tag-led">Рекомендовано</span></th>
-                        <th>⛽ Дизельний генератор</th>
-                        <th>🔌 ДБЖ (UPS)</th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">🔋</span> УЗЕ / BESS <span class="cell-tag tag-led">Рекомендовано</span>
+                            </span>
+                        </th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">⛽</span> Дизельний генератор
+                            </span>
+                        </th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">🔌</span> ДБЖ (UPS)
+                            </span>    
+                        </th>
                     </tr>
                 </thead>
                 <tbody>

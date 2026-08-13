@@ -4,59 +4,7 @@
  */
 get_header();
 ?>
-<section class="hero hero-bg-svg hero-ses-for-osbb">
-    <div class="hero-photo"></div>
-    <!-- animated building + sun deco -->
-    <div class="hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <linearGradient id="sg" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#2db551" stop-opacity=".5"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity=".2"/>
-                </linearGradient>
-                <radialGradient id="sun" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#f5c518" stop-opacity=".5"/>
-                    <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
-                </radialGradient>
-            </defs>
-            <!-- sun glow -->
-            <circle cx="700" cy="120" r="140" fill="url(#sun)" opacity=".35"/>
-            <!-- rays -->
-            <line x1="700" y1="0" x2="700" y2="-20" stroke="rgba(245,197,24,.25)" stroke-width="2"/>
-            <line x1="800" y1="50" x2="830" y2="30" stroke="rgba(245,197,24,.2)" stroke-width="1.5"/>
-            <line x1="600" y1="50" x2="570" y2="30" stroke="rgba(245,197,24,.2)" stroke-width="1.5"/>
-            <!-- building silhouette -->
-            <rect x="500" y="350" width="400" height="550" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-            <!-- windows grid -->
-            <rect x="520" y="380" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="580" y="380" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="640" y="380" width="50" height="35" fill="rgba(45,181,81,.08)" rx="1"/>
-            <rect x="700" y="380" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="760" y="380" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="820" y="380" width="60" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="520" y="430" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="580" y="430" width="50" height="35" fill="rgba(26,95,168,.12)" rx="1"/>
-            <rect x="640" y="430" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="700" y="430" width="50" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <rect x="760" y="430" width="50" height="35" fill="rgba(45,181,81,.08)" rx="1"/>
-            <rect x="820" y="430" width="60" height="35" fill="rgba(255,255,255,.04)" rx="1"/>
-            <!-- solar panels on roof -->
-            <rect x="510" y="330" width="380" height="20" fill="rgba(26,95,168,.15)" stroke="rgba(26,95,168,.3)" stroke-width="1"/>
-            <line x1="572" y1="330" x2="572" y2="350" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="636" y1="330" x2="636" y2="350" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="700" y1="330" x2="700" y2="350" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="764" y1="330" x2="764" y2="350" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="828" y1="330" x2="828" y2="350" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <!-- energy flow lines from roof to ground -->
-            <path d="M700 350 Q700 420 620 480" stroke="rgba(45,181,81,.2)" stroke-width="1.5" fill="none" stroke-dasharray="6 6"/>
-            <path d="M700 350 Q700 440 780 510" stroke="rgba(45,181,81,.15)" stroke-width="1.5" fill="none" stroke-dasharray="6 6"/>
-            <!-- left building partial -->
-            <rect x="200" y="450" width="250" height="450" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <!-- right building partial -->
-            <rect x="950" y="400" width="250" height="500" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-        </svg>
-    </div>
-    <div class="hero-tint"></div>
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-ses-for-osbb.webp'; ?>)">
     <div class="container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
