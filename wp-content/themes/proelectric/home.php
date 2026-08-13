@@ -19,12 +19,17 @@ get_header();
                 <a href="<?= esc_url( home_url('/') ) ?>">Головна</a><span>›</span>
                 <span>Блог</span>
             </div>
+            <?php
+            $posts_page_id  = get_option('page_for_posts');
+            $blog_page_title = $posts_page_id ? get_the_title( $posts_page_id ) : 'БЛОГ';
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => $blog_page_title ),
+            ) );
+            ?>
             <div class="hero-label">Корисна інформація</div>
             <h1 class="hero-title">
-                <?php
-                $posts_page_id = get_option('page_for_posts');
-                echo $posts_page_id ? esc_html( get_the_title( $posts_page_id ) ) : 'БЛОГ';
-                ?>
+                <?= esc_html( $blog_page_title ) ?>
             </h1>
             <p class="hero-desc">Статті та новини про електромонтаж, сонячну енергетику та інжиніринг</p>
         </div>

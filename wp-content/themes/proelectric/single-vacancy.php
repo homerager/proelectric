@@ -48,6 +48,13 @@ while ( have_posts() ) :
 				<a href="<?= esc_url( $career_url ) ?>">Кар'єра</a><span>›</span>
 				<span><?= get_the_title() ?></span>
 			</div>
+			<?php
+			proelectric_breadcrumb_schema( array(
+				array( 'name' => 'Головна', 'url' => home_url( '/' ) ),
+				array( 'name' => "Кар'єра", 'url' => $career_url ),
+				array( 'name' => get_the_title(), 'url' => get_permalink() ),
+			) );
+			?>
 			<h1 class="hero-title post-hero-title"><?= get_the_title() ?></h1>
 			<?php if ( ! empty( $hero_meta ) ) : ?>
 				<div class="post-hero-meta">

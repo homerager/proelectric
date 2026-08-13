@@ -28,6 +28,13 @@ while ( have_posts() ) :
                 <a href="<?= esc_url( home_url('/blog/') ) ?>">Блог</a><span>›</span>
                 <span><?= get_the_title() ?></span>
             </div>
+            <?php
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => 'Блог', 'url' => home_url('/blog/') ),
+                array( 'name' => get_the_title(), 'url' => get_permalink() ),
+            ) );
+            ?>
             <?php if ( ! empty( $categories ) ) : ?>
                 <div class="hero-label"><?= esc_html( $categories[0]->name ) ?></div>
             <?php endif; ?>

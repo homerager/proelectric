@@ -97,6 +97,13 @@ get_header();
                 <span>›</span>
                 <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">Повітряні лінії</a>
             </nav>
+            <?php
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => 'Електромонтаж', 'url' => home_url('/elektromontazhni-roboty/') ),
+                array( 'name' => 'Повітряні лінії', 'url' => get_permalink() ),
+            ) );
+            ?>
             <div class="hero-label">Монтаж · Реконструкція · Обслуговування</div>
             <h1 class="hero-title">
                 <span class="accent-green">ПОВІТРЯНІ</span><br>

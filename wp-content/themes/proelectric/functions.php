@@ -205,6 +205,21 @@ add_action( 'wp_enqueue_scripts', 'proelectric_scripts' );
 require get_template_directory() . '/inc/custom-header.php';
 
 /**
+ * Schema.org JSON-LD structured data.
+ */
+require get_template_directory() . '/inc/schema.php';
+
+/**
+ * Front-end performance tweaks.
+ */
+require get_template_directory() . '/inc/performance.php';
+
+/**
+ * Shared FAQ content (question/answer groups).
+ */
+require get_template_directory() . '/inc/faq-data.php';
+
+/**
  * Custom template tags for this theme.
  */
 require get_template_directory() . '/inc/template-tags.php';
@@ -257,6 +272,26 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 }
 
 add_filter('wpcf7_autop_or_not', '__return_false');
+
+/**
+ * Fall back to the parent post's title when an attachment has no
+ * "Alternative Text" set in the Media Library, so post thumbnails never
+ * render with an empty alt attribute.
+ */
+function proelectric_fallback_image_alt( $attr, $attachment, $size ) {
+    if ( ! empty( $attr['alt'] ) ) {
+        return $attr;
+    }
+
+    $title = $attachment->post_parent ? get_the_title( $attachment->post_parent ) : get_the_title( $attachment );
+
+    if ( $title ) {
+        $attr['alt'] = $title;
+    }
+
+    return $attr;
+}
+add_filter( 'wp_get_attachment_image_attributes', 'proelectric_fallback_image_alt', 10, 3 );
 
 remove_action('wp_print_styles', 'print_emoji_styles');
 remove_action('admin_print_scripts', 'print_emoji_detection_script');

@@ -77,6 +77,13 @@ get_header();
                 <span>›</span>
                 <a href="<?= esc_url( home_url(get_post_field('post_name', get_the_ID())) ); ?>" class="current-crumb">Монтаж електрощитів</a>
             </nav>
+            <?php
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => 'Електромонтаж', 'url' => home_url('/elektromontazhni-roboty/') ),
+                array( 'name' => 'Монтаж електрощитів', 'url' => get_permalink() ),
+            ) );
+            ?>
             <div class="hero-label">Збирання · Монтаж · Введення в дію</div>
             <h1 class="hero-title">
                 <span class="accent-blue">МОНТАЖ</span><br>

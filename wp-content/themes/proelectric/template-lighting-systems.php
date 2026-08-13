@@ -58,6 +58,13 @@ get_header();
                 <a href="<?= home_url('/elektrychni-roboty/') ?>">Електромонтаж</a><span>›</span>
                 <span>Системи освітлення</span>
             </div>
+            <?php
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => 'Електромонтаж', 'url' => home_url('/elektrychni-roboty/') ),
+                array( 'name' => 'Системи освітлення', 'url' => get_permalink() ),
+            ) );
+            ?>
             <div class="hero-label">Проектування · Монтаж · Автоматизація</div>
             <h1 class="hero-title">
                 <span class="accent-gold">СИСТЕМИ</span><br>

@@ -31,6 +31,13 @@ $terms = get_terms(
 				<a href="<?= esc_url( home_url( '/projects/' ) ) ?>">Проєкти</a><span>›</span>
 				<span><?= esc_html( $term->name ) ?></span>
 			</div>
+			<?php
+			proelectric_breadcrumb_schema( array(
+				array( 'name' => 'Головна', 'url' => home_url( '/' ) ),
+				array( 'name' => 'Проєкти', 'url' => home_url( '/projects/' ) ),
+				array( 'name' => $term->name ),
+			) );
+			?>
 			<div class="hero-label">Реалізовані об'єкти</div>
 			<h1 class="hero-title"><?= esc_html( $term->name ) ?></h1>
 			<?php if ( ! empty( $term->description ) ) : ?>

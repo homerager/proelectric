@@ -20,8 +20,16 @@ $archive_desc  = get_the_archive_description();
         <div class="hero-content hero-content-center">
             <div class="breadcrumb">
                 <a href="<?= esc_url( home_url('/') ) ?>">Головна</a><span>›</span>
-                <span>Блог</span>
+                <a href="<?= esc_url( home_url('/blog/') ) ?>">Блог</a><span>›</span>
+                <span><?= esc_html( $current_category->name ) ?></span>
             </div>
+            <?php
+            proelectric_breadcrumb_schema( array(
+                array( 'name' => 'Головна', 'url' => home_url('/') ),
+                array( 'name' => 'Блог', 'url' => home_url('/blog/') ),
+                array( 'name' => $current_category->name ),
+            ) );
+            ?>
             <div class="hero-label">Корисна інформація</div>
             <h1 class="hero-title"><?php echo $current_category->name; ?></h1>
             <?php if ( $archive_desc ) : ?>

@@ -836,7 +836,7 @@ header.scrolled .header-contacts-toggle {
 
 .header-contacts-dropdown {
     position: absolute;
-    top: calc(100% + 12px);
+    top: calc(100% + 21px);
     right: 0;
     min-width: 270px;
     display: flex;
@@ -2346,6 +2346,7 @@ form.submitting .wpcf7-spinner {
     background: var(--card);
     border: 1px solid var(--border);
     overflow: hidden;
+    height: fit-content;
 }
 
 .faq-q {
@@ -2399,7 +2400,7 @@ form.submitting .wpcf7-spinner {
 }
 
 .faq-a-inner {
-    padding: 0 24px 22px;
+    padding: 15px 24px 15px;
     font-size: 13px;
     line-height: 1.85;
     color: var(--muted);
