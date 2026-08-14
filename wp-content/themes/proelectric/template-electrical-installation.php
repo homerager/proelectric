@@ -544,7 +544,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Безкоштовний виїзд інженера. Детальний кошторис з фіксованою ціною — протягом 2 робочих днів.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions  justify-content-md-end">
+                <div class="cta-actions d-flex  justify-content-md-end">
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                     <a href="#contact" class="btn btn-outline-white scroll-to-btn">Написати нам</a>
                 </div>

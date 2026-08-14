@@ -8,63 +8,7 @@ $proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <!-- HERO -->
-<section class="hero backup-hero">
-
-    <!-- decorative SVG — battery / storage deco -->
-    <div class="backup-hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <linearGradient id="uze-bg1" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%"   stop-color="#2db551" stop-opacity="0"/>
-                    <stop offset="35%"  stop-color="#2db551" stop-opacity=".45"/>
-                    <stop offset="65%"  stop-color="#1a5fa8" stop-opacity=".4"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="uze-bg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#2db551" stop-opacity="0"/>
-                    <stop offset="50%"  stop-color="#2db551" stop-opacity=".3"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity=".15"/>
-                </linearGradient>
-            </defs>
-
-            <!-- horizontal bus lines -->
-            <line x1="0" y1="180" x2="1400" y2="180" stroke="url(#uze-bg1)" stroke-width="2.5"/>
-            <line x1="0" y1="360" x2="1400" y2="360" stroke="url(#uze-bg1)" stroke-width="1.5"/>
-            <line x1="0" y1="540" x2="1400" y2="540" stroke="url(#uze-bg1)" stroke-width="3"/>
-            <line x1="0" y1="720" x2="1400" y2="720" stroke="url(#uze-bg1)" stroke-width="1.5"/>
-
-            <!-- vertical feeders -->
-            <line x1="220"  y1="0" x2="220"  y2="900" stroke="url(#uze-bg2)" stroke-width="1.5"/>
-            <line x1="500"  y1="0" x2="500"  y2="900" stroke="url(#uze-bg2)" stroke-width="2.5"/>
-            <line x1="780"  y1="0" x2="780"  y2="900" stroke="url(#uze-bg2)" stroke-width="1.5"/>
-            <line x1="1060" y1="0" x2="1060" y2="900" stroke="url(#uze-bg2)" stroke-width="2"/>
-            <line x1="1280" y1="0" x2="1280" y2="900" stroke="url(#uze-bg2)" stroke-width="1.5"/>
-
-            <!-- battery rack symbols -->
-            <rect x="180" y="140" width="90" height="60" rx="4" fill="rgba(45,181,81,.06)" stroke="rgba(45,181,81,.3)" stroke-width="1.5"/>
-            <line x1="205" y1="140" x2="205" y2="200" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-            <line x1="225" y1="140" x2="225" y2="200" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-            <line x1="245" y1="140" x2="245" y2="200" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-
-            <rect x="1020" y="500" width="90" height="60" rx="4" fill="rgba(26,95,168,.06)" stroke="rgba(26,95,168,.3)" stroke-width="1.5"/>
-            <line x1="1045" y1="500" x2="1045" y2="560" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="1065" y1="500" x2="1065" y2="560" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="1085" y1="500" x2="1085" y2="560" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-
-            <!-- charge / discharge nodes -->
-            <circle cx="500" cy="360" r="10" fill="#2db551" opacity=".6"/>
-            <path d="M497 355 l4-7 6 12 4-7" stroke="#0d1a2a" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <circle cx="780" cy="540" r="8" fill="#1a5fa8" opacity=".55"/>
-
-            <!-- BESS label box -->
-            <rect x="380" y="800" width="640" height="60" rx="2" fill="rgba(45,181,81,.04)" stroke="rgba(45,181,81,.12)" stroke-width="1.5"/>
-            <line x1="400" y1="830" x2="1000" y2="830" stroke="rgba(45,181,81,.12)" stroke-width="1" stroke-dasharray="8 6"/>
-            <text x="700" y="836" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(45,181,81,.3)" letter-spacing="3">УЗЕ · СИСТЕМИ НАКОПИЧЕННЯ ЕНЕРГІЇ</text>
-        </svg>
-    </div>
-
-    <div class="backup-hero-tint"></div>
-
+<section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-ustanovky-zberigannya-elektroenergiyi.webp'; ?>)">
     <div class="container relative-container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
@@ -89,7 +33,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Проєктуємо, постачаємо та монтуємо промислові й побутові системи накопичення енергії (BESS) на базі LiFePO4: від домашніх модулів до контейнерних установок мегаватного класу для СЕС, підприємств та мереж.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Розрахувати УЗЕ</a>
-                <a href="#packages" class="btn btn-outline-white scroll-to-btn">Готові рішення</a>
+                <a href="#packages" class="btn btn-white scroll-to-btn">Готові рішення</a>
             </div>
         </div>
     </div>
@@ -1231,7 +1175,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Безкоштовний виїзд інженера та розрахунок терміну окупності. Оптимальне рішення з фіксованою ціною — протягом 2 робочих днів.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-primary">Замовити УЗЕ</a>
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>

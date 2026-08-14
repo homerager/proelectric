@@ -926,7 +926,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Безкоштовний виїзд інженера, фінансова модель з ROI, ПДВ і зеленим тарифом — протягом 3 робочих днів.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-primary">Замовити КП</a>
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>

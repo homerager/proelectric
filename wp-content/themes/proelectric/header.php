@@ -17,6 +17,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 	<meta hid="google-site-verification" name="google-site-verification" content="r8g3Wy30VM5toMXwaYU-dpJhmpN8NUTkyeNx0yFYp-E">
 	<script type="text/javascript">
@@ -77,9 +78,9 @@
 						<?php endif; ?>
 					</div>
 				</div>
-				<div class="nav-cta d-lg-flex d-none">
+				<div class="nav-cta d-lg-flex d-none align-items-center">
 					<?php if ( $header_messengers ) : ?>
-						<div class="header-messengers">
+						<div class="header-messengers d-flex gap-8">
 							<?php foreach ( $header_messengers as $key => $messenger ) : ?>
 								<a href="<?=  $messenger['url'] ?>" class="messenger-btn messenger-btn-sm messenger-<?= esc_attr( $key ) ?>" target="_blank" rel="noopener" aria-label="Написати у <?= esc_attr( $messenger['label'] ) ?>" title="<?= esc_attr( $messenger['label'] ) ?>">
 									<?= proelectric_messenger_icon( $key ) ?>

@@ -615,7 +615,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Безкоштовна консультація інженера та фінансова модель з повним розрахунком ROI, ПДВ і зеленого тарифу.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="#contact" class="btn btn-white scroll-to-btn">Замовити консультацію</a>
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white scroll-to-btn"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>

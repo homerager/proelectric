@@ -8,68 +8,7 @@ $proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <!-- HERO -->
-<section class="hero panel-hero">
-
-    <!-- panel circuit deco -->
-    <div class="panel-hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <linearGradient id="pnl1" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%"   stop-color="#1a5fa8" stop-opacity="0"/>
-                    <stop offset="30%"  stop-color="#1a5fa8" stop-opacity=".5"/>
-                    <stop offset="70%"  stop-color="#2db551" stop-opacity=".4"/>
-                    <stop offset="100%" stop-color="#2db551" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="pnl2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#1a5fa8" stop-opacity="0"/>
-                    <stop offset="40%"  stop-color="#1a5fa8" stop-opacity=".35"/>
-                    <stop offset="100%" stop-color="#e85c1a" stop-opacity=".15"/>
-                </linearGradient>
-            </defs>
-            <!-- bus bars horizontal -->
-            <line x1="0" y1="180" x2="1400" y2="180" stroke="url(#pnl1)" stroke-width="4"/>
-            <line x1="0" y1="360" x2="1400" y2="360" stroke="url(#pnl1)" stroke-width="2"/>
-            <line x1="0" y1="540" x2="1400" y2="540" stroke="url(#pnl1)" stroke-width="3"/>
-            <line x1="0" y1="720" x2="1400" y2="720" stroke="url(#pnl1)" stroke-width="2"/>
-            <!-- vertical drops -->
-            <line x1="260"  y1="0" x2="260"  y2="900" stroke="url(#pnl2)" stroke-width="2"/>
-            <line x1="520"  y1="0" x2="520"  y2="900" stroke="url(#pnl2)" stroke-width="3"/>
-            <line x1="780"  y1="0" x2="780"  y2="900" stroke="url(#pnl2)" stroke-width="2"/>
-            <line x1="1040" y1="0" x2="1040" y2="900" stroke="url(#pnl2)" stroke-width="2"/>
-            <line x1="1140" y1="0" x2="1140" y2="900" stroke="url(#pnl2)" stroke-width="1"/>
-            <!-- breaker symbols at nodes -->
-            <rect x="244" y="166" width="32" height="28" rx="2" fill="none" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
-            <rect x="248" y="170" width="24" height="20" rx="1" fill="rgba(26,95,168,.12)"/>
-            <rect x="504" y="346" width="32" height="28" rx="2" fill="none" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
-            <rect x="508" y="350" width="24" height="20" rx="1" fill="rgba(45,181,81,.12)"/>
-            <rect x="764" y="526" width="32" height="28" rx="2" fill="none" stroke="rgba(26,95,168,.3)" stroke-width="1.5"/>
-            <rect x="768" y="530" width="24" height="20" rx="1" fill="rgba(26,95,168,.1)"/>
-            <rect x="1024" y="166" width="32" height="28" rx="2" fill="none" stroke="rgba(232,92,26,.25)" stroke-width="1.5"/>
-            <!-- node circles -->
-            <circle cx="260"  cy="180" r="5" fill="#1a5fa8" opacity=".65"/>
-            <circle cx="520"  cy="360" r="7" fill="#2db551" opacity=".7"/>
-            <circle cx="780"  cy="540" r="5" fill="#1a5fa8" opacity=".6"/>
-            <circle cx="1040" cy="180" r="5" fill="#e85c1a" opacity=".5"/>
-            <circle cx="260"  cy="720" r="5" fill="#2db551" opacity=".45"/>
-            <circle cx="780"  cy="360" r="6" fill="#e85c1a" opacity=".55"/>
-            <!-- panel cabinet silhouette, bottom right -->
-            <rect x="1100" y="450" width="200" height="280" rx="3" fill="none" stroke="rgba(26,95,168,.12)" stroke-width="1.5"/>
-            <rect x="1100" y="450" width="200" height="40"  rx="3" fill="rgba(26,95,168,.06)"/>
-            <line x1="1100" y1="490" x2="1300" y2="490" stroke="rgba(26,95,168,.1)" stroke-width="1"/>
-            <rect x="1114" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
-            <rect x="1140" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
-            <rect x="1166" y="502" width="22" height="30" rx="1" fill="rgba(45,181,81,.15)"/>
-            <rect x="1192" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
-            <rect x="1218" y="502" width="22" height="30" rx="1" fill="rgba(26,95,168,.15)"/>
-            <rect x="1244" y="502" width="40" height="30" rx="1" fill="rgba(232,92,26,.1)"/>
-            <rect x="1114" y="546" width="170" height="4"  rx="1" fill="rgba(255,255,255,.06)"/>
-            <rect x="1114" y="556" width="170" height="14" rx="1" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-            <text x="1199" y="566" text-anchor="middle" font-family="monospace" font-size="8" fill="rgba(45,181,81,.5)">380.4 V</text>
-        </svg>
-    </div>
-
-    <div class="panel-hero-tint"></div>
-
+<section class="hero panel-hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-montazh-elektroshhytiv.webp'; ?>)">
     <div class="container relative-container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
@@ -94,7 +33,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Встановлення та підключення розподільних щитів, ГРЩ, щитів АВР, шаф управління для квартир, будинків, комерційних та промислових об'єктів.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Замовити монтаж</a>
-                <a href="#panel-types" class="btn btn-outline-white scroll-to-btn">Типи щитів</a>
+                <a href="#panel-types" class="btn btn-white scroll-to-btn">Типи щитів</a>
             </div>
         </div>
     </div>
@@ -764,7 +703,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Надішліть схему або опишіть об'єкт — підберемо оптимальне рішення та нададуть комерційну пропозицію протягом 24 годин.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-orange">Замовити монтаж</a>
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>

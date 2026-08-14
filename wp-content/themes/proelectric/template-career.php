@@ -173,7 +173,7 @@ get_template_part(
 				<p class="cta-band-sub">Надішліть резюме — ми зв'яжемося, щойно з'явиться відповідна позиція.</p>
 			</div>
 			<div class="col-md-5 col-12">
-				<div class="cta-actions justify-content-md-end">
+				<div class="cta-actions d-flex justify-content-md-end">
 					<a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
 				</div>
 			</div>

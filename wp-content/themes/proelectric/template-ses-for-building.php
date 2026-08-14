@@ -6,60 +6,7 @@ get_header();
 
 $proelectric_phone = proelectric_get_primary_phone();
 ?>
-<section class="hero hero-bg-svg hero-ses-for-building">
-    <div class="hero-photo"></div>
-    <!-- animated building + sun deco -->
-    <div class="hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <radialGradient id="sunG" cx="50%" cy="50%" r="50%">
-                    <stop offset="0%" stop-color="#f5c518" stop-opacity=".55"/>
-                    <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
-                </radialGradient>
-                <linearGradient id="hillG" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#2db551" stop-opacity=".12"/>
-                    <stop offset="100%" stop-color="#2db551" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <!-- warm sun -->
-            <circle cx="700" cy="110" r="130" fill="url(#sunG)" opacity=".5"/>
-            <!-- sun rays -->
-            <line x1="700" y1="0" x2="700" y2="-20" stroke="rgba(245,197,24,.2)" stroke-width="2"/>
-            <line x1="810" y1="50" x2="840" y2="28" stroke="rgba(245,197,24,.18)" stroke-width="1.5"/>
-            <line x1="590" y1="50" x2="560" y2="28" stroke="rgba(245,197,24,.18)" stroke-width="1.5"/>
-            <line x1="830" y1="140" x2="862" y2="140" stroke="rgba(245,197,24,.15)" stroke-width="1.5"/>
-            <line x1="570" y1="140" x2="538" y2="140" stroke="rgba(245,197,24,.15)" stroke-width="1.5"/>
-            <!-- gentle hill / ground -->
-            <ellipse cx="700" cy="870" rx="900" ry="200" fill="url(#hillG)" opacity=".6"/>
-            <!-- house silhouette -->
-            <path d="M500 600 L700 440 L900 600 Z" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.06)" stroke-width="1"/>
-            <rect x="520" y="600" width="360" height="250" fill="rgba(255,255,255,.03)" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-            <!-- chimney -->
-            <rect x="680" y="475" width="24" height="70" fill="rgba(255,255,255,.04)"/>
-            <!-- windows -->
-            <rect x="560" y="640" width="60" height="50" fill="rgba(255,200,50,.07)" stroke="rgba(255,255,255,.08)" stroke-width="1" rx="1"/>
-            <rect x="680" y="640" width="60" height="50" fill="rgba(26,95,168,.12)" stroke="rgba(255,255,255,.08)" stroke-width="1" rx="1"/>
-            <rect x="800" y="640" width="60" height="50" fill="rgba(255,200,50,.07)" stroke="rgba(255,255,255,.08)" stroke-width="1" rx="1"/>
-            <!-- door -->
-            <rect x="675" y="720" width="50" height="80" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.08)" stroke-width="1" rx="1"/>
-            <!-- solar panels on roof -->
-            <path d="M530 583 L700 445 L870 583" fill="rgba(26,95,168,.15)" stroke="rgba(26,95,168,.3)" stroke-width="1"/>
-            <!-- panel lines on roof -->
-            <line x1="595" y1="555" x2="645" y2="513" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="645" y1="570" x2="700" y2="526" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="700" y1="566" x2="757" y2="519" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="757" y1="556" x2="808" y2="510" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <!-- energy flow from panels -->
-            <path d="M700 490 Q700 560 650 620" stroke="rgba(45,181,81,.2)" stroke-width="1.5" fill="none" stroke-dasharray="5 5"/>
-            <path d="M700 490 Q700 560 750 620" stroke="rgba(45,181,81,.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 5"/>
-            <!-- trees -->
-            <ellipse cx="360" cy="710" rx="45" ry="60" fill="rgba(45,181,81,.08)"/>
-            <rect x="357" y="760" width="6" height="40" fill="rgba(45,181,81,.06)"/>
-            <ellipse cx="1040" cy="720" rx="40" ry="55" fill="rgba(45,181,81,.07)"/>
-            <rect x="1037" y="768" width="6" height="35" fill="rgba(45,181,81,.05)"/>
-        </svg>
-    </div>
-    <div class="hero-tint"></div>
+<section class="hero hero-ses-for-building" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-ses-dlya-budynku.webp'; ?>)">
     <div class="container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
@@ -930,7 +877,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Безкоштовний виїзд інженера. Оцінимо дах, порахуємо потужність, підберемо пакет і назвемо точну ціну — протягом 24 годин.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="/kontakty/" class="btn btn-white">Замовити виїзд інженера</a>
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white scroll-to-btn"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>

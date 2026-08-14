@@ -313,7 +313,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 <p class="cta-band-sub">Розкажіть про ваш проєкт — ми підготуємо рішення та комерційну пропозицію протягом 48 годин.</p>
             </div>
             <div class="col-md-5 col-12">
-                <div class="cta-actions justify-content-md-end">
+                <div class="cta-actions d-flex justify-content-md-end">
                     <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
                 </div>
             </div>

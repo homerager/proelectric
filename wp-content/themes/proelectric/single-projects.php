@@ -246,7 +246,7 @@ if ( $related->have_posts() ) :
 				<p class="cta-band-sub">Залиште заявку — ми зв'яжемося протягом 2 годин і підготуємо комерційну пропозицію.</p>
 			</div>
 			<div class="col-md-5 col-12">
-				<div class="cta-actions justify-content-md-end">
+				<div class="cta-actions d-flex justify-content-md-end">
 					<a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
 				</div>
 			</div>
