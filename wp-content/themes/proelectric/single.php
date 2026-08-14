@@ -16,8 +16,11 @@ while ( have_posts() ) :
     $tags         = get_the_tags();
     $words        = count( preg_split( '/\s+/u', trim( strip_tags( get_the_content() ) ), -1, PREG_SPLIT_NO_EMPTY ) );
     $reading_time = max( 1, ceil( $words / 200 ) );
+    $views        = proelectric_get_post_views( get_the_ID() );
     $prev_post    = get_previous_post();
     $next_post    = get_next_post();
+    $share_url    = urlencode( get_permalink() );
+    $share_title  = urlencode( get_the_title() );
 ?>
 
 <section class="hero post-hero">
@@ -45,6 +48,8 @@ while ( have_posts() ) :
                 <span><?= esc_html( get_the_date('d.m.Y') ) ?></span>
                 <span class="post-meta-sep">·</span>
                 <span><?= $reading_time ?> хв читання</span>
+                <span class="post-meta-sep">·</span>
+                <span><?= esc_html( number_format_i18n( $views ) ) ?> <?= esc_html( proelectric_ukr_plural( $views, 'перегляд', 'перегляди', 'переглядів' ) ) ?></span>
                 <!--<?php if ( get_the_author() ) : ?>
                     <span class="post-meta-sep">·</span>
                     <span><?= esc_html( get_the_author() ) ?></span>
@@ -67,6 +72,28 @@ while ( have_posts() ) :
 
                 <div class="post-content entry-content">
                     <?php the_content(); ?>
+                </div>
+
+                <div class="post-share">
+                    <span class="post-share-label">Поділитися:</span>
+                    <div class="post-share-list">
+                        <a href="https://www.facebook.com/sharer/sharer.php?u=<?= $share_url ?>" class="post-share-btn" target="_blank" rel="noopener noreferrer nofollow" title="Поділитися у Facebook" aria-label="Поділитися у Facebook">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+                        </a>
+                        <a href="https://t.me/share/url?url=<?= $share_url ?>&text=<?= $share_title ?>" class="post-share-btn" target="_blank" rel="noopener noreferrer nofollow" title="Поділитися в Telegram" aria-label="Поділитися в Telegram">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>
+                        </a>
+                        <a href="https://api.whatsapp.com/send?text=<?= $share_title ?>%20<?= $share_url ?>" class="post-share-btn" target="_blank" rel="noopener noreferrer nofollow" title="Поділитися у WhatsApp" aria-label="Поділитися у WhatsApp">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+                        </a>
+                        <a href="viber://forward?text=<?= $share_title ?>%20<?= $share_url ?>" class="post-share-btn" rel="nofollow" title="Поділитися у Viber" aria-label="Поділитися у Viber">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                        </a>
+                        <button type="button" class="post-share-btn post-share-copy" data-copy-link="<?= esc_url( get_permalink() ) ?>" title="Скопіювати посилання" aria-label="Скопіювати посилання">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg>
+                            <span class="post-share-copied-tip">Скопійовано!</span>
+                        </button>
+                    </div>
                 </div>
 
                 <?php if ( $tags ) : ?>
@@ -166,44 +193,12 @@ if ( $related->have_posts() ) :
             <h2 class="section-title">ПОВ'ЯЗАНІ СТАТТІ</h2>
         </div>
         <div class="blog-grid d-grid lg-grid-3-columns md-grid-2-columns blog-gap wf-animate-grid">
-            <?php while ( $related->have_posts() ) : $related->the_post();
-                $rcats        = get_the_category();
-                $rwords       = str_word_count( strip_tags( get_the_content() ) );
-                $rread_time   = max( 1, ceil( $rwords / 200 ) );
+            <?php
+            while ( $related->have_posts() ) :
+                $related->the_post();
+                get_template_part( 'template-parts/general/blog-card' );
+            endwhile;
             ?>
-            <article class="blog-card wf-animate">
-                <?php if ( has_post_thumbnail() ) : ?>
-                <a href="<?= esc_url( get_permalink() ) ?>" class="blog-card-thumb" aria-label="<?= esc_attr( get_the_title() ) ?>">
-                    <?= get_the_post_thumbnail( get_the_ID(), 'medium_large' ) ?>
-                    <?php if ( ! empty( $rcats ) ) : ?>
-                    <span class="blog-card-cat"><?= esc_html( $rcats[0]->name ) ?></span>
-                    <?php endif; ?>
-                </a>
-                <?php else : ?>
-                <a href="<?= esc_url( get_permalink() ) ?>" class="blog-card-thumb blog-card-thumb-placeholder" aria-label="<?= esc_attr( get_the_title() ) ?>">
-                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" opacity=".35"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"/><polyline points="13 2 13 9 20 9"/></svg>
-                    <?php if ( ! empty( $rcats ) ) : ?>
-                    <span class="blog-card-cat"><?= esc_html( $rcats[0]->name ) ?></span>
-                    <?php endif; ?>
-                </a>
-                <?php endif; ?>
-                <div class="blog-card-body">
-                    <div class="blog-card-meta">
-                        <span><?= esc_html( get_the_date('d.m.Y') ) ?></span>
-                        <span class="blog-card-sep">·</span>
-                        <span><?= $rread_time ?> хв читання</span>
-                    </div>
-                    <h3 class="blog-card-title">
-                        <a href="<?= esc_url( get_permalink() ) ?>"><?= get_the_title() ?></a>
-                    </h3>
-                    <p class="blog-card-excerpt"><?= esc_html( wp_trim_words( get_the_excerpt(), 18, '…' ) ) ?></p>
-                    <a href="<?= esc_url( get_permalink() ) ?>" class="blog-card-link">
-                        Читати далі
-                        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                    </a>
-                </div>
-            </article>
-            <?php endwhile; ?>
             <?php wp_reset_postdata(); ?>
         </div>
     </div>

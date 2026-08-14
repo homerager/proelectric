@@ -9,6 +9,43 @@ function onInit() {
   onInitMobileMenu();
   initHeroParallax();
   initCookieConsent();
+  initPostShare();
+}
+
+function initPostShare() {
+  document.querySelectorAll('[data-copy-link]').forEach(btn => {
+    btn.addEventListener('click', () => {
+      const url = btn.getAttribute('data-copy-link');
+      copyTextToClipboard(url).then(() => {
+        btn.classList.add('post-share-copied');
+        clearTimeout(btn._copyTimer);
+        btn._copyTimer = setTimeout(() => btn.classList.remove('post-share-copied'), 1800);
+      });
+    });
+  });
+}
+
+function copyTextToClipboard(text) {
+  if (navigator.clipboard && window.isSecureContext) {
+    return navigator.clipboard.writeText(text);
+  }
+
+  return new Promise((resolve, reject) => {
+    const textarea = document.createElement('textarea');
+    textarea.value = text;
+    textarea.style.position = 'fixed';
+    textarea.style.opacity = '0';
+    document.body.appendChild(textarea);
+    textarea.select();
+    try {
+      document.execCommand('copy');
+      resolve();
+    } catch (err) {
+      reject(err);
+    } finally {
+      document.body.removeChild(textarea);
+    }
+  });
 }
 
 function initCookieConsent() {

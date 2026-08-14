@@ -96,19 +96,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                     </div>
                 </div>
                 <div class="seg-visual sv1">
-                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
-                        <rect x="20" y="100" width="160" height="80" fill="rgba(255,255,255,.08)" stroke="rgba(255,255,255,.25)" stroke-width="1.5" rx="2"/>
-                        <rect x="40" y="60" width="50" height="120" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
-                        <rect x="110" y="70" width="50" height="110" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
-                        <rect x="20" y="88" width="160" height="14" rx="1" fill="rgba(26,95,168,.35)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
-                        <line x1="57" y1="88" x2="57" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <line x1="96" y1="88" x2="96" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <line x1="135" y1="88" x2="135" y2="102" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-                        <rect x="40" y="50" width="8" height="50" fill="rgba(255,255,255,.08)"/>
-                        <rect x="110" y="55" width="8" height="45" fill="rgba(255,255,255,.08)"/>
-                        <circle cx="100" cy="30" r="22" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
-                        <path d="M100 14 L96 26 H101 L96 46 L110 24 H104 Z" fill="rgba(245,197,24,.8)"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-biznesu-vyrobnytatvo.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для бізнесу">
                 </div>
             </div>
             <!-- Panel 1: Agriculture -->

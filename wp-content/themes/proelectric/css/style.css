@@ -3341,10 +3341,6 @@ form.submitting .wpcf7-spinner {
     overflow: hidden
 }
 
-.seg-visual.sv1 {
-    background: linear-gradient(135deg, #0e3660, #1a5fa8)
-}
-
 .seg-visual.sv2 {
     background: linear-gradient(135deg, #1a5fa8, #1a7a32)
 }
@@ -5495,6 +5491,76 @@ form.submitting .wpcf7-spinner {
 }
 
 
+
+/* Post share */
+.post-share {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 40px;
+    padding-top: 32px;
+    border-top: 1px solid var(--border);
+}
+
+.post-share-label {
+    font-size: 10px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--muted);
+    font-weight: 600;
+}
+
+.post-share-list {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.post-share-btn {
+    position: relative;
+    width: 36px;
+    height: 36px;
+    border: 1px solid var(--border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--muted);
+    background: var(--card);
+    cursor: pointer;
+    transition: border-color .2s, color .2s;
+}
+
+.post-share-btn:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.post-share-copied-tip {
+    position: absolute;
+    bottom: calc(100% + 8px);
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    background: var(--dark);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 600;
+    white-space: nowrap;
+    padding: 5px 10px;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity .2s, transform .2s;
+}
+
+.post-share-copy.post-share-copied {
+    border-color: var(--green);
+    color: var(--green);
+}
+
+.post-share-copy.post-share-copied .post-share-copied-tip {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
 
 /* Post navigation */
 .post-nav-wrap {

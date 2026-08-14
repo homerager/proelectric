@@ -13,6 +13,7 @@ $cats         = get_the_category();
 $tags         = get_the_tags();
 $words        = count( preg_split( '/\s+/u', trim( strip_tags( get_the_content() ) ), -1, PREG_SPLIT_NO_EMPTY ) );
 $reading_time = max( 1, ceil( $words / 200 ) );
+$views        = proelectric_get_post_views( get_the_ID() );
 // Показуємо теги якщо є, інакше — категорію.
 $card_labels  = ! empty( $tags ) ? array_slice( $tags, 0, 2 ) : ( ! empty( $cats ) ? array_slice( $cats, 0, 1 ) : array() );
 ?>
@@ -40,6 +41,8 @@ $card_labels  = ! empty( $tags ) ? array_slice( $tags, 0, 2 ) : ( ! empty( $cats
             <span><?= esc_html( get_the_date('d.m.Y') ) ?></span>
             <span class="blog-card-sep">·</span>
             <span><?= $reading_time ?> хв читання</span>
+            <span class="blog-card-sep">·</span>
+            <span><?= esc_html( number_format_i18n( $views ) ) ?> <?= esc_html( proelectric_ukr_plural( $views, 'перегляд', 'перегляди', 'переглядів' ) ) ?></span>
         </div>
         <h3 class="blog-card-title">
             <a href="<?= esc_url( get_permalink() ) ?>"><?= get_the_title() ?></a>
