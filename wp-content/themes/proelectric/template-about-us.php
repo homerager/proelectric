@@ -160,8 +160,8 @@ get_header();
                         <path d="M16 24 l6 6 10-10" stroke="url(#vi1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="srv-title">Безпека понад усе</div>
-                <div class="srv-desc">Кожен об'єкт здається з нульовим рівнем травматизму. Суворе дотримання ПУЕ, НПАОП і норм охорони праці — не формальність, а культура компанії.</div>
+                <div class="item-title">Безпека понад усе</div>
+                <div class="item-description">Кожен об'єкт здається з нульовим рівнем травматизму. Суворе дотримання ПУЕ, НПАОП і норм охорони праці — не формальність, а культура компанії.</div>
             </div>
             <div class="srv-card val-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">02</div>
@@ -173,8 +173,8 @@ get_header();
                         <path d="M14 28 l6 6 14-14" stroke="url(#vi2)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="srv-title">Якість без компромісів</div>
-                <div class="srv-desc">Використовуємо лише сертифіковані матеріали від перевірених постачальників. Внутрішній контроль якості на кожному етапі, незалежно від розміру замовлення.</div>
+                <div class="item-title">Якість без компромісів</div>
+                <div class="item-description">Використовуємо лише сертифіковані матеріали від перевірених постачальників. Внутрішній контроль якості на кожному етапі, незалежно від розміру замовлення.</div>
             </div>
             <div class="srv-card val-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">03</div>
@@ -185,8 +185,8 @@ get_header();
                         <path d="M18 24 l6 6 10-10" stroke="url(#vi3)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
                     </svg>
                 </div>
-                <div class="srv-title">Інновації та ефективність</div>
-                <div class="srv-desc">Використовуємо новітні технології та методики, щоб максимально знизити вартість та час виконання робіт. Кожен проєкт — це можливість продемонструвати свої досягнення.</div>
+                <div class="item-title">Інновації та ефективність</div>
+                <div class="item-description">Використовуємо новітні технології та методики, щоб максимально знизити вартість та час виконання робіт. Кожен проєкт — це можливість продемонструвати свої досягнення.</div>
             </div>
             <div class="srv-card val-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">04</div>
@@ -198,8 +198,8 @@ get_header();
                         <path d="M18 26 v-5 a6 6 0 0 1 12 0 v5" stroke="url(#vi4)" stroke-width="1.2" fill="none"/>
                     </svg>
                 </div>
-                <div class="srv-title">Чесність і прозорість</div>
-                <div class="srv-desc">Фіксована ціна в договорі. Детальний кошторис без прихованих рядків. Повний пакет виконавчої документації. Ми не приховуємо нічого від замовника.</div>
+                <div class="item-title">Чесність і прозорість</div>
+                <div class="item-description">Фіксована ціна в договорі. Детальний кошторис без прихованих рядків. Повний пакет виконавчої документації. Ми не приховуємо нічого від замовника.</div>
             </div>
             <div class="srv-card val-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">05</div>
@@ -211,8 +211,8 @@ get_header();
                         <line x1="22" y1="22" x2="26" y2="26" stroke="url(#vi5)" stroke-width="1.5"/>
                     </svg>
                 </div>
-                <div class="srv-title">Довгострокове партнерство</div>
-                <div class="srv-desc">Більше 60% нових замовлень — від клієнтів, що вже працювали з нами або прийшли за рекомендацією. Для нас це найважливіший показник якості.</div>
+                <div class="item-title">Довгострокове партнерство</div>
+                <div class="item-description">Більше 60% нових замовлень — від клієнтів, що вже працювали з нами або прийшли за рекомендацією. Для нас це найважливіший показник якості.</div>
             </div>
             <div class="srv-card val-card white-card white-card-bottom-border-hover wf-animate">
                 <div class="srv-num">06</div>
@@ -223,8 +223,8 @@ get_header();
                         <path d="M24 14 v12 l7 5" stroke="url(#vi6)" stroke-width="2" stroke-linecap="round"/>
                     </svg>
                 </div>
-                <div class="srv-title">Дотримання термінів</div>
-                <div class="srv-desc">Календарний план — це зобов'язання, а не орієнтир. Якщо щось іде не так, клієнт дізнається першим. Затримки в нашій роботі — рідкість, а не норма.</div>
+                <div class="item-title">Дотримання термінів</div>
+                <div class="item-description">Календарний план — це зобов'язання, а не орієнтир. Якщо щось іде не так, клієнт дізнається першим. Затримки в нашій роботі — рідкість, а не норма.</div>
             </div>
         </div>
     </div>

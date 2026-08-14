@@ -35,7 +35,7 @@
 <header class="header" id="header">
 	<div class="container">
 		<div class="header-inner">
-			<div class="header-row">
+			<div class="header-row d-flex align-items-center justify-content-between">
 				<?php $header_messengers = function_exists( 'proelectric_get_messengers' ) ? proelectric_get_messengers() : array(); ?>
 				<div class="site-logo">
 					<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">

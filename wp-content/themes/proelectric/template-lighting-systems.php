@@ -421,9 +421,21 @@ get_header();
                 <thead>
                     <tr>
                         <th>Параметр</th>
-                        <th>💡 LED <span class="cell-tag tag-led">Рекомендовано</span></th>
-                        <th>☀️ Люмінесцентні <span class="cell-tag tag-fl">Застарілі</span></th>
-                        <th>🔆 Натрієві / Ртутні <span class="cell-tag tag-inc">Заборонені в ЄС</span></th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">💡</span> LED <span class="cell-tag tag-led">Рекомендовано</span>
+                            </span>
+                        </th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">☀️</span> Люмінесцентні <span class="cell-tag tag-fl">Застарілі</span>
+                            </span>
+                        </th>
+                        <th>
+                            <span class="d-flex align-items-center gap-8">
+                                <span class="w-30px">🔆</span> Натрієві / Ртутні <span class="cell-tag tag-inc">Заборонені в ЄС</span>
+                            </span>
+                        </th>
                     </tr>
                 </thead>
                 <tbody>
@@ -579,7 +591,7 @@ get_header();
         </div>
         <div class="objects-grid wf-animate-grid d-grid md-grid-4-columns">
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o1"><span>🏭</span></div>
+                <div class="obj-thumb o1"><span class="w-60px">🏭</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Промисловість</div>
                     <div class="obj-title">Заводи та цехи</div>
@@ -587,7 +599,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o2"><span>📦</span></div>
+                <div class="obj-thumb o2"><span class="w-60px">📦</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Логістика</div>
                     <div class="obj-title">Склади та термінали</div>
@@ -595,7 +607,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o3"><span>🛒</span></div>
+                <div class="obj-thumb o3"><span class="w-60px">🛒</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Рітейл</div>
                     <div class="obj-title">Магазини та ТРЦ</div>
@@ -603,7 +615,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o4"><span>🏢</span></div>
+                <div class="obj-thumb o4"><span class="w-60px">🏢</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Офіси</div>
                     <div class="obj-title">Бізнес-центри</div>
@@ -611,7 +623,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o5"><span>🌳</span></div>
+                <div class="obj-thumb o5"><span class="w-60px">🌳</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Вулиця</div>
                     <div class="obj-title">Парки та двори</div>
@@ -619,7 +631,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o6"><span>🏛️</span></div>
+                <div class="obj-thumb o6"><span class="w-60px">🏛️</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Архітектура</div>
                     <div class="obj-title">Фасади та пам'ятники</div>
@@ -627,7 +639,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o7"><span>🏨</span></div>
+                <div class="obj-thumb o7"><span class="w-60px">🏨</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">HoReCa</div>
                     <div class="obj-title">Готелі та ресторани</div>
@@ -635,7 +647,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb o8"><span>🏠</span></div>
+                <div class="obj-thumb o8"><span class="w-60px">🏠</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Житло</div>
                     <div class="obj-title">Будинки та ОСББ</div>

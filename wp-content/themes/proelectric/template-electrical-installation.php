@@ -65,8 +65,8 @@ get_header();
                     <line x1="18" y1="6" x2="18" y2="10" stroke="url(#g1)" stroke-width="1.5"/>
                     <line x1="34" y1="6" x2="34" y2="10" stroke="url(#g1)" stroke-width="1.5"/>
                 </svg>
-                <h3 class="srv-title">Монтаж Електрощитів</h3>
-                <p class="srv-desc">Збирання та встановлення розподільних щитів, шафів управління та автоматики для промислових і цивільних об'єктів.</p>
+                <h3 class="item-title">Монтаж Електрощитів</h3>
+                <p class="item-description">Збирання та встановлення розподільних щитів, шафів управління та автоматики для промислових і цивільних об'єктів.</p>
                 <ul class="srv-list">
                     <li>Головні розподільні щити (ГРЩ)</li>
                     <li>Поверхові та квартирні щитки</li>
@@ -90,8 +90,8 @@ get_header();
                     <circle cx="34" cy="14" r="3" fill="#2db551"/>
                     <circle cx="44" cy="20" r="3" fill="#2db551" opacity=".5"/>
                 </svg>
-                <h3 class="srv-title">Прокладання Кабелів</h3>
-                <p class="srv-desc">Монтаж силових та контрольних кабелів у кабельних лотках, трубах, каналах та траншеях.</p>
+                <h3 class="item-title">Прокладання Кабелів</h3>
+                <p class="item-description">Монтаж силових та контрольних кабелів у кабельних лотках, трубах, каналах та траншеях.</p>
                 <ul class="srv-list">
                     <li>Кабельні лотки та короби</li>
                     <li>Підземне прокладання в траншеях</li>
@@ -116,8 +116,8 @@ get_header();
                     <line x1="26" y1="28" x2="26" y2="44" stroke="url(#g3)" stroke-width="1.5" stroke-linecap="round"/>
                     <line x1="18" y1="44" x2="34" y2="44" stroke="url(#g3)" stroke-width="2" stroke-linecap="round"/>
                 </svg>
-                <h3 class="srv-title">Системи Освітлення</h3>
-                <p class="srv-desc">Проектування та монтаж внутрішнього та зовнішнього освітлення: LED, промислові світильники, вулична інфраструктура.</p>
+                <h3 class="item-title">Системи Освітлення</h3>
+                <p class="item-description">Проектування та монтаж внутрішнього та зовнішнього освітлення: LED, промислові світильники, вулична інфраструктура.</p>
                 <ul class="srv-list">
                     <li>Промислове та офісне освітлення</li>
                     <li>Вуличне та охоронне освітлення</li>
@@ -140,8 +140,8 @@ get_header();
                     <line x1="16" y1="34" x2="28" y2="34" stroke="url(#g4)" stroke-width="1.2"/>
                     <path d="M32 30 L38 30 M35 27 L35 33" stroke="#2db551" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>
-                <h3 class="srv-title">Повітряні Лінії ЛЕП</h3>
-                <p class="srv-desc">Монтаж та реконструкція повітряних ліній електропередачі 0,4–110 кВ, встановлення опор та підвіска проводів.</p>
+                <h3 class="item-title">Повітряні Лінії ЛЕП</h3>
+                <p class="item-description">Монтаж та реконструкція повітряних ліній електропередачі 0,4–110 кВ, встановлення опор та підвіска проводів.</p>
                 <ul class="srv-list">
                     <li>ПЛ та КЛ 0,4–10 кВ</li>
                     <li>Монтаж залізобетонних та металевих опор</li>
@@ -163,8 +163,8 @@ get_header();
                     <path d="M26 13.5 v3.5 M26 31 v3.5 M14.5 24 h3.5 M34 24 h3.5 M18 16 l2.5 2.5 M34 16 l-2.5 2.5 M18 32 l2.5-2.5 M34 32 l-2.5-2.5" stroke="url(#g5)" stroke-width="1.4" stroke-linecap="round"/>
                     <path d="M22.5 24 l2.5 2.5 4.5-4.5" stroke="#2db551" stroke-width="1.6" fill="none" stroke-linecap="round"/>
                 </svg>
-                <h3 class="srv-title">Автоматика та Захист</h3>
-                <p class="srv-desc">Монтаж систем автоматичного керування та релейного захисту для надійної і безпечної роботи електрообладнання промислових і цивільних об'єктів.</p>
+                <h3 class="item-title">Автоматика та Захист</h3>
+                <p class="item-description">Монтаж систем автоматичного керування та релейного захисту для надійної і безпечної роботи електрообладнання промислових і цивільних об'єктів.</p>
                 <ul class="srv-list">
                     <li>Релейний захист та автоматика (РЗА)</li>
                     <li>Системи диспетчеризації та АСУ</li>
@@ -186,8 +186,8 @@ get_header();
                     <path d="M22 24 l3 3 6-6" stroke="#2db551" stroke-width="1.4" fill="none" stroke-linecap="round"/>
                     <line x1="16" y1="38" x2="36" y2="38" stroke="url(#g6)" stroke-width="1.2"/>
                 </svg>
-                <h3 class="srv-title">Резервне Живлення та АВР</h3>
-                <p class="srv-desc">Підключення генераторів, інверторів та систем автоматичного резервного живлення.</p>
+                <h3 class="item-title">Резервне Живлення та АВР</h3>
+                <p class="item-description">Підключення генераторів, інверторів та систем автоматичного резервного живлення.</p>
                 <ul class="srv-list">
                     <li>АВР</li>
                     <li>Генератори</li>
@@ -348,7 +348,7 @@ get_header();
         </div>
         <div class="objects-grid wf-animate-grid d-grid md-grid-4-columns">
             <div class="obj-card wf-animate">
-                <div class="obj-thumb industrial">🏭</div>
+                <div class="obj-thumb industrial"> <span class="w-60px">🏭</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Промисловість</div>
                     <div class="obj-title">Промислові підприємства</div>
@@ -356,7 +356,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb civil">🏢</div>
+                <div class="obj-thumb civil"><span class="w-60px">🏢</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Цивільне будівництво</div>
                     <div class="obj-title">Житлові та комерційні</div>
@@ -364,7 +364,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb outdoor">🌾</div>
+                <div class="obj-thumb outdoor"><span class="w-60px">🌾</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Агросектор</div>
                     <div class="obj-title">Сільськогосподарські об'єкти</div>
@@ -372,7 +372,7 @@ get_header();
                 </div>
             </div>
             <div class="obj-card wf-animate">
-                <div class="obj-thumb shield">⚡</div>
+                <div class="obj-thumb shield"><span class="w-60px">⚡</span></div>
                 <div class="obj-body">
                     <div class="obj-cat">Енергетика</div>
                     <div class="obj-title">Енергетичні об'єкти</div>
