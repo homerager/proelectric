@@ -7,6 +7,8 @@
 
 if ( ! function_exists( 'proelectric_schema_organization' ) ) {
 	function proelectric_schema_organization() {
+		$phone = function_exists( 'proelectric_get_primary_phone' ) ? proelectric_get_primary_phone() : array( 'tel' => '+380630607600' );
+
 		return array(
 			'@type'      => 'Organization',
 			'@id'        => home_url( '/#organization' ),
@@ -15,7 +17,7 @@ if ( ! function_exists( 'proelectric_schema_organization' ) ) {
 			'url'        => home_url( '/' ),
 			'logo'       => get_template_directory_uri() . '/images/logo.webp',
 			'image'      => get_template_directory_uri() . '/images/logo.webp',
-			'telephone'  => '+380630607600',
+			'telephone'  => $phone['tel'],
 			'email'      => 'progreselectric@gmail.com',
 			'address'    => array(
 				'@type'           => 'PostalAddress',
@@ -26,7 +28,7 @@ if ( ! function_exists( 'proelectric_schema_organization' ) ) {
 			),
 			'contactPoint' => array(
 				'@type'             => 'ContactPoint',
-				'telephone'         => '+380630607600',
+				'telephone'         => $phone['tel'],
 				'contactType'       => 'customer service',
 				'areaServed'        => 'UA',
 				'availableLanguage' => array( 'Ukrainian' ),

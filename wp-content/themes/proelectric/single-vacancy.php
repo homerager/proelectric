@@ -11,6 +11,8 @@
 
 get_header();
 
+$proelectric_phone = proelectric_get_primary_phone();
+
 // Find the page using template-career.php to link back to the vacancies list.
 $career_page = get_posts(
 	array(
@@ -111,7 +113,7 @@ while ( have_posts() ) :
 			<div class="vacancy-apply-cta-title">Зацікавила вакансія «<?= get_the_title() ?>»?</div>
 			<p>Залиште резюме через форму нижче або зателефонуйте — вкажіть, будь ласка, назву вакансії.</p>
 			<a href="#contact" class="btn btn-primary scroll-to-btn">Надіслати резюме</a>
-			<a href="tel:+380630607600" class="vacancy-apply-phone">+38 063 060 76 00</a>
+			<a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="vacancy-apply-phone"><?= esc_html( $proelectric_phone['display'] ) ?></a>
 		</div>
 	</div>
 </section>

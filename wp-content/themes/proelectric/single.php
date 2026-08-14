@@ -7,6 +7,8 @@
 
 get_header();
 
+$proelectric_phone = proelectric_get_primary_phone();
+
 while ( have_posts() ) :
     the_post();
 
@@ -106,7 +108,7 @@ while ( have_posts() ) :
                         <div class="post-cta-band-title">Є запитання?</div>
                         <p>Зателефонуйте або напишіть — наші фахівці нададуть безкоштовну консультацію.</p>
                     </div>
-                    <a href="tel:+380630607600" class="btn btn-primary">Зателефонувати</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-primary">Зателефонувати</a>
                 </div>
             </main>
 

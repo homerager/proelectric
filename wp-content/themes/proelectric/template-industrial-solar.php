@@ -3,6 +3,8 @@
   Template Name: Industrial Solar Power Plants
 */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <!-- HERO -->
@@ -926,7 +928,7 @@ get_header();
             <div class="col-md-5 col-12">
                 <div class="cta-actions justify-content-md-end">
                     <a href="<?= esc_url( home_url('/kontakty/') ); ?>" class="btn btn-primary">Замовити КП</a>
-                    <a href="tel:+380630607600" class="btn btn-outline-white">+38 063 060 76 00</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>
             </div>
         </div>

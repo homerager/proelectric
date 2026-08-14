@@ -30,6 +30,7 @@ $features_title = $args['features_title'] ?? 'ЩО ВХОДИТЬ';
 $features       = ! empty( $args['features'] ) ? (array) $args['features'] : array();
 $faq            = ! empty( $args['faq'] ) ? (array) $args['faq'] : array();
 $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?';
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <section class="hero contact-us-hero page-hero position-relative">
@@ -216,7 +217,7 @@ $cta_title      = $args['cta_title'] ?? 'ПОТРІБЕН РОЗРАХУНОК?'
             </div>
             <div class="col-md-5 col-12">
                 <div class="cta-actions justify-content-md-end">
-                    <a href="tel:+380630607600" class="btn btn-white">Зателефонувати</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
                     <a href="#contact" class="btn btn-outline-white scroll-to-btn">Написати нам</a>
                 </div>
             </div>

@@ -3,6 +3,8 @@
   Template Name: Electrical installation work
  */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/electrical-installation-hero.webp'; ?>)">
     <div class="container">
@@ -543,7 +545,7 @@ get_header();
             </div>
             <div class="col-md-5 col-12">
                 <div class="cta-actions  justify-content-md-end">
-                    <a href="tel:+380630607600" class="btn btn-white">+38 063 060 76 00</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                     <a href="#contact" class="btn btn-outline-white scroll-to-btn">Написати нам</a>
                 </div>
             </div>

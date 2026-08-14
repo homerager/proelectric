@@ -3,6 +3,8 @@
   Template Name: Home
  */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <section class="hero hero-animate-bg">
@@ -147,7 +149,7 @@ get_header();
             </div>
             <div class="col-md-5 col-12">
                 <div class="cta-actions justify-content-md-end">
-                    <a href="tel:+380630607600" class="btn btn-white">Зателефонувати</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
                 </div>
             </div>
         </div>

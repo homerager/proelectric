@@ -3,6 +3,8 @@
   Template Name: Ses for business
  */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 <section class="hero hero-ses-for-business" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-ses-dlya-biznesu.webp'; ?>)">
     <div class="container">
@@ -615,7 +617,7 @@ get_header();
             <div class="col-md-5 col-12">
                 <div class="cta-actions justify-content-md-end">
                     <a href="#contact" class="btn btn-white scroll-to-btn">Замовити консультацію</a>
-                    <a href="tel:+380630607600" class="btn btn-outline-white scroll-to-btn">+38 063 060 76 00</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-outline-white scroll-to-btn"><?= esc_html( $proelectric_phone['display'] ) ?></a>
                 </div>
             </div>
         </div>

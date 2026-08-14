@@ -3,6 +3,8 @@
   Template Name: Calculator
  */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <section class="hero contact-us-hero page-hero position-relative">
@@ -155,7 +157,7 @@ get_header();
             </div>
             <div class="col-md-5 col-12">
                 <div class="cta-actions justify-content-md-end">
-                    <a href="tel:+380630607600" class="btn btn-white">Зателефонувати</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
                     <a href="#contact" class="btn btn-outline-white scroll-to-btn">Написати нам</a>
                 </div>
             </div>

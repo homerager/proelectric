@@ -19,6 +19,7 @@
 $vacancy_title = $args['vacancy_title'] ?? '';
 $form_id       = $args['form_id'] ?? proelectric_get_vacancy_form_id();
 $form          = $form_id ? wpcf7_contact_form( $form_id ) : null;
+$apply_phones  = function_exists( 'proelectric_get_phones' ) ? proelectric_get_phones() : array();
 ?>
 <section class="page-section" id="contact">
 	<div class="container">
@@ -36,8 +37,9 @@ $form          = $form_id ? wpcf7_contact_form( $form_id ) : null;
 					</div>
 					<div>
 						<div class="c-label">Телефон</div>
-						<a href="tel:+380630607600" class="c-value">+38 063 060 76 00</a>
-						<a href="tel:+380684526450" class="c-value">+38 068 452 64 50</a>
+						<?php foreach ( $apply_phones as $phone ) : ?>
+							<a href="tel:<?= esc_attr( $phone['tel'] ) ?>" class="c-value"><?= esc_html( $phone['display'] ) ?></a>
+						<?php endforeach; ?>
 					</div>
 				</div>
 				<div class="contact-detail">

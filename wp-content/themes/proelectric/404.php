@@ -117,8 +117,9 @@ get_header();
                 <a href="<?= esc_url( home_url('/') ); ?>" class="btn btn-primary">
                     Повернутись на головну
                 </a>
-                <a href="tel:+380630607600" class="btn btn-outline-white">
-                    +38 063 060 76 00
+                <?php $phone_404 = proelectric_get_primary_phone(); ?>
+                <a href="tel:<?= esc_attr( $phone_404['tel'] ) ?>" class="btn btn-outline-white">
+                    <?= esc_html( $phone_404['display'] ) ?>
                 </a>
             </div>
 

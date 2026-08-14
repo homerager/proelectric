@@ -72,6 +72,48 @@ function proelectric_register_theme_settings() {
 					),
 				),
 			),
+			'menu_order'      => 1,
+			'position'        => 'normal',
+			'style'           => 'default',
+			'label_placement' => 'top',
+			'active'          => true,
+		)
+	);
+
+	acf_add_local_field_group(
+		array(
+			'key'    => 'group_theme_phones',
+			'title'  => 'Телефони',
+			'fields' => array(
+				array(
+					'key'          => 'field_theme_phones',
+					'label'        => 'Номери телефонів',
+					'name'         => 'phones',
+					'type'         => 'repeater',
+					'instructions' => 'Перший номер у списку використовується як основний там, де показується лише один телефон (кнопки «Зателефонувати» тощо).',
+					'layout'       => 'table',
+					'button_label' => 'Додати номер',
+					'sub_fields'   => array(
+						array(
+							'key'          => 'field_theme_phone_number',
+							'label'        => 'Номер',
+							'name'         => 'number',
+							'type'         => 'text',
+							'instructions' => 'Формат: +380XXXXXXXXX',
+							'wrapper'      => array( 'width' => '100' ),
+						),
+					),
+				),
+			),
+			'location' => array(
+				array(
+					array(
+						'param'    => 'options_page',
+						'operator' => '==',
+						'value'    => 'theme-settings',
+					),
+				),
+			),
 			'menu_order'      => 0,
 			'position'        => 'normal',
 			'style'           => 'default',
@@ -130,6 +172,69 @@ function proelectric_get_vacancy_form_id() {
 	}
 
 	return (int) get_option( 'proelectric_vacancy_form_id' );
+}
+
+/**
+ * Returns configured phone numbers as a list of ['tel' => '+380XXXXXXXXX', 'display' => '+38 0XX XXX XX XX'].
+ * Falls back to the site's original two numbers if none are configured yet.
+ * The first entry is the "primary" number used wherever only one phone is shown.
+ */
+function proelectric_get_phones() {
+	$phones = array();
+
+	if ( function_exists( 'get_field' ) ) {
+		$rows = get_field( 'phones', 'option' );
+
+		if ( is_array( $rows ) ) {
+			foreach ( $rows as $row ) {
+				$raw = trim( $row['number'] ?? '' );
+
+				if ( '' !== $raw ) {
+					$phones[] = proelectric_format_phone( $raw );
+				}
+			}
+		}
+	}
+
+	if ( empty( $phones ) ) {
+		$phones = array(
+			proelectric_format_phone( '+380630607600' ),
+			proelectric_format_phone( '+380684526450' ),
+		);
+	}
+
+	return $phones;
+}
+
+/**
+ * Returns the primary (first) configured phone number, or empty strings if none exist.
+ */
+function proelectric_get_primary_phone() {
+	$phones = proelectric_get_phones();
+
+	return $phones[0] ?? array(
+		'tel'     => '',
+		'display' => '',
+	);
+}
+
+/**
+ * Formats a raw phone number into a tel: href and a "+38 0XX XXX XX XX" display string.
+ */
+function proelectric_format_phone( $raw ) {
+	$digits = preg_replace( '/[^0-9]/', '', $raw );
+
+	if ( preg_match( '/^380(\d{2})(\d{3})(\d{2})(\d{2})$/', $digits, $m ) ) {
+		return array(
+			'tel'     => '+' . $digits,
+			'display' => '+38 0' . $m[1] . ' ' . $m[2] . ' ' . $m[3] . ' ' . $m[4],
+		);
+	}
+
+	return array(
+		'tel'     => '' !== $digits ? '+' . $digits : '',
+		'display' => $raw,
+	);
 }
 
 /**

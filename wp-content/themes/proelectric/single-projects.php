@@ -11,6 +11,8 @@
  * @package Proelectric
  */
 
+$proelectric_phone = proelectric_get_primary_phone();
+
 get_header();
 
 
@@ -164,7 +166,7 @@ while ( have_posts() ) :
 					<div class="project-side-cta-title">Потрібен схожий проєкт?</div>
 					<p>Залиште заявку — підготуємо рішення та орієнтовну вартість під ваш об'єкт.</p>
 					<a href="#contact" class="btn btn-primary scroll-to-btn">Отримати консультацію</a>
-					<a href="tel:+380630607600" class="project-side-phone">+38 063 060 76 00</a>
+					<a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="project-side-phone"><?= esc_html( $proelectric_phone['display'] ) ?></a>
 				</div>
 			</aside>
 		</div>
@@ -245,7 +247,7 @@ if ( $related->have_posts() ) :
 			</div>
 			<div class="col-md-5 col-12">
 				<div class="cta-actions justify-content-md-end">
-					<a href="tel:+380630607600" class="btn btn-white">Зателефонувати</a>
+					<a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
 				</div>
 			</div>
 		</div>

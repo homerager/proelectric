@@ -3,6 +3,8 @@
   Template Name: Electrical panel equipment
  */
 get_header();
+
+$proelectric_phone = proelectric_get_primary_phone();
 ?>
 <section class="hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/electrical-panel-equipment-hero.webp'; ?>)">
     <div class="container">
@@ -626,7 +628,7 @@ get_header();
             </div>
             <div class="col-md-5 col-12">
                 <div class="cta-actions  justify-content-md-end">
-                    <a href="tel:+380630607600" class="btn btn-white">Зателефонувати</a>
+                    <a href="tel:<?= esc_attr( $proelectric_phone['tel'] ) ?>" class="btn btn-white">Зателефонувати</a>
                     <a href="#contact" class="btn btn-outline-white scroll-to-btn">Написати нам</a>
                 </div>
             </div>

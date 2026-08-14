@@ -36,7 +36,10 @@
 	<div class="container">
 		<div class="header-inner">
 			<div class="header-row d-flex align-items-center justify-content-between">
-				<?php $header_messengers = function_exists( 'proelectric_get_messengers' ) ? proelectric_get_messengers() : array(); ?>
+				<?php
+				$header_messengers = function_exists( 'proelectric_get_messengers' ) ? proelectric_get_messengers() : array();
+				$header_phones     = function_exists( 'proelectric_get_phones' ) ? proelectric_get_phones() : array();
+				?>
 				<div class="site-logo">
 					<a href="<?= esc_url( home_url( '/' ) ); ?>" class="logo">
 						<img src="<?= get_template_directory_uri(); ?>/images/logo.webp" class="logo-mark" alt="Прогрес електрик">
@@ -60,8 +63,9 @@
 						?>
 					</nav>
 					<div class="mobile-contacts">
-						<a href="tel:+380630607600" class="mobile-contacts-phone">+38 063 060 76 00</a>
-						<a href="tel:+380684526450" class="mobile-contacts-phone">+38 068 452 64 50</a>
+						<?php foreach ( $header_phones as $phone ) : ?>
+							<a href="tel:<?= esc_attr( $phone['tel'] ) ?>" class="mobile-contacts-phone"><?= esc_html( $phone['display'] ) ?></a>
+						<?php endforeach; ?>
 						<?php if ( $header_messengers ) : ?>
 							<div class="mobile-contacts-messengers">
 								<?php foreach ( $header_messengers as $key => $messenger ) : ?>
@@ -85,18 +89,16 @@
 					<?php endif; ?>
 					<div class="header-contacts">
 						<button type="button" class="header-contacts-toggle" aria-expanded="false" aria-controls="header-contacts-dropdown">
-							+38 063 060 76 00
+							<?= esc_html( $header_phones[0]['display'] ?? '' ) ?>
 							<svg class="caret" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
 						</button>
 						<div class="header-contacts-dropdown" id="header-contacts-dropdown">
-							<a href="tel:+380630607600" class="header-contact-item">
-								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-								+38 063 060 76 00
-							</a>
-							<a href="tel:+380684526450" class="header-contact-item">
-								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-								+38 068 452 64 50
-							</a>
+							<?php foreach ( $header_phones as $phone ) : ?>
+								<a href="tel:<?= esc_attr( $phone['tel'] ) ?>" class="header-contact-item">
+									<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 13a19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 3.6 2h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+									<?= esc_html( $phone['display'] ) ?>
+								</a>
+							<?php endforeach; ?>
 							<a href="mailto:progreselectric@gmail.com" class="header-contact-item">
 								<svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
 								progreselectric@gmail.com

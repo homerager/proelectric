@@ -9,6 +9,8 @@
  * @package Proelectric
  */
 
+$footer_phones = function_exists( 'proelectric_get_phones' ) ? proelectric_get_phones() : array();
+
 ?>
 
 <footer>
@@ -62,8 +64,9 @@
 								</svg>
 							</div>	
 							<div>
-								<a href="tel:+380630607600" class="d-block">+38 063 060 76 00</a>
-								<a href="tel:+380684526450" class="d-block">+38 068 452 64 50</a>
+								<?php foreach ( $footer_phones as $phone ) : ?>
+									<a href="tel:<?= esc_attr( $phone['tel'] ) ?>" class="d-block"><?= esc_html( $phone['display'] ) ?></a>
+								<?php endforeach; ?>
 							</div>
 						</li>
 						<li>
