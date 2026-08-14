@@ -41,19 +41,19 @@ $proelectric_phone = proelectric_get_primary_phone();
     <div class="hero-stats">
         <div class="container">
             <div class="hero-stats-row d-flex justify-content-between">
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">500<span class="unit">+</span></div>
                     <div class="stat-label">Щитів<br>встановлено</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">6300<span class="unit"> А</span></div>
                     <div class="stat-label">Максимальний<br>струм щита</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">1<span class="unit"> день</span></div>
                     <div class="stat-label">Монтаж<br>квартирного щита</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">5<span class="unit"> р.</span></div>
                     <div class="stat-label">Гарантія<br>на обладнання</div>
                 </div>

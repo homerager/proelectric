@@ -64,7 +64,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <h2 class="section-title">ЯКА СЕС ПІДХОДИТЬ ВАШОМУ БУДИНКУ</h2>
             <p class="section-sub">Три рішення для різних потреб — від базової мережевої станції до повністю автономної системи.</p>
         </div>
-        <div class="sol-grid wf-animate-grid d-grid md-grid-3-columns">
+        <div class="sol-grid wf-animate-grid d-grid md-grid-3-columns gap-16">
             <div class="sol-card white-card-bottom-border-hover wf-animate">
                 <div class="sol-thumb t1">
                     <div class="sol-badge">Мережева</div>
@@ -154,7 +154,7 @@ $proelectric_phone = proelectric_get_primary_phone();
         <div class="how-inner">
             <!-- animated SVG diagram -->
             <div class="how-diagram wf-animate">
-                <svg width="440" height="360" viewBox="0 0 440 360" fill="none">
+                <svg width="440" height="360" viewBox="0 0 440 360" fill="none" style="width: 100%">
                     <defs>
                         <linearGradient id="hd1" x1="0" y1="0" x2="1" y2="1">
                             <stop offset="0%" stop-color="#1a5fa8" stop-opacity=".7"/>
@@ -650,7 +650,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <!-- Mock dashboard -->
             <div class="monitor-screen wf-animate">
                 <div class="ms-title">Дашборд · Сьогодні · 14:32</div>
-                <div class="ms-grid">
+                <div class="ms-grid d-grid grid-2-columns gap-16 mb-4">
                     <div class="ms-val">
                         <div class="ms-val-num gn">18.4</div>
                         <div class="ms-val-lbl">Генерація кВт·год</div>

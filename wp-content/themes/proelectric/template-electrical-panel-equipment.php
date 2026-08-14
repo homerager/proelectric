@@ -210,7 +210,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <div class="config-steps reveal">
                 <!-- Step 1 -->
                 <div class="config-step active" onclick="activateStep(this, 1)">
-                    <div class="step-head">
+                    <div class="step-head d-flex align-items-center gap-16">
                         <div class="step-num-badge">1</div>
                         <div class="step-title">Тип об'єкта</div>
                     </div>
@@ -237,7 +237,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 </div>
                 <!-- Step 2 -->
                 <div class="config-step" onclick="activateStep(this, 2)">
-                    <div class="step-head">
+                    <div class="step-head d-flex align-items-center gap-16">
                         <div class="step-num-badge">2</div>
                         <div class="step-title">Тип щита</div>
                     </div>
@@ -268,7 +268,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 </div>
                 <!-- Step 3 -->
                 <div class="config-step" onclick="activateStep(this, 3)">
-                    <div class="step-head">
+                    <div class="step-head d-flex align-items-center gap-16">
                         <div class="step-num-badge">3</div>
                         <div class="step-title">Струм / потужність</div>
                     </div>
@@ -295,7 +295,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                 </div>
                 <!-- Step 4 -->
                 <div class="config-step" onclick="activateStep(this, 4)">
-                    <div class="step-head">
+                    <div class="step-head d-flex align-items-center gap-16">
                         <div class="step-num-badge">4</div>
                         <div class="step-title">Клас обладнання</div>
                     </div>

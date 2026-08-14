@@ -122,19 +122,19 @@ $proelectric_phone = proelectric_get_primary_phone();
     <div class="hero-stats">
         <div class="container">
             <div class="hero-stats-row d-flex justify-content-between">
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">330<span class="unit"> кВ</span></div>
                     <div class="stat-label">Максимальна<br>напруга ліній</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">300<span class="unit">+ км</span></div>
                     <div class="stat-label">Збудовано<br>ліній</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">1500<span class="unit">+</span></div>
                     <div class="stat-label">Опор<br>встановлено</div>
                 </div>
-                <div class="hero-stat-item">
+                <div class="hero-stat-item d-flex align-items-center gap-16">
                     <div class="stat-num">3<span class="unit"> р.</span></div>
                     <div class="stat-label">Гарантія<br>на монтаж</div>
                 </div>
