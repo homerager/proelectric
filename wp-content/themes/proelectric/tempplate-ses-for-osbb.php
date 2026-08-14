@@ -65,14 +65,7 @@ get_header();
         <div class="why-rows">
             <div class="why-row reveal">
                 <div class="why-visual c1">
-                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" style="position:relative;z-index:1">
-                        <circle cx="80" cy="60" r="36" stroke="rgba(255,255,255,.35)" stroke-width="2" fill="none"/>
-                        <path d="M80 30 L72 55 H80 L72 85 L96 48 H84 Z" fill="rgba(245,197,24,.85)"/>
-                        <rect x="20" y="110" width="120" height="8" rx="2" fill="rgba(255,255,255,.15)"/>
-                        <rect x="35" y="122" width="6" height="28" fill="rgba(255,255,255,.1)"/>
-                        <rect x="77" y="122" width="6" height="28" fill="rgba(255,255,255,.1)"/>
-                        <rect x="119" y="122" width="6" height="28" fill="rgba(255,255,255,.1)"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-osbb-img-1.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для ОСББ">
                 </div>
                 <div class="why-text">
                     <div class="why-num">01</div>
@@ -87,19 +80,7 @@ get_header();
             </div>
             <div class="why-row reverse reveal">
                 <div class="why-visual c2">
-                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" style="position:relative;z-index:1">
-                        <rect x="30" y="50" width="100" height="70" rx="3" stroke="rgba(255,255,255,.35)" stroke-width="1.5" fill="none"/>
-                        <line x1="30" y1="72" x2="130" y2="72" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
-                        <rect x="40" y="80" width="18" height="12" rx="1" fill="rgba(255,255,255,.15)"/>
-                        <rect x="62" y="80" width="18" height="12" rx="1" fill="rgba(255,255,255,.15)"/>
-                        <rect x="84" y="80" width="18" height="12" rx="1" fill="rgba(45,181,81,.4)"/>
-                        <rect x="106" y="80" width="14" height="12" rx="1" fill="rgba(255,255,255,.15)"/>
-                        <rect x="40" y="98" width="18" height="12" rx="1" fill="rgba(255,255,255,.15)"/>
-                        <rect x="62" y="98" width="18" height="12" rx="1" fill="rgba(26,95,168,.4)"/>
-                        <rect x="84" y="98" width="18" height="12" rx="1" fill="rgba(255,255,255,.15)"/>
-                        <path d="M80 30 L80 50" stroke="rgba(255,255,255,.3)" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="80" cy="26" r="8" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="none"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-osbb-img-2.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для ОСББ">
                 </div>
                 <div class="why-text">
                     <div class="why-num">02</div>
@@ -114,12 +95,7 @@ get_header();
             </div>
             <div class="why-row reveal">
                 <div class="why-visual c3">
-                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" style="position:relative;z-index:1">
-                        <path d="M80 20 L30 48 v64 l50 28 50-28V48 Z" stroke="rgba(255,255,255,.3)" stroke-width="1.5" fill="none"/>
-                        <path d="M80 40 L50 57 v46 l30 16 30-16V57 Z" fill="rgba(255,255,255,.05)" stroke="rgba(45,181,81,.35)" stroke-width="1"/>
-                        <circle cx="80" cy="80" r="16" fill="rgba(45,181,81,.2)" stroke="rgba(45,181,81,.5)" stroke-width="1.5"/>
-                        <path d="M74 80 l5 5 8-8" stroke="rgba(45,181,81,.9)" stroke-width="2" stroke-linecap="round" fill="none"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-osbb-img-3.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для ОСББ">
                 </div>
                 <div class="why-text">
                     <div class="why-num">03</div>
@@ -134,18 +110,7 @@ get_header();
             </div>
             <div class="why-row reverse reveal">
                 <div class="why-visual c4">
-                    <svg width="160" height="160" viewBox="0 0 160 160" fill="none" style="position:relative;z-index:1">
-                        <rect x="25" y="40" width="48" height="80" rx="2" stroke="rgba(255,255,255,.25)" stroke-width="1.5" fill="rgba(255,255,255,.04)"/>
-                        <rect x="87" y="55" width="48" height="65" rx="2" stroke="rgba(255,255,255,.25)" stroke-width="1.5" fill="rgba(255,255,255,.04)"/>
-                        <!-- panels on both -->
-                        <rect x="28" y="33" width="42" height="10" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
-                        <rect x="90" y="48" width="42" height="10" rx="1" fill="rgba(45,181,81,.2)" stroke="rgba(45,181,81,.4)" stroke-width="1"/>
-                        <!-- connection -->
-                        <path d="M73 38 Q80 38 80 55 Q80 63 87 58" stroke="rgba(45,181,81,.4)" stroke-width="1.5" fill="none" stroke-dasharray="4 3"/>
-                        <!-- meter box -->
-                        <rect x="60" y="105" width="40" height="28" rx="2" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
-                        <text x="80" y="122" text-anchor="middle" font-family="monospace" font-size="9" fill="rgba(45,181,81,.7)">kWh</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-osbb-img-4.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для ОСББ">
                 </div>
                 <div class="why-text">
                     <div class="why-num">04</div>

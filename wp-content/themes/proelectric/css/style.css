@@ -2573,22 +2573,6 @@ form.submitting .wpcf7-spinner {
     overflow: hidden;
 }
 
-.why-visual.c1 {
-    background: linear-gradient(135deg, #0e3660, #1a5fa8)
-}
-
-.why-visual.c2 {
-    background: linear-gradient(135deg, #1a5fa8, #2db551)
-}
-
-.why-visual.c3 {
-    background: linear-gradient(135deg, #1a7a32, #2db551)
-}
-
-.why-visual.c4 {
-    background: linear-gradient(135deg, #0a2845, #154d8c)
-}
-
 .why-visual::before {
     content: '';
     position: absolute;
@@ -5300,6 +5284,40 @@ form.submitting .wpcf7-spinner {
     background: var(--bg);
     padding-top: 80px;
     padding-bottom: 100px;
+}
+
+/* Tag filter bar */
+.blog-tag-filter {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 48px;
+}
+
+.blog-tag-filter-item {
+    display: inline-flex;
+    align-items: center;
+    padding: 9px 20px;
+    border: 1px solid var(--border);
+    border-radius: 100px;
+    background: var(--card);
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: .5px;
+    color: var(--muted);
+    text-transform: uppercase;
+    transition: border-color .2s, color .2s, background .2s;
+}
+
+.blog-tag-filter-item:hover {
+    border-color: var(--blue);
+    color: var(--blue);
+}
+
+.blog-tag-filter-item.active {
+    background: linear-gradient(135deg, var(--blue), var(--green));
+    border-color: transparent;
+    color: #fff;
 }
 
 .blog-gap {

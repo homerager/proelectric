@@ -63,66 +63,7 @@ get_header();
             </div>
             <div class="story-visual reveal">
                 <div class="story-img-wrap">
-                    <!-- Stylized energy infrastructure illustration -->
-                    <svg width="380" height="300" viewBox="0 0 380 300" fill="none" style="position:relative;z-index:1;opacity:.7">
-                    <defs>
-                        <linearGradient id="sg1" x1="0" y1="0" x2="1" y2="1">
-                        <stop offset="0%" stop-color="#fff" stop-opacity=".3"/>
-                        <stop offset="100%" stop-color="#2db551" stop-opacity=".15"/>
-                        </linearGradient>
-                    </defs>
-                    <!-- Power towers -->
-                    <line x1="60" y1="40" x2="60" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
-                    <line x1="40" y1="90" x2="80" y2="90" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                    <line x1="35" y1="130" x2="85" y2="130" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                    <line x1="50" y1="80" x2="40" y2="95" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-                    <line x1="70" y1="80" x2="80" y2="95" stroke="rgba(255,255,255,0.2)" stroke-width="1.5"/>
-
-                    <line x1="180" y1="20" x2="180" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
-                    <line x1="158" y1="70" x2="202" y2="70" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                    <line x1="152" y1="115" x2="208" y2="115" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-
-                    <line x1="300" y1="50" x2="300" y2="240" stroke="rgba(255,255,255,0.3)" stroke-width="3"/>
-                    <line x1="278" y1="100" x2="322" y2="100" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-                    <line x1="272" y1="140" x2="328" y2="140" stroke="rgba(255,255,255,0.3)" stroke-width="2"/>
-
-                    <!-- Power lines -->
-                    <path d="M40 95 Q110 110 158 70" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-                    <path d="M80 95 Q130 108 202 70" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-                    <path d="M158 70 Q240 55 278 100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-                    <path d="M202 70 Q250 58 322 100" stroke="rgba(255,255,255,0.2)" stroke-width="1.5" fill="none"/>
-
-                    <!-- Solar panels at bottom -->
-                    <g opacity=".6">
-                        <rect x="20" y="250" width="50" height="32" rx="2" fill="none" stroke="rgba(45,181,81,0.5)" stroke-width="1.5"/>
-                        <line x1="20" y1="266" x2="70" y2="266" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="37" y1="250" x2="37" y2="282" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="53" y1="250" x2="53" y2="282" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-
-                        <rect x="85" y="255" width="50" height="32" rx="2" fill="none" stroke="rgba(45,181,81,0.5)" stroke-width="1.5"/>
-                        <line x1="85" y1="271" x2="135" y2="271" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="102" y1="255" x2="102" y2="287" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="118" y1="255" x2="118" y2="287" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-
-                        <rect x="152" y="248" width="60" height="36" rx="2" fill="none" stroke="rgba(45,181,81,0.6)" stroke-width="1.5"/>
-                        <line x1="152" y1="266" x2="212" y2="266" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="172" y1="248" x2="172" y2="284" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="192" y1="248" x2="192" y2="284" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-
-                        <rect x="228" y="252" width="50" height="32" rx="2" fill="none" stroke="rgba(45,181,81,0.5)" stroke-width="1.5"/>
-                        <line x1="228" y1="268" x2="278" y2="268" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="245" y1="252" x2="245" y2="284" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="261" y1="252" x2="261" y2="284" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-
-                        <rect x="295" y="256" width="50" height="32" rx="2" fill="none" stroke="rgba(45,181,81,0.5)" stroke-width="1.5"/>
-                        <line x1="295" y1="272" x2="345" y2="272" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="312" y1="256" x2="312" y2="288" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                        <line x1="328" y1="256" x2="328" y2="288" stroke="rgba(45,181,81,0.3)" stroke-width="1"/>
-                    </g>
-
-                    <!-- Ground line -->
-                    <line x1="0" y1="243" x2="380" y2="243" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/about-us.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Прогрес електрик">
                 </div>
                 <div class="story-badge">
                     <div class="story-badge-num">10+</div>

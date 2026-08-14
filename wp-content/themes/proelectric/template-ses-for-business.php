@@ -4,53 +4,7 @@
  */
 get_header();
 ?>
-<section class="hero hero-bg-svg hero-ses-for-business">
-    <div class="hero-photo"></div>
-    <!-- animated building + sun deco -->
-    <div class="hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <linearGradient id="hg1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1a5fa8" stop-opacity=".4"/>
-                    <stop offset="100%" stop-color="#2db551" stop-opacity=".2"/>
-                </linearGradient>
-                <linearGradient id="hg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%" stop-color="#f5c518" stop-opacity=".4"/>
-                    <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-            <!-- sun -->
-            <circle cx="700" cy="80" r="100" fill="url(#hg2)" opacity=".4"/>
-            <!-- factory / warehouse silhouette -->
-            <rect x="100" y="500" width="1200" height="400" fill="rgba(255,255,255,.025)" stroke="rgba(255,255,255,.05)" stroke-width="1"/>
-            <rect x="200" y="420" width="300" height="480" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <rect x="900" y="440" width="250" height="460" fill="rgba(255,255,255,.02)" stroke="rgba(255,255,255,.04)" stroke-width="1"/>
-            <!-- chimney / tower -->
-            <rect x="480" y="280" width="30" height="220" fill="rgba(255,255,255,.04)"/>
-            <rect x="890" y="310" width="30" height="190" fill="rgba(255,255,255,.04)"/>
-            <!-- rooftop solar panels array -->
-            <rect x="120" y="490" width="1160" height="14" rx="2" fill="rgba(26,95,168,.18)" stroke="rgba(26,95,168,.35)" stroke-width="1"/>
-            <line x1="240" y1="490" x2="240" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="360" y1="490" x2="360" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="480" y1="490" x2="480" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="600" y1="490" x2="600" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="720" y1="490" x2="720" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="840" y1="490" x2="840" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="960" y1="490" x2="960" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="1080" y1="490" x2="1080" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="1200" y1="490" x2="1200" y2="504" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <!-- second panel row -->
-            <rect x="120" y="470" width="1160" height="14" rx="2" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.25)" stroke-width="1"/>
-            <!-- energy lines -->
-            <path d="M700 80 Q700 300 700 490" stroke="rgba(245,197,24,.15)" stroke-width="2" fill="none" stroke-dasharray="8 8"/>
-            <path d="M400 80 Q400 300 350 490" stroke="rgba(245,197,24,.1)" stroke-width="1.5" fill="none" stroke-dasharray="6 8"/>
-            <path d="M1000 80 Q1000 300 1050 490" stroke="rgba(245,197,24,.1)" stroke-width="1.5" fill="none" stroke-dasharray="6 8"/>
-            <!-- ground energy flows -->
-            <path d="M700 504 Q700 600 500 650" stroke="rgba(45,181,81,.2)" stroke-width="1.5" fill="none" stroke-dasharray="5 6"/>
-            <path d="M700 504 Q700 600 900 650" stroke="rgba(45,181,81,.15)" stroke-width="1.5" fill="none" stroke-dasharray="5 6"/>
-        </svg>
-    </div>
-    <div class="hero-tint"></div>
+<section class="hero hero-ses-for-business" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-ses-dlya-biznesu.webp'; ?>)">
     <div class="container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">

@@ -39,6 +39,8 @@ get_header();
 <section class="page-section blog-listing-section">
     <div class="container">
 
+        <?php get_template_part( 'template-parts/general/blog-tag-filter' ); ?>
+
         <?php if ( have_posts() ) : ?>
 
         <div class="blog-grid d-grid lg-grid-3-columns md-grid-2-columns blog-gap wf-animate-grid">
