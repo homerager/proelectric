@@ -8,83 +8,7 @@ $proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <!-- HERO -->
-<section class="hero ind-solar-hero">
-
-    <div class="ind-solar-hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <radialGradient id="isg1" cx="50%" cy="20%" r="55%">
-                    <stop offset="0%"   stop-color="#f5c518" stop-opacity=".35"/>
-                    <stop offset="100%" stop-color="#f5c518" stop-opacity="0"/>
-                </radialGradient>
-                <linearGradient id="isg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#1a5fa8" stop-opacity=".0"/>
-                    <stop offset="60%"  stop-color="#1a5fa8" stop-opacity=".18"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity=".08"/>
-                </linearGradient>
-                <linearGradient id="isg3" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%"   stop-color="#f5c518" stop-opacity="0"/>
-                    <stop offset="30%"  stop-color="#f5c518" stop-opacity=".2"/>
-                    <stop offset="70%"  stop-color="#1a5fa8" stop-opacity=".2"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity="0"/>
-                </linearGradient>
-            </defs>
-
-            <!-- sun glow -->
-            <circle cx="700" cy="90" r="160" fill="url(#isg1)"/>
-            <circle cx="700" cy="90" r="80"  fill="rgba(245,197,24,.12)"/>
-
-            <!-- subtle horizon fill -->
-            <rect x="0" y="550" width="1400" height="350" fill="url(#isg2)"/>
-
-            <!-- factory silhouette -->
-            <rect x="0"    y="560" width="1400" height="340" fill="rgba(255,255,255,.018)"/>
-            <rect x="50"   y="460" width="260"  height="440" fill="rgba(255,255,255,.015)" stroke="rgba(255,255,255,.03)" stroke-width="1"/>
-            <rect x="370"  y="500" width="180"  height="400" fill="rgba(255,255,255,.012)" stroke="rgba(255,255,255,.025)" stroke-width="1"/>
-            <rect x="850"  y="480" width="240"  height="420" fill="rgba(255,255,255,.015)" stroke="rgba(255,255,255,.03)" stroke-width="1"/>
-            <rect x="1150" y="510" width="200"  height="390" fill="rgba(255,255,255,.012)" stroke="rgba(255,255,255,.025)" stroke-width="1"/>
-            <!-- chimneys -->
-            <rect x="110"  y="330" width="22" height="130" fill="rgba(255,255,255,.03)"/>
-            <rect x="155"  y="350" width="22" height="110" fill="rgba(255,255,255,.025)"/>
-            <rect x="910"  y="340" width="22" height="140" fill="rgba(255,255,255,.03)"/>
-            <rect x="1050" y="360" width="18" height="120" fill="rgba(255,255,255,.02)"/>
-
-            <!-- GROUND SOLAR ARRAY — rows of panels -->
-            <!-- row 1 -->
-            <rect x="30"   y="544" width="1340" height="16" rx="1" fill="rgba(26,95,168,.28)" stroke="rgba(26,95,168,.5)" stroke-width="1"/>
-            <!-- row 2 -->
-            <rect x="30"   y="524" width="1340" height="16" rx="1" fill="rgba(26,95,168,.22)" stroke="rgba(26,95,168,.4)" stroke-width="1"/>
-            <!-- row 3 -->
-            <rect x="30"   y="504" width="1340" height="16" rx="1" fill="rgba(26,95,168,.16)" stroke="rgba(26,95,168,.3)" stroke-width="1"/>
-            <!-- row 4 -->
-            <rect x="30"   y="484" width="1340" height="16" rx="1" fill="rgba(26,95,168,.10)" stroke="rgba(26,95,168,.22)" stroke-width="1"/>
-            <!-- column dividers on row 1 -->
-            <?php for ($x = 100; $x < 1370; $x += 70): ?>
-            <line x1="<?= $x ?>" y1="544" x2="<?= $x ?>" y2="560" stroke="rgba(26,95,168,.18)" stroke-width="1"/>
-            <line x1="<?= $x ?>" y1="524" x2="<?= $x ?>" y2="540" stroke="rgba(26,95,168,.14)" stroke-width="1"/>
-            <?php endfor; ?>
-
-            <!-- energy flow lines from panels to inverter station -->
-            <path d="M350 544 Q350 620 500 680" stroke="rgba(245,197,24,.18)" stroke-width="2" fill="none" stroke-dasharray="8 7"/>
-            <path d="M700 544 Q700 610 700 680" stroke="rgba(245,197,24,.22)" stroke-width="2.5" fill="none" stroke-dasharray="8 7"/>
-            <path d="M1050 544 Q1050 620 900 680" stroke="rgba(245,197,24,.18)" stroke-width="2" fill="none" stroke-dasharray="8 7"/>
-
-            <!-- inverter/transformer station -->
-            <rect x="580" y="680" width="240" height="60" rx="3" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
-            <text x="700" y="716" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="13" fill="rgba(26,95,168,.55)" letter-spacing="3">ТРАНСФОРМАТОРНА ПС</text>
-
-            <!-- grid connection line -->
-            <line x1="700" y1="740" x2="700" y2="800" stroke="rgba(45,181,81,.3)" stroke-width="2.5" stroke-dasharray="6 5"/>
-            <rect x="620" y="800" width="160" height="50" rx="2" fill="rgba(45,181,81,.06)" stroke="rgba(45,181,81,.25)" stroke-width="1.5"/>
-            <text x="700" y="831" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(45,181,81,.45)" letter-spacing="2">МЕРЕЖА 35/110 кВ</text>
-
-            <!-- horizontal energy bar label at bottom -->
-            <line x1="0" y1="860" x2="1400" y2="860" stroke="url(#isg3)" stroke-width="1.5" stroke-dasharray="10 8"/>
-        </svg>
-    </div>
-
-    <div class="ind-solar-hero-tint"></div>
-
+<section class="hero ind-solar-hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-promyslovi-sonyachni-elektrostancziyi.webp'; ?>)">
     <div class="container relative-container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
@@ -110,7 +34,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Проєктуємо та будуємо наземні та дахові СЕС від 500 кВт до 50 МВт. Повний цикл: від технічного аудиту і проекту до підключення до мережі, оформлення тарифу та сервісу.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Отримати КП</a>
-                <a href="#solutions" class="btn btn-outline-white scroll-to-btn">Типи СЕС</a>
+                <a href="#solutions" class="btn btn-white scroll-to-btn">Типи СЕС</a>
             </div>
         </div>
     </div>
@@ -439,67 +363,8 @@ $proelectric_phone = proelectric_get_primary_phone();
 
         <div class="cables-split-inner wf-animate">
             <div class="cables-split-visual">
-                <div class="cables-split-accent" style="background:radial-gradient(circle at 55% 45%, rgba(245,197,24,.12) 0%, transparent 70%)"></div>
-                <svg width="340" height="380" viewBox="0 0 340 380" fill="none" style="position:relative;z-index:1">
-                    <defs>
-                        <linearGradient id="spg1" x1="0" y1="0" x2="1" y2="1">
-                            <stop offset="0%"   stop-color="#f5c518" stop-opacity=".6"/>
-                            <stop offset="100%" stop-color="#1a5fa8" stop-opacity=".5"/>
-                        </linearGradient>
-                    </defs>
-
-                    <!-- ground array – 3 rows of panels -->
-                    <?php
-                    $rows_y = [30, 60, 90];
-                    $opacities = ['.45', '.35', '.25'];
-                    foreach ($rows_y as $i => $ry): ?>
-                    <rect x="20" y="<?= $ry ?>" width="300" height="22" rx="2"
-                          fill="rgba(26,95,168,<?= $opacities[$i] ?>)"
-                          stroke="rgba(26,95,168,.6)" stroke-width="1.2"/>
-                    <?php for ($cx = 60; $cx < 320; $cx += 40): ?>
-                    <line x1="<?= $cx ?>" y1="<?= $ry ?>" x2="<?= $cx ?>" y2="<?= $ry + 22 ?>"
-                          stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                    <?php endfor; ?>
-                    <?php endforeach; ?>
-
-                    <!-- support legs -->
-                    <?php foreach ([40, 100, 160, 220, 280] as $lx): ?>
-                    <line x1="<?= $lx ?>" y1="112" x2="<?= $lx ?>" y2="135"
-                          stroke="rgba(255,255,255,.18)" stroke-width="1.5"/>
-                    <?php endforeach; ?>
-
-                    <!-- combiner box -->
-                    <rect x="100" y="140" width="140" height="36" rx="3" fill="rgba(255,255,255,.05)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
-                    <text x="170" y="163" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(245,197,24,.7)" letter-spacing="2">COMBINER BOX</text>
-
-                    <!-- DC cable to inverter -->
-                    <line x1="170" y1="176" x2="170" y2="200" stroke="rgba(245,197,24,.4)" stroke-width="2" stroke-dasharray="5 4"/>
-
-                    <!-- central inverter -->
-                    <rect x="80" y="200" width="180" height="50" rx="4" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.5)" stroke-width="2"/>
-                    <text x="170" y="223" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="12" fill="rgba(26,95,168,.85)" letter-spacing="3">ІНВЕРТОР</text>
-                    <text x="170" y="238" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,.4)" font-family="Montserrat,sans-serif">Central / String 500 кВт+</text>
-
-                    <!-- AC cable to transformer -->
-                    <line x1="170" y1="250" x2="170" y2="276" stroke="rgba(45,181,81,.4)" stroke-width="2"/>
-
-                    <!-- step-up transformer -->
-                    <rect x="90" y="276" width="160" height="44" rx="3" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.45)" stroke-width="1.5"/>
-                    <text x="170" y="296" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(45,181,81,.8)" letter-spacing="2">ТРАНСФОРМАТОР</text>
-                    <text x="170" y="311" text-anchor="middle" font-size="9"  fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif">0,4 / 10 / 35 кВ</text>
-
-                    <!-- grid connection -->
-                    <line x1="170" y1="320" x2="170" y2="344" stroke="rgba(45,181,81,.35)" stroke-width="2"/>
-                    <rect x="80"  y="344" width="180" height="30" rx="2" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                    <text x="170" y="363" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="Montserrat,sans-serif">Мережа 10 / 35 / 110 кВ</text>
-
-                    <!-- monitoring icons -->
-                    <circle cx="310" cy="220" r="14" fill="rgba(245,197,24,.08)" stroke="rgba(245,197,24,.3)" stroke-width="1.2"/>
-                    <text x="310" y="225" text-anchor="middle" font-size="8" fill="rgba(245,197,24,.6)" font-family="Bebas Neue,sans-serif">SCADA</text>
-                    <line x1="260" y1="225" x2="296" y2="225" stroke="rgba(245,197,24,.2)" stroke-width="1" stroke-dasharray="3 2"/>
-                </svg>
+                <img src="<?= get_template_directory_uri(); ?>/images/static/promyslovi-sonyachni-elektrostancziyi-img-1.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Наземні сес">
             </div>
-
             <div class="cables-split-content">
                 <h3 class="section-label">Технічні стандарти</h3>
                 <h2 class="section-title" style="font-size:clamp(26px,3.5vw,44px)">ТОЧНІСТЬ<br>ПРОМИСЛОВОГО РІВНЯ</h2>

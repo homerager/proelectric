@@ -64,7 +64,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <h2 class="section-title">СЕГМЕНТИ БІЗНЕСУ</h2>
             <div class="section-sub">Підбираємо рішення під специфіку кожного бізнесу — потужність, схему підключення та фінансову модель.</div>
         </div>
-        <div class="segments-nav wf-animate">
+        <div class="segments-nav d-flex wf-animate">
             <button class="tab seg-tab active" onclick="switchTab(0)">Виробництво</button>
             <button class="tab seg-tab" onclick="switchTab(1)">Агросектор</button>
             <button class="tab seg-tab" onclick="switchTab(2)">Комерційна нерухомість</button>
@@ -124,18 +124,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                     </div>
                 </div>
                 <div class="seg-visual sv2">
-                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
-                        <ellipse cx="100" cy="150" rx="80" ry="15" fill="rgba(45,181,81,.15)"/>
-                        <rect x="60" y="100" width="80" height="50" fill="rgba(255,255,255,.07)" stroke="rgba(255,255,255,.2)" stroke-width="1" rx="2"/>
-                        <path d="M50 100 L100 65 L150 100" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1"/>
-                        <rect x="62" y="86" width="76" height="14" rx="1" fill="rgba(45,181,81,.25)" stroke="rgba(45,181,81,.45)" stroke-width="1"/>
-                        <line x1="85" y1="86" x2="85" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <line x1="108" y1="86" x2="108" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <line x1="131" y1="86" x2="131" y2="100" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <circle cx="100" cy="30" r="25" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1.5"/>
-                        <path d="M100 12 L95 26 H101 L96 48 L112 22 H104.5 Z" fill="rgba(245,197,24,.85)"/>
-                        <path d="M100 100 Q100 120 80 135" stroke="rgba(45,181,81,.3)" stroke-width="1.5" fill="none" stroke-dasharray="4 4"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-biznesu-agrosector.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для бізнесу">
                 </div>
             </div>
             <!-- Panel 2: Commercial real estate -->
@@ -163,23 +152,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                     </div>
                 </div>
                 <div class="seg-visual sv3">
-                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
-                        <rect x="50" y="60" width="100" height="120" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1.5" rx="2"/>
-                        <rect x="60" y="72" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="82" y="72" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="104" y="72" width="18" height="14" rx="1" fill="rgba(45,181,81,.2)"/>
-                        <rect x="126" y="72" width="14" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="60" y="94" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="82" y="94" width="18" height="14" rx="1" fill="rgba(26,95,168,.2)"/>
-                        <rect x="104" y="94" width="18" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="126" y="94" width="14" height="14" rx="1" fill="rgba(255,255,255,.1)"/>
-                        <rect x="50" y="48" width="100" height="14" rx="1" fill="rgba(239,195,24,.2)" stroke="rgba(245,197,24,.4)" stroke-width="1"/>
-                        <line x1="75" y1="48" x2="75" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
-                        <line x1="100" y1="48" x2="100" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
-                        <line x1="125" y1="48" x2="125" y2="62" stroke="rgba(245,197,24,.2)" stroke-width="1"/>
-                        <circle cx="100" cy="25" r="16" fill="rgba(245,197,24,.25)" stroke="rgba(245,197,24,.4)" stroke-width="1"/>
-                        <path d="M100 13 L97 22 H101 L97.5 32 L107 18 H102 Z" fill="rgba(245,197,24,.9)"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-biznesu-comerciyna-neruhomist.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для бізнесу">
                 </div>
             </div>
             <!-- Panel 3: Warehouses -->
@@ -207,20 +180,7 @@ $proelectric_phone = proelectric_get_primary_phone();
                     </div>
                 </div>
                 <div class="seg-visual sv4">
-                    <svg width="200" height="200" viewBox="0 0 200 200" fill="none" style="position:relative;z-index:1">
-                        <rect x="20" y="110" width="160" height="60" fill="rgba(255,255,255,.06)" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                        <path d="M15 110 L100 70 L185 110" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <!-- large panel array on flat roof -->
-                        <rect x="22" y="97" width="156" height="12" rx="1" fill="rgba(26,95,168,.25)" stroke="rgba(26,95,168,.45)" stroke-width="1"/>
-                        <line x1="55" y1="97" x2="55" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="89" y1="97" x2="89" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="123" y1="97" x2="123" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="157" y1="97" x2="157" y2="109" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <rect x="22" y="83" width="156" height="12" rx="1" fill="rgba(26,95,168,.18)" stroke="rgba(26,95,168,.35)" stroke-width="1"/>
-                        <rect x="75" y="130" width="50" height="40" fill="rgba(255,255,255,.04)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <circle cx="100" cy="40" r="22" fill="rgba(245,197,24,.2)" stroke="rgba(245,197,24,.35)" stroke-width="1.5"/>
-                        <path d="M100 24 L96 36 H101 L97 52 L111 30 H104 Z" fill="rgba(245,197,24,.8)"/>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/ses-dlya-biznesu-sklad-i-logistyka.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="СЕС для бізнесу">
                 </div>
             </div>
         </div>

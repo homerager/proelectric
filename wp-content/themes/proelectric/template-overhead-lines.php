@@ -114,7 +114,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Будівництво та реконструкція повітряних ліній електропередачі від 0,4 до 330 кВ. Встановлення опор, підвіска та натягування проводів, монтаж ізоляторів та захисту від блискавок.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Замовити монтаж</a>
-                <a href="#line-types" class="btn btn-outline-white scroll-to-btn">Типи ліній</a>
+                <a href="#line-types" class="btn btn-white scroll-to-btn">Типи ліній</a>
             </div>
         </div>
     </div>

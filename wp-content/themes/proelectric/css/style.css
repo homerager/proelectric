@@ -332,6 +332,18 @@ strong {
     width: 60px;
 }
 
+.h-240 {
+    height: 240px!important;
+}
+
+.h-280 {
+    height: 280px!important;
+}
+
+.h-300 {
+    height: 300px!important;
+}
+
 .h-full {
     height: 100%;
 }
@@ -1294,7 +1306,7 @@ footer .logo .logo-text .brand {
 
 .hero .hero-title {
     font-family: 'Bebas Neue', sans-serif;
-    font-size: clamp(42px, 8vw, 86px);
+    font-size: clamp(46px, 8vw, 86px);
     line-height: 1.1;
     color: #fff;
     letter-spacing: -.5px;
@@ -2267,6 +2279,7 @@ form.submitting .wpcf7-spinner {
     margin-bottom: 32px;
 }
 
+.fact-num,
 .calc-info-num {
     font-family: 'Bebas Neue', sans-serif;
     font-size: 52px;
@@ -3233,10 +3246,8 @@ form.submitting .wpcf7-spinner {
 }
 
 .segments-nav {
-    display: flex;
     gap: 2px;
     background: var(--border);
-    margin-top: 48px
 }
 
 .seg-tab {
@@ -3341,25 +3352,6 @@ form.submitting .wpcf7-spinner {
     overflow: hidden
 }
 
-.seg-visual.sv2 {
-    background: linear-gradient(135deg, #1a5fa8, #1a7a32)
-}
-
-.seg-visual.sv3 {
-    background: linear-gradient(135deg, #0a2845, #239e43)
-}
-
-.seg-visual.sv4 {
-    background: linear-gradient(135deg, #154d8c, #2db551)
-}
-
-.seg-visual::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image: radial-gradient(circle, rgba(255, 255, 255, .08) 1px, transparent 1px);
-    background-size: 22px 22px
-}
 /*-----END SES FOR BUSINESS PAGE-----*/
 
 
@@ -5829,7 +5821,6 @@ form.submitting .wpcf7-spinner {
 
 .cables-hero-deco,
 .backup-hero-deco,
-.ind-solar-hero-deco,
 .page-404-deco,
 .panel-hero-deco,
 .lep-hero-deco,
@@ -6310,38 +6301,8 @@ form.submitting .wpcf7-spinner {
    BACKUP POWER / AVR PAGE
    ============================================================ */
 
-.backup-hero {
-    background: linear-gradient(155deg, #040d08 0%, #091a10 50%, #06100d 100%);
-    background-image: none;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.backup-hero::before {
-    animation: none;
-    background-color: #040d08;
-    background-image: linear-gradient(155deg, #040d08 0%, #091a10 50%, #06100d 100%);
-}
-
-.backup-hero-tint {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background:
-        radial-gradient(ellipse 55% 50% at 50% 30%, rgba(45,181,81,.14) 0%, transparent 65%),
-        radial-gradient(ellipse 30% 40% at 80% 65%, rgba(26,95,168,.1) 0%, transparent 55%);
-    pointer-events: none;
-}
-
-
-
 .backup-hero .hero-content {
     max-width: 900px;
-}
-
-.backup-hero .hero-label {
-    color: var(--green);
-    justify-content: center;
 }
 
 .backup-hero .hero-label::before,
@@ -6368,32 +6329,6 @@ form.submitting .wpcf7-spinner {
 /* ============================================================
    INDUSTRIAL SOLAR POWER PLANTS PAGE
    ============================================================ */
-
-.ind-solar-hero {
-    background: linear-gradient(165deg, #04090e 0%, #0a1520 55%, #050d06 100%);
-    background-image: none;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.ind-solar-hero::before {
-    animation: none;
-    background-color: #04090e;
-    background-image: linear-gradient(165deg, #04090e 0%, #0a1520 55%, #050d06 100%);
-}
-
-.ind-solar-hero-tint {
-    position: absolute;
-    inset: 0;
-    z-index: 2;
-    background:
-        radial-gradient(ellipse 60% 45% at 50% 25%, rgba(245,197,24,.1) 0%, transparent 65%),
-        radial-gradient(ellipse 40% 50% at 20% 60%, rgba(26,95,168,.1) 0%, transparent 60%),
-        radial-gradient(ellipse 30% 40% at 85% 65%, rgba(45,181,81,.07) 0%, transparent 55%);
-    pointer-events: none;
-}
-
-
 
 .ind-solar-hero .hero-content {
     max-width: 940px;
@@ -8871,6 +8806,10 @@ a.partner-logo:hover {
 
     .project-results-grid {
         grid-template-columns: repeat(2, 1fr);
+    }
+
+    .seg-info {
+        padding: 30px 20px;
     }
 }
 

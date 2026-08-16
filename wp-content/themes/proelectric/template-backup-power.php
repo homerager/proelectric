@@ -8,74 +8,7 @@ $proelectric_phone = proelectric_get_primary_phone();
 ?>
 
 <!-- HERO -->
-<section class="hero backup-hero">
-
-    <!-- decorative SVG — circuit / switch deco -->
-    <div class="backup-hero-deco">
-        <svg viewBox="0 0 1400 900" width="100%" height="100%" preserveAspectRatio="xMidYMid slice" fill="none" style="position:absolute;inset:0">
-            <defs>
-                <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="0">
-                    <stop offset="0%"   stop-color="#2db551" stop-opacity="0"/>
-                    <stop offset="35%"  stop-color="#2db551" stop-opacity=".45"/>
-                    <stop offset="65%"  stop-color="#1a5fa8" stop-opacity=".4"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity="0"/>
-                </linearGradient>
-                <linearGradient id="bg2" x1="0" y1="0" x2="0" y2="1">
-                    <stop offset="0%"   stop-color="#2db551" stop-opacity="0"/>
-                    <stop offset="50%"  stop-color="#2db551" stop-opacity=".3"/>
-                    <stop offset="100%" stop-color="#1a5fa8" stop-opacity=".15"/>
-                </linearGradient>
-            </defs>
-
-            <!-- horizontal bus lines -->
-            <line x1="0" y1="180" x2="1400" y2="180" stroke="url(#bg1)" stroke-width="2.5"/>
-            <line x1="0" y1="360" x2="1400" y2="360" stroke="url(#bg1)" stroke-width="1.5"/>
-            <line x1="0" y1="540" x2="1400" y2="540" stroke="url(#bg1)" stroke-width="3"/>
-            <line x1="0" y1="720" x2="1400" y2="720" stroke="url(#bg1)" stroke-width="1.5"/>
-
-            <!-- vertical feeders -->
-            <line x1="220"  y1="0" x2="220"  y2="900" stroke="url(#bg2)" stroke-width="1.5"/>
-            <line x1="500"  y1="0" x2="500"  y2="900" stroke="url(#bg2)" stroke-width="2.5"/>
-            <line x1="780"  y1="0" x2="780"  y2="900" stroke="url(#bg2)" stroke-width="1.5"/>
-            <line x1="1060" y1="0" x2="1060" y2="900" stroke="url(#bg2)" stroke-width="2"/>
-            <line x1="1280" y1="0" x2="1280" y2="900" stroke="url(#bg2)" stroke-width="1.5"/>
-
-            <!-- AVR switch symbols at intersections -->
-            <!-- switch 1 -->
-            <circle cx="220" cy="180" r="8" fill="#2db551" opacity=".55"/>
-            <line x1="210" y1="170" x2="230" y2="190" stroke="#2db551" stroke-width="2" opacity=".6"/>
-            <!-- switch 2 -->
-            <circle cx="500" cy="540" r="10" fill="#2db551" opacity=".65"/>
-            <line x1="490" y1="530" x2="510" y2="550" stroke="#2db551" stroke-width="2.5" opacity=".7"/>
-            <!-- switch 3 -->
-            <circle cx="780" cy="360" r="8" fill="#1a5fa8" opacity=".6"/>
-            <line x1="770" y1="350" x2="790" y2="370" stroke="#1a5fa8" stroke-width="2" opacity=".65"/>
-            <!-- switch 4 -->
-            <circle cx="1060" cy="720" r="7" fill="#1a5fa8" opacity=".5"/>
-            <line x1="1050" y1="710" x2="1070" y2="730" stroke="#1a5fa8" stroke-width="2" opacity=".55"/>
-
-            <!-- generator symbol -->
-            <circle cx="500" cy="180" r="28" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.25)" stroke-width="1.5"/>
-            <circle cx="500" cy="180" r="18" fill="rgba(45,181,81,.06)" stroke="rgba(45,181,81,.18)" stroke-width="1"/>
-            <path d="M491 180 l5-8 8 16 5-8" stroke="rgba(45,181,81,.45)" stroke-width="1.5" fill="none" stroke-linecap="round"/>
-            <text x="500" y="220" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="10" fill="rgba(45,181,81,.35)" letter-spacing="2">ГЕНЕРАТОР</text>
-
-            <!-- battery symbol -->
-            <rect x="740" cy="480" x="740" y="518" width="80" height="44" rx="3" fill="rgba(26,95,168,.07)" stroke="rgba(26,95,168,.25)" stroke-width="1.5"/>
-            <line x1="760" y1="518" x2="760" y2="562" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="780" y1="518" x2="780" y2="562" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <line x1="800" y1="518" x2="800" y2="562" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-            <text x="780" y="582" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="10" fill="rgba(26,95,168,.3)" letter-spacing="2">АКБ</text>
-
-            <!-- AVR label box -->
-            <rect x="380" y="800" width="640" height="60" rx="2" fill="rgba(45,181,81,.04)" stroke="rgba(45,181,81,.12)" stroke-width="1.5"/>
-            <line x1="400" y1="830" x2="1000" y2="830" stroke="rgba(45,181,81,.12)" stroke-width="1" stroke-dasharray="8 6"/>
-            <text x="700" y="836" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(45,181,81,.3)" letter-spacing="3">АВР · РЕЗЕРВНЕ ЖИВЛЕННЯ</text>
-        </svg>
-    </div>
-
-    <div class="backup-hero-tint"></div>
-
+<section class="hero backup-hero" style="--hero-bg: url(<?= get_template_directory_uri() . '/images/banners/hero-rezervne-zhyvlennya-ta-avr.webp'; ?>)">
     <div class="container relative-container">
         <div class="hero-content hero-content-center">
             <nav class="breadcrumb">
@@ -100,7 +33,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Проєктуємо та монтуємо системи гарантованого та безперебійного електропостачання: АВР, генераторні установки, ДБЖ та акумуляторні системи для об'єктів будь-якого масштабу.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Замовити розрахунок</a>
-                <a href="#systems" class="btn btn-outline-white scroll-to-btn">Типи систем</a>
+                <a href="#systems" class="btn btn-white scroll-to-btn">Типи систем</a>
             </div>
         </div>
     </div>
@@ -143,25 +76,9 @@ $proelectric_phone = proelectric_get_primary_phone();
         <div class="cables-methods-grid d-grid lg-grid-3-columns md-grid-2-columns wf-animate-grid">
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm1">
+                <div class="cables-method-thumb h-300">
                     <div class="cables-method-badge">Автоматика</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <rect x="20" y="20" width="60" height="60" rx="3" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.4)" stroke-width="1.5"/>
-                        <!-- main feed -->
-                        <line x1="10" y1="50" x2="30" y2="50" stroke="rgba(45,181,81,.6)" stroke-width="2"/>
-                        <!-- reserve feed -->
-                        <line x1="10" y1="70" x2="30" y2="70" stroke="rgba(26,95,168,.5)" stroke-width="2" stroke-dasharray="4 3"/>
-                        <!-- output -->
-                        <line x1="70" y1="50" x2="90" y2="50" stroke="rgba(45,181,81,.6)" stroke-width="2"/>
-                        <!-- switch contacts -->
-                        <circle cx="38" cy="50" r="3.5" fill="rgba(45,181,81,.7)"/>
-                        <line x1="38" y1="50" x2="55" y2="40" stroke="rgba(45,181,81,.55)" stroke-width="1.5" stroke-linecap="round"/>
-                        <circle cx="55" cy="40" r="3" fill="rgba(45,181,81,.5)"/>
-                        <circle cx="55" cy="60" r="3" fill="rgba(26,95,168,.45)"/>
-                        <circle cx="62" cy="50" r="3.5" fill="rgba(45,181,81,.7)"/>
-                        <!-- label -->
-                        <text x="50" y="84" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.4)" font-family="Montserrat,sans-serif" letter-spacing="1">АВР</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-avr.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="АВР">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">АВР — Автоматичне Введення Резерву</div>
@@ -177,18 +94,9 @@ $proelectric_phone = proelectric_get_primary_phone();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm2">
+                <div class="cables-method-thumb h-300">
                     <div class="cables-method-badge">Генерація</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <circle cx="50" cy="45" r="28" fill="rgba(26,95,168,.08)" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
-                        <circle cx="50" cy="45" r="18" fill="rgba(26,95,168,.06)" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <!-- rotor blades suggestion -->
-                        <path d="M50 30 L44 45 L50 42 L56 45 Z" fill="rgba(26,95,168,.5)"/>
-                        <circle cx="50" cy="45" r="5" fill="rgba(45,181,81,.7)" stroke="rgba(45,181,81,.9)" stroke-width="1"/>
-                        <!-- output line -->
-                        <line x1="50" y1="73" x2="50" y2="85" stroke="rgba(45,181,81,.5)" stroke-width="2"/>
-                        <text x="50" y="96" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.4)" font-family="Montserrat,sans-serif" letter-spacing="1">ГЕНЕРАТОР</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-generatory.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Дизельні та газові генератори">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Дизельні та газові генератори</div>
@@ -204,24 +112,9 @@ $proelectric_phone = proelectric_get_primary_phone();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm3">
+                <div class="cables-method-thumb h-300">
                     <div class="cables-method-badge">Безперебійне живлення</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <rect x="25" y="28" width="50" height="44" rx="3" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
-                        <!-- battery cells -->
-                        <rect x="30" y="33" width="12" height="34" rx="1" fill="rgba(45,181,81,.15)" stroke="rgba(45,181,81,.4)" stroke-width="1"/>
-                        <rect x="44" y="33" width="12" height="34" rx="1" fill="rgba(26,95,168,.15)" stroke="rgba(26,95,168,.35)" stroke-width="1"/>
-                        <rect x="58" y="33" width="12" height="34" rx="1" fill="rgba(45,181,81,.1)" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
-                        <!-- charge level -->
-                        <rect x="31" y="47" width="10" height="19" rx="1" fill="rgba(45,181,81,.45)"/>
-                        <rect x="45" y="43" width="10" height="23" rx="1" fill="rgba(26,95,168,.45)"/>
-                        <rect x="59" y="51" width="10" height="15" rx="1" fill="rgba(45,181,81,.35)"/>
-                        <!-- top terminal -->
-                        <rect x="34" y="26" width="4" height="4" rx="1" fill="rgba(45,181,81,.5)"/>
-                        <rect x="48" y="26" width="4" height="4" rx="1" fill="rgba(26,95,168,.5)"/>
-                        <rect x="62" y="26" width="4" height="4" rx="1" fill="rgba(45,181,81,.5)"/>
-                        <text x="50" y="84" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif" letter-spacing="1">ДБЖ / UPS</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-dgb.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="ДБЖ та інверторні системи">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">ДБЖ та інверторні системи</div>
@@ -237,22 +130,9 @@ $proelectric_phone = proelectric_get_primary_phone();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm4">
+                <div class="cables-method-thumb h-300">
                     <div class="cables-method-badge">Накопичення енергії</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- battery pack outline -->
-                        <rect x="18" y="30" width="64" height="40" rx="3" fill="rgba(26,95,168,.08)" stroke="rgba(26,95,168,.4)" stroke-width="1.5"/>
-                        <rect x="82" y="40" width="6" height="20" rx="1" fill="rgba(26,95,168,.3)"/>
-                        <!-- cell separators -->
-                        <line x1="34" y1="30" x2="34" y2="70" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="50" y1="30" x2="50" y2="70" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <line x1="66" y1="30" x2="66" y2="70" stroke="rgba(26,95,168,.2)" stroke-width="1"/>
-                        <!-- charge fill -->
-                        <rect x="19" y="31" width="46" height="38" rx="2" fill="rgba(26,95,168,.2)"/>
-                        <!-- LiFePO4 symbol -->
-                        <text x="50" y="54" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.45)" font-family="Montserrat,sans-serif" font-weight="600">LiFePO₄</text>
-                        <text x="50" y="84" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif" letter-spacing="1">АКБ СИСТЕМА</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-akb.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Акумуляторні системи накопичення">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Акумуляторні системи накопичення</div>
@@ -268,29 +148,8 @@ $proelectric_phone = proelectric_get_primary_phone();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm5">
-                    <div class="cables-method-badge">Розподіл живлення</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- PDU/STS enclosure -->
-                        <rect x="22" y="22" width="56" height="56" rx="3" fill="rgba(45,181,81,.06)" stroke="rgba(45,181,81,.3)" stroke-width="1.5"/>
-                        <!-- main input A -->
-                        <line x1="5" y1="38" x2="22" y2="38" stroke="rgba(45,181,81,.5)" stroke-width="2"/>
-                        <circle cx="10" cy="38" r="3" fill="rgba(45,181,81,.5)"/>
-                        <!-- main input B -->
-                        <line x1="5" y1="62" x2="22" y2="62" stroke="rgba(26,95,168,.45)" stroke-width="2" stroke-dasharray="4 3"/>
-                        <circle cx="10" cy="62" r="3" fill="rgba(26,95,168,.5)"/>
-                        <!-- output breakers -->
-                        <rect x="30" y="30" width="8" height="12" rx="1" fill="rgba(45,181,81,.3)" stroke="rgba(45,181,81,.5)" stroke-width="1"/>
-                        <rect x="42" y="30" width="8" height="12" rx="1" fill="rgba(45,181,81,.25)" stroke="rgba(45,181,81,.4)" stroke-width="1"/>
-                        <rect x="54" y="30" width="8" height="12" rx="1" fill="rgba(45,181,81,.2)" stroke="rgba(45,181,81,.35)" stroke-width="1"/>
-                        <rect x="66" y="30" width="8" height="12" rx="1" fill="rgba(45,181,81,.15)" stroke="rgba(45,181,81,.3)" stroke-width="1"/>
-                        <!-- output lines -->
-                        <line x1="34" y1="42" x2="34" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <line x1="46" y1="42" x2="46" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <line x1="58" y1="42" x2="58" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <line x1="70" y1="42" x2="70" y2="78" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                        <text x="50" y="90" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif" letter-spacing="1">STS / PDU</text>
-                    </svg>
+                <div class="cables-method-thumb h-300">
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-sts.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="STS та розподільні щити ГЖ">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">STS та розподільні щити ГЖ</div>
@@ -306,28 +165,9 @@ $proelectric_phone = proelectric_get_primary_phone();
             </div>
 
             <div class="cables-method-card wf-animate">
-                <div class="cables-method-thumb bpm6">
+                <div class="cables-method-thumb h-300">
                     <div class="cables-method-badge">Відновлювана енергія</div>
-                    <svg width="100" height="100" viewBox="0 0 100 100" fill="none" style="position:relative;z-index:1">
-                        <!-- solar panel -->
-                        <rect x="18" y="18" width="40" height="28" rx="2" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
-                        <line x1="18" y1="28" x2="58" y2="28" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <line x1="18" y1="37" x2="58" y2="37" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <line x1="30" y1="18" x2="30" y2="46" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <line x1="44" y1="18" x2="44" y2="46" stroke="rgba(45,181,81,.2)" stroke-width="1"/>
-                        <!-- inverter box -->
-                        <rect x="62" y="22" width="22" height="20" rx="2" fill="rgba(26,95,168,.1)" stroke="rgba(26,95,168,.35)" stroke-width="1.2"/>
-                        <path d="M65 36 l5-8 5 8" stroke="rgba(26,95,168,.5)" stroke-width="1.2" fill="none" stroke-linecap="round"/>
-                        <!-- battery box -->
-                        <rect x="62" y="50" width="22" height="18" rx="2" fill="rgba(26,95,168,.1)" stroke="rgba(26,95,168,.3)" stroke-width="1.2"/>
-                        <rect x="65" y="53" width="16" height="10" rx="1" fill="rgba(26,95,168,.25)"/>
-                        <!-- connection lines -->
-                        <line x1="58" y1="32" x2="62" y2="32" stroke="rgba(45,181,81,.4)" stroke-width="1.5"/>
-                        <line x1="73" y1="42" x2="73" y2="50" stroke="rgba(26,95,168,.35)" stroke-width="1.2"/>
-                        <!-- output -->
-                        <line x1="38" y1="46" x2="38" y2="80" stroke="rgba(45,181,81,.3)" stroke-width="1.5"/>
-                        <text x="50" y="90" text-anchor="middle" font-size="7" fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif" letter-spacing="1">СЕС + АКБ</text>
-                    </svg>
+                    <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-gibridna.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Гібридні системи СЕС + АКБ">
                 </div>
                 <div class="cables-method-body">
                     <div class="cables-method-title">Гібридні системи СЕС + АКБ</div>
@@ -341,7 +181,6 @@ $proelectric_phone = proelectric_get_primary_phone();
                     </ul>
                 </div>
             </div>
-
         </div>
     </div>
 </section>
@@ -601,69 +440,9 @@ $proelectric_phone = proelectric_get_primary_phone();
             <h2 class="section-title">НАДІЙНІСТЬ НА КОЖНОМУ РІВНІ</h2>
             <p class="section-sub">Система резервного живлення — не просто обладнання, а комплексне рішення, яке не підведе у критичний момент.</p>
         </div>
-
         <div class="cables-split-inner wf-animate">
             <div class="cables-split-visual">
-                <div class="cables-split-accent" style="background:radial-gradient(circle at 60% 40%, rgba(45,181,81,.18) 0%, transparent 70%)"></div>
-                <svg width="340" height="380" viewBox="0 0 340 380" fill="none" style="position:relative;z-index:1">
-                    <defs>
-                        <radialGradient id="bpg1" cx="50%" cy="50%" r="50%">
-                            <stop offset="0%"   stop-color="#2db551" stop-opacity=".6"/>
-                            <stop offset="100%" stop-color="#2db551" stop-opacity=".05"/>
-                        </radialGradient>
-                    </defs>
-
-                    <!-- Mains source -->
-                    <rect x="30" y="30" width="80" height="40" rx="3" fill="rgba(26,95,168,.12)" stroke="rgba(26,95,168,.4)" stroke-width="1.5"/>
-                    <text x="70" y="48" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.5)" font-family="Montserrat,sans-serif" letter-spacing="1">МЕРЕЖА</text>
-                    <text x="70" y="60" text-anchor="middle" font-size="8" fill="rgba(26,95,168,.7)" font-family="Bebas Neue,sans-serif" letter-spacing="2">0,4 кВ</text>
-
-                    <!-- Generator source -->
-                    <rect x="230" y="30" width="80" height="40" rx="3" fill="rgba(45,181,81,.1)" stroke="rgba(45,181,81,.35)" stroke-width="1.5"/>
-                    <text x="270" y="48" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.5)" font-family="Montserrat,sans-serif" letter-spacing="1">ГЕНЕРАТОР</text>
-                    <text x="270" y="60" text-anchor="middle" font-size="8" fill="rgba(45,181,81,.7)" font-family="Bebas Neue,sans-serif" letter-spacing="2">РЕЗЕРВ</text>
-
-                    <!-- AVR cabinet -->
-                    <rect x="105" y="110" width="130" height="80" rx="4" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.5)" stroke-width="2"/>
-                    <text x="170" y="145" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="15" fill="rgba(45,181,81,.8)" letter-spacing="3">АВР</text>
-                    <text x="170" y="163" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.4)" font-family="Montserrat,sans-serif">Автоматика</text>
-                    <text x="170" y="177" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.3)" font-family="Montserrat,sans-serif">перемикання</text>
-
-                    <!-- Lines to AVR -->
-                    <line x1="70"  y1="70" x2="70"  y2="110" stroke="rgba(26,95,168,.4)" stroke-width="1.5"/>
-                    <line x1="70"  y1="90" x2="105" y2="120" stroke="rgba(26,95,168,.4)" stroke-width="1.5"/>
-                    <line x1="270" y1="70" x2="270" y2="110" stroke="rgba(45,181,81,.4)" stroke-width="1.5" stroke-dasharray="5 4"/>
-                    <line x1="270" y1="90" x2="235" y2="120" stroke="rgba(45,181,81,.4)" stroke-width="1.5" stroke-dasharray="5 4"/>
-
-                    <!-- Switch indicator -->
-                    <circle cx="140" cy="150" r="6" fill="rgba(45,181,81,.3)" stroke="rgba(45,181,81,.7)" stroke-width="1.5"/>
-                    <circle cx="200" cy="150" r="6" fill="rgba(26,95,168,.2)" stroke="rgba(26,95,168,.5)" stroke-width="1.5"/>
-                    <line x1="148" y1="150" x2="192" y2="150" stroke="rgba(45,181,81,.3)" stroke-width="1" stroke-dasharray="3 3"/>
-
-                    <!-- UPS -->
-                    <rect x="105" y="230" width="60" height="50" rx="3" fill="rgba(26,95,168,.1)" stroke="rgba(26,95,168,.35)" stroke-width="1.5"/>
-                    <text x="135" y="252" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(26,95,168,.7)" letter-spacing="2">ДБЖ</text>
-                    <rect x="112" y="258" width="46" height="14" rx="1" fill="rgba(26,95,168,.2)"/>
-                    <rect x="113" y="259" width="30" height="12" rx="1" fill="rgba(45,181,81,.4)"/>
-
-                    <!-- Battery -->
-                    <rect x="175" y="230" width="60" height="50" rx="3" fill="rgba(45,181,81,.08)" stroke="rgba(45,181,81,.3)" stroke-width="1.5"/>
-                    <text x="205" y="252" text-anchor="middle" font-family="Bebas Neue,sans-serif" font-size="11" fill="rgba(45,181,81,.7)" letter-spacing="2">АКБ</text>
-                    <text x="205" y="268" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.35)" font-family="Montserrat,sans-serif">LiFePO₄</text>
-
-                    <!-- Loads -->
-                    <line x1="135" y1="190" x2="135" y2="230" stroke="rgba(255,255,255,.2)" stroke-width="1.5"/>
-                    <line x1="170" y1="190" x2="205" y2="230" stroke="rgba(255,255,255,.15)" stroke-width="1.2"/>
-
-                    <!-- Critical load -->
-                    <rect x="90" y="315" width="160" height="40" rx="3" fill="rgba(255,255,255,.05)" stroke="rgba(255,255,255,.15)" stroke-width="1"/>
-                    <text x="170" y="333" text-anchor="middle" font-size="9" fill="rgba(255,255,255,.45)" font-family="Montserrat,sans-serif">Критичне навантаження</text>
-                    <text x="170" y="347" text-anchor="middle" font-size="8" fill="rgba(255,255,255,.3)" font-family="Montserrat,sans-serif">Сервери · Медицина · Виробництво</text>
-
-                    <!-- Line to load -->
-                    <line x1="135" y1="280" x2="135" y2="315" stroke="rgba(45,181,81,.3)" stroke-width="1.5"/>
-                    <line x1="205" y1="280" x2="205" y2="315" stroke="rgba(45,181,81,.25)" stroke-width="1.2"/>
-                </svg>
+                <img src="<?= get_template_directory_uri(); ?>/images/static/rezervne-zhyvlennya-ta-avr-scheme.webp" class="relative z-index-1 w-full h-full object-fit-cover" alt="Резервне живлення та АВР">
             </div>
 
             <div class="cables-split-content">

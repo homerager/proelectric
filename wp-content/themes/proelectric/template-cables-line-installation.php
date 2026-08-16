@@ -76,7 +76,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Прокладаємо силові та контрольні кабелі від 0,4 кВ до 110 кВ. У лотках, трубах, траншеях, кабельних каналах та на естакадах — будь-яким методом для будь-якого об'єкта.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Замовити монтаж</a>
-                <a href="#methods" class="btn btn-outline-white scroll-to-btn">Методи прокладки</a>
+                <a href="#methods" class="btn btn-white scroll-to-btn">Методи прокладки</a>
             </div>
         </div>
     </div>

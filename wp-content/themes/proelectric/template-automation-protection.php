@@ -96,7 +96,7 @@ $proelectric_phone = proelectric_get_primary_phone();
             <p class="hero-desc">Проєктуємо, монтуємо та налагоджуємо системи релейного захисту, автоматики й диспетчеризації — від щитів РЗА на підстанціях до АСУ ТП промислових об'єктів. Захист, який спрацьовує вчасно і селективно.</p>
             <div class="hero-actions btn-group">
                 <a href="#contact" class="btn btn-primary scroll-to-btn">Замовити розрахунок</a>
-                <a href="#systems" class="btn btn-outline-white scroll-to-btn">Напрямки робіт</a>
+                <a href="#systems" class="btn btn-white scroll-to-btn">Напрямки робіт</a>
             </div>
         </div>
     </div>
